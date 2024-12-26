@@ -2,4 +2,24 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  flex-direction: column;
+}
+
+.welcomeContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 20px 0;
+  width: 100%;
+}
+
+.image {
+  border-radius: 50%;
+}
+
+.technicalSkillsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
