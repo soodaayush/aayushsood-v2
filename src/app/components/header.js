@@ -15,11 +15,11 @@ export default function Header() {
         <h1>Aayush Sood</h1>
       </div>
       <div className={styles.links}>
-        <Image src={GitHub} width={50} height={50} alt="GitHub" />
-        <Image src={LeetCode} width={50} height={50} alt="GitHub" />
-        <Image src={LinkedIn} width={50} height={50} alt="GitHub" />
-        <Image src={PDF} width={50} height={50} alt="GitHub" />
-        <Image src={YouTube} width={50} height={50} alt="GitHub" />
+        <Image src={GitHub} width={40} height={40} alt="GitHub" />
+        <Image src={LeetCode} width={40} height={40} alt="GitHub" />
+        <Image src={LinkedIn} width={40} height={40} alt="GitHub" />
+        <Image src={PDF} width={40} height={40} alt="GitHub" />
+        <Image src={YouTube} width={40} height={40} alt="GitHub" />
       </div>
     </div>
   );

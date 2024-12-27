@@ -1,72 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
-
-:root {
-  --bg-color-line: #cbcbcb;
-  --bg-color-page: #19223e;
-  --color-cgi: #991f3d;
-  --color-black: #555555;
-  --color-brand-primary: #3863d9;
-  --bg-footer-1: #bbdeea;
-  --bg-footer-2: #eafdfc;
-  --color-text: hsl(222deg, 22%, 5%);
-  --color-background: hsl(0deg, 0%, 100%);
-  --color-blurred-background: hsla(0deg, 0%, 100%, 0.85);
-  --color-primary: hsl(245deg, 100%, 60%);
-  --color-secondary: hsl(333deg, 100%, 45%);
-  --color-tertiary: hsl(255deg, 85%, 30%);
-  --color-decorative: hsl(200deg, 75%, 65%);
-  --color-muted: hsl(210deg, 55%, 92%);
-  --color-muted-background: hsla(210deg, 55%, 92%, 0.85);
-  --color-info: hsl(245deg, 100%, 60%);
-  --color-success: hsl(160deg, 100%, 40%);
-  --color-success-background: hsla(160deg, 100%, 40%, 0.1);
-  --color-error: hsl(340deg, 95%, 50%);
-  --color-error-background: hsla(340deg, 95%, 43%, 0.1);
-  --color-alert: hsl(37deg, 100%, 50%);
-  --color-alert-background: hsla(52deg, 100%, 50%, 0.25);
-  --color-venn-0: hsl(190deg, 100%, 65%);
-  --color-venn-1: hsl(340deg, 100%, 65%);
-  --color-gray-100: hsl(225deg, 25%, 95%);
-  --color-gray-200: hsl(225deg, 16%, 90%);
-  --color-gray-300: hsl(225deg, 8%, 80%);
-  --color-gray-400: hsl(225deg, 8%, 70%);
-  --color-gray-500: hsl(225deg, 7%, 60%);
-  --color-gray-600: hsl(225deg, 15%, 50%);
-  --color-gray-700: hsl(225deg, 12%, 40%);
-  --color-gray-900: hsl(225deg, 25%, 20%);
-  --color-gray-1000: hsl(225deg, 15%, 15%);
-  --color-subtle-background: hsl(225deg, 25%, 95%);
-  --color-subtle-floating: hsl(0deg, 0%, 100%);
-  --color-homepage-light: hsl(204deg, 67%, 85%);
-  --color-homepage-dark: hsl(202deg, 71%, 90%);
-  --color-homepage-bg: hsl(204deg, 67%, 85%);
-  --syntax-bg: hsl(225deg, 25%, 97%);
-  --syntax-highlight: hsl(225deg, 25%, 93%);
-  --syntax-txt: #2a2a2a;
-  --syntax-comment: #467790;
-  --syntax-prop: #da0079;
-  --syntax-bool: #bf00b8;
-  --syntax-val: #78909c;
-  --syntax-str: #651fff;
-  --syntax-name: #aa00ff;
-  --syntax-del: rgb(255, 85, 85);
-  --syntax-regex: #3600d6;
-  --syntax-fn: #3d5afe;
+@font-face {
+  font-family: "Wotfard";
+  font-weight: 400;
+  src: url("../assets/fonts/wotfard-regular-webfont.woff2") format("woff2"),
+    url("../assets/fonts/wotfard-regular-webfont.ttf") format("ttf"),
+    url("../assets/fonts/wotfard-regular-webfont.eot") format("eot");
+  font-display: swap;
 }
 
 *,
@@ -82,7 +20,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   font-size: 16px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Wotfard", sans-serif;
 }
 
 body {
