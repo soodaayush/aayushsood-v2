@@ -4,3 +4,10 @@
   align-items: center;
   border: 1px solid red;
 }
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}

@@ -17,9 +17,18 @@
   border-radius: 50%;
 }
 
-.technicalSkillsContainer {
+.projectsContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
+}
+
+.projectList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
