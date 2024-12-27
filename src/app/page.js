@@ -14,31 +14,110 @@ const projects = [
     link: "https://www.aayushsood.com/",
     image: Aayush,
     description: "A great website",
-    tags: ["Hardware"],
+    tags: ["Hardware"].sort((a, b) => a.localeCompare(b)),
     github: "https://github.com/soodaayush",
   },
   {
     id: 2,
-    name: "Ben Eater's 8-Bit Project",
+    name: "Ben Eater's 6502 Project",
     link: "https://www.aayushsood.com/",
     image: Aayush,
     description: "A great website",
+    tags: ["Arduino", "Python", "Assembly", "C++"].sort((a, b) =>
+      a.localeCompare(b)
+    ),
     github: "https://github.com/soodaayush",
   },
   {
     id: 3,
-    name: "Ben Eater's 8-Bit Project",
+    name: "LlamaTalk",
     link: "https://www.aayushsood.com/",
     image: Aayush,
     description: "A great website",
+    tags: ["HTML", "SCSS", "JavaScript", "Codellama", "Ollama"].sort((a, b) =>
+      a.localeCompare(b)
+    ),
     github: "https://github.com/soodaayush",
   },
   {
     id: 4,
-    name: "Ben Eater's 8-Bit Project",
+    name: "Arduino-based School Yoga Project",
     link: "https://www.aayushsood.com/",
     image: Aayush,
     description: "A great website",
+    tags: ["Arduino", "C++"].sort((a, b) => a.localeCompare(b)),
+    github: "https://github.com/soodaayush",
+  },
+  {
+    id: 5,
+    name: "WordSmith",
+    link: "https://wordsmithy.netlify.app/",
+    image: Aayush,
+    description: "A great website",
+    tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
+    github: "https://github.com/soodaayush",
+  },
+  {
+    id: 6,
+    name: "LeetCode",
+    link: "https://www.aayushsood.com/",
+    image: Aayush,
+    description: "A great website",
+    tags: ["JavaScript", "Python", "C++"].sort((a, b) => a.localeCompare(b)),
+    github: "https://github.com/soodaayush",
+  },
+  {
+    id: 7,
+    name: "CoinDeno",
+    link: "https://www.aayushsood.com/",
+    image: Aayush,
+    description: "A great website",
+    tags: ["React Native", "Expo", "Firebase", "JavaScript"].sort((a, b) =>
+      a.localeCompare(b)
+    ),
+    github: "https://github.com/soodaayush",
+  },
+  {
+    id: 8,
+    name: "Pac Man",
+    link: "https://www.aayushsood.com/",
+    image: Aayush,
+    description: "A great website",
+    tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
+    github: "https://github.com/soodaayush",
+  },
+  {
+    id: 9,
+    name: "CoinDeno Web",
+    link: "https://www.aayushsood.com/",
+    image: Aayush,
+    description: "A great website",
+    tags: [
+      "React",
+      "Redux",
+      "Vite",
+      "Firebase",
+      "Tailwind CSS",
+      "JavaScript",
+    ].sort((a, b) => a.localeCompare(b)),
+    github: "https://github.com/soodaayush",
+  },
+  {
+    id: 10,
+    name: "Frontend Mentor Challenges",
+    link: "https://www.aayushsood.com/",
+    image: Aayush,
+    description: "A great website",
+    tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
+    github: "https://github.com/soodaayush",
+  },
+  {
+    id: 11,
+    name: "LearnWithMe",
+    link: "https://www.aayushsood.com/",
+    image: Aayush,
+    description: "A great website",
+    tags: ["HTML", "SCSS"].sort((a, b) => a.localeCompare(b)),
     github: "https://github.com/soodaayush",
   },
 ];
@@ -130,6 +209,7 @@ export default function Home() {
               link={project.link}
               image={project.image}
               description={project.description}
+              tags={project.tags}
               github={project.github}
             />
           ))}
