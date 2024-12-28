@@ -8,11 +8,13 @@ import Project from "./components/project";
 import TechnicalSkill from "./components/techincalSkill";
 import Interest from "./components/interest";
 
-import { FaLaptopCode, FaCamera, FaBook, FaGamepad } from "react-icons/fa";
+import { FaLaptop, FaCode, FaGamepad, FaGlobe } from "react-icons/fa";
+import { PiMathOperationsFill } from "react-icons/pi";
+import { MdScience } from "react-icons/md";
+import { MdOutlineSportsMartialArts } from "react-icons/md";
 
 const projects = [
   {
-    id: 1,
     name: "Ben Eater's 8-Bit Project",
     link: "https://www.aayushsood.com/",
     image: Aayush,
@@ -21,7 +23,6 @@ const projects = [
     github: "https://github.com/soodaayush",
   },
   {
-    id: 2,
     name: "Ben Eater's 6502 Project",
     link: "https://www.aayushsood.com/",
     image: Aayush,
@@ -32,7 +33,6 @@ const projects = [
     github: "https://github.com/soodaayush",
   },
   {
-    id: 3,
     name: "LlamaTalk",
     link: "https://www.aayushsood.com/",
     image: Aayush,
@@ -43,7 +43,6 @@ const projects = [
     github: "https://github.com/soodaayush",
   },
   {
-    id: 4,
     name: "Arduino-based School Yoga Project",
     link: "https://www.aayushsood.com/",
     image: Aayush,
@@ -52,7 +51,6 @@ const projects = [
     github: "https://github.com/soodaayush",
   },
   {
-    id: 5,
     name: "WordSmith",
     link: "https://wordsmithy.netlify.app/",
     image: Aayush,
@@ -61,7 +59,6 @@ const projects = [
     github: "https://github.com/soodaayush",
   },
   {
-    id: 6,
     name: "LeetCode",
     link: "https://www.aayushsood.com/",
     image: Aayush,
@@ -70,7 +67,6 @@ const projects = [
     github: "https://github.com/soodaayush",
   },
   {
-    id: 7,
     name: "CoinDeno",
     link: "https://www.aayushsood.com/",
     image: Aayush,
@@ -81,7 +77,6 @@ const projects = [
     github: "https://github.com/soodaayush",
   },
   {
-    id: 8,
     name: "Pac Man",
     link: "https://www.aayushsood.com/",
     image: Aayush,
@@ -90,7 +85,6 @@ const projects = [
     github: "https://github.com/soodaayush",
   },
   {
-    id: 9,
     name: "CoinDeno Web",
     link: "https://www.aayushsood.com/",
     image: Aayush,
@@ -106,7 +100,6 @@ const projects = [
     github: "https://github.com/soodaayush",
   },
   {
-    id: 10,
     name: "Frontend Mentor Challenges",
     link: "https://www.aayushsood.com/",
     image: Aayush,
@@ -115,7 +108,6 @@ const projects = [
     github: "https://github.com/soodaayush",
   },
   {
-    id: 11,
     name: "LearnWithMe",
     link: "https://www.aayushsood.com/",
     image: Aayush,
@@ -127,7 +119,6 @@ const projects = [
 
 const technicalSkills = [
   {
-    id: 1,
     type: "Frontend",
     skills: [
       { id: 1, name: "HTML", experience: "4 Years" },
@@ -140,7 +131,6 @@ const technicalSkills = [
     ].sort((a, b) => a.name.localeCompare(b.name)),
   },
   {
-    id: 2,
     type: "Backend",
     skills: [
       { id: 8, name: "Python", experience: "1 Year" },
@@ -151,7 +141,6 @@ const technicalSkills = [
     ].sort((a, b) => a.name.localeCompare(b.name)),
   },
   {
-    id: 3,
     type: "DevOps/Tools",
     skills: [
       { id: 13, name: "Cloudflare", experience: "2 Years" },
@@ -163,7 +152,6 @@ const technicalSkills = [
     ].sort((a, b) => a.name.localeCompare(b.name)),
   },
   {
-    id: 4,
     type: "Mobile",
     skills: [
       { id: 19, name: "React Native", experience: "2 Years" },
@@ -175,28 +163,46 @@ const technicalSkills = [
 
 const interests = [
   {
-    id: 1,
-    name: "Web Development",
-    icon: <FaLaptopCode />,
-    description: "I love creating beautiful, responsive websites.",
-  },
-  {
-    id: 2,
-    name: "Photography",
-    icon: <FaCamera />,
-    description: "Capturing sunsets and landscapes is my passion.",
-  },
-  {
-    id: 3,
     name: "Gaming",
     icon: <FaGamepad />,
-    description: "I enjoy strategy games like chess and Age of Empires.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
   },
   {
-    id: 4,
-    name: "Reading",
-    icon: <FaBook />,
-    description: "Fiction and non-fiction books keep me inspired.",
+    name: "Math",
+    icon: <PiMathOperationsFill />,
+    description:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.",
+  },
+  {
+    name: "Science",
+    icon: <MdScience />,
+    description:
+      "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae..",
+  },
+  {
+    name: "Geopolitics",
+    icon: <FaGlobe />,
+    description:
+      "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+  },
+  {
+    name: "MMA",
+    icon: <MdOutlineSportsMartialArts />,
+    description:
+      "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+  },
+  {
+    name: "Programming",
+    icon: <FaCode />,
+    description:
+      "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+  },
+  {
+    name: "Technology",
+    icon: <FaLaptop />,
+    description:
+      "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
   },
 ];
 
@@ -220,9 +226,9 @@ export default function Home() {
       <div className={styles.technicalSkillsContainer}>
         <h1>Technical Skills</h1>
         <div className={styles.technicalSkillsList}>
-          {technicalSkills.map((technicalSkill) => (
+          {technicalSkills.map((technicalSkill, index) => (
             <TechnicalSkill
-              key={technicalSkill.id}
+              key={index}
               type={technicalSkill.type}
               skills={technicalSkill.skills}
             />
@@ -232,9 +238,9 @@ export default function Home() {
       <div className={styles.projectsContainer}>
         <h1>Projects</h1>
         <div className={styles.projectList}>
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <Project
-              key={project.id}
+              key={index}
               name={project.name}
               link={project.link}
               image={project.image}
@@ -250,9 +256,9 @@ export default function Home() {
         <div className={styles.interestList}>
           {interests.map((interest, index) => (
             <Interest
-              key={interest.id}
-              icon={interest.icon}
+              key={index}
               name={interest.name}
+              icon={interest.icon}
               description={interest.description}
             />
           ))}

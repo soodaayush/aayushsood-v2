@@ -53,17 +53,30 @@
 
 .interestsContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 20px 0 20px 0;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .interestList {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  column-count: 3;
+  column-gap: 16px;
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .interestList {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .interestList {
+    column-count: 1;
+  }
 }

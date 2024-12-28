@@ -1,10 +1,21 @@
 .interestContainer {
-  text-align: center;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  break-inside: avoid;
   border: 1px solid red;
 }
 
-.interestName {
-  border: 1px solid red;
-  text-align: center;
-  margin: 0;
+.interestTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interestIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
 }
