@@ -3,11 +3,16 @@
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  width: 500px;
+  width: 450px;
   height: 375px;
-  padding: 10px;
+  padding: 20px;
   border: 1px solid red;
   text-align: center;
+  border-radius: 20px;
+}
+
+.projectName {
+  margin: 0;
 }
 
 .tagContainer {

@@ -50,3 +50,20 @@
   gap: 20px;
   flex-wrap: wrap;
 }
+
+.interestsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0 20px 0;
+  width: 100%;
+}
+
+.interestList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}

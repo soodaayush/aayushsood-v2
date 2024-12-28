@@ -6,6 +6,9 @@ import Aayush from "./assets/welcome/aayush.jpg";
 
 import Project from "./components/project";
 import TechnicalSkill from "./components/techincalSkill";
+import Interest from "./components/interest";
+
+import { FaLaptopCode, FaCamera, FaBook, FaGamepad } from "react-icons/fa";
 
 const projects = [
   {
@@ -170,6 +173,33 @@ const technicalSkills = [
   },
 ];
 
+const interests = [
+  {
+    id: 1,
+    name: "Web Development",
+    icon: <FaLaptopCode />,
+    description: "I love creating beautiful, responsive websites.",
+  },
+  {
+    id: 2,
+    name: "Photography",
+    icon: <FaCamera />,
+    description: "Capturing sunsets and landscapes is my passion.",
+  },
+  {
+    id: 3,
+    name: "Gaming",
+    icon: <FaGamepad />,
+    description: "I enjoy strategy games like chess and Age of Empires.",
+  },
+  {
+    id: 4,
+    name: "Reading",
+    icon: <FaBook />,
+    description: "Fiction and non-fiction books keep me inspired.",
+  },
+];
+
 export default function Home() {
   return (
     <div className={styles.homeContainer}>
@@ -211,6 +241,19 @@ export default function Home() {
               description={project.description}
               tags={project.tags}
               github={project.github}
+            />
+          ))}
+        </div>
+      </div>
+      <div className={styles.interestsContainer}>
+        <h1>Interests</h1>
+        <div className={styles.interestList}>
+          {interests.map((interest, index) => (
+            <Interest
+              key={interest.id}
+              icon={interest.icon}
+              name={interest.name}
+              description={interest.description}
             />
           ))}
         </div>
