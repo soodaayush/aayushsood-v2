@@ -69,13 +69,13 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 875px) {
   .interestList {
     column-count: 2;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .interestList {
     column-count: 1;
   }

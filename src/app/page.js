@@ -3,6 +3,8 @@ import Image from "next/image";
 import styles from "./styles/page.module.css";
 
 import Aayush from "./assets/welcome/aayush.jpg";
+import eightBit from "./assets/projects/thumbnails/8-bit-computer.webp";
+import sixtyFiveZeroTwo from "./assets/projects/thumbnails/6502.webp";
 
 import Project from "./components/project";
 import TechnicalSkill from "./components/techincalSkill";
@@ -17,7 +19,7 @@ const projects = [
   {
     name: "Ben Eater's 8-Bit Project",
     link: "https://www.aayushsood.com/",
-    image: Aayush,
+    image: eightBit,
     description: "A great website",
     tags: ["Hardware"].sort((a, b) => a.localeCompare(b)),
     github: "https://github.com/soodaayush",
@@ -25,7 +27,7 @@ const projects = [
   {
     name: "Ben Eater's 6502 Project",
     link: "https://www.aayushsood.com/",
-    image: Aayush,
+    image: sixtyFiveZeroTwo,
     description: "A great website",
     tags: ["Arduino", "Python", "Assembly", "C++"].sort((a, b) =>
       a.localeCompare(b)

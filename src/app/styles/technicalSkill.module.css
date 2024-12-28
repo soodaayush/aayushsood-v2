@@ -3,12 +3,13 @@
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  width: 300px;
+  width: 260px;
   border: 1px solid red;
   height: 700px;
   padding: 20px;
   gap: 20px;
   border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .skillType {
