@@ -17,7 +17,7 @@ export default function Project(props) {
         ))}
       </div>
       <a href={props.github} target="_blank">
-        <button>GitHub</button>
+        <button className={styles.githubButton}>GitHub</button>
       </a>
     </div>
   );

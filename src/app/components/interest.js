@@ -1,4 +1,5 @@
 import styles from "../styles/interest.module.css";
+import { motion } from "motion";
 
 export default function Interest(props) {
   return (

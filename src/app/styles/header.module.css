@@ -5,6 +5,18 @@
   border: 1px solid red;
 }
 
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  color: black;
+  margin-right: 20px;
+}
+
 .links {
   display: flex;
   justify-content: center;

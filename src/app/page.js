@@ -9,6 +9,7 @@ import sixtyFiveZeroTwo from "./assets/projects/thumbnails/6502.webp";
 import Project from "./components/project";
 import TechnicalSkill from "./components/techincalSkill";
 import Interest from "./components/interest";
+import Example from "./components/example";
 
 import { FaLaptop, FaCode, FaGamepad, FaGlobe } from "react-icons/fa";
 import { PiMathOperationsFill } from "react-icons/pi";
@@ -226,7 +227,7 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.technicalSkillsContainer}>
-        <h1>Technical Skills</h1>
+        <h1 className={styles.sectionHeading}>Technical Skills</h1>
         <div className={styles.technicalSkillsList}>
           {technicalSkills.map((technicalSkill, index) => (
             <TechnicalSkill
@@ -237,8 +238,9 @@ export default function Home() {
           ))}
         </div>
       </div>
+      <Example />
       <div className={styles.projectsContainer}>
-        <h1>Projects</h1>
+        <h1 className={styles.sectionHeading}>Projects</h1>
         <div className={styles.projectList}>
           {projects.map((project, index) => (
             <Project
@@ -254,7 +256,7 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.interestsContainer}>
-        <h1>Interests</h1>
+        <h1 className={styles.sectionHeading}>Interests</h1>
         <div className={styles.interestList}>
           {interests.map((interest, index) => (
             <Interest

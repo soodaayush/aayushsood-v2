@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "../styles/header.module.css";
 
@@ -11,8 +12,13 @@ import YouTube from "../assets/header-icons/youtube.svg";
 export default function Header() {
   return (
     <div className={styles.container}>
-      <div className="name">
-        <h1>Aayush Sood</h1>
+      <div className={styles.name}>
+        <Link className={styles.title} href="/">
+          <h1>Aayush Sood</h1>
+        </Link>
+        <Link className={styles.title} href="/blog">
+          <h2>Blog</h2>
+        </Link>
       </div>
       <div className={styles.links}>
         <Image src={GitHub} width={40} height={40} alt="GitHub" />
