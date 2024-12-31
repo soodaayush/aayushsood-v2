@@ -21,7 +21,13 @@ export default function Header() {
         </Link>
       </div>
       <div className={styles.links}>
-        <Image src={GitHub} width={40} height={40} alt="GitHub" />
+        <Image
+          src={GitHub}
+          width={40}
+          height={40}
+          alt="GitHub"
+          className={styles.svg}
+        />
         <Image src={LeetCode} width={40} height={40} alt="GitHub" />
         <Image src={LinkedIn} width={40} height={40} alt="GitHub" />
         <Image src={PDF} width={40} height={40} alt="GitHub" />

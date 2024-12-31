@@ -1,16 +1,25 @@
 .interestContainer {
   padding: 16px;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 16px;
   break-inside: avoid;
-  border: 1px solid red;
+  transition: 0.3s ease-in-out;
+  text-align: justify;
+}
+
+.interestContainer:hover {
+  box-shadow: 0 5px 15px #8892b0;
 }
 
 .interestTitle {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.15s ease-in-out;
+}
+
+.interestContainer:hover .interestTitle {
+  color: #64ffda;
 }
 
 .interestIcon {

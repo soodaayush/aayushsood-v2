@@ -6,14 +6,22 @@
   width: 450px;
   height: 475px;
   padding: 20px;
-  border: 1px solid red;
   text-align: center;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.projectContainer:hover {
+  box-shadow: 0 5px 15px #8892b0;
 }
 
 .projectName {
-  margin: 0;
+  margin-top: 0;
+  color: #617bff;
+}
+
+.description {
+  margin-bottom: 0;
 }
 
 .tagContainer {
@@ -23,6 +31,7 @@
   flex-wrap: wrap;
   gap: 10px;
   margin: 10px;
+  margin: 20px 0;
 }
 
 .tag {
@@ -32,6 +41,13 @@
   outline: none;
   transition: 0.15s ease-in-out;
   padding: 5px;
+  background: rgba(45, 212, 191, 0.1);
+  color: #64ffda;
+  padding: 10px;
+}
+
+.tag:hover {
+  opacity: 0.75;
 }
 
 .githubButton {
@@ -46,8 +62,14 @@
   transition: 0.15s ease-in-out;
   padding: 10px;
   cursor: pointer;
+  background: #1e2a35;
+  color: #fff;
+}
+
+.githubButton:hover {
+  opacity: 0.75;
 }
 
 .githubLogo {
-  margin-right: 5px;
+  margin-right: 10px;
 }

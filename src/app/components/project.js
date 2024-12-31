@@ -10,11 +10,11 @@ export default function Project(props) {
       <a href={props.link} target="_blank">
         <Image src={props.image} width={250} height={150} alt={props.name} />
       </a>
-      <p>{props.description}</p>
+      <p className={styles.description}>{props.description}</p>
       <div className={styles.tagContainer}>
         {props.tags.map((tag, index) => (
           <button className={styles.tag} key={index}>
-            <p>{tag}</p>
+            {tag}
           </button>
         ))}
       </div>

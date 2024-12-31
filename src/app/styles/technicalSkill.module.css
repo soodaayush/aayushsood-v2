@@ -4,12 +4,15 @@
   align-items: center;
   flex-direction: column;
   width: 260px;
-  border: 1px solid red;
   height: 700px;
   padding: 20px;
   gap: 20px;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.technicalSkillContainer:hover {
+  box-shadow: 0 5px 15px #8892b0;
 }
 
 .skillType {
@@ -27,4 +30,6 @@
   padding: 0;
   margin: 0;
   font-size: 25px;
+  font-weight: bold;
+  cursor: default;
 }
