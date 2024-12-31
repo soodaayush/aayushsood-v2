@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: column;
   width: 450px;
-  height: 375px;
+  height: 475px;
   padding: 20px;
   border: 1px solid red;
   text-align: center;
@@ -25,6 +25,29 @@
   margin: 10px;
 }
 
+.tag {
+  border-radius: 10px;
+  font-family: "Wotfard", sans-serif;
+  border: none;
+  outline: none;
+  transition: 0.15s ease-in-out;
+  padding: 5px;
+}
+
 .githubButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  font-family: "Wotfard", sans-serif;
+  border: none;
+  outline: none;
+  transition: 0.15s ease-in-out;
+  padding: 10px;
   cursor: pointer;
+}
+
+.githubLogo {
+  margin-right: 5px;
 }

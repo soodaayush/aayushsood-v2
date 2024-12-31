@@ -5,11 +5,18 @@ import styles from "./styles/page.module.css";
 import Aayush from "./assets/welcome/aayush.jpg";
 import eightBit from "./assets/projects/thumbnails/8-bit-computer.webp";
 import sixtyFiveZeroTwo from "./assets/projects/thumbnails/6502.webp";
+import llamaTalk from "./assets/projects/thumbnails/llamatalk.png";
+import wordSmith from "./assets/projects/thumbnails/wordsmith.png";
+import leetCode from "./assets/projects/thumbnails/leetcode.png";
+import coinDeno from "./assets/projects/thumbnails/coindeno.png";
+import pacMan from "./assets/projects/thumbnails/pac-man.png";
+import coinDenoWeb from "./assets/projects/thumbnails/coindeno-web.png";
+import frontendMentorChallenges from "./assets/projects/thumbnails/frontend-mentor-challenges.png";
+import learnWithMe from "./assets/projects/thumbnails/learn-with-me.png";
 
 import Project from "./components/project";
 import TechnicalSkill from "./components/techincalSkill";
 import Interest from "./components/interest";
-import Example from "./components/example";
 
 import { FaLaptop, FaCode, FaGamepad, FaGlobe } from "react-icons/fa";
 import { PiMathOperationsFill } from "react-icons/pi";
@@ -38,7 +45,7 @@ const projects = [
   {
     name: "LlamaTalk",
     link: "https://www.aayushsood.com/",
-    image: Aayush,
+    image: llamaTalk,
     description: "A great website",
     tags: ["HTML", "SCSS", "JavaScript", "Codellama", "Ollama"].sort((a, b) =>
       a.localeCompare(b)
@@ -56,41 +63,41 @@ const projects = [
   {
     name: "WordSmith",
     link: "https://wordsmithy.netlify.app/",
-    image: Aayush,
+    image: wordSmith,
     description: "A great website",
     tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
     github: "https://github.com/soodaayush",
   },
   {
     name: "LeetCode",
-    link: "https://www.aayushsood.com/",
-    image: Aayush,
+    link: "https://github.com/soodaayush/leetcode",
+    image: leetCode,
     description: "A great website",
     tags: ["JavaScript", "Python", "C++"].sort((a, b) => a.localeCompare(b)),
-    github: "https://github.com/soodaayush",
+    github: "https://github.com/soodaayush/leetcode",
   },
   {
     name: "CoinDeno",
-    link: "https://www.aayushsood.com/",
-    image: Aayush,
+    link: "https://coindeno.netlify.app/",
+    image: coinDeno,
     description: "A great website",
     tags: ["React Native", "Expo", "Firebase", "JavaScript"].sort((a, b) =>
       a.localeCompare(b)
     ),
-    github: "https://github.com/soodaayush",
+    github: "https://github.com/soodaayush/coindeno",
   },
   {
     name: "Pac Man",
-    link: "https://www.aayushsood.com/",
-    image: Aayush,
+    link: "https://pac-man-wb.netlify.app/",
+    image: pacMan,
     description: "A great website",
     tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
-    github: "https://github.com/soodaayush",
+    github: "https://github.com/soodaayush/pac-man",
   },
   {
     name: "CoinDeno Web",
-    link: "https://www.aayushsood.com/",
-    image: Aayush,
+    link: "https://warbaddy.com/",
+    image: coinDenoWeb,
     description: "A great website",
     tags: [
       "React",
@@ -100,23 +107,23 @@ const projects = [
       "Tailwind CSS",
       "JavaScript",
     ].sort((a, b) => a.localeCompare(b)),
-    github: "https://github.com/soodaayush",
+    github: "https://github.com/soodaayush/coindeno-web",
   },
   {
     name: "Frontend Mentor Challenges",
-    link: "https://www.aayushsood.com/",
-    image: Aayush,
+    link: "https://challenges-wb.netlify.app/",
+    image: frontendMentorChallenges,
     description: "A great website",
     tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
-    github: "https://github.com/soodaayush",
+    github: "https://github.com/soodaayush/frontend-mentor-challenges",
   },
   {
     name: "LearnWithMe",
-    link: "https://www.aayushsood.com/",
-    image: Aayush,
+    link: "https://learningwithme.netlify.app/",
+    image: learnWithMe,
     description: "A great website",
     tags: ["HTML", "SCSS"].sort((a, b) => a.localeCompare(b)),
-    github: "https://github.com/soodaayush",
+    github: "https://github.com/soodaayush/learn-with-me",
   },
 ];
 
@@ -238,7 +245,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <Example />
+      {/* <Example /> */}
       <div className={styles.projectsContainer}>
         <h1 className={styles.sectionHeading}>Projects</h1>
         <div className={styles.projectList}>
