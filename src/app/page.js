@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "motion/react";
+
 import Image from "next/image";
 
 import styles from "./styles/page.module.css";
@@ -17,6 +21,7 @@ import learnWithMe from "./assets/projects/thumbnails/learn-with-me.png";
 import Project from "./components/project";
 import TechnicalSkill from "./components/techincalSkill";
 import Interest from "./components/interest";
+import Example from "./components/example";
 
 import { FaLaptop, FaCode, FaGamepad, FaGlobe } from "react-icons/fa";
 import { PiMathOperationsFill } from "react-icons/pi";
@@ -245,7 +250,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-      {/* <Example /> */}
       <div className={styles.projectsContainer}>
         <h1 className={styles.sectionHeading}>Projects</h1>
         <div className={styles.projectList}>

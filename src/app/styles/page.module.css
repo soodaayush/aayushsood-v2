@@ -3,13 +3,14 @@
   justify-content: start;
   align-items: center;
   flex-direction: column;
+  border: 1px solid red;
 }
 
 .welcomeContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0 20px 0;
+  padding: 20px;
   width: 100%;
 }
 
@@ -27,7 +28,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px 0 20px 0;
+  padding: 20px;
   width: 100%;
 }
 
@@ -44,7 +45,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px 0 20px 0;
+  padding: 20px;
   width: 100%;
 }
 

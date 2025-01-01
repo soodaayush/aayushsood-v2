@@ -3,13 +3,12 @@
   border-radius: 20px;
   margin-bottom: 16px;
   break-inside: avoid;
-  transition: 0.3s ease-in-out;
   text-align: justify;
 }
 
-.interestContainer:hover {
+/* .interestContainer:hover {
   box-shadow: 0 5px 15px #8892b0;
-}
+} */
 
 .interestTitle {
   display: flex;

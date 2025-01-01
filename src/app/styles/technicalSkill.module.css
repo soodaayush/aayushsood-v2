@@ -11,10 +11,6 @@
   transition: 0.3s ease-in-out;
 }
 
-.technicalSkillContainer:hover {
-  box-shadow: 0 5px 15px #8892b0;
-}
-
 .skillType {
   margin: 0;
 }

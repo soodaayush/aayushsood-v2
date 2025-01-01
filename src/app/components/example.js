@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "motion/react";
 
 export default function Example() {
@@ -7,7 +9,7 @@ export default function Example() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <h1>Motion Library Test</h1>
+      <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} />
     </motion.div>
   );
 }

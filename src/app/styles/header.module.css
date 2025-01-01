@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   border: 1px solid red;
+  padding: 20px;
 }
 
 .name {
@@ -31,4 +32,11 @@
 
 .svg {
   fill: #fff;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }

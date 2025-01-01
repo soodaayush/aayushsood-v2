@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "motion/react";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,17 +25,81 @@ export default function Header() {
         </Link>
       </div>
       <div className={styles.links}>
-        <Image
-          src={GitHub}
-          width={40}
-          height={40}
-          alt="GitHub"
-          className={styles.svg}
-        />
-        <Image src={LeetCode} width={40} height={40} alt="GitHub" />
-        <Image src={LinkedIn} width={40} height={40} alt="GitHub" />
-        <Image src={PDF} width={40} height={40} alt="GitHub" />
-        <Image src={YouTube} width={40} height={40} alt="GitHub" />
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          whileDrag={{ scale: 0.9, rotate: 10 }}
+          drag
+          className={styles.button}
+        >
+          <Image
+            src={GitHub}
+            width={40}
+            height={40}
+            alt="GitHub"
+            className={styles.svg}
+          />
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          whileDrag={{ scale: 0.9, rotate: 10 }}
+          drag
+          className={styles.button}
+        >
+          <Image
+            src={LeetCode}
+            width={40}
+            height={40}
+            alt="GitHub"
+            className={styles.svg}
+          />
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          whileDrag={{ scale: 0.9, rotate: 10 }}
+          drag
+          className={styles.button}
+        >
+          <Image
+            src={LinkedIn}
+            width={40}
+            height={40}
+            alt="GitHub"
+            className={styles.svg}
+          />
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          whileDrag={{ scale: 0.9, rotate: 10 }}
+          drag
+          className={styles.button}
+        >
+          <Image
+            src={PDF}
+            width={40}
+            height={40}
+            alt="GitHub"
+            className={styles.svg}
+          />
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          whileDrag={{ scale: 0.9, rotate: 10 }}
+          drag
+          className={styles.button}
+        >
+          <Image
+            src={YouTube}
+            width={40}
+            height={40}
+            alt="GitHub"
+            className={styles.svg}
+          />
+        </motion.button>
       </div>
     </div>
   );
