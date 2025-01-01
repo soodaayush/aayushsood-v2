@@ -8,7 +8,13 @@ export default function Project(props) {
     <div className={styles.projectContainer}>
       <h1 className={styles.projectName}>{props.name}</h1>
       <a href={props.link} target="_blank">
-        <Image src={props.image} width={250} height={150} alt={props.name} />
+        <Image
+          className={styles.projectThumbnail}
+          src={props.image}
+          width={250}
+          height={150}
+          alt={props.name}
+        />
       </a>
       <p className={styles.description}>{props.description}</p>
       <div className={styles.tagContainer}>

@@ -21,6 +21,7 @@
 .sectionHeading {
   font-size: 50px;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .technicalSkillsContainer {
@@ -84,5 +85,14 @@
 @media (max-width: 500px) {
   .interestList {
     column-count: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .welcomeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
