@@ -8,9 +8,9 @@ export default function TechnicalSkill(props) {
   return (
     <motion.div
       whileHover={{
-        scale: 1.1, // Slightly enlarge
-        backgroundColor: "#2d3748", // Change background color (orange)
-        boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)", // Add shadow
+        scale: 1.1,
+        backgroundColor: "#2d3748",
+        boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
       }}
       className={styles.technicalSkillContainer}
     >

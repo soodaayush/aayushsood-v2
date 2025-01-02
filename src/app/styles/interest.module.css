@@ -4,17 +4,16 @@
   margin-bottom: 16px;
   break-inside: avoid;
   text-align: justify;
+  overflow: visible;
+  
 }
-
-/* .interestContainer:hover {
-  box-shadow: 0 5px 15px #8892b0;
-} */
 
 .interestTitle {
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.15s ease-in-out;
+  overflow: visible;
 }
 
 .interestContainer:hover .interestTitle {

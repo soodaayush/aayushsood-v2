@@ -11,6 +11,7 @@ import Aayush from "./assets/welcome/aayush.jpg";
 import eightBit from "./assets/projects/thumbnails/8-bit-computer.webp";
 import sixtyFiveZeroTwo from "./assets/projects/thumbnails/6502.webp";
 import llamaTalk from "./assets/projects/thumbnails/llamatalk.png";
+import arduinoYogaProject from "./assets/projects/thumbnails/arduino-yoga-project.webp";
 import wordSmith from "./assets/projects/thumbnails/wordsmith.png";
 import leetCode from "./assets/projects/thumbnails/leetcode.png";
 import coinDeno from "./assets/projects/thumbnails/coindeno.png";
@@ -60,7 +61,7 @@ const projects = [
   {
     name: "Arduino-based School Yoga Project",
     link: "https://www.aayushsood.com/",
-    image: Aayush,
+    image: arduinoYogaProject,
     description: "A great website",
     tags: ["Arduino", "C++"].sort((a, b) => a.localeCompare(b)),
     github: "https://github.com/soodaayush",
@@ -234,6 +235,26 @@ export default function Home() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [cursorVisible, setCursorVisible] = useState(true);
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextProject = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
+  };
+
+  const prevProject = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Determine the projects to show (3 at a time, with a 'sticking-out' 4th)
+  const visibleProjects = projects.slice(currentIndex, currentIndex + 3);
+
+  // If we're at the last few projects, adjust to show a full set of 3
+  if (visibleProjects.length < 3) {
+    visibleProjects.push(...projects.slice(0, 3 - visibleProjects.length));
+  }
+
   useEffect(() => {
     let typingTimeout;
 
@@ -331,18 +352,26 @@ export default function Home() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className={styles.projectList}
         >
-          {projects.map((project, index) => (
-            <Project
-              key={index}
-              name={project.name}
-              link={project.link}
-              image={project.image}
-              description={project.description}
-              tags={project.tags}
-              github={project.github}
-            />
-          ))}
+          {projects
+            .slice(currentIndex, currentIndex + 4)
+            .map((project, index) => (
+              <motion.div
+                key={project.name}
+                className={`${styles.projectCard} ${
+                  index === 3 ? styles.stickOut : ""
+                }`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Project {...project} />
+              </motion.div>
+            ))}
         </motion.div>
+        <div className={styles.projectToggles}>
+          <button onClick={prevProject}>← Prev</button>
+          <button onClick={nextProject}>Next →</button>
+        </div>
       </div>
       <div className={styles.interestsContainer}>
         <h1 className={styles.sectionHeading}>Interests</h1>

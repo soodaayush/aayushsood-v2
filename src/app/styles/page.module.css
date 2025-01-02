@@ -65,7 +65,14 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  flex-wrap: wrap;
+}
+
+.projectToggles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .interestsContainer {
@@ -76,6 +83,7 @@
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .interestList {
@@ -84,6 +92,7 @@
   padding: 16px;
   width: 100%;
   box-sizing: border-box;
+  overflow: visible;
 }
 
 @media (max-width: 875px) {
@@ -105,4 +114,13 @@
     align-items: center;
     flex-direction: column;
   }
+}
+
+.projectCard {
+  flex: 0 0 30%; /* Ensure each project takes up around 30% of the container */
+  transition: transform 0.3s ease-in-out;
+}
+
+.projectCard.stickOut {
+  transform: scale(1.1) translateX(10px); /* Emphasizes the last card */
 }
