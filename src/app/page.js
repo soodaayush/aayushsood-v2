@@ -229,13 +229,25 @@ export default function Home() {
           Hi, I am Aayush <br /> And I am a fullstack developer
         </h1>
         <div>
-          <Image
-            className={styles.image}
-            src={Aayush}
-            height={250}
-            width={250}
-            alt="Aayush"
-          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }} // Start with opacity 0 and slight blur
+            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} // Fade in and remove blur while zooming in
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 0 20px rgba(255, 255, 255, 0.7)", // Soft glow effect
+              transition: { type: "spring", stiffness: 300, damping: 15 },
+            }}
+            className={styles.profileImageContainer}
+          >
+            <Image
+              className={styles.image}
+              src={Aayush}
+              height={250}
+              width={250}
+              alt="Aayush"
+            />
+          </motion.div>
         </div>
       </div>
       <div className={styles.technicalSkillsContainer}>
@@ -252,7 +264,12 @@ export default function Home() {
       </div>
       <div className={styles.projectsContainer}>
         <h1 className={styles.sectionHeading}>Projects</h1>
-        <div className={styles.projectList}>
+        <motion.div
+          initial={{ opacity: 0, y: 50, visibility: "hidden" }} // Initially invisible
+          whileInView={{ opacity: 1, y: 0, visibility: "visible" }} // Make visible when in view
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className={styles.projectList}
+        >
           {projects.map((project, index) => (
             <Project
               key={index}
@@ -264,7 +281,7 @@ export default function Home() {
               github={project.github}
             />
           ))}
-        </div>
+        </motion.div>
       </div>
       <div className={styles.interestsContainer}>
         <h1 className={styles.sectionHeading}>Interests</h1>

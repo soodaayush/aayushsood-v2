@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "motion/react";
+
 import Image from "next/image";
 import styles from "../styles/project.module.css";
 
@@ -5,7 +9,7 @@ import GitHub from "../assets/header-icons/github.svg";
 
 export default function Project(props) {
   return (
-    <div className={styles.projectContainer}>
+    <motion.div className={styles.projectContainer}>
       <h1 className={styles.projectName}>{props.name}</h1>
       <a href={props.link} target="_blank">
         <Image
@@ -36,6 +40,6 @@ export default function Project(props) {
           GitHub
         </button>
       </a>
-    </div>
+    </motion.div>
   );
 }

@@ -18,6 +18,11 @@
   border-radius: 50%;
 }
 
+.profileImageContainer {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
 .sectionHeading {
   font-size: 50px;
   padding-bottom: 20px;
@@ -88,7 +93,7 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 800px) {
   .welcomeContainer {
     display: flex;
     justify-content: center;
