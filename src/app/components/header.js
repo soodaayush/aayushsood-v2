@@ -32,13 +32,15 @@ export default function Header() {
           drag
           className={styles.button}
         >
-          <Image
-            src={GitHub}
-            width={40}
-            height={40}
-            alt="GitHub"
-            className={styles.svg}
-          />
+          <a href="https://github.com/soodaayush" target="_blank">
+            <Image
+              src={GitHub}
+              width={40}
+              height={40}
+              alt="GitHub"
+              className={styles.svg}
+            />
+          </a>
         </motion.button>
         <motion.button
           whileHover={{ scale: 1.1 }}
@@ -47,13 +49,15 @@ export default function Header() {
           drag
           className={styles.button}
         >
-          <Image
-            src={LeetCode}
-            width={40}
-            height={40}
-            alt="GitHub"
-            className={styles.svg}
-          />
+          <a href="https://leetcode.com/u/soodaayush/" target="_blank">
+            <Image
+              src={LeetCode}
+              width={40}
+              height={40}
+              alt="LeetCode"
+              className={styles.svg}
+            />
+          </a>
         </motion.button>
         <motion.button
           whileHover={{ scale: 1.1 }}
@@ -62,13 +66,15 @@ export default function Header() {
           drag
           className={styles.button}
         >
-          <Image
-            src={LinkedIn}
-            width={40}
-            height={40}
-            alt="GitHub"
-            className={styles.svg}
-          />
+          <a href="https://www.linkedin.com/in/soodaayush/" target="_blank">
+            <Image
+              src={LinkedIn}
+              width={40}
+              height={40}
+              alt="GitHub"
+              className={styles.svg}
+            />
+          </a>
         </motion.button>
         <motion.button
           whileHover={{ scale: 1.1 }}
@@ -92,13 +98,15 @@ export default function Header() {
           drag
           className={styles.button}
         >
-          <Image
-            src={YouTube}
-            width={40}
-            height={40}
-            alt="GitHub"
-            className={styles.svg}
-          />
+          <a href="https://www.youtube.com/@soodaayush" target="_blank">
+            <Image
+              src={YouTube}
+              width={40}
+              height={40}
+              alt="GitHub"
+              className={styles.svg}
+            />
+          </a>
         </motion.button>
       </div>
     </div>
