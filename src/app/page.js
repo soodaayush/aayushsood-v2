@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { useState, useEffect } from "react";
 
 import Image from "next/image";
 
@@ -21,7 +22,6 @@ import learnWithMe from "./assets/projects/thumbnails/learn-with-me.png";
 import Project from "./components/project";
 import TechnicalSkill from "./components/techincalSkill";
 import Interest from "./components/interest";
-import Example from "./components/example";
 
 import { FaLaptop, FaCode, FaGamepad, FaGlobe } from "react-icons/fa";
 import { PiMathOperationsFill } from "react-icons/pi";
@@ -222,20 +222,81 @@ const interests = [
 ];
 
 export default function Home() {
+  const roles = [
+    "fullstack developer!",
+    "student!",
+    "creator!",
+    "entrepreneur!",
+  ];
+
+  const [text, setText] = useState("");
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [cursorVisible, setCursorVisible] = useState(true);
+
+  useEffect(() => {
+    let typingTimeout;
+
+    const updateText = () => {
+      const fullText = `Hi, I am Aayush and I am a `;
+      const currentRole = roles[roleIndex];
+
+      const fullRoleText = fullText + currentRole;
+      const displayedRole = text.slice(fullText.length);
+
+      if (!isDeleting) {
+        setText((prev) => {
+          const nextText = fullRoleText.slice(0, prev.length + 1);
+          if (nextText === fullRoleText) {
+            setTimeout(() => setIsDeleting(true), 1000);
+          }
+          return nextText;
+        });
+        typingTimeout = setTimeout(updateText, 50);
+      } else {
+        if (displayedRole.length > 0) {
+          setText((prev) => prev.slice(0, -1));
+          typingTimeout = setTimeout(updateText, 40);
+        } else {
+          setIsDeleting(false);
+          setRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+        }
+      }
+    };
+
+    typingTimeout = setTimeout(updateText, 100);
+
+    return () => clearTimeout(typingTimeout);
+  }, [text, isDeleting, roleIndex, roles]);
+
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setCursorVisible((prev) => !prev);
+    }, 600);
+
+    return () => clearInterval(cursorInterval);
+  }, []);
+
   return (
     <div className={styles.homeContainer}>
       <div className={styles.welcomeContainer}>
-        <h1>
-          Hi, I am Aayush <br /> And I am a fullstack developer
-        </h1>
+        <motion.div
+          className={styles.welcomeText}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          {text}
+          {cursorVisible && <span>|</span>}
+        </motion.div>
         <div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }} // Start with opacity 0 and slight blur
-            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} // Fade in and remove blur while zooming in
+            initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
+            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             whileHover={{
               scale: 1.05,
-              boxShadow: "0 0 20px rgba(255, 255, 255, 0.7)", // Soft glow effect
+              boxShadow: "0 0 20px rgba(255, 255, 255, 0.7)",
               transition: { type: "spring", stiffness: 300, damping: 15 },
             }}
             className={styles.profileImageContainer}
@@ -265,8 +326,8 @@ export default function Home() {
       <div className={styles.projectsContainer}>
         <h1 className={styles.sectionHeading}>Projects</h1>
         <motion.div
-          initial={{ opacity: 0, y: 50, visibility: "hidden" }} // Initially invisible
-          whileInView={{ opacity: 1, y: 0, visibility: "visible" }} // Make visible when in view
+          initial={{ opacity: 0, y: 50, visibility: "hidden" }}
+          whileInView={{ opacity: 1, y: 0, visibility: "visible" }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className={styles.projectList}
         >
