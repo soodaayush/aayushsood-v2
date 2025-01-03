@@ -79,6 +79,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
 }
 
 @media (max-width: 450px) {
@@ -92,12 +93,6 @@
   .projectContainer {
     width: 350px;
     height: 450px;
-  }
-}
-
-@media (max-width: 960px) {
-  .projectContainer {
-    height: auto;
   }
 }
 

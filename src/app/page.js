@@ -252,7 +252,7 @@ export default function Home() {
   useEffect(() => {
     const updateVisibleProjects = () => {
       const width = window.innerWidth;
-      if (width <= 700) {
+      if (width <= 720) {
         setNumVisibleProjects(1);
       } else if (width <= 1080) {
         setNumVisibleProjects(2);
