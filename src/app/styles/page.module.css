@@ -64,7 +64,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* flex-wrap: wrap; */
 }
 
 .projectToggles {
@@ -73,6 +72,20 @@
   align-items: center;
   margin-top: 20px;
   width: 100%;
+}
+
+.projectToggle {
+  font-family: "Wotfard", sans-serif;
+  background: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+}
+
+.projectToggle:hover {
+  opacity: 0.75;
 }
 
 .interestsContainer {
@@ -117,10 +130,10 @@
 }
 
 .projectCard {
-  flex: 0 0 30%; /* Ensure each project takes up around 30% of the container */
+  flex: 0 0 30%;
   transition: transform 0.3s ease-in-out;
 }
 
 .projectCard.stickOut {
-  transform: scale(1.1) translateX(10px); /* Emphasizes the last card */
+  transform: scale(1.1) translateX(10px);
 }

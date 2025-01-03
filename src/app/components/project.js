@@ -30,14 +30,14 @@ export default function Project(props) {
       </div>
       <p className={styles.description}>{props.description}</p>
       <div className={styles.links}>
-        <div>{props.year}</div>
+        <div className={styles.year}>{props.year}</div>
         <div>
           <a href={props.github} className={styles.link} target="_blank">
             <Image
               className={styles.githubLogo}
               src={GitHub}
-              height={30}
-              width={30}
+              height={25}
+              width={25}
               alt="GitHub"
             />
           </a>
@@ -46,8 +46,8 @@ export default function Project(props) {
               <Image
                 className={styles.githubLogo}
                 src={Link}
-                height={30}
-                width={30}
+                height={25}
+                width={25}
                 alt="Website"
               />
             </a>

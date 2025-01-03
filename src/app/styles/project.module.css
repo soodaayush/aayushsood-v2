@@ -38,7 +38,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 10px 0;
+  margin-bottom: 5px;
 }
 
 .tag {
@@ -54,6 +54,10 @@
 
 .tag:hover {
   opacity: 0.75;
+}
+
+.year {
+  font-weight: bold;
 }
 
 .link {

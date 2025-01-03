@@ -237,55 +237,36 @@ export default function Home() {
   const [cursorVisible, setCursorVisible] = useState(true);
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [numVisibleProjects, setNumVisibleProjects] = useState(3); // Default to 3 projects visible
+  const [numVisibleProjects, setNumVisibleProjects] = useState(3);
 
-  // Function to go to the next project
   const nextProject = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
   };
 
-  // Function to go to the previous project
   const prevProject = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? projects.length - 1 : prevIndex - 1
     );
   };
 
-  // Function to update number of visible projects based on screen width
-  const updateVisibleProjects = () => {
-    const width = window.innerWidth;
-    if (width <= 480) {
-      setNumVisibleProjects(1); // Show 1 project for small screens
-    } else if (width <= 768) {
-      setNumVisibleProjects(2); // Show 2 projects for medium screens
-    } else {
-      setNumVisibleProjects(3); // Show 3 projects for larger screens
-    }
-  };
-
-  // Update the number of visible projects on screen resize
   useEffect(() => {
-    // Handle window resizing
     const updateVisibleProjects = () => {
       const width = window.innerWidth;
-      if (width <= 480) {
-        setNumVisibleProjects(1); // Show 1 project for small screens
+      if (width <= 700) {
+        setNumVisibleProjects(1);
       } else if (width <= 1080) {
-        setNumVisibleProjects(2); // Show 2 projects for medium screens
-      } else if (width <= 1400) {
-        setNumVisibleProjects(3); // Show 3 projects for larger screens
+        setNumVisibleProjects(2);
+      } else if (width <= 1450) {
+        setNumVisibleProjects(3);
       } else {
-        setNumVisibleProjects(4); // Show 4 projects for large screens
+        setNumVisibleProjects(4);
       }
     };
 
-    // Initial check for the number of visible projects
     updateVisibleProjects();
 
-    // Add resize event listener to handle window resizing
     window.addEventListener("resize", updateVisibleProjects);
 
-    // Handle text typing effect
     let typingTimeout;
     const updateText = () => {
       const fullText = `Hi, I am Aayush and I am a `;
@@ -316,12 +297,10 @@ export default function Home() {
 
     typingTimeout = setTimeout(updateText, 100);
 
-    // Handle cursor blinking effect
     const cursorInterval = setInterval(() => {
       setCursorVisible((prev) => !prev);
     }, 600);
 
-    // Cleanup function to remove event listeners and clear timeouts
     return () => {
       window.removeEventListener("resize", updateVisibleProjects);
       clearTimeout(typingTimeout);
@@ -404,8 +383,12 @@ export default function Home() {
           ))}
         </motion.div>
         <div className={styles.projectToggles}>
-          <button onClick={prevProject}>← Prev</button>
-          <button onClick={nextProject}>Next →</button>
+          <button className={styles.projectToggle} onClick={prevProject}>
+            ← Prev
+          </button>
+          <button className={styles.projectToggle} onClick={nextProject}>
+            Next →
+          </button>
         </div>
       </div>
       <div className={styles.interestsContainer}>
