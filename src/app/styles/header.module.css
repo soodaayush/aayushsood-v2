@@ -2,15 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid red;
   padding: 5px 20px;
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(10, 18, 32, 0.08);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(144, 152, 166, 0.85);
   z-index: 1;
 }
 
@@ -40,6 +39,7 @@
 
 .svg {
   fill: #fff;
+  cursor: pointer;
 }
 
 .button {
