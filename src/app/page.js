@@ -8,6 +8,7 @@ import Image from "next/image";
 import styles from "./styles/page.module.css";
 
 import Aayush from "./assets/welcome/aayush.jpg";
+import BVHMobileApp from "./assets/projects/thumbnails/bvh-mobile-app.png";
 import eightBit from "./assets/projects/thumbnails/8-bit-computer.webp";
 import sixtyFiveZeroTwo from "./assets/projects/thumbnails/6502.webp";
 import llamaTalk from "./assets/projects/thumbnails/llamatalk.png";
@@ -30,6 +31,14 @@ import { MdScience } from "react-icons/md";
 import { MdOutlineSportsMartialArts } from "react-icons/md";
 
 const projects = [
+  {
+    name: "Bay View High School Mobile App",
+    image: BVHMobileApp,
+    description: "A great website",
+    tags: ["React Native", "Expo"].sort((a, b) => a.localeCompare(b)),
+    year: 2024,
+    github: "https://github.com/soodaayush/BVHApp",
+  },
   {
     name: "Ben Eater's 8-Bit Project",
     image: eightBit,
