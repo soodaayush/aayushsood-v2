@@ -1,10 +1,10 @@
 .projectContainer {
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
   padding: 20px;
-  text-align: center;
+  text-align: left;
   border-radius: 20px;
   transition: 0.3s ease-in-out;
 }
@@ -14,66 +14,67 @@
 }
 
 .projectName {
-  margin-top: 0;
   color: #617bff;
+  margin-bottom: 0;
+}
+
+.imageContainer {
+  width: 100%;
 }
 
 .projectThumbnail {
   width: 100%;
+  border-radius: 5px;
 }
 
 .description {
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 
 .tagContainer {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 10px;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .tag {
-  border-radius: 10px;
+  border-radius: 5px;
   font-family: "Wotfard", sans-serif;
   border: none;
   outline: none;
   transition: 0.15s ease-in-out;
-  padding: 5px;
   background: rgba(45, 212, 191, 0.1);
   color: #64ffda;
-  padding: 10px;
+  padding: 5px;
 }
 
 .tag:hover {
   opacity: 0.75;
 }
 
-.githubButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 10px;
-  font-family: "Wotfard", sans-serif;
-  border: none;
-  outline: none;
+.link {
   transition: 0.15s ease-in-out;
-  padding: 10px;
-  cursor: pointer;
-  background: #1e2a35;
-  color: #fff;
+  display: inline-block;
+  fill: #fff;
 }
 
-.githubButton:hover {
+.link:not(:last-child) {
+  margin-right: 10px;
+}
+
+.link:hover {
   opacity: 0.75;
 }
 
-.githubLogo {
-  margin-right: 10px;
+.links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media (max-width: 450px) {
@@ -85,8 +86,8 @@
 
 @media (min-width: 450px) {
   .projectContainer {
-    width: 450px;
-    height: 540px;
+    width: 350px;
+    height: 450px;
   }
 }
 

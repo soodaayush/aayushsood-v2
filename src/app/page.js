@@ -32,103 +32,104 @@ import { MdOutlineSportsMartialArts } from "react-icons/md";
 const projects = [
   {
     name: "Ben Eater's 8-Bit Project",
-    link: "https://www.aayushsood.com/",
     image: eightBit,
     description: "A great website",
     tags: ["Hardware"].sort((a, b) => a.localeCompare(b)),
+    year: 2024,
     github: "https://github.com/soodaayush",
   },
   {
     name: "Ben Eater's 6502 Project",
-    link: "https://www.aayushsood.com/",
     image: sixtyFiveZeroTwo,
     description: "A great website",
     tags: ["Arduino", "Python", "Assembly", "C++"].sort((a, b) =>
       a.localeCompare(b)
     ),
-    github: "https://github.com/soodaayush",
+    year: 2024,
+    github: "https://github.com/soodaayush/6502-project",
   },
   {
     name: "LlamaTalk",
-    link: "https://www.aayushsood.com/",
     image: llamaTalk,
     description: "A great website",
-    tags: ["HTML", "SCSS", "JavaScript", "Codellama", "Ollama"].sort((a, b) =>
+    tags: ["HTML", "SCSS", "JavaScript", "Codellama"].sort((a, b) =>
       a.localeCompare(b)
     ),
-    github: "https://github.com/soodaayush",
+    year: 2024,
+    github: "https://github.com/soodaayush/llamatalk",
   },
   {
     name: "Arduino-based School Yoga Project",
-    link: "https://www.aayushsood.com/",
     image: arduinoYogaProject,
     description: "A great website",
     tags: ["Arduino", "C++"].sort((a, b) => a.localeCompare(b)),
-    github: "https://github.com/soodaayush",
+    year: 2024,
+    github: "https://github.com/soodaayush/arduino-school-yoga-project",
   },
   {
     name: "WordSmith",
-    link: "https://wordsmithy.netlify.app/",
+    website: "https://wordsmithy.netlify.app/",
     image: wordSmith,
     description: "A great website",
     tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
-    github: "https://github.com/soodaayush",
+    year: 2024,
+    github: "https://github.com/soodaayush/wordsmith",
   },
   {
     name: "LeetCode",
-    link: "https://github.com/soodaayush/leetcode",
     image: leetCode,
     description: "A great website",
     tags: ["JavaScript", "Python", "C++"].sort((a, b) => a.localeCompare(b)),
+    year: 2022,
     github: "https://github.com/soodaayush/leetcode",
   },
   {
     name: "CoinDeno",
-    link: "https://coindeno.netlify.app/",
+    website: "https://coindeno.netlify.app/",
     image: coinDeno,
     description: "A great website",
     tags: ["React Native", "Expo", "Firebase", "JavaScript"].sort((a, b) =>
       a.localeCompare(b)
     ),
+    year: 2022,
     github: "https://github.com/soodaayush/coindeno",
   },
   {
     name: "Pac Man",
-    link: "https://pac-man-wb.netlify.app/",
+    website: "https://pac-man-wb.netlify.app/",
     image: pacMan,
     description: "A great website",
     tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
+    year: 2021,
     github: "https://github.com/soodaayush/pac-man",
   },
   {
     name: "CoinDeno Web",
-    link: "https://warbaddy.com/",
+    website: "https://warbaddy.com/",
     image: coinDenoWeb,
     description: "A great website",
-    tags: [
-      "React",
-      "Redux",
-      "Vite",
-      "Firebase",
-      "Tailwind CSS",
-      "JavaScript",
-    ].sort((a, b) => a.localeCompare(b)),
+    tags: ["React", "Redux", "Firebase", "Tailwind CSS"].sort((a, b) =>
+      a.localeCompare(b)
+    ),
+    year: 2021,
     github: "https://github.com/soodaayush/coindeno-web",
   },
   {
     name: "Frontend Mentor Challenges",
-    link: "https://challenges-wb.netlify.app/",
+    website: "https://challenges-wb.netlify.app/",
     image: frontendMentorChallenges,
     description: "A great website",
     tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
+    year: 2020,
     github: "https://github.com/soodaayush/frontend-mentor-challenges",
   },
   {
     name: "LearnWithMe",
-    link: "https://learningwithme.netlify.app/",
+    website: "https://learningwithme.netlify.app/",
     image: learnWithMe,
     description: "A great website",
     tags: ["HTML", "SCSS"].sort((a, b) => a.localeCompare(b)),
+    year: 2020,
     github: "https://github.com/soodaayush/learn-with-me",
   },
 ];
@@ -236,28 +237,56 @@ export default function Home() {
   const [cursorVisible, setCursorVisible] = useState(true);
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [numVisibleProjects, setNumVisibleProjects] = useState(3); // Default to 3 projects visible
 
+  // Function to go to the next project
   const nextProject = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
   };
 
+  // Function to go to the previous project
   const prevProject = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? projects.length - 1 : prevIndex - 1
     );
   };
 
-  // Determine the projects to show (3 at a time, with a 'sticking-out' 4th)
-  const visibleProjects = projects.slice(currentIndex, currentIndex + 3);
+  // Function to update number of visible projects based on screen width
+  const updateVisibleProjects = () => {
+    const width = window.innerWidth;
+    if (width <= 480) {
+      setNumVisibleProjects(1); // Show 1 project for small screens
+    } else if (width <= 768) {
+      setNumVisibleProjects(2); // Show 2 projects for medium screens
+    } else {
+      setNumVisibleProjects(3); // Show 3 projects for larger screens
+    }
+  };
 
-  // If we're at the last few projects, adjust to show a full set of 3
-  if (visibleProjects.length < 3) {
-    visibleProjects.push(...projects.slice(0, 3 - visibleProjects.length));
-  }
-
+  // Update the number of visible projects on screen resize
   useEffect(() => {
-    let typingTimeout;
+    // Handle window resizing
+    const updateVisibleProjects = () => {
+      const width = window.innerWidth;
+      if (width <= 480) {
+        setNumVisibleProjects(1); // Show 1 project for small screens
+      } else if (width <= 1080) {
+        setNumVisibleProjects(2); // Show 2 projects for medium screens
+      } else if (width <= 1400) {
+        setNumVisibleProjects(3); // Show 3 projects for larger screens
+      } else {
+        setNumVisibleProjects(4); // Show 4 projects for large screens
+      }
+    };
 
+    // Initial check for the number of visible projects
+    updateVisibleProjects();
+
+    // Add resize event listener to handle window resizing
+    window.addEventListener("resize", updateVisibleProjects);
+
+    // Handle text typing effect
+    let typingTimeout;
     const updateText = () => {
       const fullText = `Hi, I am Aayush and I am a `;
       const currentRole = roles[roleIndex];
@@ -287,16 +316,23 @@ export default function Home() {
 
     typingTimeout = setTimeout(updateText, 100);
 
-    return () => clearTimeout(typingTimeout);
-  }, [text, isDeleting, roleIndex, roles]);
-
-  useEffect(() => {
+    // Handle cursor blinking effect
     const cursorInterval = setInterval(() => {
       setCursorVisible((prev) => !prev);
     }, 600);
 
-    return () => clearInterval(cursorInterval);
-  }, []);
+    // Cleanup function to remove event listeners and clear timeouts
+    return () => {
+      window.removeEventListener("resize", updateVisibleProjects);
+      clearTimeout(typingTimeout);
+      clearInterval(cursorInterval);
+    };
+  }, [text, isDeleting, roleIndex, roles]);
+
+  const visibleProjects = [];
+  for (let i = 0; i < numVisibleProjects; i++) {
+    visibleProjects.push(projects[(currentIndex + i) % projects.length]);
+  }
 
   return (
     <div className={styles.homeContainer}>
@@ -352,21 +388,20 @@ export default function Home() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className={styles.projectList}
         >
-          {projects
-            .slice(currentIndex, currentIndex + 4)
-            .map((project, index) => (
-              <motion.div
-                key={project.name}
-                className={`${styles.projectCard} ${
-                  index === 3 ? styles.stickOut : ""
-                }`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <Project {...project} />
-              </motion.div>
-            ))}
+          {visibleProjects.map((project, index) => (
+            <motion.div
+              key={project.name}
+              className={`${styles.projectCard} ${
+                index === 2 ? styles.stickOut : ""
+              }`}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Project {...project} />
+            </motion.div>
+          ))}
         </motion.div>
         <div className={styles.projectToggles}>
           <button onClick={prevProject}>← Prev</button>

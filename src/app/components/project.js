@@ -6,12 +6,12 @@ import Image from "next/image";
 import styles from "../styles/project.module.css";
 
 import GitHub from "../assets/header-icons/github.svg";
+import Link from "../assets/projects/link.svg";
 
 export default function Project(props) {
   return (
     <motion.div className={styles.projectContainer}>
-      <h1 className={styles.projectName}>{props.name}</h1>
-      <a href={props.link} target="_blank">
+      <a href={props.link} className={styles.imageContainer} target="_blank">
         <Image
           className={styles.projectThumbnail}
           src={props.image}
@@ -20,7 +20,7 @@ export default function Project(props) {
           alt={props.name}
         />
       </a>
-      <p className={styles.description}>{props.description}</p>
+      <h2 className={styles.projectName}>{props.name}</h2>
       <div className={styles.tagContainer}>
         {props.tags.map((tag, index) => (
           <button className={styles.tag} key={index}>
@@ -28,18 +28,32 @@ export default function Project(props) {
           </button>
         ))}
       </div>
-      <a href={props.github} target="_blank">
-        <button className={styles.githubButton}>
-          <Image
-            className={styles.githubLogo}
-            src={GitHub}
-            height={30}
-            width={30}
-            alt="GitHub"
-          />
-          GitHub
-        </button>
-      </a>
+      <p className={styles.description}>{props.description}</p>
+      <div className={styles.links}>
+        <div>{props.year}</div>
+        <div>
+          <a href={props.github} className={styles.link} target="_blank">
+            <Image
+              className={styles.githubLogo}
+              src={GitHub}
+              height={30}
+              width={30}
+              alt="GitHub"
+            />
+          </a>
+          {props.website && (
+            <a href={props.website} className={styles.link} target="_blank">
+              <Image
+                className={styles.githubLogo}
+                src={Link}
+                height={30}
+                width={30}
+                alt="Website"
+              />
+            </a>
+          )}
+        </div>
+      </div>
     </motion.div>
   );
 }
