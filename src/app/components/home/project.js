@@ -3,10 +3,10 @@
 import { motion } from "motion/react";
 
 import Image from "next/image";
-import styles from "../styles/project.module.css";
+import styles from "../../styles/home/project.module.css";
 
-import GitHub from "../assets/header-icons/github.svg";
-import Link from "../assets/projects/link.svg";
+import GitHub from "../../assets/header-icons/github.svg";
+import Link from "../../assets/projects/link.svg";
 
 export default function Project(props) {
   return (

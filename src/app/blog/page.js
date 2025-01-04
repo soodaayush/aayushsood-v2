@@ -1,5 +1,4 @@
-import Image from "next/image";
-import styles from "../styles/blog.module.css";
+import styles from "../styles/blog/blog.module.css";
 
 export default function Blog() {
   return (

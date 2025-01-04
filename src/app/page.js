@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 import Image from "next/image";
 
-import styles from "./styles/page.module.css";
+import styles from "./styles/home/page.module.css";
 
 import Aayush from "./assets/welcome/aayush.jpg";
 import BVHMobileApp from "./assets/projects/thumbnails/bvh-mobile-app.png";
@@ -21,11 +21,9 @@ import coinDenoWeb from "./assets/projects/thumbnails/coindeno-web.png";
 import frontendMentorChallenges from "./assets/projects/thumbnails/frontend-mentor-challenges.png";
 import learnWithMe from "./assets/projects/thumbnails/learn-with-me.png";
 
-import wave from "./assets/welcome/wave.svg";
-
-import Project from "./components/project";
-import TechnicalSkill from "./components/techincalSkill";
-import Interest from "./components/interest";
+import Project from "./components/home/project";
+import TechnicalSkill from "./components/home/techincalSkill";
+import Interest from "./components/home/interest";
 
 import { FaLaptop, FaCode, FaGamepad, FaGlobe } from "react-icons/fa";
 import { PiMathOperationsFill } from "react-icons/pi";

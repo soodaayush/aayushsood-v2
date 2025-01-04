@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 
-import styles from "../styles/technicalSkill.module.css";
+import styles from "../../styles/home/technicalSkill.module.css";
 
 export default function TechnicalSkill(props) {
   return (

@@ -28,7 +28,7 @@
 }
 
 .title {
-  color: #fff;
+  color: #f8fafc;
   margin-right: 20px;
   transition: 0.15s ease-in-out;
 }
@@ -45,7 +45,7 @@
 }
 
 .svg {
-  fill: #fff;
+  fill: #f8fafc;
   cursor: pointer;
 }
 

@@ -63,7 +63,7 @@
 .link {
   transition: 0.15s ease-in-out;
   display: inline-block;
-  fill: #fff;
+  fill: #f8fafc;
 }
 
 .link:not(:last-child) {

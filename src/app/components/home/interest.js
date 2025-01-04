@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 
-import styles from "../styles/interest.module.css";
+import styles from "../../styles/home/interest.module.css";
 
 export default function Interest(props) {
   return (

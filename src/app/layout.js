@@ -1,7 +1,7 @@
-import "./styles/globals.css";
+import "./styles/global/globals.css";
 
-import Header from "./components/header";
-import Footer from "./components/footer";
+import Header from "./components/global/header";
+import Footer from "./components/global/footer";
 
 export const metadata = {
   title: "Aayush Sood",

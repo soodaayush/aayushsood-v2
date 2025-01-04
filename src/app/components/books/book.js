@@ -1,9 +1,13 @@
+"use client";
+
+import { motion } from "motion/react";
 import Image from "next/image";
-import styles from "../styles/book.module.css";
+
+import styles from "../../styles/books/book.module.css";
 
 export default function Book(props) {
   return (
-    <div className={styles.bookContainer}>
+    <motion.div className={styles.bookContainer}>
       <Image
         className={styles.image}
         src={props.cover}
@@ -17,6 +21,6 @@ export default function Book(props) {
       <a className={styles.link} href={props.authorLink} target="_blank">
         <label className={styles.bookAuthor}>{props.author}</label>
       </a>
-    </div>
+    </motion.div>
   );
 }

@@ -1,9 +1,9 @@
 @font-face {
   font-family: "Wotfard";
   font-weight: 400;
-  src: url("../assets/fonts/wotfard-regular-webfont.woff2") format("woff2"),
-    url("../assets/fonts/wotfard-regular-webfont.ttf") format("ttf"),
-    url("../assets/fonts/wotfard-regular-webfont.eot") format("eot");
+  src: url("../../assets/fonts/wotfard-regular-webfont.woff2") format("woff2"),
+    url("../../assets/fonts/wotfard-regular-webfont.ttf") format("ttf"),
+    url("../../assets/fonts/wotfard-regular-webfont.eot") format("eot");
   font-display: swap;
 }
 
@@ -26,7 +26,7 @@ html {
 body {
   margin: 0;
   background: #090e1a;
-  color: #fff;
+  color: #f8fafc;
 }
 
 a {

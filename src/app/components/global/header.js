@@ -6,14 +6,13 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "../styles/header.module.css";
-
-import GitHub from "../assets/header-icons/github.svg";
-import LeetCode from "../assets/header-icons/leetcode.svg";
-import LinkedIn from "../assets/header-icons/linkedin.svg";
-import PDF from "../assets/header-icons/pdf.svg";
-import YouTube from "../assets/header-icons/youtube.svg";
-import menu from "../assets/header-icons/menu.svg";
+import styles from "../../styles/global/header.module.css";
+import GitHub from "../../assets/header-icons/github.svg";
+import LeetCode from "../../assets/header-icons/leetcode.svg";
+import LinkedIn from "../../assets/header-icons/linkedin.svg";
+import PDF from "../../assets/header-icons/pdf.svg";
+import YouTube from "../../assets/header-icons/youtube.svg";
+import menu from "../../assets/header-icons/menu.svg";
 
 export default function Header() {
   const [hideIcons, setHideIcons] = useState(false);

@@ -114,7 +114,7 @@
 .projectToggle {
   font-family: "Wotfard", sans-serif;
   background: transparent;
-  color: #fff;
+  color: #f8fafc;
   border: none;
   outline: none;
   cursor: pointer;
@@ -158,7 +158,7 @@
 }
 
 @media (max-width: 800px) {
-  .welcomeContainer {
+  .welcomeContent {
     display: flex;
     justify-content: center;
     align-items: center;
