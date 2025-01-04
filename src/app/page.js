@@ -21,6 +21,8 @@ import coinDenoWeb from "./assets/projects/thumbnails/coindeno-web.png";
 import frontendMentorChallenges from "./assets/projects/thumbnails/frontend-mentor-challenges.png";
 import learnWithMe from "./assets/projects/thumbnails/learn-with-me.png";
 
+import wave from "./assets/welcome/wave.svg";
+
 import Project from "./components/project";
 import TechnicalSkill from "./components/techincalSkill";
 import Interest from "./components/interest";
@@ -236,8 +238,8 @@ export default function Home() {
   const roles = [
     "fullstack developer!",
     "student!",
+    "competitive programmer!",
     "creator!",
-    "entrepreneur!",
   ];
 
   const [text, setText] = useState("");
@@ -322,8 +324,8 @@ export default function Home() {
 
   return (
     <div className={styles.homeContainer}>
-      <div className="content">
-        <div className={styles.welcomeContainer}>
+      <div className={styles.welcomeContainer}>
+        <div className={`content ${styles.welcomeContent}`}>
           <motion.div
             className={styles.welcomeText}
             initial={{ opacity: 0, y: 20 }}
@@ -346,7 +348,7 @@ export default function Home() {
               className={styles.profileImageContainer}
             >
               <Image
-                className={styles.image}
+                className={styles.picture}
                 src={Aayush}
                 height={250}
                 width={250}
@@ -355,6 +357,15 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
+      </div>
+      <div className={styles.curve}>
+        <Image
+          className={styles.image}
+          src={wave}
+          height={250}
+          width={250}
+          alt="Wave"
+        />
       </div>
       <div className={styles.technicalSkillsContainer}>
         <h1 className={styles.sectionHeading}>Technical Skills</h1>
@@ -382,9 +393,7 @@ export default function Home() {
             {visibleProjects.map((project, index) => (
               <motion.div
                 key={project.name}
-                className={`${styles.projectCard} ${
-                  index === 2 ? styles.stickOut : ""
-                }`}
+                className={`${styles.projectCard}`}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
