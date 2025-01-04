@@ -265,10 +265,8 @@ export default function Home() {
         setNumVisibleProjects(1);
       } else if (width <= 1080) {
         setNumVisibleProjects(2);
-      } else if (width <= 1450) {
-        setNumVisibleProjects(3);
       } else {
-        setNumVisibleProjects(4);
+        setNumVisibleProjects(3);
       }
     };
 
@@ -324,93 +322,101 @@ export default function Home() {
 
   return (
     <div className={styles.homeContainer}>
-      <div className={styles.welcomeContainer}>
-        <motion.div
-          className={styles.welcomeText}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          {text}
-          {cursorVisible && <span>|</span>}
-        </motion.div>
-        <div>
+      <div className="content">
+        <div className={styles.welcomeContainer}>
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
-            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 0 20px rgba(255, 255, 255, 0.7)",
-              transition: { type: "spring", stiffness: 300, damping: 15 },
-            }}
-            className={styles.profileImageContainer}
+            className={styles.welcomeText}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <Image
-              className={styles.image}
-              src={Aayush}
-              height={250}
-              width={250}
-              alt="Aayush"
-            />
+            {text}
+            {cursorVisible && <span>|</span>}
           </motion.div>
+          <div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
+              animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 20px rgba(255, 255, 255, 0.7)",
+                transition: { type: "spring", stiffness: 300, damping: 15 },
+              }}
+              className={styles.profileImageContainer}
+            >
+              <Image
+                className={styles.image}
+                src={Aayush}
+                height={250}
+                width={250}
+                alt="Aayush"
+              />
+            </motion.div>
+          </div>
         </div>
       </div>
       <div className={styles.technicalSkillsContainer}>
         <h1 className={styles.sectionHeading}>Technical Skills</h1>
-        <div className={styles.technicalSkillsList}>
-          {technicalSkills.map((technicalSkill, index) => (
-            <TechnicalSkill
-              key={index}
-              type={technicalSkill.type}
-              skills={technicalSkill.skills}
-            />
-          ))}
+        <div className="content">
+          <div className={styles.technicalSkillsList}>
+            {technicalSkills.map((technicalSkill, index) => (
+              <TechnicalSkill
+                key={index}
+                type={technicalSkill.type}
+                skills={technicalSkill.skills}
+              />
+            ))}
+          </div>
         </div>
       </div>
       <div className={styles.projectsContainer}>
-        <h1 className={styles.sectionHeading}>Projects</h1>
-        <motion.div
-          initial={{ opacity: 0, y: 50, visibility: "hidden" }}
-          whileInView={{ opacity: 1, y: 0, visibility: "visible" }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className={styles.projectList}
-        >
-          {visibleProjects.map((project, index) => (
-            <motion.div
-              key={project.name}
-              className={`${styles.projectCard} ${
-                index === 2 ? styles.stickOut : ""
-              }`}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Project {...project} />
-            </motion.div>
-          ))}
-        </motion.div>
-        <div className={styles.projectToggles}>
-          <button className={styles.projectToggle} onClick={prevProject}>
-            ← Prev
-          </button>
-          <button className={styles.projectToggle} onClick={nextProject}>
-            Next →
-          </button>
+        <div className={`content ${styles.projectContent}`}>
+          <h1 className={styles.sectionHeading}>Projects</h1>
+          <motion.div
+            initial={{ opacity: 0, y: 50, visibility: "hidden" }}
+            whileInView={{ opacity: 1, y: 0, visibility: "visible" }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className={styles.projectList}
+          >
+            {visibleProjects.map((project, index) => (
+              <motion.div
+                key={project.name}
+                className={`${styles.projectCard} ${
+                  index === 2 ? styles.stickOut : ""
+                }`}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Project {...project} />
+              </motion.div>
+            ))}
+          </motion.div>
+          <div className={styles.projectToggles}>
+            <button className={styles.projectToggle} onClick={prevProject}>
+              ← Prev
+            </button>
+            <button className={styles.projectToggle} onClick={nextProject}>
+              Next →
+            </button>
+          </div>
         </div>
       </div>
       <div className={styles.interestsContainer}>
-        <h1 className={styles.sectionHeading}>Interests</h1>
-        <div className={styles.interestList}>
-          {interests.map((interest, index) => (
-            <Interest
-              key={index}
-              name={interest.name}
-              icon={interest.icon}
-              description={interest.description}
-            />
-          ))}
+        <div className={`content ${styles.interestsContent}`}>
+          <h1 className={styles.sectionHeading}>Interests</h1>
+          <div className={styles.interestList}>
+            {interests.map((interest, index) => (
+              <Interest
+                key={index}
+                name={interest.name}
+                icon={interest.icon}
+                description={interest.description}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

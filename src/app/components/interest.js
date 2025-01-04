@@ -14,7 +14,6 @@ export default function Interest(props) {
         rotate: 5,
         boxShadow: "0px 4px 20px rgba(255, 255, 255, 0.3)",
         transition: { type: "spring", stiffness: 300, damping: 15 },
-        transformOrigin: "center",
       }}
       whileTap={{
         scale: 0.95,

@@ -1,6 +1,13 @@
 .footerContainer {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.footerContent {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
 }
