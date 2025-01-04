@@ -1,0 +1,33 @@
+.bookContainer {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  text-align: center;
+  height: 550px;
+  width: 300px;
+}
+
+.image {
+  border-radius: 5px;
+}
+
+.link {
+  color: #fff;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+}
+
+.link:hover {
+  opacity: 0.75;
+}
+
+.bookTitle {
+  margin: 0;
+  cursor: pointer;
+}
+
+.bookAuthor {
+  color: #758295;
+  cursor: pointer;
+}
