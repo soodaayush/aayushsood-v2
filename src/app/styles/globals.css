@@ -33,7 +33,8 @@ a {
   text-decoration: none;
 }
 
-img {
+img,
+svg {
   display: block;
 }
 
