@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -13,8 +14,15 @@ import PDF from "../../assets/header-icons/pdf.svg";
 import YouTube from "../../assets/header-icons/youtube.svg";
 import titans from "../../assets/header-icons/titans.png";
 import menu from "../../assets/header-icons/menu.svg";
+import close from "../../assets/header-icons/close.svg";
 
 export default function Header() {
+  const [hamburgerMenu, setHamburgerMenu] = useState(false);
+
+  function openHamburgerMenu() {
+    setHamburgerMenu(!hamburgerMenu);
+  }
+
   return (
     <div className={styles.container}>
       <div className={`content ${styles.headerContent}`}>
@@ -148,10 +156,72 @@ export default function Header() {
               width={40}
               height={40}
               alt="GitHub"
+              onClick={openHamburgerMenu}
               className={styles.svg}
             />
           </motion.button>
         </div>
+        {hamburgerMenu && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{
+              opacity: 1,
+              height: "auto",
+            }}
+            exit={{
+              opacity: 0,
+              height: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              opacity: { duration: 0.3 },
+              height: { duration: 0.5, ease: "easeInOut" },
+            }}
+            style={{ overflow: "hidden" }}
+            className={styles.headerMenu}
+          >
+            <div className={styles.menuClose}>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                whileDrag={{ scale: 0.9, rotate: 10 }}
+                drag
+                className={styles.button}
+              >
+                <Image
+                  src={close}
+                  width={40}
+                  height={40}
+                  alt="GitHub"
+                  onClick={openHamburgerMenu}
+                  className={styles.svg}
+                />
+              </motion.button>
+            </div>
+            <div className={styles.menuPages}>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                whileDrag={{ scale: 0.9, rotate: 10 }}
+                className={styles.menuButton}
+                drag
+              >
+                <div>Blog</div>
+                <div>Something</div>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                whileDrag={{ scale: 0.9, rotate: 10 }}
+                className={styles.menuButton}
+                drag
+              >
+                <div>Books</div>
+                <div>Something</div>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
       </div>
     </div>
   );
