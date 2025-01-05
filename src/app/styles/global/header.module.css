@@ -27,6 +27,12 @@
   text-align: center;
 }
 
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .title {
   color: #f8fafc;
   margin-right: 20px;
@@ -49,9 +55,43 @@
   cursor: pointer;
 }
 
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .button {
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+@media (min-width: 750px) {
+  .menu {
+    display: none;
+  }
+
+  .links {
+    display: block;
+  }
+
+  .pages {
+    display: flex;
+  }
+}
+
+@media (max-width: 750px) {
+  .menu {
+    display: block;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .pages {
+    display: none;
+  }
 }
