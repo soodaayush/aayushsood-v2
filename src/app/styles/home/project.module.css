@@ -9,12 +9,7 @@
   transition: 0.3s ease-in-out;
 }
 
-.projectContainer:hover {
-  box-shadow: 0 5px 15px #8892b0;
-}
-
 .projectName {
-  color: #617bff;
   margin-bottom: 0;
 }
 
@@ -47,13 +42,14 @@
   border: none;
   outline: none;
   transition: 0.15s ease-in-out;
-  background: rgba(45, 212, 191, 0.1);
-  color: #64ffda;
+  background: #171e29;
+  color: #f8fafc;
+  opacity: 0.75;
   padding: 5px;
 }
 
 .tag:hover {
-  opacity: 0.75;
+  opacity: 1;
 }
 
 .year {

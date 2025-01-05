@@ -9,8 +9,15 @@ import GitHub from "../../assets/header-icons/github.svg";
 import Link from "../../assets/projects/link.svg";
 
 export default function Project(props) {
+  
+
   return (
-    <motion.div className={styles.projectContainer}>
+    <motion.div
+      style={{
+        background: props.gradient,
+      }}
+      className={styles.projectContainer}
+    >
       <a href={props.link} className={styles.imageContainer} target="_blank">
         <Image
           className={styles.projectThumbnail}

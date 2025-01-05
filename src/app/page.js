@@ -38,6 +38,7 @@ const projects = [
     tags: ["React Native", "Expo"].sort((a, b) => a.localeCompare(b)),
     year: 2024,
     github: "https://github.com/soodaayush/BVHApp",
+    gradient: "linear-gradient( #6D4D87, #875E92, #A06E9D)",
   },
   {
     name: "Ben Eater's 8-Bit Project",
@@ -46,6 +47,7 @@ const projects = [
     tags: ["Hardware"].sort((a, b) => a.localeCompare(b)),
     year: 2024,
     github: "https://github.com/soodaayush",
+    gradient: "linear-gradient( #C68A3E, #C26F3E, #BE543E)",
   },
   {
     name: "Ben Eater's 6502 Project",
@@ -56,6 +58,7 @@ const projects = [
     ),
     year: 2024,
     github: "https://github.com/soodaayush/6502-project",
+    gradient: "linear-gradient( #715C6A, #924D60, #B33E56)",
   },
   {
     name: "LlamaTalk",
@@ -66,6 +69,7 @@ const projects = [
     ),
     year: 2024,
     github: "https://github.com/soodaayush/llamatalk",
+    gradient: "linear-gradient( #238F76, #1E8A7D, #188583)",
   },
   {
     name: "Arduino-based School Yoga Project",
@@ -74,6 +78,7 @@ const projects = [
     tags: ["Arduino", "C++"].sort((a, b) => a.localeCompare(b)),
     year: 2024,
     github: "https://github.com/soodaayush/arduino-school-yoga-project",
+    gradient: "linear-gradient( #894B15, #9C6512, #A8760F)",
   },
   {
     name: "WordSmith",
@@ -83,6 +88,7 @@ const projects = [
     tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
     year: 2024,
     github: "https://github.com/soodaayush/wordsmith",
+    gradient: "linear-gradient( #433873, #323B71, #213E6F)",
   },
   {
     name: "LeetCode",
@@ -91,6 +97,7 @@ const projects = [
     tags: ["JavaScript", "Python", "C++"].sort((a, b) => a.localeCompare(b)),
     year: 2022,
     github: "https://github.com/soodaayush/leetcode",
+    gradient: "linear-gradient( #176C5C, #1B7862, #1E8368)",
   },
   {
     name: "CoinDeno",
@@ -102,6 +109,7 @@ const projects = [
     ),
     year: 2022,
     github: "https://github.com/soodaayush/coindeno",
+    gradient: "linear-gradient( #2082AB, #22699C, #23508D)",
   },
   {
     name: "Pac Man",
@@ -111,6 +119,7 @@ const projects = [
     tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
     year: 2021,
     github: "https://github.com/soodaayush/pac-man",
+    gradient: "linear-gradient( #5D427F, #825B8F, #9B6B9A)",
   },
   {
     name: "CoinDeno Web",
@@ -122,6 +131,7 @@ const projects = [
     ),
     year: 2021,
     github: "https://github.com/soodaayush/coindeno-web",
+    gradient: "linear-gradient( #C57D3E, #C2683E, #BF533E)",
   },
   {
     name: "Frontend Mentor Challenges",
@@ -131,6 +141,7 @@ const projects = [
     tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
     year: 2020,
     github: "https://github.com/soodaayush/frontend-mentor-challenges",
+    gradient: "linear-gradient( #715D6A, #914E60, #B03F56)",
   },
   {
     name: "LearnWithMe",
@@ -140,6 +151,7 @@ const projects = [
     tags: ["HTML", "SCSS"].sort((a, b) => a.localeCompare(b)),
     year: 2020,
     github: "https://github.com/soodaayush/learn-with-me",
+    gradient: "linear-gradient( #269273, #208C7A, #198681)",
   },
 ];
 
