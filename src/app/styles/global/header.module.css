@@ -87,7 +87,7 @@
   padding: 20px;
 }
 
-.menuPages {
+.menuSection {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,6 +103,20 @@
   align-items: center;
   width: 100%;
   cursor: pointer;
+}
+
+.pageIcon {
+  height: 40px;
+  width: 40px;
+}
+
+.menuLink {
+  width: 100%;
+  color: #f8fafc;
+}
+
+.menuLinkText {
+  margin: 0;
 }
 
 @media (min-width: 750px) {

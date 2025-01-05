@@ -1,7 +1,9 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
+
+import { FaBlog, FaBook } from "react-icons/fa";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -161,67 +163,225 @@ export default function Header() {
             />
           </motion.button>
         </div>
-        {hamburgerMenu && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{
-              opacity: 1,
-              height: "auto",
-            }}
-            exit={{
-              opacity: 0,
-              height: 0,
-            }}
-            transition={{
-              duration: 0.5,
-              opacity: { duration: 0.3 },
-              height: { duration: 0.5, ease: "easeInOut" },
-            }}
-            style={{ overflow: "hidden" }}
-            className={styles.headerMenu}
-          >
-            <div className={styles.menuClose}>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                whileDrag={{ scale: 0.9, rotate: 10 }}
-                drag
-                className={styles.button}
-              >
-                <Image
-                  src={close}
-                  width={40}
-                  height={40}
-                  alt="GitHub"
+        <AnimatePresence>
+          {hamburgerMenu && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{
+                duration: 0.5,
+                opacity: { duration: 0.3 },
+                height: { duration: 0.5, ease: "easeInOut" },
+              }}
+              style={{ overflow: "hidden" }}
+              className={styles.headerMenu}
+            >
+              <div className={styles.menuClose}>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  whileDrag={{ scale: 0.9, rotate: 10 }}
+                  drag
+                  className={styles.button}
+                >
+                  <Image
+                    src={close}
+                    width={40}
+                    height={40}
+                    alt="GitHub"
+                    onClick={openHamburgerMenu}
+                    className={styles.svg}
+                  />
+                </motion.button>
+              </div>
+              <div className={styles.menuSection}>
+                <Link
+                  className={styles.menuLink}
+                  href="/blog"
                   onClick={openHamburgerMenu}
-                  className={styles.svg}
-                />
-              </motion.button>
-            </div>
-            <div className={styles.menuPages}>
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                whileDrag={{ scale: 0.9, rotate: 10 }}
-                className={styles.menuButton}
-                drag
-              >
-                <div>Blog</div>
-                <div>Something</div>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                whileDrag={{ scale: 0.9, rotate: 10 }}
-                className={styles.menuButton}
-                drag
-              >
-                <div>Books</div>
-                <div>Something</div>
-              </motion.div>
-            </div>
-          </motion.div>
-        )}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    whileDrag={{ scale: 0.9, rotate: 10 }}
+                    className={styles.menuButton}
+                    drag
+                  >
+                    <h2 className={styles.menuLinkText}>Blog</h2>
+                    <div>
+                      <FaBlog className={styles.pageIcon} />
+                    </div>
+                  </motion.div>
+                </Link>
+                <Link
+                  className={styles.menuLink}
+                  href="/books"
+                  onClick={openHamburgerMenu}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    whileDrag={{ scale: 0.9, rotate: 10 }}
+                    className={styles.menuButton}
+                    drag
+                  >
+                    <h2 className={styles.menuLinkText}>Books</h2>
+                    <div>
+                      <FaBook className={styles.pageIcon} />
+                    </div>
+                  </motion.div>
+                </Link>
+              </div>
+              <div className={styles.menuSection}>
+                <a
+                  href="https://github.com/soodaayush"
+                  target="_blank"
+                  className={styles.menuLink}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    whileDrag={{ scale: 0.9, rotate: 10 }}
+                    className={styles.menuButton}
+                    drag
+                  >
+                    <h2 className={styles.menuLinkText}>GitHub</h2>
+                    <div>
+                      <Image
+                        src={GitHub}
+                        width={40}
+                        height={40}
+                        alt="GitHub"
+                        className={styles.svg}
+                      />
+                    </div>
+                  </motion.div>
+                </a>
+                <a
+                  href="https://leetcode.com/u/soodaayush/"
+                  target="_blank"
+                  className={styles.menuLink}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    whileDrag={{ scale: 0.9, rotate: 10 }}
+                    className={styles.menuButton}
+                    drag
+                  >
+                    <h2 className={styles.menuLinkText}>LeetCode</h2>
+                    <div>
+                      <Image
+                        src={LeetCode}
+                        width={40}
+                        height={40}
+                        alt="LeetCode"
+                        className={styles.svg}
+                      />
+                    </div>
+                  </motion.div>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/soodaayush/"
+                  target="_blank"
+                  className={styles.menuLink}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    whileDrag={{ scale: 0.9, rotate: 10 }}
+                    className={styles.menuButton}
+                    drag
+                  >
+                    <h2 className={styles.menuLinkText}>LinkedIn</h2>
+                    <div>
+                      <Image
+                        src={LinkedIn}
+                        width={40}
+                        height={40}
+                        alt="LinkedIn"
+                        className={styles.svg}
+                      />
+                    </div>
+                  </motion.div>
+                </a>
+                <a
+                  href="../../assets/resume/resume.pdf"
+                  target="_blank"
+                  className={styles.menuLink}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    whileDrag={{ scale: 0.9, rotate: 10 }}
+                    className={styles.menuButton}
+                    drag
+                  >
+                    <h2 className={styles.menuLinkText}>Resume</h2>
+                    <div>
+                      <Image
+                        src={PDF}
+                        width={40}
+                        height={40}
+                        alt="Resume"
+                        className={styles.svg}
+                      />
+                    </div>
+                  </motion.div>
+                </a>
+                <a
+                  href="https://www.youtube.com/@soodaayush"
+                  target="_blank"
+                  className={styles.menuLink}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    whileDrag={{ scale: 0.9, rotate: 10 }}
+                    className={styles.menuButton}
+                    drag
+                  >
+                    <h2 className={styles.menuLinkText}>YouTube</h2>
+                    <div>
+                      <Image
+                        src={YouTube}
+                        width={40}
+                        height={40}
+                        alt="YouTube"
+                        className={styles.svg}
+                      />
+                    </div>
+                  </motion.div>
+                </a>
+                <a
+                  href="https://titansmaaf.ca/"
+                  target="_blank"
+                  className={styles.menuLink}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    whileDrag={{ scale: 0.9, rotate: 10 }}
+                    className={styles.menuButton}
+                    drag
+                  >
+                    <h2 className={styles.menuLinkText}>Titans MMA</h2>
+                    <div>
+                      <Image
+                        src={titans}
+                        width={40}
+                        height={40}
+                        alt="Titans MMA"
+                        className={styles.svg}
+                      />
+                    </div>
+                  </motion.div>
+                </a>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
