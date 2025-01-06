@@ -150,7 +150,6 @@ export default function Header() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             whileDrag={{ scale: 0.9, rotate: 10 }}
-            drag
             className={styles.button}
           >
             <Image
@@ -182,14 +181,13 @@ export default function Header() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   whileDrag={{ scale: 0.9, rotate: 10 }}
-                  drag
                   className={styles.button}
                 >
                   <Image
                     src={close}
                     width={40}
                     height={40}
-                    alt="GitHub"
+                    alt="Close"
                     onClick={openHamburgerMenu}
                     className={styles.svg}
                   />
@@ -206,7 +204,6 @@ export default function Header() {
                     whileTap={{ scale: 0.95 }}
                     whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
-                    drag
                   >
                     <h2 className={styles.menuLinkText}>Blog</h2>
                     <div>
@@ -224,7 +221,6 @@ export default function Header() {
                     whileTap={{ scale: 0.95 }}
                     whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
-                    drag
                   >
                     <h2 className={styles.menuLinkText}>Books</h2>
                     <div>
@@ -244,7 +240,6 @@ export default function Header() {
                     whileTap={{ scale: 0.95 }}
                     whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
-                    drag
                   >
                     <h2 className={styles.menuLinkText}>GitHub</h2>
                     <div>
@@ -268,7 +263,6 @@ export default function Header() {
                     whileTap={{ scale: 0.95 }}
                     whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
-                    drag
                   >
                     <h2 className={styles.menuLinkText}>LeetCode</h2>
                     <div>
@@ -292,7 +286,6 @@ export default function Header() {
                     whileTap={{ scale: 0.95 }}
                     whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
-                    drag
                   >
                     <h2 className={styles.menuLinkText}>LinkedIn</h2>
                     <div>
@@ -316,7 +309,6 @@ export default function Header() {
                     whileTap={{ scale: 0.95 }}
                     whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
-                    drag
                   >
                     <h2 className={styles.menuLinkText}>Resume</h2>
                     <div>
@@ -340,7 +332,6 @@ export default function Header() {
                     whileTap={{ scale: 0.95 }}
                     whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
-                    drag
                   >
                     <h2 className={styles.menuLinkText}>YouTube</h2>
                     <div>
@@ -364,7 +355,6 @@ export default function Header() {
                     whileTap={{ scale: 0.95 }}
                     whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
-                    drag
                   >
                     <h2 className={styles.menuLinkText}>Titans MMA</h2>
                     <div>
