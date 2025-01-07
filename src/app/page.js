@@ -32,9 +32,10 @@ import { MdOutlineSportsMartialArts } from "react-icons/md";
 
 const projects = [
   {
-    name: "Bay View High School Mobile App",
+    name: "BVHS Mobile App",
     image: BVHMobileApp,
-    description: "A great website",
+    description:
+      "A mobile app I created for my high school for an easier distribution of information. This was created for Harvard University's CS50x.",
     tags: ["React Native", "Expo"].sort((a, b) => a.localeCompare(b)),
     year: 2024,
     github: "https://github.com/soodaayush/BVHApp",
@@ -43,7 +44,8 @@ const projects = [
   {
     name: "Ben Eater's 8-Bit Project",
     image: eightBit,
-    description: "A great website",
+    description:
+      "A project involving the creation of an 8-bit computer, inspired by Ben Eater.",
     tags: ["Hardware"].sort((a, b) => a.localeCompare(b)),
     year: 2024,
     github: "https://github.com/soodaayush",
@@ -52,7 +54,8 @@ const projects = [
   {
     name: "Ben Eater's 6502 Project",
     image: sixtyFiveZeroTwo,
-    description: "A great website",
+    description:
+      "A series of hardware projects surrounding the 6502 CPU, inspired by Ben Eater.",
     tags: ["Arduino", "Python", "Assembly", "C++"].sort((a, b) =>
       a.localeCompare(b)
     ),
@@ -63,7 +66,8 @@ const projects = [
   {
     name: "LlamaTalk",
     image: llamaTalk,
-    description: "A great website",
+    description:
+      "A website that allows you to interact with Meta's Codellama, through a service called Ollama.",
     tags: ["HTML", "SCSS", "JavaScript", "Codellama"].sort((a, b) =>
       a.localeCompare(b)
     ),
@@ -74,7 +78,8 @@ const projects = [
   {
     name: "Arduino-based School Yoga Project",
     image: arduinoYogaProject,
-    description: "A great website",
+    description:
+      "An Arduino project that reminds the user to meditate. This was used as a submission for my Yoga exam.",
     tags: ["Arduino", "C++"].sort((a, b) => a.localeCompare(b)),
     year: 2024,
     github: "https://github.com/soodaayush/arduino-school-yoga-project",
@@ -84,7 +89,8 @@ const projects = [
     name: "WordSmith",
     website: "https://wordsmithy.netlify.app/",
     image: wordSmith,
-    description: "A great website",
+    description:
+      "A website that allows you to play a word guessing game involving the comparison of two words.",
     tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
     year: 2024,
     github: "https://github.com/soodaayush/wordsmith",
@@ -93,7 +99,8 @@ const projects = [
   {
     name: "LeetCode",
     image: leetCode,
-    description: "A great website",
+    description:
+      "A collection of my solved LeetCode problems, written in multiple languages.",
     tags: ["JavaScript", "Python", "C++"].sort((a, b) => a.localeCompare(b)),
     year: 2022,
     github: "https://github.com/soodaayush/leetcode",
@@ -103,7 +110,8 @@ const projects = [
     name: "CoinDeno",
     website: "https://coindeno.netlify.app/",
     image: coinDeno,
-    description: "A great website",
+    description:
+      "A mobile app that allows you to track your favorite cryptocurrencies and build your own portfolio.",
     tags: ["React Native", "Expo", "Firebase", "JavaScript"].sort((a, b) =>
       a.localeCompare(b)
     ),
@@ -115,7 +123,7 @@ const projects = [
     name: "Pac Man",
     website: "https://pac-man-wb.netlify.app/",
     image: pacMan,
-    description: "A great website",
+    description: "A website that allows you to play the iconic game, Pac Man.",
     tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
     year: 2021,
     github: "https://github.com/soodaayush/pac-man",
@@ -125,7 +133,8 @@ const projects = [
     name: "CoinDeno Web",
     website: "https://warbaddy.com/",
     image: coinDenoWeb,
-    description: "A great website",
+    description:
+      "Similar to CoinDeno, this is a web version, which allows you to track your favorite cryptocurrencies and build your own portfolio.",
     tags: ["React", "Redux", "Firebase", "Tailwind CSS"].sort((a, b) =>
       a.localeCompare(b)
     ),
@@ -137,7 +146,7 @@ const projects = [
     name: "Frontend Mentor Challenges",
     website: "https://challenges-wb.netlify.app/",
     image: frontendMentorChallenges,
-    description: "A great website",
+    description: "A collection of my completed Frontend Mentor challenges.",
     tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
     year: 2020,
     github: "https://github.com/soodaayush/frontend-mentor-challenges",
@@ -147,7 +156,7 @@ const projects = [
     name: "LearnWithMe",
     website: "https://learningwithme.netlify.app/",
     image: learnWithMe,
-    description: "A great website",
+    description: "A website created for a tutor based in New Delhi, India.",
     tags: ["HTML", "SCSS"].sort((a, b) => a.localeCompare(b)),
     year: 2020,
     github: "https://github.com/soodaayush/learn-with-me",

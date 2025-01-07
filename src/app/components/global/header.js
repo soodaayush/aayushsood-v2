@@ -45,8 +45,6 @@ export default function Header() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            whileDrag={{ scale: 0.9, rotate: 10 }}
-            drag
             className={styles.button}
           >
             <a href="https://github.com/soodaayush" target="_blank">
@@ -62,8 +60,6 @@ export default function Header() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            whileDrag={{ scale: 0.9, rotate: 10 }}
-            drag
             className={styles.button}
           >
             <a href="https://leetcode.com/u/soodaayush/" target="_blank">
@@ -79,8 +75,6 @@ export default function Header() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            whileDrag={{ scale: 0.9, rotate: 10 }}
-            drag
             className={styles.button}
           >
             <a href="https://www.linkedin.com/in/soodaayush/" target="_blank">
@@ -96,8 +90,6 @@ export default function Header() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            whileDrag={{ scale: 0.9, rotate: 10 }}
-            drag
             className={styles.button}
           >
             <a href="../../assets/resume/resume.pdf" target="_blank">
@@ -113,8 +105,6 @@ export default function Header() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            whileDrag={{ scale: 0.9, rotate: 10 }}
-            drag
             className={styles.button}
           >
             <a href="https://www.youtube.com/@soodaayush" target="_blank">
@@ -130,8 +120,6 @@ export default function Header() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            whileDrag={{ scale: 0.9, rotate: 10 }}
-            drag
             className={styles.button}
           >
             <a href="https://titansmaaf.ca/" target="_blank">
@@ -149,7 +137,6 @@ export default function Header() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            whileDrag={{ scale: 0.9, rotate: 10 }}
             className={styles.button}
           >
             <Image
@@ -180,7 +167,6 @@ export default function Header() {
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  whileDrag={{ scale: 0.9, rotate: 10 }}
                   className={styles.button}
                 >
                   <Image
@@ -202,7 +188,6 @@ export default function Header() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
                   >
                     <h2 className={styles.menuLinkText}>Blog</h2>
@@ -219,7 +204,6 @@ export default function Header() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
                   >
                     <h2 className={styles.menuLinkText}>Books</h2>
@@ -238,7 +222,6 @@ export default function Header() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
                   >
                     <h2 className={styles.menuLinkText}>GitHub</h2>
@@ -261,7 +244,6 @@ export default function Header() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
                   >
                     <h2 className={styles.menuLinkText}>LeetCode</h2>
@@ -284,7 +266,6 @@ export default function Header() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
                   >
                     <h2 className={styles.menuLinkText}>LinkedIn</h2>
@@ -307,7 +288,6 @@ export default function Header() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
                   >
                     <h2 className={styles.menuLinkText}>Resume</h2>
@@ -330,7 +310,6 @@ export default function Header() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
                   >
                     <h2 className={styles.menuLinkText}>YouTube</h2>
@@ -353,7 +332,6 @@ export default function Header() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    whileDrag={{ scale: 0.9, rotate: 10 }}
                     className={styles.menuButton}
                   >
                     <h2 className={styles.menuLinkText}>Titans MMA</h2>
