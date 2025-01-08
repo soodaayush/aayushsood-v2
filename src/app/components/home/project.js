@@ -9,12 +9,11 @@ import GitHub from "../../assets/header-icons/github.svg";
 import Link from "../../assets/projects/link.svg";
 
 export default function Project(props) {
-  
-
   return (
     <motion.div
       style={{
         background: props.gradient,
+        transform: props.rotate,
       }}
       className={styles.projectContainer}
     >
