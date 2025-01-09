@@ -16,6 +16,10 @@ import twelveYearsASlave from "../assets/books/twelveYearsASlave.jpg";
 import thePsychologyOfMoney from "../assets/books/thePsychologyOfMoney.jpg";
 import theMartian from "../assets/books/theMartian.jpg";
 import projectHailMary from "../assets/books/projectHailMary.jpg";
+import principles from "../assets/books/principles.jpg";
+import lordOfTheFlies from "../assets/books/lordOfTheFlies.jpg";
+import andThenThereWereNone from "../assets/books/andThenThereWereNone.jpg";
+import theInvisibleMan from "../assets/books/theInvisibleMan.jpg";
 
 import Book from "../components/books/book";
 
@@ -136,6 +140,36 @@ const books = [
     cover: projectHailMary,
     bookLink: "https://a.co/d/cSk7cZx",
     authorLink: "https://www.amazon.ca/stores/Andy-Weir/author/B00G0WYW92",
+  },
+  {
+    title: "Principles",
+    author: "Ray Dalio",
+    cover: principles,
+    bookLink: "https://a.co/d/8CNJuyb",
+    authorLink: "https://www.amazon.ca/stores/Ray-Dalio/author/B0711LQ9G4",
+  },
+  {
+    title: "Lord of the Flies",
+    author: "William Golding",
+    cover: lordOfTheFlies,
+    bookLink: "https://a.co/d/fWB4VBC",
+    authorLink:
+      "https://www.amazon.ca/stores/William-Golding/author/B000APSP20",
+  },
+  {
+    title: "And Then There Were None",
+    author: "Agatha Christie",
+    cover: andThenThereWereNone,
+    bookLink: "https://a.co/d/7Ka4Hzq",
+    authorLink:
+      "https://www.amazon.ca/stores/Agatha-Christie/author/B000APENBC",
+  },
+  {
+    title: "The Invisible Man",
+    author: "H.G. Wells",
+    cover: theInvisibleMan,
+    bookLink: "https://a.co/d/6oYaTuH",
+    authorLink: "https://www.amazon.ca/stores/H.-G.-Wells/author/B000AQ4FBE",
   },
 ];
 
