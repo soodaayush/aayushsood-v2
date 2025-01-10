@@ -1,7 +1,7 @@
 [
   {
-    "id": "understanding-react-hooks",
-    "title": "Understanding React Hooks",
+    "id": "biology-plant-project",
+    "title": "Biology Plant Project",
     "date": "2025-01-01",
     "content": [
       {
@@ -10,12 +10,12 @@
       },
       {
         "type": "image",
-        "src": "/images/react-hooks.png",
-        "alt": "Diagram of React Hooks"
+        "src": "/src/app/assets/books/1984.jpg",
+        "alt": "Diagram of"
       },
       {
         "type": "paragraph",
-        "text": "This post explores the most commonly used hooks like useState, useEffect, and useContext."
+        "text": "This post is about my great biology project."
       },
       {
         "type": "code",
@@ -28,14 +28,14 @@
       },
       {
         "type": "video",
-        "src": "https://www.youtube.com/embed/dpw9EHDh2bM",
+        "src": "https://www.youtube.com/embed/H8JM2J6iaDQ",
         "title": "React Hooks Tutorial"
       }
     ]
   },
   {
-    "id": "2",
-    "title": "A Guide to Next.js Static Site Generation",
+    "id": "test",
+    "title": "Test",
     "date": "2025-01-05",
     "content": [
       {

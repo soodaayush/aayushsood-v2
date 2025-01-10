@@ -1,5 +1,34 @@
-.container {
+.blogPostContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.blogPostContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imageContainer {
+  margin: 20px 0;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.code {
+  background-color: #242424;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.videoContainer {
+  margin: 20px 0;
 }
