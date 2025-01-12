@@ -1,25 +1,27 @@
 import styles from "../styles/books/books.module.css";
 
-import nineteenEightyFour from "../assets/books/1984.jpg";
-import oneHundredYearsOfSolitude from "../assets/books/one-hundred-years-of-solitude.jpg";
-import moonwalkingWithEinstein from "../assets/books/moonwalking-with-einstein.jpg";
-import dune from "../assets/books/dune.jpg";
-import steveJobs from "../assets/books/steveJobs.jpg";
-import animalFarm from "../assets/books/animalFarm.jpg";
-import braveNewWorld from "../assets/books/braveNewWorld.jpg";
-import theKiteRunner from "../assets/books/theKiteRunner.jpg";
-import slaughterhouseFive from "../assets/books/slaughterhouseFive.jpg";
-import allQuietOnTheWesternFront from "../assets/books/allQuietOnTheWesternFront.jpg";
-import theAlchemist from "../assets/books/theAlchemist.jpg";
-import theWarOfTheWorlds from "../assets/books/theWarOfTheWorlds.jpg";
-import twelveYearsASlave from "../assets/books/twelveYearsASlave.jpg";
-import thePsychologyOfMoney from "../assets/books/thePsychologyOfMoney.jpg";
-import theMartian from "../assets/books/theMartian.jpg";
-import projectHailMary from "../assets/books/projectHailMary.jpg";
-import principles from "../assets/books/principles.jpg";
-import lordOfTheFlies from "../assets/books/lordOfTheFlies.jpg";
-import andThenThereWereNone from "../assets/books/andThenThereWereNone.jpg";
-import theInvisibleMan from "../assets/books/theInvisibleMan.jpg";
+("../../../public/");
+
+import nineteenEightyFour from "../../../public/assets/books/1984.jpg";
+import oneHundredYearsOfSolitude from "../../../public/assets/books/one-hundred-years-of-solitude.jpg";
+import moonwalkingWithEinstein from "../../../public/assets/books/moonwalking-with-einstein.jpg";
+import dune from "../../../public/assets/books/dune.jpg";
+import steveJobs from "../../../public/assets/books/steveJobs.jpg";
+import animalFarm from "../../../public/assets/books/animalFarm.jpg";
+import braveNewWorld from "../../../public/assets/books/braveNewWorld.jpg";
+import theKiteRunner from "../../../public/assets/books/theKiteRunner.jpg";
+import slaughterhouseFive from "../../../public/assets/books/slaughterhouseFive.jpg";
+import allQuietOnTheWesternFront from "../../../public/assets/books/allQuietOnTheWesternFront.jpg";
+import theAlchemist from "../../../public/assets/books/theAlchemist.jpg";
+import theWarOfTheWorlds from "../../../public/assets/books/theWarOfTheWorlds.jpg";
+import twelveYearsASlave from "../../../public/assets/books/twelveYearsASlave.jpg";
+import thePsychologyOfMoney from "../../../public/assets/books/thePsychologyOfMoney.jpg";
+import theMartian from "../../../public/assets/books/theMartian.jpg";
+import projectHailMary from "../../../public/assets/books/projectHailMary.jpg";
+import principles from "../../../public/assets/books/principles.jpg";
+import lordOfTheFlies from "../../../public/assets/books/lordOfTheFlies.jpg";
+import andThenThereWereNone from "../../../public/assets/books/andThenThereWereNone.jpg";
+import theInvisibleMan from "../../../public/assets/books/theInvisibleMan.jpg";
 
 import Book from "../components/books/book";
 

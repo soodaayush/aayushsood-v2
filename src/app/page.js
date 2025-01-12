@@ -7,19 +7,19 @@ import Image from "next/image";
 
 import styles from "./styles/home/page.module.css";
 
-import Aayush from "./assets/welcome/aayush.jpg";
-import BVHMobileApp from "./assets/projects/thumbnails/bvh-mobile-app.png";
-import eightBit from "./assets/projects/thumbnails/8-bit-computer.webp";
-import sixtyFiveZeroTwo from "./assets/projects/thumbnails/6502.webp";
-import llamaTalk from "./assets/projects/thumbnails/llamatalk.png";
-import arduinoYogaProject from "./assets/projects/thumbnails/arduino-yoga-project.webp";
-import wordSmith from "./assets/projects/thumbnails/wordsmith.png";
-import leetCode from "./assets/projects/thumbnails/leetcode.png";
-import coinDeno from "./assets/projects/thumbnails/coindeno.png";
-import pacMan from "./assets/projects/thumbnails/pac-man.png";
-import coinDenoWeb from "./assets/projects/thumbnails/coindeno-web.png";
-import frontendMentorChallenges from "./assets/projects/thumbnails/frontend-mentor-challenges.png";
-import learnWithMe from "./assets/projects/thumbnails/learn-with-me.png";
+import Aayush from "../../public/assets/welcome/aayush.jpg";
+import BVHMobileApp from "../../public/assets/projects/thumbnails/bvh-mobile-app.png";
+import eightBit from "../../public/assets/projects/thumbnails/8-bit-computer.webp";
+import sixtyFiveZeroTwo from "../../public/assets/projects/thumbnails/6502.webp";
+import llamaTalk from "../../public/assets/projects/thumbnails/llamatalk.png";
+import arduinoYogaProject from "../../public/assets/projects/thumbnails/arduino-yoga-project.webp";
+import wordSmith from "../../public/assets/projects/thumbnails/wordsmith.png";
+import leetCode from "../../public/assets/projects/thumbnails/leetcode.png";
+import coinDeno from "../../public/assets/projects/thumbnails/coindeno.png";
+import pacMan from "../../public/assets/projects/thumbnails/pac-man.png";
+import coinDenoWeb from "../../public/assets/projects/thumbnails/coindeno-web.png";
+import frontendMentorChallenges from "../../public/assets/projects/thumbnails/frontend-mentor-challenges.png";
+import learnWithMe from "../../public/assets/projects/thumbnails/learn-with-me.png";
 
 import Project from "./components/home/project";
 import TechnicalSkill from "./components/home/techincalSkill";
