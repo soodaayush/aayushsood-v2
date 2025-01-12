@@ -1,66 +1,36 @@
-"use client";
+// app/blog/[id]/page.js
 
-import { usePathname } from "next/navigation";
-import blogData from "../../data/blogs.json";
-import Image from "next/image";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { promises as fs } from "fs";
+import path from "path";
 
 import styles from "../../styles/blog/blogPost.module.css";
 
-export default function BlogPostPage() {
-  const id = usePathname().slice(6);
-  const post = blogData.find((post) => post.id === id);
+// Fetch the blog post data based on the ID (slug)
+export default async function BlogPost({ params }) {
+  console.log(params);
 
-  if (!post) {
-    return <p>Post not found</p>;
-  }
+  const content = await fs.readFile(
+    path.join(process.cwd(), "src/app/posts", `${params.projectSlug}.mdx`),
+    "utf-8"
+  );
+
+  const data =
+    (await compileMDX) <
+    Frontmatter >
+    {
+      source: content,
+      options: {
+        parseFrontmatter: true,
+      },
+    };
 
   return (
     <div className={styles.blogPostContainer}>
       <div className={`content ${styles.blogPostContent}`}>
-        <h1>{post.title}</h1>
-        <p>{post.date}</p>
-        <div>
-          {post.content.map((block, index) => {
-            switch (block.type) {
-              case "paragraph":
-                return <p key={index}>{block.text}</p>;
-              case "image":
-                return (
-                  <div key={index}>
-                    <Image
-                      src={block.src}
-                      alt={block.alt}
-                      width={800}
-                      height={400}
-                      className={styles.image}
-                    />
-                  </div>
-                );
-              case "code":
-                return (
-                  <pre key={index} className={styles.code}>
-                    <code>{block.content}</code>
-                  </pre>
-                );
-              case "video":
-                return (
-                  <div key={index} className={styles.videoContainer}>
-                    <iframe
-                      width="800"
-                      height="450"
-                      src={block.src}
-                      title={block.title}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                );
-              default:
-                return null;
-            }
-          })}
-        </div>
+        {/* <h1>{data.title}</h1>
+        <p>{data.date}</p> */}
+        {data.content}
       </div>
     </div>
   );
