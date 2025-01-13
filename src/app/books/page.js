@@ -1,7 +1,5 @@
 import styles from "../styles/books/books.module.css";
 
-("../../../public/");
-
 import nineteenEightyFour from "../../../public/assets/books/1984.jpg";
 import oneHundredYearsOfSolitude from "../../../public/assets/books/one-hundred-years-of-solitude.jpg";
 import moonwalkingWithEinstein from "../../../public/assets/books/moonwalking-with-einstein.jpg";
@@ -22,6 +20,10 @@ import principles from "../../../public/assets/books/principles.jpg";
 import lordOfTheFlies from "../../../public/assets/books/lordOfTheFlies.jpg";
 import andThenThereWereNone from "../../../public/assets/books/andThenThereWereNone.jpg";
 import theInvisibleMan from "../../../public/assets/books/theInvisibleMan.jpg";
+import theOutsiders from "../../../public/assets/books/theOutsiders.jpg";
+import duneMessiah from "../../../public/assets/books/duneMessiah.jpg";
+import childrenOfDune from "../../../public/assets/books/childrenOfDune.jpg";
+import theRoad from "../../../public/assets/books/theRoad.jpg";
 
 import Book from "../components/books/book";
 
@@ -172,6 +174,35 @@ const books = [
     cover: theInvisibleMan,
     bookLink: "https://a.co/d/6oYaTuH",
     authorLink: "https://www.amazon.ca/stores/H.-G.-Wells/author/B000AQ4FBE",
+  },
+  {
+    title: "The Outsiders",
+    author: "S.E. Hinton",
+    cover: theOutsiders,
+    bookLink: "https://a.co/d/9gMGJBT",
+    authorLink: "https://www.amazon.ca/stores/S.-E.-Hinton/author/B000AQ1R5G",
+  },
+  {
+    title: "Dune Messiah",
+    author: "Frank Herbert",
+    cover: duneMessiah,
+    bookLink: "https://a.co/d/7Q4lOrV",
+    authorLink: "https://www.amazon.ca/stores/Frank-Herbert/author/B000APO5OM",
+  },
+  {
+    title: "Children of Dune",
+    author: "Frank Herbert",
+    cover: childrenOfDune,
+    bookLink: "https://a.co/d/ao2Ia6n",
+    authorLink: "https://www.amazon.ca/stores/Frank-Herbert/author/B000APO5OM",
+  },
+  {
+    title: "The Road",
+    author: "Cormac McCarthy",
+    cover: theRoad,
+    bookLink: "https://a.co/d/f4wds28",
+    authorLink:
+      "https://www.amazon.ca/stores/Cormac-McCarthy/author/B000APT0OW",
   },
 ];
 
