@@ -24,6 +24,8 @@ import theOutsiders from "../../../public/assets/books/theOutsiders.jpg";
 import duneMessiah from "../../../public/assets/books/duneMessiah.jpg";
 import childrenOfDune from "../../../public/assets/books/childrenOfDune.jpg";
 import theRoad from "../../../public/assets/books/theRoad.jpg";
+import atomicHabits from "../../../public/assets/books/atomicHabits.jpg";
+import theHotZone from "../../../public/assets/books/theHotZone.jpg";
 
 import Book from "../components/books/book";
 
@@ -203,6 +205,21 @@ const books = [
     bookLink: "https://a.co/d/f4wds28",
     authorLink:
       "https://www.amazon.ca/stores/Cormac-McCarthy/author/B000APT0OW",
+  },
+  {
+    title: "Atomic Habits",
+    author: "James Clear",
+    cover: atomicHabits,
+    bookLink: "https://a.co/d/8dsmlqm",
+    authorLink: "https://www.amazon.ca/stores/James-Clear/author/B07DJTJC3X",
+  },
+  {
+    title: "The Hot Zone",
+    author: "Richard Preston",
+    cover: theHotZone,
+    bookLink: "https://a.co/d/1MMeVNL",
+    authorLink:
+      "https://www.amazon.ca/stores/Richard-Preston/author/B000AQ793U",
   },
 ];
 
