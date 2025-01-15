@@ -17,12 +17,18 @@ export default async function Blog() {
         path.join(process.cwd(), "src/app/posts", filename),
         "utf-8"
       );
-      const { frontmatter } = await compileMDX({
+      console.log(filenames);
+      console.log("MDX Source Content:", content);
+
+      const { frontmatter, content: compiledContent } = await compileMDX({
         source: content,
         options: {
           parseFrontmatter: true,
         },
       });
+
+      console.log("Frontmatter:", frontmatter);
+      console.log("Compiled Content:", compiledContent);
       return {
         filename,
         slug: filename.replace(".mdx", ""),
@@ -31,18 +37,16 @@ export default async function Blog() {
     })
   );
 
-  console.log(filenames);
-
   return (
     <div className={styles.blogContainer}>
       <div className={`content ${styles.blogContent}`}>
         <h1 className={styles.blogTitle}>Blog</h1>
         <div className={styles.blogList}>
-          {blogPosts.map((post, slug, index) => (
+          {blogPosts.map((post, index) => (
             <Link
               className={styles.blogPost}
               key={index}
-              href={`/blog/${post.id}`}
+              href={`/blog/${post.slug}`}
             >
               <h1 className={styles.title}>{post.title}</h1>
               <p className={styles.date}>{post.date}</p>
