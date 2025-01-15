@@ -1,0 +1,26 @@
+.codeBlock {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  background: #242424;
+}
+
+.codeBlock {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .codeBlock {
+    font-size: 12px;
+  }
+}
+
+.codeBlock {
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .codeBlock {
+    padding: 0.5rem;
+  }
+}

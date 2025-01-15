@@ -1,12 +1,11 @@
 import styles from "../styles/blog/blog.module.css";
+import Image from "next/image";
 
 import Link from "next/link";
 
 import { promises as fs } from "fs";
 import path from "path";
 import { compileMDX } from "next-mdx-remote/rsc";
-
-// import posts from "../data/blogs.json";
 
 export default async function Blog() {
   const filenames = await fs.readdir(path.join(process.cwd(), "src/app/posts"));
@@ -17,18 +16,14 @@ export default async function Blog() {
         path.join(process.cwd(), "src/app/posts", filename),
         "utf-8"
       );
-      console.log(filenames);
-      console.log("MDX Source Content:", content);
 
-      const { frontmatter, content: compiledContent } = await compileMDX({
+      const { frontmatter } = await compileMDX({
         source: content,
         options: {
           parseFrontmatter: true,
         },
       });
 
-      console.log("Frontmatter:", frontmatter);
-      console.log("Compiled Content:", compiledContent);
       return {
         filename,
         slug: filename.replace(".mdx", ""),

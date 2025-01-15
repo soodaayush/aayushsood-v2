@@ -2,53 +2,40 @@ import { promises as fs } from "fs";
 import path from "path";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import matter from "gray-matter";
-import { compileMDX } from "next-mdx-remote/rsc";
 import styles from "../../styles/blog/blogPost.module.css";
+import { MDXComponents } from "../../MDXComponents/MDXComponents";
 
-// Fetch the blog post data based on the ID (slug)
 export default async function BlogPost({ params }) {
-  const { id } = params;
-
-  const filePath = path.join(process.cwd(), "src/app/posts", `${id}.mdx`);
+  const { id } = await params;
 
   try {
-    const content = await fs.readFile(filePath, "utf-8");
-    console.log("File Content:", content);
+    const filePath = path.join(process.cwd(), "src/app/posts", `${id}.mdx`);
+    const source = await fs.readFile(filePath, "utf-8");
 
-    const { content: mdxContent, data: frontmatter } = matter(content);
-    console.log("Parsed Frontmatter:", frontmatter);
-    console.log("MDX Content:", mdxContent);
+    const { content, data: frontmatter } = matter(source);
 
-    // Check if there is MDX content
-    if (!mdxContent) {
-      throw new Error("MDX content is empty.");
-    }
+    const components = {};
 
-    // // Compile MDX content to React component
-    // const { compiledSource } = await compileMDX({
-    //   source: mdxContent,
-    // });
-
-    // // If no compiledSource is returned, throw an error
-    // if (!compiledSource) {
-    //   throw new Error("MDX compilation failed. No compiled source returned.");
-    // }
-
-    // // Log the compiled source for debugging
-    // console.log("Compiled Source:", compiledSource); // Debugging compiled source
-
-    // Return the blog post content
     return (
       <div className={styles.blogPostContainer}>
-        <h1>{frontmatter.title}</h1>
-        <p>{frontmatter.date}</p>
-        <div>
-          <MDXRemote source={content} />
+        <div className={`content ${styles.blogPostContent}`}>
+          <h1>{frontmatter.title}</h1>
+          <p>{frontmatter.date}</p>
+          <MDXRemote
+            source={content}
+            components={MDXComponents}
+            options={{
+              parseFrontmatter: true,
+              mdxOptions: {
+                development: process.env.NODE_ENV === "development",
+              },
+            }}
+          />
         </div>
       </div>
     );
   } catch (error) {
-    console.error("Error reading or compiling MDX file:", error);
+    console.error("Error reading MDX file:", error);
     return <p>Post not found. Please check the console for errors.</p>;
   }
 }

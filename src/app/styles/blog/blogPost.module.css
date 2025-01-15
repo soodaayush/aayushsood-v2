@@ -9,27 +9,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 50%;
   flex-direction: column;
-  border: 1px solid red;
-}
-
-.imageContainer {
-  margin: 20px 0;
-}
-
-.image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.code {
-  background-color: #242424;
-  padding: 10px;
-  border-radius: 5px;
-  overflow-x: auto;
-}
-
-.videoContainer {
-  margin: 20px 0;
 }
