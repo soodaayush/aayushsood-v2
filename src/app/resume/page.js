@@ -43,10 +43,37 @@ export default function Resume() {
         </div>
       </div>
       <div className={styles.row2}>
-        <div className={styles.column1}>
+        <div className={`${styles.projects} ${styles.column2}`}>
           <h3>Projects</h3>
+          <div className={styles.project}>
+            <div class="project-details">
+              <a
+                target="_blank"
+                className={styles.headerText}
+                href="https://warbaddy.com/"
+              >
+                CoinDeno Web
+              </a>
+              <p className={styles.dateText}>August 2021 - July 2022</p>
+            </div>
+            <ul>
+              <li className={styles.bodyText}>
+                Created a React website that allows tracking and portfolio
+                management of various Cryptocurrencies.
+              </li>
+              <li className={styles.bodyText}>
+                Utilized React, Firebase, and Redux for application development,
+                with CoinGecko REST APIs for cryptocurrency data integration.
+              </li>
+              <li className={styles.bodyText}>
+                Deployed the application using continuous integration and
+                continuous deployment (CI/CD) practices, ensuring reliability
+                and fast iteration.
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className={styles.column2}>
+        <div className={`${styles.column2}`}>
           <h3>Technical Skills</h3>
         </div>
       </div>

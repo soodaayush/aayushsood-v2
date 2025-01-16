@@ -22,7 +22,25 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+.bodyText {
+  font-size: 14px;
+}
+
+.dateText {
+  color: #b3bac5;
+}
+
+.headerText {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f8fafc;
 }
 
 .contact {
