@@ -40,6 +40,9 @@ export default function Header() {
             <Link className={styles.title} href="/books">
               <h2>Books</h2>
             </Link>
+            <Link className={styles.title} href="/resume">
+              <h2>Resume</h2>
+            </Link>
           </div>
         </div>
         <div className={styles.links}>
