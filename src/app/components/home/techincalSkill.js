@@ -15,14 +15,16 @@ export default function TechnicalSkill(props) {
       className={styles.technicalSkillContainer}
     >
       <h1 className={styles.skillType}>{props.type}</h1>
-      {props.skills.map((skill) => (
-        <div className={styles.technicalSkill} key={skill.id}>
-          <p className={styles.skillTitle}>{skill.name}</p>
-          <label className={styles.skillExperience}>
-            {skill.experience} Experience
-          </label>
-        </div>
-      ))}
+      {props.skills
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map((skill) => (
+          <div className={styles.technicalSkill} key={skill.id}>
+            <p className={styles.skillTitle}>{skill.name}</p>
+            <label className={styles.skillExperience}>
+              {skill.experience} Experience
+            </label>
+          </div>
+        ))}
     </motion.div>
   );
 }

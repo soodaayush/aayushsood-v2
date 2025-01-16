@@ -28,11 +28,13 @@ export default function Project(props) {
       </a>
       <h2 className={styles.projectName}>{props.name}</h2>
       <div className={styles.tagContainer}>
-        {props.tags.map((tag, index) => (
-          <button className={styles.tag} key={index}>
-            {tag}
-          </button>
-        ))}
+        {props.tags
+          .sort((a, b) => a.localeCompare(b))
+          .map((tag, index) => (
+            <button className={styles.tag} key={index}>
+              {tag}
+            </button>
+          ))}
       </div>
       <p className={styles.description}>{props.description}</p>
       <div className={styles.links}>

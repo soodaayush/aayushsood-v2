@@ -8,18 +8,6 @@ import Image from "next/image";
 import styles from "./styles/home/page.module.css";
 
 import Aayush from "../../public/assets/welcome/aayush.jpg";
-import BVHMobileApp from "../../public/assets/projects/thumbnails/bvh-mobile-app.png";
-import eightBit from "../../public/assets/projects/thumbnails/8-bit-computer.webp";
-import sixtyFiveZeroTwo from "../../public/assets/projects/thumbnails/6502.webp";
-import llamaTalk from "../../public/assets/projects/thumbnails/llamatalk.png";
-import arduinoYogaProject from "../../public/assets/projects/thumbnails/arduino-yoga-project.webp";
-import wordSmith from "../../public/assets/projects/thumbnails/wordsmith.png";
-import leetCode from "../../public/assets/projects/thumbnails/leetcode.png";
-import coinDeno from "../../public/assets/projects/thumbnails/coindeno.png";
-import pacMan from "../../public/assets/projects/thumbnails/pac-man.png";
-import coinDenoWeb from "../../public/assets/projects/thumbnails/coindeno-web.png";
-import frontendMentorChallenges from "../../public/assets/projects/thumbnails/frontend-mentor-challenges.png";
-import learnWithMe from "../../public/assets/projects/thumbnails/learn-with-me.png";
 
 import Project from "./components/home/project";
 import TechnicalSkill from "./components/home/techincalSkill";
@@ -30,242 +18,21 @@ import { PiMathOperationsFill } from "react-icons/pi";
 import { MdScience } from "react-icons/md";
 import { MdOutlineSportsMartialArts } from "react-icons/md";
 
-const projects = [
-  {
-    name: "BVHS Mobile App",
-    image: BVHMobileApp,
-    description:
-      "A mobile app I created for my high school for an easier distribution of information. This was created for Harvard University's CS50x.",
-    tags: ["React Native", "Expo"].sort((a, b) => a.localeCompare(b)),
-    year: 2024,
-    github: "https://github.com/soodaayush/BVHApp",
-    gradient: "linear-gradient( #6D4D87, #875E92, #A06E9D)",
-    rotate: "rotate(2deg)",
-  },
-  {
-    name: "Ben Eater's 8-Bit Project",
-    image: eightBit,
-    description:
-      "A project involving the creation of an 8-bit computer, inspired by Ben Eater.",
-    tags: ["Hardware"].sort((a, b) => a.localeCompare(b)),
-    year: 2024,
-    github: "https://github.com/soodaayush",
-    gradient: "linear-gradient( #C68A3E, #C26F3E, #BE543E)",
-    rotate: "rotate(358deg)",
-  },
-  {
-    name: "Ben Eater's 6502 Project",
-    image: sixtyFiveZeroTwo,
-    description:
-      "A series of hardware projects surrounding the 6502 CPU, inspired by Ben Eater.",
-    tags: ["Arduino", "Python", "Assembly", "C++"].sort((a, b) =>
-      a.localeCompare(b)
-    ),
-    year: 2024,
-    github: "https://github.com/soodaayush/6502-project",
-    gradient: "linear-gradient( #715C6A, #924D60, #B33E56)",
-    rotate: "rotate(2deg)",
-  },
-  {
-    name: "LlamaTalk",
-    image: llamaTalk,
-    description:
-      "A website that allows you to interact with Meta's Codellama, through a service called Ollama.",
-    tags: ["HTML", "SCSS", "JavaScript", "Codellama"].sort((a, b) =>
-      a.localeCompare(b)
-    ),
-    year: 2024,
-    github: "https://github.com/soodaayush/llamatalk",
-    gradient: "linear-gradient( #238F76, #1E8A7D, #188583)",
-    rotate: "rotate(358deg)",
-  },
-  {
-    name: "Arduino-based School Yoga Project",
-    image: arduinoYogaProject,
-    description:
-      "An Arduino project that reminds the user to meditate. This was used as a submission for my Yoga exam.",
-    tags: ["Arduino", "C++"].sort((a, b) => a.localeCompare(b)),
-    year: 2024,
-    github: "https://github.com/soodaayush/arduino-school-yoga-project",
-    gradient: "linear-gradient( #894B15, #9C6512, #A8760F)",
-    rotate: "rotate(2deg)",
-  },
-  {
-    name: "WordSmith",
-    website: "https://wordsmithy.netlify.app/",
-    image: wordSmith,
-    description:
-      "A website that allows you to play a word guessing game involving the comparison of two words.",
-    tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
-    year: 2024,
-    github: "https://github.com/soodaayush/wordsmith",
-    gradient: "linear-gradient( #433873, #323B71, #213E6F)",
-    rotate: "rotate(358deg)",
-  },
-  {
-    name: "LeetCode",
-    image: leetCode,
-    description:
-      "A collection of my solved LeetCode problems, written in multiple languages.",
-    tags: ["JavaScript", "Python", "C++"].sort((a, b) => a.localeCompare(b)),
-    year: 2022,
-    github: "https://github.com/soodaayush/leetcode",
-    gradient: "linear-gradient( #176C5C, #1B7862, #1E8368)",
-    rotate: "rotate(2deg)",
-  },
-  {
-    name: "CoinDeno",
-    website: "https://coindeno.netlify.app/",
-    image: coinDeno,
-    description:
-      "A mobile app that allows you to track your favorite cryptocurrencies and build your own portfolio.",
-    tags: ["React Native", "Expo", "Firebase", "JavaScript"].sort((a, b) =>
-      a.localeCompare(b)
-    ),
-    year: 2022,
-    github: "https://github.com/soodaayush/coindeno",
-    gradient: "linear-gradient( #2082AB, #22699C, #23508D)",
-    rotate: "rotate(358deg)",
-  },
-  {
-    name: "Pac Man",
-    website: "https://pac-man-wb.netlify.app/",
-    image: pacMan,
-    description: "A website that allows you to play the iconic game, Pac Man.",
-    tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
-    year: 2021,
-    github: "https://github.com/soodaayush/pac-man",
-    gradient: "linear-gradient( #5D427F, #825B8F, #9B6B9A)",
-    rotate: "rotate(2deg)",
-  },
-  {
-    name: "CoinDeno Web",
-    website: "https://warbaddy.com/",
-    image: coinDenoWeb,
-    description:
-      "Similar to CoinDeno, this is a web version, which allows you to track your favorite cryptocurrencies and build your own portfolio.",
-    tags: ["React", "Redux", "Firebase", "Tailwind CSS"].sort((a, b) =>
-      a.localeCompare(b)
-    ),
-    year: 2021,
-    github: "https://github.com/soodaayush/coindeno-web",
-    gradient: "linear-gradient( #C57D3E, #C2683E, #BF533E)",
-    rotate: "rotate(358deg)",
-  },
-  {
-    name: "Frontend Mentor Challenges",
-    website: "https://challenges-wb.netlify.app/",
-    image: frontendMentorChallenges,
-    description: "A collection of my completed Frontend Mentor challenges.",
-    tags: ["HTML", "SCSS", "JavaScript"].sort((a, b) => a.localeCompare(b)),
-    year: 2020,
-    github: "https://github.com/soodaayush/frontend-mentor-challenges",
-    gradient: "linear-gradient( #715D6A, #914E60, #B03F56)",
-    rotate: "rotate(2deg)",
-  },
-  {
-    name: "LearnWithMe",
-    website: "https://learningwithme.netlify.app/",
-    image: learnWithMe,
-    description: "A website created for a tutor based in New Delhi, India.",
-    tags: ["HTML", "SCSS"].sort((a, b) => a.localeCompare(b)),
-    year: 2020,
-    github: "https://github.com/soodaayush/learn-with-me",
-    gradient: "linear-gradient( #269273, #208C7A, #198681)",
-    rotate: "rotate(358deg)",
-  },
-];
-
-const technicalSkills = [
-  {
-    type: "Frontend",
-    skills: [
-      { id: 1, name: "HTML", experience: "4 Years" },
-      { id: 2, name: "CSS", experience: "4 Years" },
-      { id: 3, name: "SCSS", experience: "4 Years" },
-      { id: 4, name: "JavaScript", experience: "3 Years" },
-      { id: 5, name: "Tailwind CSS", experience: "3 Years" },
-      { id: 6, name: "React", experience: "3 Years" },
-      { id: 7, name: "Bootstrap CSS", experience: "2 Years" },
-    ].sort((a, b) => a.name.localeCompare(b.name)),
-  },
-  {
-    type: "Backend",
-    skills: [
-      { id: 8, name: "Python", experience: "1 Year" },
-      { id: 9, name: "Node.js", experience: "3 Years" },
-      { id: 10, name: "Firebase", experience: "2 Years" },
-      { id: 11, name: "SQL", experience: "2 Years" },
-      { id: 12, name: "C++", experience: "10 Months" },
-    ].sort((a, b) => a.name.localeCompare(b.name)),
-  },
-  {
-    type: "DevOps/Tools",
-    skills: [
-      { id: 13, name: "Cloudflare", experience: "2 Years" },
-      { id: 14, name: "Netlify", experience: "4 Years" },
-      { id: 15, name: "NPM", experience: "3 Years" },
-      { id: 16, name: "Yarn", experience: "2 Years" },
-      { id: 17, name: "Git", experience: "4 Years" },
-      { id: 18, name: "GitHub", experience: "4 Years" },
-    ].sort((a, b) => a.name.localeCompare(b.name)),
-  },
-  {
-    type: "Mobile",
-    skills: [
-      { id: 19, name: "React Native", experience: "2 Years" },
-      { id: 20, name: "iOS", experience: "2 Years" },
-      { id: 21, name: "Android", experience: "2 Years" },
-    ].sort((a, b) => a.name.localeCompare(b.name)),
-  },
-];
-
-const interests = [
-  {
-    name: "Gaming",
-    icon: <FaGamepad />,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
-  },
-  {
-    name: "Math",
-    icon: <PiMathOperationsFill />,
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.",
-  },
-  {
-    name: "Science",
-    icon: <MdScience />,
-    description:
-      "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae..",
-  },
-  {
-    name: "Geopolitics",
-    icon: <FaGlobe />,
-    description:
-      "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
-  },
-  {
-    name: "MMA",
-    icon: <MdOutlineSportsMartialArts />,
-    description:
-      "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
-  },
-  {
-    name: "Programming",
-    icon: <FaCode />,
-    description:
-      "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
-  },
-  {
-    name: "Technology",
-    icon: <FaLaptop />,
-    description:
-      "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
-  },
-];
+import projects from "./data/projects.json";
+import technicalSkills from "./data/technicalSkills.json";
+import interests from "./data/interests.json";
 
 export default function Home() {
+  const iconMap = {
+    FaGamepad: FaGamepad,
+    PiMathOperationsFill: PiMathOperationsFill,
+    MdScience: MdScience,
+    FaGlobe: FaGlobe,
+    MdOutlineSportsMartialArts: MdOutlineSportsMartialArts,
+    FaCode: FaCode,
+    FaLaptop: FaLaptop,
+  };
+
   const roles = [
     "fullstack developer!",
     "student!",
@@ -448,14 +215,17 @@ export default function Home() {
         <div className={`content ${styles.interestsContent}`}>
           <h1 className={styles.sectionHeading}>Interests</h1>
           <div className={styles.interestList}>
-            {interests.map((interest, index) => (
-              <Interest
-                key={index}
-                name={interest.name}
-                icon={interest.icon}
-                description={interest.description}
-              />
-            ))}
+            {interests.map((interest, index) => {
+              const IconComponent = iconMap[interest.icon];
+              return (
+                <Interest
+                  key={index}
+                  name={interest.name}
+                  description={interest.description}
+                  icon={<IconComponent />}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

@@ -93,7 +93,7 @@ export default function Header() {
             whileTap={{ scale: 0.95 }}
             className={styles.button}
           >
-            <a href="../../assets/resume/resume.pdf" target="_blank">
+            <a href="assets/resume/resume.pdf" target="_blank">
               <Image
                 src={PDF}
                 width={40}
