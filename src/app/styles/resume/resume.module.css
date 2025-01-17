@@ -1,14 +1,25 @@
 .resumeContainer {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resumeContentContainer {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   padding: 20px;
+  width: 75%;
 }
 
 .name {
   font-size: 50px;
   margin: 0;
+}
+
+.listItem {
+  margin-bottom: 25px;
 }
 
 .row1 {
@@ -31,6 +42,7 @@
 
 .bodyText {
   font-size: 14px;
+  margin: 0;
 }
 
 .dateText {
@@ -41,12 +53,14 @@
   font-size: 18px;
   font-weight: 600;
   color: #f8fafc;
+  margin: 0;
 }
 
 .headerTitle {
   color: #f8fafc;
   margin-bottom: 10px;
   font-weight: 500;
+  font-size: 20px;
 }
 
 .contact {
@@ -79,4 +93,8 @@
 
 .sectionDetail {
   margin-bottom: 10px;
+}
+
+.section:not(:first-of-type) {
+  margin-top: 20px;
 }
