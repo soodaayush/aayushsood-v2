@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Ben Eater's 6502 Project",
+    "date": "April 2024 - July 2024",
+    "link": "https://github.com/soodaayush/6502-project",
+    "bullets": [
+      "A collection of projects surrounding the 6502 CPU, inspired by Ben Eater.",
+      "Utilized assembly language to develop low-level programs and debug hardware interactions.",
+      "Designed and tested various circuits and peripherals to enhance the CPU's functionality."
+    ]
+  },
+  {
+    "name": "LeetCode",
+    "date": "December 2022 - January 2025",
+    "link": "https://github.com/soodaayush/leetcode",
+    "bullets": [
+      "GitHub repository of over 50 LeetCode challenges completed using JavaScript, Python, and C++.",
+      "Solved complex algorithmic problems, enhancing problem-solving and critical thinking skills."
+    ]
+  },
+  {
+    "name": "CoinDeno Mobile",
+    "date": "July 2022 - September 2022",
+    "link": "https://coindeno.netlify.app/",
+    "bullets": [
+      "Created the React Native mobile enabled version of the CoinDeno Web, enabled for both iOS and Android and hosted on the Android Play Store.",
+      "Leveraged the React Native framework for a consistent cross-platform experience.",
+      "Conducted thorough testing across multiple devices to ensure performance, usability, and security."
+    ]
+  },
+  {
+    "name": "CoinDeno Web",
+    "date": "August 2021 - July 2022",
+    "link": "https://warbaddy.com/",
+    "bullets": [
+      "Created a React website that allows tracking and portfolio management of various Cryptocurrencies.",
+      "Utilized React, Firebase, and Redux for application development, with CoinGecko REST APIs for cryptocurrency data integration.",
+      "Deployed the application using continuous integration and continuous deployment (CI/CD) practices, ensuring reliability and fast iteration."
+    ]
+  },
+  {
+    "name": "Frontend Mentor Challenges",
+    "date": "November 2020 - January 2024",
+    "link": "https://github.com/soodaayush/frontend-mentor-challenges",
+    "bullets": [
+      "GitHub repository of over 50+ Frontend Mentor challenges completed using modern web stack technologies.",
+      "Explored advanced CSS and JavaScript features to create interactive and dynamic user interfaces."
+    ]
+  },
+  {
+    "name": "LearnWithMe",
+    "date": "October 2020 - November 2020",
+    "link": "https://learningwithme.netlify.app/",
+    "bullets": [
+      "Developed a responsive website for a tutor in New Delhi, India, to facilitate learning and student engagement"
+    ]
+  }
+]

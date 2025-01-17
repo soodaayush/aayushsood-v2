@@ -1,5 +1,8 @@
 import styles from "../styles/resume/resume.module.css";
 
+import ResumeProject from "../components/resume/resumeProject";
+import resumeProjects from "../data/resumeProjects.json";
+
 export default function Resume() {
   return (
     <div className={styles.resumeContainer}>
@@ -43,38 +46,41 @@ export default function Resume() {
         </div>
       </div>
       <div className={styles.row2}>
-        <div className={`${styles.projects} ${styles.column2}`}>
+        <div className={`${styles.projects} ${styles.column1}`}>
           <h3>Projects</h3>
-          <div className={styles.project}>
-            <div class="project-details">
-              <a
-                target="_blank"
-                className={styles.headerText}
-                href="https://warbaddy.com/"
-              >
-                CoinDeno Web
-              </a>
-              <p className={styles.dateText}>August 2021 - July 2022</p>
-            </div>
-            <ul>
-              <li className={styles.bodyText}>
-                Created a React website that allows tracking and portfolio
-                management of various Cryptocurrencies.
-              </li>
-              <li className={styles.bodyText}>
-                Utilized React, Firebase, and Redux for application development,
-                with CoinGecko REST APIs for cryptocurrency data integration.
-              </li>
-              <li className={styles.bodyText}>
-                Deployed the application using continuous integration and
-                continuous deployment (CI/CD) practices, ensuring reliability
-                and fast iteration.
-              </li>
-            </ul>
-          </div>
+          {resumeProjects.map((project, index) => (
+            <ResumeProject
+              key={index}
+              name={project.name}
+              date={project.date}
+              link={project.link}
+              bullets={project.bullets}
+            />
+          ))}
         </div>
         <div className={`${styles.column2}`}>
-          <h3>Technical Skills</h3>
+          <div>
+            <h3 className={styles.headerTitle}>Technical Skills</h3>
+            <div className={styles.sectionDetail}>
+              <h3 className={styles.headerText}>Programming Languages</h3>
+              <p className={styles.bodyText}>
+                HTML, CSS, SCSS, JavaScript, Python, SQL, C++
+              </p>
+            </div>
+            <div className={styles.sectionDetail}>
+              <h3 className={styles.headerText}>Libraries & Frameworks</h3>
+              <p className={styles.bodyText}>
+                React, React Native, Bootstrap, Tailwind CSS, Node.js
+              </p>
+            </div>
+            <div className={styles.sectionDetail}>
+              <h3 className={styles.headerText}>Tools & Platforms</h3>
+              <p className={styles.bodyText}>
+                Firebase, Cloudflare, Netlify, Git, GitHub, iOS, Android, Yarn,
+                NPM
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -43,6 +43,12 @@
   color: #f8fafc;
 }
 
+.headerTitle {
+  color: #f8fafc;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
 .contact {
   display: flex;
   justify-content: center;
@@ -55,4 +61,22 @@
   color: #f8fafc;
   margin: 0;
   padding: 0;
+}
+
+.column2 {
+  padding: 20px;
+  height: 100%;
+  width: 30%;
+  margin-bottom: -20px;
+}
+
+.column1 {
+  width: 70%;
+  height: 100%;
+  padding: 20px;
+  margin-bottom: -20px;
+}
+
+.sectionDetail {
+  margin-bottom: 10px;
 }
