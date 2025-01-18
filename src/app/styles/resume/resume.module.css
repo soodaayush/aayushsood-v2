@@ -10,7 +10,6 @@
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  width: 75%;
 }
 
 .name {
@@ -80,7 +79,8 @@
   color: #f8fafc;
   margin-bottom: 10px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .contact {
@@ -117,4 +117,32 @@
 
 .section:not(:first-of-type) {
   margin-top: 20px;
+}
+
+@media (min-width: 840px) {
+  .row1 {
+    flex-direction: row;
+  }
+
+  .row2 {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 840px) {
+  .row1 {
+    flex-direction: column;
+  }
+
+  .row2 {
+    flex-direction: column;
+  }
+
+  .column1 {
+    width: 100%;
+  }
+
+  .column2 {
+    width: 100%;
+  }
 }
