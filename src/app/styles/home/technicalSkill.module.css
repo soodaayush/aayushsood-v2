@@ -10,8 +10,13 @@
   border-radius: 20px;
 }
 
+.technicalSkillContainer:hover .skillType {
+  color: #64ffda;
+}
+
 .skillType {
   margin: 0;
+  transition: 0.15s ease-in-out;
 }
 
 .technicalSkill {
@@ -29,7 +34,7 @@
   cursor: default;
 }
 
-@media (max-width: 582px) {
+@media (max-width: 579px) {
   .technicalSkillContainer {
     height: auto;
   }

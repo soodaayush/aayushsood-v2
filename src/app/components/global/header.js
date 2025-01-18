@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 
 import { FaBlog, FaBook } from "react-icons/fa";
+import { BsFileEarmarkPersonFill } from "react-icons/bs";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -13,7 +14,6 @@ import styles from "../../styles/global/header.module.css";
 import GitHub from "../../../../public/assets/header-icons/github.svg";
 import LeetCode from "../../../../public/assets/header-icons/leetcode.svg";
 import LinkedIn from "../../../../public/assets/header-icons/linkedin.svg";
-import PDF from "../../../../public/assets/header-icons/pdf.svg";
 import YouTube from "../../../../public/assets/header-icons/youtube.svg";
 import titans from "../../../../public/assets/header-icons/titans.png";
 import menu from "../../../../public/assets/header-icons/menu.svg";
@@ -201,6 +201,22 @@ export default function Header() {
                     </div>
                   </motion.div>
                 </Link>
+                <Link
+                  className={styles.menuLink}
+                  href="/resume"
+                  onClick={openHamburgerMenu}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={styles.menuButton}
+                  >
+                    <h2 className={styles.menuLinkText}>Resume</h2>
+                    <div>
+                      <BsFileEarmarkPersonFill className={styles.pageIcon} />
+                    </div>
+                  </motion.div>
+                </Link>
               </div>
               <div className={styles.menuSection}>
                 <a
@@ -269,7 +285,6 @@ export default function Header() {
                     </div>
                   </motion.div>
                 </a>
-
                 <a
                   href="https://www.youtube.com/@soodaayush"
                   target="_blank"
