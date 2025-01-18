@@ -42,7 +42,27 @@
 
 .bodyText {
   font-size: 14px;
+  color: #a1aab7;
   margin: 0;
+}
+
+.svg {
+  fill: #f8fafc;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.nameContainer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .dateText {

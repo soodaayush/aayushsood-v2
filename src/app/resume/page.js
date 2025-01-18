@@ -1,4 +1,12 @@
+"use client";
+
+import { motion, AnimatePresence } from "motion/react";
+
+import Image from "next/image";
+
 import styles from "../styles/resume/resume.module.css";
+
+import PDF from "../../../public/assets/header-icons/pdf.svg";
 
 import ResumeProject from "../components/resume/resumeProject";
 import resumeProjects from "../data/resumeProjects.json";
@@ -9,7 +17,24 @@ export default function Resume() {
       <div className={`content ${styles.resumeContentContainer}`}>
         <div className={styles.row1}>
           <div className={styles.column1}>
-            <h1 className={styles.name}>Aayush Sood</h1>
+            <div className={styles.nameContainer}>
+              <h1 className={styles.name}>Aayush Sood</h1>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className={styles.button}
+              >
+                <a href="assets/resume/resume.pdf" target="_blank">
+                  <Image
+                    src={PDF}
+                    width={40}
+                    height={40}
+                    alt="GitHub"
+                    className={styles.svg}
+                  />
+                </a>
+              </motion.button>
+            </div>
             <label>Aspiring Intern & Fullstack Developer</label>
           </div>
           <div className={`${styles.column2} ${styles.contact}`}>
@@ -63,7 +88,7 @@ export default function Resume() {
             <div className={styles.section}>
               <h3 className={styles.headerTitle}>Technical Skills</h3>
               <div className={styles.sectionDetail}>
-                <h3 className={styles.sectionDetail}>Programming Languages</h3>
+                <h3 className={styles.headerText}>Programming Languages</h3>
                 <p className={styles.bodyText}>
                   HTML, CSS, SCSS, JavaScript, Python, SQL, C++
                 </p>

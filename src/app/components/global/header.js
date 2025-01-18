@@ -54,8 +54,8 @@ export default function Header() {
             <a href="https://github.com/soodaayush" target="_blank">
               <Image
                 src={GitHub}
-                width={40}
-                height={40}
+                width={35}
+                height={35}
                 alt="GitHub"
                 className={styles.svg}
               />
@@ -69,8 +69,8 @@ export default function Header() {
             <a href="https://leetcode.com/u/soodaayush/" target="_blank">
               <Image
                 src={LeetCode}
-                width={40}
-                height={40}
+                width={35}
+                height={35}
                 alt="LeetCode"
                 className={styles.svg}
               />
@@ -84,23 +84,8 @@ export default function Header() {
             <a href="https://www.linkedin.com/in/soodaayush/" target="_blank">
               <Image
                 src={LinkedIn}
-                width={40}
-                height={40}
-                alt="GitHub"
-                className={styles.svg}
-              />
-            </a>
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className={styles.button}
-          >
-            <a href="assets/resume/resume.pdf" target="_blank">
-              <Image
-                src={PDF}
-                width={40}
-                height={40}
+                width={35}
+                height={35}
                 alt="GitHub"
                 className={styles.svg}
               />
@@ -114,8 +99,8 @@ export default function Header() {
             <a href="https://www.youtube.com/@soodaayush" target="_blank">
               <Image
                 src={YouTube}
-                width={40}
-                height={40}
+                width={35}
+                height={35}
                 alt="GitHub"
                 className={styles.svg}
               />
@@ -129,8 +114,8 @@ export default function Header() {
             <a href="https://titansmaaf.ca/" target="_blank">
               <Image
                 src={titans}
-                width={40}
-                height={40}
+                width={35}
+                height={35}
                 alt="Titans MMA"
                 className={styles.svg}
               />
@@ -145,9 +130,9 @@ export default function Header() {
           >
             <Image
               src={menu}
-              width={40}
-              height={40}
-              alt="GitHub"
+              width={35}
+              height={35}
+              alt="Menu"
               onClick={openHamburgerMenu}
               className={styles.svg}
             />
@@ -175,8 +160,8 @@ export default function Header() {
                 >
                   <Image
                     src={close}
-                    width={40}
-                    height={40}
+                    width={30}
+                    height={30}
                     alt="Close"
                     onClick={openHamburgerMenu}
                     className={styles.svg}
@@ -284,28 +269,7 @@ export default function Header() {
                     </div>
                   </motion.div>
                 </a>
-                <a
-                  href="../../assets/resume/resume.pdf"
-                  target="_blank"
-                  className={styles.menuLink}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={styles.menuButton}
-                  >
-                    <h2 className={styles.menuLinkText}>Resume</h2>
-                    <div>
-                      <Image
-                        src={PDF}
-                        width={40}
-                        height={40}
-                        alt="Resume"
-                        className={styles.svg}
-                      />
-                    </div>
-                  </motion.div>
-                </a>
+
                 <a
                   href="https://www.youtube.com/@soodaayush"
                   target="_blank"

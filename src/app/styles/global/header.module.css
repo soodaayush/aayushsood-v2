@@ -43,12 +43,9 @@
   opacity: 0.75;
 }
 
-.links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
+/* .links {
+  border: 1px solid red;
+} */
 
 .svg {
   fill: #f8fafc;
@@ -66,6 +63,7 @@
   border: none;
   outline: none;
   cursor: pointer;
+  gap: 20px;
 }
 
 .headerMenu {
@@ -125,7 +123,7 @@
   }
 
   .links {
-    display: block;
+    display: flex;
   }
 
   .pages {
