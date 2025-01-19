@@ -2,7 +2,7 @@
   {
     "name": "Gaming",
     "icon": "FaGamepad",
-    "description": "Gaming is my way to unwind and explore new worlds. I'm particularly into first-person shooters like Fortnite, Rainbow Six Siege, Cyberpunk, and more.",
+    "description": "I love immersing myself in diverse virtual worlds, exploring narratives, and tackling challenges. Gaming isn't just about entertainment; it's a gateway to experiencing different cultures, stories, and perspectives. It sharpens my reflexes, strategic thinking, and teamwork skills, all while providing a sense of community through multiplayer experiences and online forums. The evolving nature of gaming technology also fascinates me, from realistic graphics to the rise of virtual and augmented reality, making it a field that constantly piques my interest.",
     "channels": [
       {
         "name": "CoryxKenshin",
@@ -13,7 +13,7 @@
   {
     "name": "Math",
     "icon": "PiMathOperationsFill",
-    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.",
+    "description": "Math fuels my logical reasoning and analytical skills. I enjoy delving into mathematical puzzles, exploring abstract concepts, and applying them to real-world problems. Whether it's algebra, calculus, or statistics, each area of mathematics offers unique insights into the workings of the universe, enhancing my ability to think critically and solve problems efficiently.",
     "channels": [
       {
         "name": "3Blue1Brown",
@@ -32,18 +32,30 @@
   {
     "name": "Science",
     "icon": "MdScience",
-    "description": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae..",
+    "description": "Science is a vast domain that captures my curiosity with its exploration of the natural world. Physics, in particular, offers a profound understanding of the universe, from the smallest particles to the largest cosmic structures. I am captivated by concepts like relativity, quantum mechanics, and thermodynamics. Science, in general, drives innovation and shapes our future, making it an essential part of our progress. I enjoy staying updated with the latest scientific discoveries and exploring how they can be applied to improve our lives.",
     "channels": [
       {
         "name": "Veritasium",
         "link": "https://www.youtube.com/@veritasium"
+      },
+      {
+        "name": "Mark Rober",
+        "link": "https://www.youtube.com/@MarkRober"
+      },
+      {
+        "name": "Vsauce",
+        "link": "https://www.youtube.com/@Vsauce"
+      },
+      {
+        "name": "Kurzgesagt",
+        "link": "https://www.youtube.com/@kurzgesagt"
       }
     ]
   },
   {
     "name": "Geopolitics",
     "icon": "FaGlobe",
-    "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+    "description": "Geopolitics is a fascinating field that delves into the complexities of international relations, power structures, and global conflicts. Understanding the historical context of geopolitical events helps me analyze current affairs more critically. I am particularly interested in how economic policies, cultural exchanges, and technological advancements influence the global stage. This interest allows me to connect the dots between different events and understand their broader implications.",
     "channels": [
       {
         "name": "Peter Zeihan",
@@ -54,7 +66,7 @@
   {
     "name": "MMA",
     "icon": "MdOutlineSportsMartialArts",
-    "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+    "description": "Mixed Martial Arts challenge my physical and mental limits. The sport demands discipline, strategy, and resilience. Training in MMA has taught me the importance of focus, adaptability, and respect for opponents. Beyond the physical benefits, it provides a sense of accomplishment and boosts my confidence. Watching professional fights also offers valuable insights into techniques and strategies, fueling my passion for continuous learning and self-improvement.",
     "channels": [
       {
         "name": "UFC",
@@ -77,7 +89,7 @@
   {
     "name": "Programming",
     "icon": "FaCode",
-    "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+    "description": "Programming is both a creative outlet and a problem-solving tool for me. It allows me to bring ideas to life by developing software and applications that can make a real difference. I enjoy exploring different programming languages, frameworks, and tools, constantly learning and adapting to new technologies. The process of debugging and optimizing code is particularly rewarding, as it challenges my patience and perseverance. Programming is not just a skill; it's a way of thinking that empowers me to tackle complex problems in innovative ways.",
     "channels": [
       {
         "name": "Fireship",
@@ -96,7 +108,7 @@
   {
     "name": "Technology",
     "icon": "FaLaptop",
-    "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+    "description": "Technology is the backbone of modern society, driving innovation and transformation in every field. My fascination with technology stems from its ability to solve complex problems and improve our quality of life. Whether it's artificial intelligence, blockchain, or renewable energy, I am excited by the possibilities that technology offers. I enjoy staying ahead of the curve, learning about emerging trends, and exploring how they can be harnessed to create a better future.",
     "channels": [
       {
         "name": "Ben Eater",

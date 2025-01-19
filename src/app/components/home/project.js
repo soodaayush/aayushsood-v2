@@ -17,7 +17,7 @@ export default function Project(props) {
       }}
       className={styles.projectContainer}
     >
-      <a href={props.link} className={styles.imageContainer} target="_blank">
+      <div className={styles.imageContainer}>
         <Image
           className={styles.projectThumbnail}
           src={props.image}
@@ -25,7 +25,7 @@ export default function Project(props) {
           height={150}
           alt={props.name}
         />
-      </a>
+      </div>
       <h2 className={styles.projectName}>{props.name}</h2>
       <div className={styles.tagContainer}>
         {props.tags
