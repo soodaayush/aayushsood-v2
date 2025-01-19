@@ -25,7 +25,11 @@
       },
       {
         "name": "Krista King",
-        "link": "https://www.youtube.com/@kristakingmath"
+        "link": "https://www.kristakingmath.com/"
+      },
+      {
+        "name": "Khan Academy",
+        "link": "https://www.khanacademy.org"
       }
     ]
   },
@@ -102,6 +106,10 @@
       {
         "name": "Kevin Powell",
         "link": "https://www.youtube.com/@KevinPowell"
+      },
+      {
+        "name": "CS50",
+        "link": "https://www.youtube.com/@cs50"
       }
     ]
   },

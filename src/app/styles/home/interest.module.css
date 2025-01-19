@@ -5,6 +5,7 @@
   break-inside: avoid;
   text-align: justify;
   overflow: visible;
+  text-align: left;
 }
 
 .interestTitle {
@@ -35,7 +36,14 @@
   color: #f8fafc;
   border-bottom: 2px solid #64ffda;
   transition: 0.15s ease-in-out;
-  margin-left: 5px;
+}
+
+.linkTexts {
+  width: 100%;
+}
+
+.linkTexts > *:not(:first-child) {
+  margin-left: 10px;
 }
 
 .link:hover {

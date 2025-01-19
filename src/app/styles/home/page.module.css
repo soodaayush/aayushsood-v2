@@ -136,23 +136,23 @@
 }
 
 .interestList {
-  column-count: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 16px;
   padding: 16px;
   width: 100%;
-  box-sizing: border-box;
-  overflow: visible;
+  margin: 0 auto;
 }
 
 @media (max-width: 875px) {
   .interestList {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
   .interestList {
-    column-count: 1;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
