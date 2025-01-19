@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 import Image from "next/image";
 
@@ -10,7 +11,7 @@ import styles from "./styles/home/page.module.css";
 import Aayush from "../../public/assets/welcome/aayush.jpg";
 
 import Project from "./components/home/project";
-import TechnicalSkill from "./components/home/techincalSkill";
+import TechnicalSkill from "./components/home/technicalSkill";
 import Interest from "./components/home/interest";
 
 import { FaLaptop, FaCode, FaGamepad, FaGlobe } from "react-icons/fa";
@@ -32,18 +33,6 @@ export default function Home() {
     FaCode: FaCode,
     FaLaptop: FaLaptop,
   };
-
-  const roles = [
-    "fullstack developer!",
-    "student!",
-    "competitive programmer!",
-    "creator!",
-  ];
-
-  const [text, setText] = useState("");
-  const [roleIndex, setRoleIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [cursorVisible, setCursorVisible] = useState(true);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [numVisibleProjects, setNumVisibleProjects] = useState(3);
@@ -74,46 +63,10 @@ export default function Home() {
 
     window.addEventListener("resize", updateVisibleProjects);
 
-    let typingTimeout;
-    const updateText = () => {
-      const fullText = `Hi, I am Aayush and I am a `;
-      const currentRole = roles[roleIndex];
-
-      const fullRoleText = fullText + currentRole;
-      const displayedRole = text.slice(fullText.length);
-
-      if (!isDeleting) {
-        setText((prev) => {
-          const nextText = fullRoleText.slice(0, prev.length + 1);
-          if (nextText === fullRoleText) {
-            setTimeout(() => setIsDeleting(true), 1000);
-          }
-          return nextText;
-        });
-        typingTimeout = setTimeout(updateText, 50);
-      } else {
-        if (displayedRole.length > 0) {
-          setText((prev) => prev.slice(0, -1));
-          typingTimeout = setTimeout(updateText, 40);
-        } else {
-          setIsDeleting(false);
-          setRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-        }
-      }
-    };
-
-    typingTimeout = setTimeout(updateText, 100);
-
-    const cursorInterval = setInterval(() => {
-      setCursorVisible((prev) => !prev);
-    }, 600);
-
     return () => {
       window.removeEventListener("resize", updateVisibleProjects);
-      clearTimeout(typingTimeout);
-      clearInterval(cursorInterval);
     };
-  }, [text, isDeleting, roleIndex, roles]);
+  }, []);
 
   const visibleProjects = [];
   for (let i = 0; i < numVisibleProjects; i++) {
@@ -124,15 +77,30 @@ export default function Home() {
     <div className={styles.homeContainer}>
       <div className={styles.welcomeContainer}>
         <div className={`content ${styles.welcomeContent}`}>
-          <motion.div
-            className={styles.welcomeText}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            {text}
-            {cursorVisible && <span>|</span>}
-          </motion.div>
+          <div>
+            <TypeAnimation
+              sequence={[
+                "Hi, I'm Aayush",
+                2000,
+                "Hi, I'm Aayush\nAnd I am a fullstack developer!",
+                2000,
+                "Hi, I'm Aayush\nAnd I am a student!",
+                2000,
+                "Hi, I'm Aayush\nAnd I am a creator!",
+                2000,
+                "Hi, I'm Aayush\nAnd I am a competitive programmer!",
+                2000,
+              ]}
+              speed={5}
+              className={styles.welcomeText}
+            />
+            <p>
+              I'm based in Nova Scotia, Canada, and I'm passionate about Math,
+              Software Engineering, Gaming, and Jiu Jitsu. <br />
+              I'm an aspiring software intern with coding passion,
+              problem-solving skills, and eagerness to contribute.
+            </p>
+          </div>
           <div>
             <motion.div
               initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}

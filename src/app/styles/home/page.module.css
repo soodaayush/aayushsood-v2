@@ -21,7 +21,7 @@
 }
 
 .welcomeText {
-  text-align: center;
+  white-space: pre-line;
 }
 
 .picture {

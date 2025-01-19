@@ -21,7 +21,7 @@
   },
   {
     "name": "Ben Eater's 6502 Project",
-    "image": "/assets/projects/thumbnails/6502.webp",
+    "image": "/assets/projects/thumbnails/6502.jpeg",
     "description": "A series of hardware projects surrounding the 6502 CPU, inspired by Ben Eater.",
     "tags": ["Arduino", "Python", "Assembly", "C++"],
     "year": 2024,
