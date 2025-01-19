@@ -15,10 +15,6 @@ export default function Interest(props) {
         boxShadow: "0px 4px 20px rgba(255, 255, 255, 0.3)",
         transition: { type: "spring", stiffness: 300, damping: 15 },
       }}
-      whileTap={{
-        scale: 0.95,
-        transition: { type: "spring", stiffness: 300, damping: 15 },
-      }}
       className={styles.interestContainer}
     >
       <h1 className={styles.interestTitle}>
@@ -26,6 +22,21 @@ export default function Interest(props) {
         {props.name}
       </h1>
       <p>{props.description}</p>
+      <div className={styles.links}>
+        <p>My favorite channels I follow are: </p>
+        {props.channels
+          .sort((a, b) => a.name.localeCompare(b.name))
+          .map((channel, index) => (
+            <a
+              className={styles.link}
+              key={index}
+              href={channel.link}
+              target="_blank"
+            >
+              {channel.name}
+            </a>
+          ))}
+      </div>
     </motion.div>
   );
 }

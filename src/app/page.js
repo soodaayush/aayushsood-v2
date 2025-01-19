@@ -91,7 +91,8 @@ export default function Home() {
                 "Hi, I'm Aayush\nAnd I am a competitive programmer!",
                 2000,
               ]}
-              speed={5}
+              speed={40} // Increased speed for smoother animation
+              deletionSpeed={35} // Slightly faster deletion
               className={styles.welcomeText}
             />
             <p>
@@ -190,6 +191,7 @@ export default function Home() {
                   key={index}
                   name={interest.name}
                   description={interest.description}
+                  channels={interest.channels}
                   icon={<IconComponent />}
                 />
               );

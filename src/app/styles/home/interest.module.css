@@ -25,3 +25,19 @@
   align-items: center;
   margin-right: 10px;
 }
+
+.links {
+  text-align: left;
+  width: 100%;
+}
+
+.link {
+  color: #f8fafc;
+  border-bottom: 2px solid #64ffda;
+  transition: 0.15s ease-in-out;
+  margin-left: 5px;
+}
+
+.link:hover {
+  opacity: 0.75;
+}

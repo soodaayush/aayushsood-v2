@@ -2,36 +2,106 @@
   {
     "name": "Gaming",
     "icon": "FaGamepad",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+    "description": "Gaming is my way to unwind and explore new worlds. I'm particularly into first-person shooters like Fortnite, Rainbow Six Siege, Cyberpunk, and more.",
+    "channels": [
+      {
+        "name": "CoryxKenshin",
+        "link": "https://www.youtube.com/@CoryxKenshin"
+      }
+    ]
   },
   {
     "name": "Math",
     "icon": "PiMathOperationsFill",
-    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi."
+    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.",
+    "channels": [
+      {
+        "name": "3Blue1Brown",
+        "link": "https://www.youtube.com/@3blue1brown"
+      },
+      {
+        "name": "Numberphile",
+        "link": "https://www.youtube.com/@numberphile"
+      },
+      {
+        "name": "Krista King",
+        "link": "https://www.youtube.com/@kristakingmath"
+      }
+    ]
   },
   {
     "name": "Science",
     "icon": "MdScience",
-    "description": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.."
+    "description": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae..",
+    "channels": [
+      {
+        "name": "Veritasium",
+        "link": "https://www.youtube.com/@veritasium"
+      }
+    ]
   },
   {
     "name": "Geopolitics",
     "icon": "FaGlobe",
-    "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+    "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+    "channels": [
+      {
+        "name": "Peter Zeihan",
+        "link": "https://www.youtube.com/@ZeihanonGeopolitics"
+      }
+    ]
   },
   {
     "name": "MMA",
     "icon": "MdOutlineSportsMartialArts",
-    "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+    "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+    "channels": [
+      {
+        "name": "UFC",
+        "link": "https://www.youtube.com/@ufc"
+      },
+      {
+        "name": "Khabib Nurmagomedov",
+        "link": "https://www.youtube.com/@KhabibTheEagle"
+      },
+      {
+        "name": "Alex Pereira",
+        "link": "https://www.youtube.com/@Poatan.AlexPereira"
+      },
+      {
+        "name": "Gordon Ryan",
+        "link": "https://www.youtube.com/@Gordonlovesjiujitsu"
+      }
+    ]
   },
   {
     "name": "Programming",
     "icon": "FaCode",
-    "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+    "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+    "channels": [
+      {
+        "name": "Fireship",
+        "link": "https://www.youtube.com/@Fireship"
+      },
+      {
+        "name": "Gennady Korotkevich",
+        "link": "https://www.youtube.com/@que_tourist"
+      },
+      {
+        "name": "Kevin Powell",
+        "link": "https://www.youtube.com/@KevinPowell"
+      }
+    ]
   },
   {
     "name": "Technology",
     "icon": "FaLaptop",
-    "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+    "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+    "channels": [
+      {
+        "name": "Ben Eater",
+        "link": "https://www.youtube.com/@BenEater"
+      }
+    ]
   }
 ]
