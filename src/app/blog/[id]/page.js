@@ -5,6 +5,8 @@ import matter from "gray-matter";
 import styles from "../../styles/blog/blogPost.module.css";
 import { MDXComponents } from "../../MDXComponents/MDXComponents";
 
+export const runtime = "edge";
+
 export default async function BlogPost({ params }) {
   const { id } = await params;
 
