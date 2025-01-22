@@ -11,3 +11,19 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.contact {
+  color: #f8fafc;
+  transition: 0.15s ease-in-out;
+}
+
+.contact:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 450px) {
+  .footerContent {
+    flex-direction: column;
+    text-align: center;
+  }
+}

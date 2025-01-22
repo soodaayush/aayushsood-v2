@@ -91,14 +91,23 @@
   text-align: left;
 }
 
+.highlight {
+  border-bottom: 2px solid #64ffda;
+}
+
 .list {
   margin-left: -26px;
 }
 
 .link {
   color: #f8fafc;
+  transition: 0.15s ease-in-out;
   margin: 0;
   padding: 0;
+}
+
+.link:hover {
+  opacity: 0.75;
 }
 
 .column2 {

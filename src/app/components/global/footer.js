@@ -7,6 +7,11 @@ export default function Footer() {
         <div>
           <label>© 2023 - Present Aayush Sood. All Rights Reserved.</label>
         </div>
+        <div>
+          <a className={styles.contact} href="mailto:aayush.sood@icloud.com">
+            Contact
+          </a>
+        </div>
       </div>
     </div>
   );

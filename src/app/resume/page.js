@@ -125,33 +125,49 @@ export default function Resume() {
               <div className={styles.sectionDetail}>
                 <ul className={styles.list}>
                   <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Completed Harvard's <strong>CS50</strong>: Introduction to
-                    Computer Science
+                    Completed Harvard's{" "}
+                    <strong className={styles.highlight}>CS50</strong>:
+                    Introduction to Computer Science
                   </li>
                   <li className={`${styles.bodyText} ${styles.listItem}`}>
                     Invited to and participated in an exclusive{" "}
-                    <strong>math camp</strong> hosted by{" "}
-                    <strong>Dalhousie University</strong>
-                  </li>
-                  <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Recipient of the <strong>Innovative Mind Award</strong>
+                    <strong className={styles.highlight}>math camp</strong>{" "}
+                    hosted by{" "}
+                    <strong className={styles.highlight}>
+                      Dalhousie University
+                    </strong>
                   </li>
                   <li className={`${styles.bodyText} ${styles.listItem}`}>
                     Recipient of the{" "}
-                    <strong>Mathematics Achievement Award</strong>
+                    <strong className={styles.highlight}>
+                      Innovative Mind Award
+                    </strong>
+                  </li>
+                  <li className={`${styles.bodyText} ${styles.listItem}`}>
+                    Recipient of the{" "}
+                    <strong className={styles.highlight}>
+                      Mathematics Achievement Award
+                    </strong>
                   </li>
                   <li className={`${styles.bodyText} ${styles.listItem}`}>
                     Made Honour Rolls in junior division of{" "}
-                    <strong>
+                    <strong className={styles.highlight}>
                       University of Waterloo's Canadian Computing Competition
                     </strong>
                   </li>
                   <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Achieved <strong>first place</strong> in a{" "}
-                    <strong>regional Improv competition</strong>
+                    Achieved{" "}
+                    <strong className={styles.highlight}>first place</strong> in
+                    a{" "}
+                    <strong className={styles.highlight}>
+                      regional Improv competition
+                    </strong>
                   </li>
                   <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Earned <strong>medals in Jiu Jitsu tournaments</strong>
+                    Earned{" "}
+                    <strong className={styles.highlight}>
+                      medals in Jiu Jitsu tournaments
+                    </strong>
                   </li>
                 </ul>
               </div>
