@@ -53,6 +53,14 @@
       {
         "name": "Kurzgesagt",
         "link": "https://www.youtube.com/@kurzgesagt"
+      },
+      {
+        "name": "The Organic Chemistry Tutor",
+        "link": "https://www.youtube.com/@TheOrganicChemistryTutor"
+      },
+      {
+        "name": "TED-Ed",
+        "link": "https://www.youtube.com/@TEDEd"
       }
     ]
   },
@@ -64,6 +72,14 @@
       {
         "name": "Peter Zeihan",
         "link": "https://www.youtube.com/@ZeihanonGeopolitics"
+      },
+      {
+        "name": "CaspianReport",
+        "link": "https://www.youtube.com/@CaspianReport"
+      },
+      {
+        "name": "RealLifeLore",
+        "link": "https://www.youtube.com/@RealLifeLore"
       }
     ]
   },
@@ -87,6 +103,10 @@
       {
         "name": "Gordon Ryan",
         "link": "https://www.youtube.com/@Gordonlovesjiujitsu"
+      },
+      {
+        "name": "ONE Championship",
+        "link": "https://www.youtube.com/@ONEChampionship"
       }
     ]
   },
@@ -110,6 +130,14 @@
       {
         "name": "CS50",
         "link": "https://www.youtube.com/@cs50"
+      },
+      {
+        "name": "Academind",
+        "link": "https://www.youtube.com/@academind"
+      },
+      {
+        "name": "Zero To Mastery",
+        "link": "https://zerotomastery.io/"
       }
     ]
   },
@@ -121,6 +149,14 @@
       {
         "name": "Ben Eater",
         "link": "https://www.youtube.com/@BenEater"
+      },
+      {
+        "name": "styropyro",
+        "link": "https://www.youtube.com/@styropyro"
+      },
+      {
+        "name": "Branch Education",
+        "link": "https://www.youtube.com/@BranchEducation"
       }
     ]
   }

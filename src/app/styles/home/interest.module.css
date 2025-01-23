@@ -39,11 +39,11 @@
 }
 
 .linkTexts {
-  width: 100%;
-}
-
-.linkTexts > *:not(:first-child) {
-  margin-left: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .link:hover {
