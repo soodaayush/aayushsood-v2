@@ -1,7 +1,5 @@
 import "./styles/global/globals.css";
 
-import { Viewport, Metadata } from "next";
-
 import Header from "./components/global/header";
 import Footer from "./components/global/footer";
 
