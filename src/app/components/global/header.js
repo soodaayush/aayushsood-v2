@@ -15,7 +15,7 @@ import GitHub from "../../../../public/assets/header-icons/github.svg";
 import LeetCode from "../../../../public/assets/header-icons/leetcode.svg";
 import LinkedIn from "../../../../public/assets/header-icons/linkedin.svg";
 import YouTube from "../../../../public/assets/header-icons/youtube.svg";
-import titans from "../../../../public/assets/header-icons/titans.png";
+import titans from "../../../../public/assets/header-icons/titans.webp";
 import menu from "../../../../public/assets/header-icons/menu.svg";
 import close from "../../../../public/assets/header-icons/close.svg";
 

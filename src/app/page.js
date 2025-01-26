@@ -8,7 +8,7 @@ import Image from "next/image";
 
 import styles from "./styles/home/page.module.css";
 
-import Aayush from "../../public/assets/welcome/aayush.jpg";
+import Aayush from "../../public/assets/welcome/aayush.webp";
 
 import Project from "./components/home/project";
 import TechnicalSkill from "./components/home/technicalSkill";

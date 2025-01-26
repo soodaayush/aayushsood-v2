@@ -1,7 +1,7 @@
 [
   {
     "name": "BVHS Mobile App",
-    "image": "/assets/projects/thumbnails/bvh-mobile-app.png",
+    "image": "/assets/projects/thumbnails/bvh-mobile-app.webp",
     "description": "A mobile app I created for my high school for an easier distribution of information. This was created for Harvard University's CS50x.",
     "tags": ["React Native", "Expo"],
     "year": 2024,
@@ -21,7 +21,7 @@
   },
   {
     "name": "Ben Eater's 6502 Project",
-    "image": "/assets/projects/thumbnails/6502.jpeg",
+    "image": "/assets/projects/thumbnails/6502.webp",
     "description": "A series of hardware projects surrounding the 6502 CPU, inspired by Ben Eater.",
     "tags": ["Arduino", "Python", "Assembly", "C++"],
     "year": 2024,
@@ -31,7 +31,7 @@
   },
   {
     "name": "LlamaTalk",
-    "image": "/assets/projects/thumbnails/llamatalk.png",
+    "image": "/assets/projects/thumbnails/llamatalk.webp",
     "description": "A website that allows you to interact with Meta's Codellama, through a service called Ollama.",
     "tags": ["HTML", "SCSS", "JavaScript", "Codellama"],
     "year": 2024,
@@ -52,7 +52,7 @@
   {
     "name": "WordSmith",
     "website": "https://wordsmithy.netlify.app/",
-    "image": "/assets/projects/thumbnails/wordsmith.png",
+    "image": "/assets/projects/thumbnails/wordsmith.webp",
     "description": "A website that allows you to play a word guessing game involving the comparison of two words.",
     "tags": ["HTML", "SCSS", "JavaScript"],
     "year": 2024,
@@ -62,7 +62,7 @@
   },
   {
     "name": "LeetCode",
-    "image": "/assets/projects/thumbnails/leetcode.png",
+    "image": "/assets/projects/thumbnails/leetcode.webp",
     "description": "A collection of my solved LeetCode problems, written in multiple languages.",
     "tags": ["JavaScript", "Python", "C++"],
     "year": 2022,
@@ -73,7 +73,7 @@
   {
     "name": "CoinDeno",
     "website": "https://coindeno.netlify.app/",
-    "image": "/assets/projects/thumbnails/coindeno.png",
+    "image": "/assets/projects/thumbnails/coindeno.webp",
     "description": "A mobile app that allows you to track your favorite cryptocurrencies and build your own portfolio.",
     "tags": ["React Native", "Expo", "Firebase", "JavaScript"],
     "year": 2022,
@@ -84,7 +84,7 @@
   {
     "name": "Pac Man",
     "website": "https://pac-man-wb.netlify.app/",
-    "image": "/assets/projects/thumbnails/pac-man.png",
+    "image": "/assets/projects/thumbnails/pac-man.webp",
     "description": "A website that allows you to play the iconic game, Pac Man.",
     "tags": ["HTML", "SCSS", "JavaScript"],
     "year": 2021,
@@ -95,7 +95,7 @@
   {
     "name": "CoinDeno Web",
     "website": "https://warbaddy.com/",
-    "image": "/assets/projects/thumbnails/coindeno-web.png",
+    "image": "/assets/projects/thumbnails/coindeno-web.webp",
     "description": "Similar to CoinDeno, this is a web version, which allows you to track your favorite cryptocurrencies and build your own portfolio.",
     "tags": ["React", "Redux", "Firebase", "Tailwind CSS"],
     "year": 2021,
@@ -106,7 +106,7 @@
   {
     "name": "Frontend Mentor Challenges",
     "website": "https://challenges-wb.netlify.app/",
-    "image": "/assets/projects/thumbnails/frontend-mentor-challenges.png",
+    "image": "/assets/projects/thumbnails/frontend-mentor-challenges.webp",
     "description": "A collection of my completed Frontend Mentor challenges.",
     "tags": ["HTML", "SCSS", "JavaScript"],
     "year": 2020,
@@ -117,7 +117,7 @@
   {
     "name": "LearnWithMe",
     "website": "https://learningwithme.netlify.app/",
-    "image": "/assets/projects/thumbnails/learn-with-me.png",
+    "image": "/assets/projects/thumbnails/learn-with-me.webp",
     "description": "A website created for a tutor based in New Delhi, India.",
     "tags": ["HTML", "SCSS"],
     "year": 2020,
