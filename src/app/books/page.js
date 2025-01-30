@@ -10,9 +10,11 @@ export default function Books() {
       <div className={`content ${styles.booksContent}`}>
         <h1 className={styles.booksTitle}>Reading List</h1>
         <div className={styles.booksList}>
-          {books.map((book, index) => (
-            <Book {...book} key={index} />
-          ))}
+          {books
+            .sort((a, b) => a.title.localeCompare(b.title))
+            .map((book, index) => (
+              <Book {...book} key={index} />
+            ))}
         </div>
       </div>
     </div>
