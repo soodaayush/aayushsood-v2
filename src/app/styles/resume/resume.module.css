@@ -132,7 +132,7 @@
   margin-top: 20px;
 }
 
-@media (min-width: 840px) {
+@media (min-width: 880px) {
   .row1 {
     flex-direction: row;
   }
@@ -142,7 +142,7 @@
   }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 880px) {
   .row1 {
     flex-direction: column;
   }

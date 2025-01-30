@@ -6,7 +6,7 @@ import Footer from "./components/global/footer";
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#ffffff",
+  themeColor: "#12192b",
 };
 
 export const metadata = {
@@ -96,6 +96,9 @@ export const metadata = {
     title: "Aayush Sood",
     description: "Aayush Sood's Portfolio",
     images: ["https://www.aayushsood.com/assets/openGraph/banner.png"],
+  },
+  alternates: {
+    canonical: "https://www.aayushsood.com/",
   },
 };
 
