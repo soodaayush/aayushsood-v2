@@ -10,14 +10,18 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "Aayush Sood",
-  description: "Aayush Sood's Portfolio",
+  title: "Portfolio | Aayush Sood",
+  description:
+    "Welcome to my personal portfolio. Discover my skills, projects, interests, and experience.",
   creator: "Aayush Sood",
   keywords: [
     "portfolio",
     "Aayush Sood",
     "developer",
     "programming",
+    "tech",
+    "web development",
+    "software engineer",
     "projects",
   ],
   robots: {

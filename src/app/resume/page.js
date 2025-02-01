@@ -1,7 +1,3 @@
-"use client";
-
-import { motion, AnimatePresence } from "motion/react";
-
 import Image from "next/image";
 
 import styles from "../styles/resume/resume.module.css";
@@ -11,6 +7,39 @@ import PDF from "../../../public/assets/header-icons/pdf.svg";
 import ResumeProject from "../components/resume/resumeProject";
 import resumeProjects from "../data/resumeProjects.json";
 
+export const metadata = {
+  title: "Resume | Aayush Sood",
+  description:
+    "View my resume and explore my experience, skills, and education.",
+  creator: "Aayush Sood",
+  openGraph: {
+    title: "Resume | Aayush Sood",
+    description:
+      "View my resume and explore my experience, skills, and education.",
+    url: "https://www.aayushsood.com/resume",
+    siteName: "Aayush Sood's Resume",
+    images: [
+      {
+        url: "https://www.aayushsood.com/assets/openGraph/banner.png",
+        width: 800,
+        height: 600,
+        alt: "Aayush Sood's Resume",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Resume | Aayush Sood",
+    description:
+      "View my resume and explore my experience, skills, and education.",
+    images: ["https://www.aayushsood.com/assets/openGraph/banner.png"],
+  },
+  alternates: {
+    canonical: "https://www.aayushsood.com/resume",
+  },
+};
+
 export default function Resume() {
   return (
     <div className={styles.resumeContainer}>
@@ -19,11 +48,7 @@ export default function Resume() {
           <div className={styles.column1}>
             <div className={styles.nameContainer}>
               <h1 className={styles.name}>Aayush Sood</h1>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className={styles.button}
-              >
+              <button className={styles.button}>
                 <a href="assets/resume/resume.pdf" target="_blank">
                   <Image
                     src={PDF}
@@ -33,7 +58,7 @@ export default function Resume() {
                     className={styles.svg}
                   />
                 </a>
-              </motion.button>
+              </button>
             </div>
             <label>Aspiring Intern & Fullstack Developer</label>
           </div>
