@@ -1,5 +1,7 @@
 import "./styles/global/globals.css";
 
+import Head from "next/head";
+
 import Header from "./components/global/header";
 import Footer from "./components/global/footer";
 
@@ -106,6 +108,43 @@ export const metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "http://schema.org",
+  "@type": "Person",
+  name: "Aayush Sood",
+  url: "https://www.aayushsood.com",
+  description:
+    "Hi, I'm Aayush And I am a fullstack developer! I'm based in Nova Scotia, Canada, and I'm passionate about Math, Software Engineering, Gaming, and Jiu Jitsu.",
+  sameAs: [
+    "https://www.linkedin.com/in/soodaayush/",
+    "https://github.com/soodaayush",
+    "https://www.youtube.com/@soodaayush",
+    "https://leetcode.com/u/soodaayush/",
+  ],
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.aayushsood.com/assets/welcome/aayush.webp",
+  },
+  jobTitle: "Fullstack Developer",
+  worksFor: {
+    "@type": "Organization",
+    name: "Freelance",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+1 (902)-789-4315",
+    contactType: "Developer Support",
+    areaServed: "Global",
+    availableLanguage: "English",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Halifax",
+    addressRegion: "Nova Scotia",
+    addressCountry: "Canada",
+  },
+};
+
 export const runtime = "edge";
 
 export default function RootLayout({ children }) {
@@ -115,6 +154,10 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </body>
     </html>
   );
