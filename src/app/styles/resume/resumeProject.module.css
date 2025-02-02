@@ -25,4 +25,9 @@
 
 .link {
   color: #f8fafc;
+  transition: 0.15s ease-in-out;
+}
+
+.link:hover {
+  opacity: 0.75;
 }
