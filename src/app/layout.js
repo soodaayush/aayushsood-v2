@@ -1,7 +1,5 @@
 import "./styles/global/globals.css";
 
-import Head from "next/head";
-
 import Header from "./components/global/header";
 import Footer from "./components/global/footer";
 
