@@ -1,0 +1,59 @@
+.notFoundContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+}
+
+.notFoundContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headerText {
+  font-size: 160px;
+  margin: 0;
+}
+
+.labelText {
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.link {
+  color: #e6b3ff;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  transition: 0.15s ease-in-out;
+}
+
+.link:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 450px) {
+  .labelText {
+    font-size: 24px;
+  }
+
+  .link {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .headerText {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .headerText {
+    font-size: 50px;
+  }
+}
