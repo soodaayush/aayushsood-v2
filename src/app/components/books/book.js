@@ -16,7 +16,7 @@ export default function Book(props) {
         alt={props.title}
       />
       <a className={styles.link} href={props.bookLink} target="_blank">
-        <h3 className={styles.bookTitle}>{props.title}</h3>
+        <h1 className={styles.bookTitle}>{props.title}</h1>
       </a>
       <a className={styles.link} href={props.authorLink} target="_blank">
         <label className={styles.bookAuthor}>{props.author}</label>
