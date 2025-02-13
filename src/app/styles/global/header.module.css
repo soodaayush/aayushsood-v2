@@ -43,9 +43,9 @@
   opacity: 0.75;
 }
 
-/* .links {
-  border: 1px solid red;
-} */
+.links {
+  gap: 5px;
+}
 
 .svg {
   fill: #f8fafc;

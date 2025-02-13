@@ -54,8 +54,8 @@ export default function Header() {
             <a href="https://github.com/soodaayush" target="_blank">
               <Image
                 src={GitHub}
-                width={35}
-                height={35}
+                width={40}
+                height={40}
                 alt="GitHub"
                 className={styles.svg}
               />
@@ -69,8 +69,8 @@ export default function Header() {
             <a href="https://leetcode.com/u/soodaayush/" target="_blank">
               <Image
                 src={LeetCode}
-                width={35}
-                height={35}
+                width={40}
+                height={40}
                 alt="LeetCode"
                 className={styles.svg}
               />
@@ -84,8 +84,8 @@ export default function Header() {
             <a href="https://www.linkedin.com/in/soodaayush/" target="_blank">
               <Image
                 src={LinkedIn}
-                width={35}
-                height={35}
+                width={40}
+                height={40}
                 alt="GitHub"
                 className={styles.svg}
               />
@@ -99,8 +99,8 @@ export default function Header() {
             <a href="https://www.youtube.com/@soodaayush" target="_blank">
               <Image
                 src={YouTube}
-                width={35}
-                height={35}
+                width={40}
+                height={40}
                 alt="GitHub"
                 className={styles.svg}
               />
@@ -114,8 +114,8 @@ export default function Header() {
             <a href="https://titansmaaf.ca/" target="_blank">
               <Image
                 src={titans}
-                width={35}
-                height={35}
+                width={40}
+                height={40}
                 alt="Titans MMA"
                 className={styles.svg}
               />
@@ -130,8 +130,8 @@ export default function Header() {
           >
             <Image
               src={menu}
-              width={35}
-              height={35}
+              width={40}
+              height={40}
               alt="Menu"
               onClick={openHamburgerMenu}
               className={styles.svg}
@@ -160,8 +160,8 @@ export default function Header() {
                 >
                   <Image
                     src={close}
-                    width={30}
-                    height={30}
+                    width={40}
+                    height={40}
                     alt="Close"
                     onClick={openHamburgerMenu}
                     className={styles.svg}
@@ -169,22 +169,6 @@ export default function Header() {
                 </motion.button>
               </div>
               <div className={styles.menuSection}>
-                {/* <Link
-                  className={styles.menuLink}
-                  href="/blog"
-                  onClick={openHamburgerMenu}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={styles.menuButton}
-                  >
-                    <h2 className={styles.menuLinkText}>Blog</h2>
-                    <div>
-                      <FaBlog className={styles.pageIcon} />
-                    </div>
-                  </motion.div>
-                </Link> */}
                 <Link
                   className={styles.menuLink}
                   href="/books"
