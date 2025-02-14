@@ -3,6 +3,8 @@ import "./styles/global/globals.css";
 import Header from "./components/global/header";
 import Footer from "./components/global/footer";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 export const viewport = {
   width: "device-width",
   initialScale: 1,
@@ -156,6 +158,7 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <GoogleAnalytics gaId="G-ZSFY8QD3JM" />
       </body>
     </html>
   );
