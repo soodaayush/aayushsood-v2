@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 60px 20px 60px 20px;
   width: 100%;
   background: linear-gradient(180deg, #090f1d, #0a1124, #090e1a, #12192c);
 }
