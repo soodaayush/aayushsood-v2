@@ -91,8 +91,8 @@ export default function Home() {
                 "Hi, I'm Aayush\nAnd I am a competitive programmer!",
                 2000,
               ]}
-              speed={40} // Increased speed for smoother animation
-              deletionSpeed={35} // Slightly faster deletion
+              speed={40}
+              deletionSpeed={35}
               className={styles.welcomeText}
             />
             <p>
