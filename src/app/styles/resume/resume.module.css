@@ -13,6 +13,95 @@
 }
 
 .name {
+  font-size: 50px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.sectionContainer {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sectionHeading {
+  margin: 0;
+}
+
+.divider {
+  border-top: 1px solid #fff;
+  width: 100%;
+}
+
+.schoolContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.school {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.schoolDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.text {
+  margin: 0;
+}
+
+.projectContainer {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.project {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  border: 1px solid red;
+}
+
+.projectDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .name {
   margin: 0;
 }
 
@@ -170,4 +259,4 @@
   .name {
     font-size: 35px;
   }
-}
+} */

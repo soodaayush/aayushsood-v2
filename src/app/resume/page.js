@@ -44,158 +44,148 @@ export default function Resume() {
   return (
     <div className={styles.resumeContainer}>
       <div className={`content ${styles.resumeContentContainer}`}>
-        <div className={styles.row1}>
-          <div className={styles.column1}>
-            <div className={styles.nameContainer}>
-              <h1 className={styles.name}>Aayush Sood</h1>
-              <button className={styles.button}>
-                <a href="assets/resume/resume.pdf" target="_blank">
-                  <Image
-                    src={PDF}
-                    width={40}
-                    height={40}
-                    alt="GitHub"
-                    className={styles.svg}
-                  />
-                </a>
-              </button>
+        <h1 className={styles.name}>Aayush Sood</h1>
+        <div className={styles.links}>
+          <p>+1 (902) 789-4315</p> |<p>aayush.sood@icloud.com</p> |
+          <p>linkedin.com/in/soodaayush</p> |<p>github.com/soodaayush</p> |
+          <p>aayushsood.com</p>
+        </div>
+        <div className={styles.sectionContainer}>
+          <h1 className={styles.sectionHeading}>Education</h1>
+          <hr className={styles.divider} />
+          <div className={styles.schoolContainer}>
+            <div className={styles.school}>
+              <div className={styles.schoolDetails}>
+                <p className={styles.text}>Bay View High School</p>
+                <p className={styles.text}>Upper Tantallon, NS</p>
+              </div>
+              <div className={styles.schoolDetails}>
+                <i className={styles.text}>Secondary School - Grade 11</i>
+                <p className={styles.text}>Sep. 2023 - Present</p>
+              </div>
             </div>
-            <label>Aspiring Intern & Fullstack Developer</label>
-          </div>
-          <div className={`${styles.column2} ${styles.contact}`}>
-            <a className={styles.link} target="_blank" href="tel:9027894315">
-              +1 (902) 789-4315
-            </a>
-            <a
-              className={styles.link}
-              target="_blank"
-              href="mailto:aayush.sood@icloud.com"
-            >
-              aayush.sood@icloud.com
-            </a>
-            <a
-              className={styles.link}
-              target="_blank"
-              href="https://aayushsood.com/"
-            >
-              aayushsood.com
-            </a>
-            <a
-              className={styles.link}
-              target="_blank"
-              href="https://github.com/soodaayush"
-            >
-              github.com/soodaayush
-            </a>
-            <a
-              className={styles.link}
-              target="_blank"
-              href="https://www.linkedin.com/in/soodaayush/"
-            >
-              linkedin.com/in/soodaayush
-            </a>
+            <div className={styles.school}>
+              <div className={styles.schoolDetails}>
+                <p className={styles.text}>Ridgecliff Middle School</p>
+                <p className={styles.text}>Beechville, NS</p>
+              </div>
+              <div className={styles.schoolDetails}>
+                <i className={styles.text}>Middle School</i>
+                <p className={styles.text}>Sep. 2019 - Jun. 2023</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className={styles.row2}>
-          <div className={`${styles.projects} ${styles.column1}`}>
-            <h3 className={styles.headerTitle}>Projects</h3>
-            {resumeProjects.map((project, index) => (
-              <ResumeProject
-                key={index}
-                name={project.name}
-                date={project.date}
-                link={project.link}
-                bullets={project.bullets}
-              />
-            ))}
+        <div className={styles.sectionContainer}>
+          <h1 className={styles.sectionHeading}>Accomplishments</h1>
+          <hr className={styles.divider} />
+          <div className={styles.schoolDetails}>
+            <h1 className={styles.text}>
+              Some of my notable achievements, included but not limited to:
+            </h1>
+            <h1 className={styles.text}>Since 2019</h1>
           </div>
-          <div className={`${styles.column2}`}>
-            <div className={styles.section}>
-              <h3 className={styles.headerTitle}>Technical Skills</h3>
-              <div className={styles.sectionDetail}>
-                <h3 className={styles.headerText}>Programming Languages</h3>
-                <p className={styles.bodyText}>
-                  HTML, CSS, SCSS, JavaScript, Python, SQL, C++
+          <div className={styles.accomplishmentList}>
+            <ul>
+              <li>
+                Competitively programming on CodeForces.com, Rating 1001, since
+                2024
+              </li>
+              <li>
+                Competitively programming on CodeForces.com, Rating 1001, since
+                2024
+              </li>
+              <li>
+                Competitively programming on CodeForces.com, Rating 1001, since
+                2024
+              </li>
+              <li>
+                Competitively programming on CodeForces.com, Rating 1001, since
+                2024
+              </li>
+              <li>
+                Competitively programming on CodeForces.com, Rating 1001, since
+                2024
+              </li>
+              <li>
+                Competitively programming on CodeForces.com, Rating 1001, since
+                2024
+              </li>
+              <li>
+                Competitively programming on CodeForces.com, Rating 1001, since
+                2024
+              </li>
+              <li>
+                Competitively programming on CodeForces.com, Rating 1001, since
+                2024
+              </li>
+              <li>
+                Competitively programming on CodeForces.com, Rating 1001, since
+                2024
+              </li>
+              <li>
+                Competitively programming on CodeForces.com, Rating 1001, since
+                2024
+              </li>
+              <li>
+                Competitively programming on CodeForces.com, Rating 1001, since
+                2024
+              </li>
+              <li>
+                Competitively programming on CodeForces.com, Rating 1001, since
+                2024
+              </li>
+              <li>
+                Competitively programming on CodeForces.com, Rating 1001, since
+                2024
+              </li>
+              <li>
+                Competitively programming on CodeForces.com, Rating 1001, since
+                2024
+              </li>
+              <li>
+                Competitively programming on CodeForces.com, Rating 1001, since
+                2024
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className={styles.sectionContainer}>
+          <h1 className={styles.sectionHeading}>Projects</h1>
+          <hr className={styles.divider} />
+          <div className={styles.projectContainer}>
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p className={styles.text}>
+                  Bay View High School - Mobile App |
+                  <i> React Native, JavaScript, Expo, Git</i>
                 </p>
+                <p className={styles.text}>July 2024 - September 2024</p>
               </div>
-              <div className={styles.sectionDetail}>
-                <h3 className={styles.headerText}>Libraries & Frameworks</h3>
-                <p className={styles.bodyText}>
-                  React, React Native, Bootstrap, Tailwind CSS, Node.js
-                </p>
-              </div>
-              <div className={styles.sectionDetail}>
-                <h3 className={styles.headerText}>Tools & Platforms</h3>
-                <p className={styles.bodyText}>
-                  Firebase, Cloudflare, Netlify, Git, GitHub, iOS, Android,
-                  Yarn, NPM
-                </p>
-              </div>
+              <ul className={styles.projectNotes}>
+                <li>
+                  Developed a Bay View High School Mobile app to present the
+                  school with a handheld presence
+                </li>
+              </ul>
             </div>
-            <div className={styles.section}>
-              <h3 className={styles.headerTitle}>Education</h3>
-              <div className={styles.sectionDetail}>
-                <h3 className={styles.headerText}>Bay View High School</h3>
-                <p className={styles.bodyText}>Upper Tantallon, NS</p>
-                <p className={styles.bodyText}>2023 - Present</p>
-              </div>
-              <div className={styles.sectionDetail}>
-                <h3 className={styles.headerText}>Ridgecliff Middle School</h3>
-                <p className={styles.bodyText}>Beechville, NS</p>
-                <p className={styles.bodyText}>2019 - 2023</p>
-              </div>
+          </div>
+        </div>
+        <div className={styles.sectionContainer}>
+          <h1 className={styles.sectionHeading}>Technical Skills</h1>
+          <hr className={styles.divider} />
+          <div className={styles.technicalSkillsContainer}>
+            <div className={styles.skill}>
+              <b>Languages: </b> <p className={styles.text}>HTML, CSS</p>
             </div>
-            <div className={styles.section}>
-              <h3 className={styles.headerTitle}>Accomplishments</h3>
-              <div className={styles.sectionDetail}>
-                <ul className={styles.list}>
-                  <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Completed Harvard's{" "}
-                    <strong className={styles.highlight}>CS50</strong>:
-                    Introduction to Computer Science
-                  </li>
-                  <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Invited to and participated in an exclusive{" "}
-                    <strong className={styles.highlight}>math camp</strong>{" "}
-                    hosted by{" "}
-                    <strong className={styles.highlight}>
-                      Dalhousie University
-                    </strong>
-                  </li>
-                  <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Recipient of the{" "}
-                    <strong className={styles.highlight}>
-                      Innovative Mind Award
-                    </strong>
-                  </li>
-                  <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Recipient of the{" "}
-                    <strong className={styles.highlight}>
-                      Mathematics Achievement Award
-                    </strong>
-                  </li>
-                  <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Made Honour Rolls in junior division of{" "}
-                    <strong className={styles.highlight}>
-                      University of Waterloo's Canadian Computing Competition
-                    </strong>
-                  </li>
-                  <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Achieved{" "}
-                    <strong className={styles.highlight}>first place</strong> in
-                    a{" "}
-                    <strong className={styles.highlight}>
-                      regional Improv competition
-                    </strong>
-                  </li>
-                  <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Earned{" "}
-                    <strong className={styles.highlight}>
-                      medals in Jiu Jitsu tournaments
-                    </strong>
-                  </li>
-                </ul>
-              </div>
+            <div className={styles.skill}>
+              <b>Languages: </b> <p className={styles.text}>HTML, CSS</p>
+            </div>
+            <div className={styles.skill}>
+              <b>Languages: </b> <p className={styles.text}>HTML, CSS</p>
+            </div>
+            <div className={styles.skill}>
+              <b>Languages: </b> <p className={styles.text}>HTML, CSS</p>
             </div>
           </div>
         </div>
