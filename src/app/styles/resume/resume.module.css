@@ -18,7 +18,6 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  font-size: 50px;
   margin: 0;
   width: 100%;
 }
@@ -92,6 +91,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  gap: 20px;
 }
 
 .text {
@@ -232,10 +232,30 @@
     align-items: start;
     flex-direction: column;
   }
+
+  .space {
+    display: none;
+  }
 }
 
 @media (min-width: 840px) {
   .skill {
     flex-direction: row;
+  }
+
+  .space {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 430px) {
+  .name {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 430px) {
+  .name {
+    font-size: 50px;
   }
 }

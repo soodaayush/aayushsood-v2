@@ -559,36 +559,58 @@ export default function Resume() {
             <div className={styles.skill}>
               <b>Soft Skills: </b>
               <p className={styles.text}>
-                &nbsp;Leadership, Mentorship, Communication, Community Building,
+                <label className={`${styles.text} ${styles.space}`}>
+                  &nbsp;
+                </label>
+                Leadership, Mentorship, Communication, Community Building,
                 Promoting Inclusivity
               </p>
             </div>
             <div className={styles.skill}>
               <b>Programming Languages: </b>
               <p className={styles.text}>
-                &nbsp;Python, C++, JavaScript, SQL, HTML, CSS/SCSS
+                <label className={`${styles.text} ${styles.space}`}>
+                  &nbsp;
+                </label>
+                Python, C++, JavaScript, SQL, HTML, CSS/SCSS
               </p>
             </div>
             <div className={styles.skill}>
               <b>Programming Frameworks: </b>
-              <p className={styles.text}>&nbsp;React, React Native, Node.js</p>
-            </div>
-            <div className={styles.skill}>
-              <b>Developer Tools: </b>{" "}
               <p className={styles.text}>
-                &nbsp;Firebase, Cloudflare, Netlify, Git, GitHub, iOS, Android,
-                Yarn, NPM
+                <label className={`${styles.text} ${styles.space}`}>
+                  &nbsp;
+                </label>
+                React, React Native, Node.js
               </p>
             </div>
             <div className={styles.skill}>
-              <b>Programming Libraries: </b>{" "}
-              <p className={styles.text}>&nbsp;Tailwind, Bootstrap</p>
+              <b>Developer Tools: </b>
+              <p className={styles.text}>
+                <label className={`${styles.text} ${styles.space}`}>
+                  &nbsp;
+                </label>
+                Firebase, Cloudflare, Netlify, Git, GitHub, iOS, Android, Yarn,
+                NPM
+              </p>
+            </div>
+            <div className={styles.skill}>
+              <b>Programming Libraries: </b>
+              <p className={styles.text}>
+                <label className={`${styles.text} ${styles.space}`}>
+                  &nbsp;
+                </label>
+                Tailwind, Bootstrap
+              </p>
             </div>
             <div className={styles.skill}>
               <b>Productivity Tools and OS: </b>{" "}
               <p className={styles.text}>
-                &nbsp;MS Office, MS Teams, Google Suite, Jira, Adobe Photoshop,
-                OBS Studio, Linux
+                <label className={`${styles.text} ${styles.space}`}>
+                  &nbsp;
+                </label>
+                MS Office, MS Teams, Google Suite, Jira, Adobe Photoshop, OBS
+                Studio, Linux
               </p>
             </div>
           </div>
