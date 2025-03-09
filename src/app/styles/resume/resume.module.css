@@ -14,6 +14,7 @@
 
 .name {
   font-size: 50px;
+  margin: 0;
 }
 
 .links {
@@ -97,7 +98,7 @@
 
 .skill {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 

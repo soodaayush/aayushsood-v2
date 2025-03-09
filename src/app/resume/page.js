@@ -88,64 +88,70 @@ export default function Resume() {
           <div className={styles.accomplishmentList}>
             <ul>
               <li>
-                Competitively programming on CodeForces.com, Rating 1001, since
-                2024
+                Competitively programming on{" "}
+                <a href="https://codeforces.com/profile/aayushsood">
+                  CodeForces.com
+                </a>
+                , Rating 1001, since 2024
               </li>
               <li>
-                Competitively programming on CodeForces.com, Rating 1001, since
-                2024
+                Public Relations Manager for Nova Scotia Secondary School
+                Students’ Association (NSSSA), since 2024
               </li>
               <li>
-                Competitively programming on CodeForces.com, Rating 1001, since
-                2024
+                Peer Tutoring fellow grade 10 & 11 students in Mathematics and
+                Sciences, since 2024
               </li>
               <li>
-                Competitively programming on CodeForces.com, Rating 1001, since
-                2024
+                Completed Harvard’s CS50x: Introduction to Computer Science
+                course on edX, 2024
               </li>
               <li>
-                Competitively programming on CodeForces.com, Rating 1001, since
-                2024
+                Invited to and participated in an exclusive summer math camp
+                hosted by Dalhousie University, 2024
               </li>
               <li>
-                Competitively programming on CodeForces.com, Rating 1001, since
-                2024
+                Volunteered 200+ hours as a Camp Counselor during Canada Games
+                Centre (CGC) Summer Camp, Halifax, 2024
               </li>
               <li>
-                Competitively programming on CodeForces.com, Rating 1001, since
-                2024
+                Recipient of the Student Council Innovative Mind Award in Grade
+                10, 2024
               </li>
               <li>
-                Competitively programming on CodeForces.com, Rating 1001, since
-                2024
+                Made Honour Rolls and received Certificate of Distinction in
+                Junior division of University of Waterloo’s Canadian Computing
+                Competition (CCC), 2024
               </li>
               <li>
-                Competitively programming on CodeForces.com, Rating 1001, since
-                2024
+                Cabinet Member on Nova Scotia Minister of Education’s Student
+                Advisory Council (MSAC), since 2024
               </li>
               <li>
-                Competitively programming on CodeForces.com, Rating 1001, since
-                2024
+                Executive of Bay View High School’s Student Council and Founder
+                and President of the Technology club, since 2023
               </li>
               <li>
-                Competitively programming on CodeForces.com, Rating 1001, since
-                2024
+                Recipient of the Mathematics Achievement & Citizenship Awards in
+                Grade 9, 2023
               </li>
               <li>
-                Competitively programming on CodeForces.com, Rating 1001, since
-                2024
+                Won first place in a regional Improv competition during Grade 9
+                at Ridgecliff Middle School, 2023
+              </li>
+              <li>Completed 85+ challenges on LeetCode.com, since 2022</li>
+              <li>
+                Earned several medals in regional Brazilian Jiu Jitsu
+                competitions, 2022-2024
               </li>
               <li>
-                Competitively programming on CodeForces.com, Rating 1001, since
-                2024
+                Mentoring fellow Brazilian Jiu Jitsu practitioners at Titans
+                MMA, since 2022
               </li>
+              <li>Completed 50+ challenges on FrontendMentor.io, since 2020</li>
               <li>
-                Competitively programming on CodeForces.com, Rating 1001, since
-                2024
-              </li>
-              <li>
-                Competitively programming on CodeForces.com, Rating 1001, since
-                2024
+                Recipient of Bronze Star and Bronze Medallion of the Nova Scotia
+                Lifesaving Society, 2019-2021
               </li>
             </ul>
           </div>
@@ -176,16 +182,32 @@ export default function Resume() {
           <hr className={styles.divider} />
           <div className={styles.technicalSkillsContainer}>
             <div className={styles.skill}>
-              <b>Languages: </b> <p className={styles.text}>HTML, CSS</p>
+              <b>Languages: </b>
+              <p className={styles.text}>
+                &nbsp;Python, C++, JavaScript, SQL, HTML, CSS/SCSS
+              </p>
             </div>
             <div className={styles.skill}>
-              <b>Languages: </b> <p className={styles.text}>HTML, CSS</p>
+              <b>Frameworks: </b>
+              <p className={styles.text}>&nbsp;React, React Native, Node.js</p>
             </div>
             <div className={styles.skill}>
-              <b>Languages: </b> <p className={styles.text}>HTML, CSS</p>
+              <b>Developer Tools: </b>{" "}
+              <p className={styles.text}>
+                &nbsp;Firebase, Cloudflare, Netlify, Git, GitHub, iOS, Android,
+                Yarn, NPM
+              </p>
             </div>
             <div className={styles.skill}>
-              <b>Languages: </b> <p className={styles.text}>HTML, CSS</p>
+              <b>Libraries: </b>{" "}
+              <p className={styles.text}>&nbsp;Tailwind, Bootstrap</p>
+            </div>
+            <div className={styles.skill}>
+              <b>Productivity Tools and OS: </b>{" "}
+              <p className={styles.text}>
+                &nbsp;MS Office, MS Teams, Google Suite, Jira, Adobe Photoshop,
+                OBS Studio, Linux
+              </p>
             </div>
           </div>
         </div>
