@@ -4,9 +4,6 @@ import styles from "../styles/resume/resume.module.css";
 
 import PDF from "../../../public/assets/header-icons/pdf.svg";
 
-import ResumeProject from "../components/resume/resumeProject";
-import resumeProjects from "../data/resumeProjects.json";
-
 export const metadata = {
   title: "Resume | Aayush Sood",
   description:
@@ -44,158 +41,555 @@ export default function Resume() {
   return (
     <div className={styles.resumeContainer}>
       <div className={`content ${styles.resumeContentContainer}`}>
-        <div className={styles.row1}>
-          <div className={styles.column1}>
-            <div className={styles.nameContainer}>
-              <h1 className={styles.name}>Aayush Sood</h1>
-              <button className={styles.button}>
-                <a href="assets/resume/resume.pdf" target="_blank">
-                  <Image
-                    src={PDF}
-                    width={40}
-                    height={40}
-                    alt="GitHub"
-                    className={styles.svg}
-                  />
-                </a>
-              </button>
-            </div>
-            <label>Aspiring Intern & Fullstack Developer</label>
-          </div>
-          <div className={`${styles.column2} ${styles.contact}`}>
-            <a className={styles.link} target="_blank" href="tel:9027894315">
-              +1 (902) 789-4315
+        <div className={styles.intro}>
+          <h1 className={styles.name}>
+            Aayush Sood{" "}
+            <a href="assets/resume/resume.pdf" target="_blank">
+              <Image
+                src={PDF}
+                width={40}
+                height={40}
+                alt="GitHub"
+                className={styles.svg}
+              />
             </a>
+          </h1>
+
+          <div className={styles.links}>
+            <a className={styles.link} href="tel:9027894315" target="_blank">
+              +1 (902) 789-4315
+            </a>{" "}
+            <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
             <a
-              className={styles.link}
-              target="_blank"
+              className={`${styles.link} ${styles.underline}`}
               href="mailto:aayush.sood@icloud.com"
+              target="_blank"
             >
               aayush.sood@icloud.com
-            </a>
+            </a>{" "}
+            <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
             <a
-              className={styles.link}
+              className={`${styles.link} ${styles.underline}`}
+              href="https://www.linkedin.com/in/soodaayush/"
               target="_blank"
-              href="https://aayushsood.com/"
             >
-              aayushsood.com
-            </a>
+              linkedin.com/in/soodaayush
+            </a>{" "}
+            <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
             <a
-              className={styles.link}
-              target="_blank"
+              className={`${styles.link} ${styles.underline}`}
               href="https://github.com/soodaayush"
+              target="_blank"
             >
               github.com/soodaayush
             </a>
+            <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
             <a
-              className={styles.link}
+              className={`${styles.link} ${styles.underline}`}
+              href="https://www.aayushsood.com/"
               target="_blank"
-              href="https://www.linkedin.com/in/soodaayush/"
             >
-              linkedin.com/in/soodaayush
+              aayushsood.com
             </a>
           </div>
         </div>
-        <div className={styles.row2}>
-          <div className={`${styles.projects} ${styles.column1}`}>
-            <h3 className={styles.headerTitle}>Projects</h3>
-            {resumeProjects.map((project, index) => (
-              <ResumeProject
-                key={index}
-                name={project.name}
-                date={project.date}
-                link={project.link}
-                bullets={project.bullets}
-              />
-            ))}
+        <div className={styles.sectionContainer}>
+          <h1 className={styles.sectionHeading}>Education</h1>
+          <hr className={styles.divider} />
+          <div className={styles.schoolContainer}>
+            <div className={styles.school}>
+              <div className={styles.schoolDetails}>
+                <b className={styles.text}>Bay View High School</b>
+                <p className={styles.text}>Upper Tantallon, NS</p>
+              </div>
+              <div className={styles.schoolDetails}>
+                <i className={styles.text}>Secondary School - Grade 11</i>
+                <p className={styles.text}>Sep. 2023 - Present</p>
+              </div>
+            </div>
+            <div className={styles.school}>
+              <div className={styles.schoolDetails}>
+                <b className={styles.text}>Ridgecliff Middle School</b>
+                <p className={styles.text}>Beechville, NS</p>
+              </div>
+              <div className={styles.schoolDetails}>
+                <i className={styles.text}>Middle School</i>
+                <p className={styles.text}>Sep. 2019 - Jun. 2023</p>
+              </div>
+            </div>
           </div>
-          <div className={`${styles.column2}`}>
-            <div className={styles.section}>
-              <h3 className={styles.headerTitle}>Technical Skills</h3>
-              <div className={styles.sectionDetail}>
-                <h3 className={styles.headerText}>Programming Languages</h3>
-                <p className={styles.bodyText}>
-                  HTML, CSS, SCSS, JavaScript, Python, SQL, C++
+        </div>
+        <div className={styles.sectionContainer}>
+          <h1 className={styles.sectionHeading}>Accomplishments</h1>
+          <hr className={styles.divider} />
+          <div className={styles.accomplishmentTextContainer}>
+            <h1 className={`${styles.text} ${styles.accomplishmentHeader}`}>
+              Some of my notable achievements, including but not limited to:
+            </h1>
+            <h1 className={`${styles.text} ${styles.accomplishmentHeader}`}>
+              Since 2019
+            </h1>
+          </div>
+          <div className={styles.accomplishmentList}>
+            <ul>
+              <li>
+                Competitively programming on{" "}
+                <a
+                  className={`${styles.link} ${styles.underline}`}
+                  href="https://codeforces.com/profile/aayushsood"
+                  target="_blank"
+                >
+                  CodeForces.com
+                </a>
+                , Rating 1001, since 2024
+              </li>
+              <li>
+                Public Relations Manager for Nova Scotia Secondary School
+                Students’ Association{" "}
+                <a
+                  className={`${styles.link} ${styles.underline}`}
+                  href="https://www.nsssa.ca/"
+                  target="_blank"
+                >
+                  (NSSSA)
+                </a>
+                , since 2024
+              </li>
+              <li>
+                Peer Tutoring fellow grade 10 & 11 students in Mathematics and
+                Sciences, since 2024
+              </li>
+              <li>
+                Completed Harvard’s CS50x: Introduction to Computer Science
+                course on{" "}
+                <a
+                  className={`${styles.link} ${styles.underline}`}
+                  href="https://courses.edx.org/certificates/51884bfbb2734dc4bbdf1eca77ce83db"
+                  target="_blank"
+                >
+                  edX
+                </a>
+                , 2024
+              </li>
+              <li>
+                Invited to and participated in an exclusive summer math camp
+                hosted by Dalhousie University, 2024
+              </li>
+              <li>
+                Volunteered 200+ hours as a Camp Counselor during Canada Games
+                Centre{" "}
+                <a
+                  className={`${styles.link} ${styles.underline}`}
+                  href="https://canadagamescentre.ca/"
+                  target="_blank"
+                >
+                  (CGC)
+                </a>{" "}
+                Summer Camp, Halifax, 2024
+              </li>
+              <li>
+                Recipient of the Student Council Innovative Mind Award in Grade
+                10, 2024
+              </li>
+              <li>
+                Made{" "}
+                <a
+                  className={`${styles.link} ${styles.underline}`}
+                  href="https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024CCCResults.pdf"
+                  target="_blank"
+                >
+                  Honour Rolls
+                </a>{" "}
+                and received Certificate of Distinction in Junior division of
+                University of Waterloo’s Canadian Computing Competition (CCC),
+                2024
+              </li>
+              <li>
+                Cabinet Member on Nova Scotia Minister of Education’s Student
+                Advisory Council (MSAC), since 2024
+              </li>
+              <li>
+                Executive of Bay View High School’s Student Council and Founder
+                and President of the{" "}
+                <a
+                  className={`${styles.link} ${styles.underline}`}
+                  href="https://bvh-tech-club.netlify.app/"
+                  target="_blank"
+                >
+                  Technology Club
+                </a>
+                , since 2023
+              </li>
+              <li>
+                Recipient of the Mathematics Achievement & Citizenship Awards in
+                Grade 9, 2023
+              </li>
+              <li>
+                Won first place in a regional{" "}
+                <a
+                  className={`${styles.link} ${styles.underline}`}
+                  href="https://improv.ca/"
+                  target="_blank"
+                >
+                  Improv
+                </a>{" "}
+                competition during Grade 9 at Ridgecliff Middle School, 2023
+              </li>
+              <li>
+                Completed 85+ challenges on{" "}
+                <a
+                  className={`${styles.link} ${styles.underline}`}
+                  href="https://leetcode.com/u/soodaayush/"
+                  target="_blank"
+                >
+                  LeetCode.com
+                </a>
+                , since 2022
+              </li>
+              <li>
+                Earned several medals in regional Brazilian Jiu Jitsu
+                competitions, 2022-2024
+              </li>
+              <li>
+                Mentoring fellow Brazilian Jiu Jitsu practitioners at{" "}
+                <a
+                  className={`${styles.link} ${styles.underline}`}
+                  href="https://titansmaaf.ca/"
+                  target="_blank"
+                >
+                  Titans MMA
+                </a>
+                , since 2022
+              </li>
+              <li>
+                Completed 50+ challenges on{" "}
+                <a
+                  className={`${styles.link} ${styles.underline}`}
+                  href="https://www.frontendmentor.io/profile/soodaayush"
+                  target="_blank"
+                >
+                  FrontendMentor.io
+                </a>
+                , since 2020
+              </li>
+              <li>
+                Recipient of Bronze Star and Bronze Medallion of the Nova Scotia
+                Lifesaving Society, 2019-2021
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className={styles.sectionContainer}>
+          <h1 className={styles.sectionHeading}>Projects</h1>
+          <hr className={styles.divider} />
+          <div className={styles.projectContainer}>
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  Nova Scotia Secondary School Students&apos; Association - PR
+                  Manager
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  September 2024 - Present
                 </p>
               </div>
-              <div className={styles.sectionDetail}>
-                <h3 className={styles.headerText}>Libraries & Frameworks</h3>
-                <p className={styles.bodyText}>
-                  React, React Native, Bootstrap, Tailwind CSS, Node.js
-                </p>
-              </div>
-              <div className={styles.sectionDetail}>
-                <h3 className={styles.headerText}>Tools & Platforms</h3>
-                <p className={styles.bodyText}>
-                  Firebase, Cloudflare, Netlify, Git, GitHub, iOS, Android,
-                  Yarn, NPM
-                </p>
-              </div>
+              <ul className={styles.projectNotes}>
+                <li>
+                  Managing social media accounts across multiple platforms to
+                  increase engagement and brand awareness
+                </li>
+                <li>
+                  Creating and curating content that aligns with our
+                  organization&apos;s mission and values
+                </li>
+                <li>
+                  Developing and maintaining relationships with businesses,
+                  securing funding and partnership opportunities
+                </li>
+                <li>
+                  Consulted the NSSSA infrastructure group on cybersecurity
+                  issues, providing insights on security best practices and risk
+                  mitigation
+                </li>
+              </ul>
             </div>
-            <div className={styles.section}>
-              <h3 className={styles.headerTitle}>Education</h3>
-              <div className={styles.sectionDetail}>
-                <h3 className={styles.headerText}>Bay View High School</h3>
-                <p className={styles.bodyText}>Upper Tantallon, NS</p>
-                <p className={styles.bodyText}>2023 - Present</p>
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  Bay View High School - Mobile App |
+                  <i> React Native, JavaScript, Expo, Git</i>
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  July 2024 - September 2024
+                </p>
               </div>
-              <div className={styles.sectionDetail}>
-                <h3 className={styles.headerText}>Ridgecliff Middle School</h3>
-                <p className={styles.bodyText}>Beechville, NS</p>
-                <p className={styles.bodyText}>2019 - 2023</p>
-              </div>
+              <ul className={styles.projectNotes}>
+                <li>
+                  Developed a Bay View High School Mobile app to present the
+                  school with a handheld presence
+                </li>
+                <li>
+                  Application developed using React Native framework, JavaScript
+                  and deployed using Expo
+                </li>
+                <li>
+                  The mobile app provides full compatibility with iOS and
+                  Android devices
+                </li>
+                <li>
+                  Application also submitted as a final project for Harvard’s
+                  CS50x course
+                </li>
+              </ul>
             </div>
-            <div className={styles.section}>
-              <h3 className={styles.headerTitle}>Accomplishments</h3>
-              <div className={styles.sectionDetail}>
-                <ul className={styles.list}>
-                  <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Completed Harvard's{" "}
-                    <strong className={styles.highlight}>CS50</strong>:
-                    Introduction to Computer Science
-                  </li>
-                  <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Invited to and participated in an exclusive{" "}
-                    <strong className={styles.highlight}>math camp</strong>{" "}
-                    hosted by{" "}
-                    <strong className={styles.highlight}>
-                      Dalhousie University
-                    </strong>
-                  </li>
-                  <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Recipient of the{" "}
-                    <strong className={styles.highlight}>
-                      Innovative Mind Award
-                    </strong>
-                  </li>
-                  <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Recipient of the{" "}
-                    <strong className={styles.highlight}>
-                      Mathematics Achievement Award
-                    </strong>
-                  </li>
-                  <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Made Honour Rolls in junior division of{" "}
-                    <strong className={styles.highlight}>
-                      University of Waterloo's Canadian Computing Competition
-                    </strong>
-                  </li>
-                  <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Achieved{" "}
-                    <strong className={styles.highlight}>first place</strong> in
-                    a{" "}
-                    <strong className={styles.highlight}>
-                      regional Improv competition
-                    </strong>
-                  </li>
-                  <li className={`${styles.bodyText} ${styles.listItem}`}>
-                    Earned{" "}
-                    <strong className={styles.highlight}>
-                      medals in Jiu Jitsu tournaments
-                    </strong>
-                  </li>
-                </ul>
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  Canada Games Centre Volunteer - Camp Counselor
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  July 2024 - August 2024
+                </p>
               </div>
+              <ul className={styles.projectNotes}>
+                <li>
+                  Collaborated with counsellors to design engaging activities,
+                  including sports, arts and crafts, and team-building exercises
+                  for children aged 5 - 12
+                </li>
+                <li>
+                  Monitored campers&apos; behavior and well-being, ensuring a
+                  safe and inclusive environment for all participant
+                </li>
+                <li>
+                  Volunteered 200+ hours contributing to camp operations and
+                  enhancing the overall camper experience
+                </li>
+                <li>
+                  Encouraged campers to participate, build friendships, and
+                  adhere to camp rules, promoting a fun and respectful
+                  atmosphere
+                </li>
+              </ul>
+            </div>
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  Ben Eater&apos;s 6502 Project |<i> Python, Assembly</i>
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  April 2024 - July 2024
+                </p>
+              </div>
+              <ul className={styles.projectNotes}>
+                <li>
+                  A collection of hardware bread-boarding project surrounding
+                  the 6502 CPU, inspired by{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://eater.net/"
+                    target="_blank"
+                  >
+                    Ben Eater
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  Nova Scotia Education Minister&apos;s Student Advisory Council
+                  - Cabinet Member
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  January 2024 - Present
+                </p>
+              </div>
+              <ul className={styles.projectNotes}>
+                <li>
+                  Representing the views and concerns of students & teachers
+                  from diverse backgrounds to ensure their voices are heard in
+                  policy-making processes
+                </li>
+                <li>
+                  Proudly represented Bay View High School&apos;s district while
+                  collaborating with the Education Minister and other council
+                  members to provide feedback on existing and proposed
+                  educational policies and initiative
+                </li>
+                <li>
+                  Provided input on school cell phone usage policies that
+                  resulted in a new directive that was implemented in September
+                  2024
+                </li>
+                <li>
+                  Conducted research and analysis on various educational trends,
+                  challenges, and opportunities in collaboration with other
+                  participating members
+                </li>
+              </ul>
+            </div>
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  Student Council Executive & Tech Club President
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  September 2023 - Present
+                </p>
+              </div>
+              <ul className={styles.projectNotes}>
+                <li>
+                  Leading and organizing initiatives such as school events,
+                  fundraisers, tech workshops, and hands-on projects to enhance
+                  student engagement
+                </li>
+                <li>
+                  Under my leadership, Tech Club grew from 3-4 to 30+ members
+                  with a median 20+ member attendance on a weekly basis
+                </li>
+                <li>
+                  Mentoring and fostering a learning community by guiding
+                  students in tech-related topics, planning interactive
+                  sessions, and creating an inclusive space for skill
+                  development
+                </li>
+                <li>
+                  Advocating for student interests by collaborating with
+                  administration, gathering feedback, and ensuring student
+                  voices are represented in decision-making
+                </li>
+                <li>
+                  Managing operations and resources, including funding requests,
+                  club materials, and coordination among council members and
+                  club participants
+                </li>
+              </ul>
+            </div>
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  CoinDeno - Mobile App |
+                  <i> React Native, Git, REST, Firebase, CoinGecko APIs</i>
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  July 2022 - September 2022
+                </p>
+              </div>
+              <ul className={styles.projectNotes}>
+                <li>
+                  Created the React Native mobile enabled version of the
+                  CoinDeno Web, enabled for both iOS and Android and hosted on
+                  the Android Play Store
+                </li>
+                <li>
+                  Leveraged the React Native framework for a consistent
+                  cross-platform experience
+                </li>
+              </ul>
+            </div>
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  CoinDeno - Web App |
+                  <i>
+                    {" "}
+                    React.js, JavaScript, REST, Git, Firebase, CoinGecko APIs
+                  </i>
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  August 2021 - July 2022
+                </p>
+              </div>
+              <ul className={styles.projectNotes}>
+                <li>
+                  Created a React website that allows tracking and portfolio
+                  management of various Cryptocurrencies
+                </li>
+                <li>
+                  Utilized React, Firebase, and Redux for application
+                  development, with CoinGecko REST APIs for cryptocurrency data
+                  integration
+                </li>
+                <li>
+                  Deployed the application using continuous integration and
+                  continuous deployment (CI/CD) practices, ensuring reliability
+                  and fast iteration
+                </li>
+                <li>Integrated Google Auth for seamless user authentication</li>
+              </ul>
+            </div>
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  Mentor - Titans MMA
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  February 2021 - Present
+                </p>
+              </div>
+              <ul className={styles.projectNotes}>
+                <li>
+                  Led and organized kids classes aged 5 - 15 in Brazilian Jiu
+                  Jitsu, focusing on technique, form, and physical fitness
+                </li>
+                <li>
+                  Taught students a variety of techniques, including
+                  self-defense, striking, grappling, and forms, while
+                  emphasizing the importance of discipline, respect, and
+                  perseverance
+                </li>
+                <li>
+                  Ensured a safe training environment by enforcing gym rules,
+                  teaching proper techniques to prevent injuries
+                </li>
+                <li>
+                  Acted as a mentor and role model, fostering a positive and
+                  inclusive atmosphere that encourages personal growth,
+                  confidence, and self-discipline
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className={styles.sectionContainer}>
+          <h1 className={styles.sectionHeading}>Extracurricular Skills</h1>
+          <hr className={styles.divider} />
+          <div className={styles.technicalSkillsContainer}>
+            <div className={styles.skill}>
+              <b>Soft Skills: </b>
+              <p className={styles.text}>
+                &nbsp;Leadership, Mentorship, Communication, Community Building,
+                Promoting Inclusivity
+              </p>
+            </div>
+            <div className={styles.skill}>
+              <b>Programming Languages: </b>
+              <p className={styles.text}>
+                &nbsp;Python, C++, JavaScript, SQL, HTML, CSS/SCSS
+              </p>
+            </div>
+            <div className={styles.skill}>
+              <b>Programming Frameworks: </b>
+              <p className={styles.text}>&nbsp;React, React Native, Node.js</p>
+            </div>
+            <div className={styles.skill}>
+              <b>Developer Tools: </b>{" "}
+              <p className={styles.text}>
+                &nbsp;Firebase, Cloudflare, Netlify, Git, GitHub, iOS, Android,
+                Yarn, NPM
+              </p>
+            </div>
+            <div className={styles.skill}>
+              <b>Programming Libraries: </b>{" "}
+              <p className={styles.text}>&nbsp;Tailwind, Bootstrap</p>
+            </div>
+            <div className={styles.skill}>
+              <b>Productivity Tools and OS: </b>{" "}
+              <p className={styles.text}>
+                &nbsp;MS Office, MS Teams, Google Suite, Jira, Adobe Photoshop,
+                OBS Studio, Linux
+              </p>
             </div>
           </div>
         </div>
