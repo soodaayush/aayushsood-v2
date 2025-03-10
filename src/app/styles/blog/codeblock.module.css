@@ -9,7 +9,7 @@
   font-size: 18px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .codeBlock {
     font-size: 12px;
   }
