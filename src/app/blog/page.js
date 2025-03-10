@@ -1,54 +1,44 @@
-// import styles from "../styles/blog/blog.module.css";
-// import Image from "next/image";
+"use client";
 
-// import Link from "next/link";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 
-// import { promises as fs } from "fs";
-// import path from "path";
-// import { compileMDX } from "next-mdx-remote/rsc";
+export default function Blog() {
+  const [posts, setPosts] = useState([]);
 
-// export default async function Blog() {
-//   const filenames = await fs.readdir(path.join(process.cwd(), "src/app/posts"));
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        const res = await fetch("/postsMetadata.json");
+        if (!res.ok) throw new Error("Failed to fetch posts metadata");
+        const data = await res.json();
+        setPosts(data);
+      } catch (error) {
+        console.error("Error loading blog posts:", error);
+      }
+    }
 
-//   const blogPosts = await Promise.all(
-//     filenames.map(async (filename) => {
-//       const content = await fs.readFile(
-//         path.join(process.cwd(), "src/app/posts", filename),
-//         "utf-8"
-//       );
+    fetchPosts();
+  }, []);
 
-//       const { frontmatter } = await compileMDX({
-//         source: content,
-//         options: {
-//           parseFrontmatter: true,
-//         },
-//       });
-
-//       return {
-//         filename,
-//         slug: filename.replace(".mdx", ""),
-//         ...frontmatter,
-//       };
-//     })
-//   );
-
-//   return (
-//     <div className={styles.blogContainer}>
-//       <div className={`content ${styles.blogContent}`}>
-//         <h1 className={styles.blogTitle}>Blog</h1>
-//         <div className={styles.blogList}>
-//           {blogPosts.map((post, index) => (
-//             <Link
-//               className={styles.blogPost}
-//               key={index}
-//               href={`/blog/${post.slug}`}
-//             >
-//               <h1 className={styles.title}>{post.title}</h1>
-//               <p className={styles.date}>{post.date}</p>
-//             </Link>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+  return (
+    <div>
+      <h1>Blog</h1>
+      <div>
+        {posts.length === 0 ? (
+          <p>Loading...</p>
+        ) : (
+          posts.map((post) => (
+            <Link key={post.slug} href={`/blog/${post.slug}`}>
+              <div>
+                <h2>{post.title}</h2>
+                <p>{post.date}</p>
+                <p>{post.description}</p>
+              </div>
+            </Link>
+          ))
+        )}
+      </div>
+    </div>
+  );
+}

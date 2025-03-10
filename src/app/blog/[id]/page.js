@@ -1,41 +1,47 @@
-// import { promises as fs } from "fs";
-// import path from "path";
-// import { MDXRemote } from "next-mdx-remote/rsc";
-// import matter from "gray-matter";
-// import styles from "../../styles/blog/blogPost.module.css";
-// import { MDXComponents } from "../../MDXComponents/MDXComponents";
+"use client";
 
-// export default async function BlogPost({ params }) {
-//   const { id } = await params;
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import { notFound } from "next/navigation";
 
-//   try {
-//     const filePath = path.join(process.cwd(), "src/app/posts", `${id}.mdx`);
-//     const source = await fs.readFile(filePath, "utf-8");
+export default function BlogPost() {
+  const { id } = useParams(); // Get dynamic route param
+  const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-//     const { content, data: frontmatter } = matter(source);
+  useEffect(() => {
+    async function fetchPost() {
+      try {
+        const res = await fetch("/postsMetadata.json");
+        if (!res.ok) throw new Error("Failed to fetch posts metadata");
 
-//     const components = {};
+        const posts = await res.json();
+        const foundPost = posts.find((p) => p.slug === id);
 
-//     return (
-//       <div className={styles.blogPostContainer}>
-//         <div className={`content ${styles.blogPostContent}`}>
-//           <h1>{frontmatter.title}</h1>
-//           <p>{frontmatter.date}</p>
-//           <MDXRemote
-//             source={content}
-//             components={MDXComponents}
-//             options={{
-//               parseFrontmatter: true,
-//               mdxOptions: {
-//                 development: process.env.NODE_ENV === "development",
-//               },
-//             }}
-//           />
-//         </div>
-//       </div>
-//     );
-//   } catch (error) {
-//     console.error("Error reading MDX file:", error);
-//     return <p>Post not found. Please check the console for errors.</p>;
-//   }
-// }
+        if (!foundPost) {
+          notFound(); // If post is not found, trigger 404
+        } else {
+          setPost(foundPost);
+        }
+      } catch (error) {
+        console.error("Error loading blog post:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchPost();
+  }, [id]);
+
+  if (loading) return <p>Loading...</p>;
+  if (!post) return notFound();
+
+  return (
+    <div>
+      <h1>{post.title}</h1>
+      <p>{post.date}</p>
+      <p>{post.description}</p>
+      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+    </div>
+  );
+}

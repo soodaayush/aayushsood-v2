@@ -34,9 +34,9 @@ export default function Header() {
             <h1>Aayush Sood</h1>
           </Link>
           <div className={styles.pages}>
-            {/* <Link className={styles.title} href="/blog">
+            <Link className={styles.title} href="/blog">
               <h2>Blog</h2>
-            </Link> */}
+            </Link>
             <Link className={styles.title} href="/books">
               <h2>Books</h2>
             </Link>

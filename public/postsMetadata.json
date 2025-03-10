@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "test",
+    "title": "My First Blog Post",
+    "date": "2025-03-01",
+    "description": "This is a brief description of my first blog post.",
+    "author": "Aayush Sood"
+  },
+  {
+    "slug": "test2",
+    "title": "A Deep Dive into Software Engineering",
+    "date": "2025-03-05",
+    "description": "Exploring concepts and practices in the field of software engineering.",
+    "author": "Aayush Sood"
+  }
+]
