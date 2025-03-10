@@ -1,0 +1,18 @@
+{
+  "title": "React Hooks",
+  "description": "Skibidi Toilet",
+  "date": "2025-01-01T00:00:00.000Z",
+  "body": {
+    "raw": "\n# React Hooks\n\nReact Hooks are functions that let you use state and other React features without writing a class.\n\n![Diagram of React Hooks](/assets/books/1984.jpg)\n\n## Commonly Used Hooks\n\n```javascript\nimport React, { useState } from \"react\";\n\nfunction Example() {\n  const [count, setCount] = useState(0);\n  return (\n    <div>\n      <p>You clicked {count} times</p>\n      <button onClick={() => setCount(count + 1)}>Click me</button>\n    </div>\n  );\n}\n```\n",
+    "html": "<h1>React Hooks</h1>\n<p>React Hooks are functions that let you use state and other React features without writing a class.</p>\n<p><img src=\"/assets/books/1984.jpg\" alt=\"Diagram of React Hooks\"></p>\n<h2>Commonly Used Hooks</h2>\n<pre><code class=\"language-javascript\">import React, { useState } from \"react\";\n\nfunction Example() {\n  const [count, setCount] = useState(0);\n  return (\n    &#x3C;div>\n      &#x3C;p>You clicked {count} times&#x3C;/p>\n      &#x3C;button onClick={() => setCount(count + 1)}>Click me&#x3C;/button>\n    &#x3C;/div>\n  );\n}\n</code></pre>"
+  },
+  "_id": "posts/test.mdx",
+  "_raw": {
+    "sourceFilePath": "posts/test.mdx",
+    "sourceFileName": "test.mdx",
+    "sourceFileDir": "posts",
+    "contentType": "mdx",
+    "flattenedPath": "posts/test"
+  },
+  "type": "Blog"
+}

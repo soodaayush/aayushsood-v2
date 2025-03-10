@@ -12,5 +12,8 @@
   align-items: center;
   width: 50%;
   flex-direction: column;
-  border: 1px solid red;
+}
+
+.text {
+  margin: 0;
 }

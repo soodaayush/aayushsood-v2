@@ -1,43 +1,23 @@
-"use client";
+import { allBlogs } from "../../../.contentlayer/generated/Blog/_index.mjs";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import styles from "../styles/blog/blog.module.css";
 
 export default function Blog() {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    async function fetchPosts() {
-      try {
-        const res = await fetch("/postsMetadata.json");
-        if (!res.ok) throw new Error("Failed to fetch posts metadata");
-        const data = await res.json();
-        setPosts(data);
-      } catch (error) {
-        console.error("Error loading blog posts:", error);
-      }
-    }
-
-    fetchPosts();
-  }, []);
-
   return (
-    <div>
-      <h1>Blog</h1>
-      <div>
-        {posts.length === 0 ? (
-          <p>Loading...</p>
-        ) : (
-          posts.map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`}>
-              <div>
-                <h2>{post.title}</h2>
-                <p>{post.date}</p>
-                <p>{post.description}</p>
-              </div>
-            </Link>
-          ))
-        )}
+    <div className={styles.blogContainer}>
+      <div className={styles.blogList}>
+        {allBlogs.map((post, index) => (
+          <div className={styles.blogPost} key={index}>
+            <a
+              className={styles.link}
+              href={`/blog/${post._raw.flattenedPath.split("/").pop()}`}
+            >
+              <h2 className={styles.title}>{post.title}</h2>
+              <h3 className={styles.date}>{post.date.split("T")[0]}</h3>
+              <p>{post.description}</p>
+            </a>
+          </div>
+        ))}
       </div>
     </div>
   );

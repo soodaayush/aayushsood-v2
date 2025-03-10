@@ -1,47 +1,34 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
-import { notFound } from "next/navigation";
+import { allBlogs } from "../../../../.contentlayer/generated/Blog/_index.mjs";
+import { usePathname } from "next/navigation";
+import { MDXProvider } from "@mdx-js/react";
+
+import { MDXComponents } from "../../MDXComponents/MDXComponents";
+
+import styles from "../../styles/blog/blogPost.module.css";
 
 export default function BlogPost() {
-  const { id } = useParams(); // Get dynamic route param
-  const [post, setPost] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const slug = usePathname().slice(6);
 
-  useEffect(() => {
-    async function fetchPost() {
-      try {
-        const res = await fetch("/postsMetadata.json");
-        if (!res.ok) throw new Error("Failed to fetch posts metadata");
+  const blog = allBlogs.find((blog) => blog._raw.flattenedPath.endsWith(slug));
 
-        const posts = await res.json();
-        const foundPost = posts.find((p) => p.slug === id);
+  if (!blog) {
+    return <div>Blog post not found</div>;
+  }
 
-        if (!foundPost) {
-          notFound(); // If post is not found, trigger 404
-        } else {
-          setPost(foundPost);
-        }
-      } catch (error) {
-        console.error("Error loading blog post:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchPost();
-  }, [id]);
-
-  if (loading) return <p>Loading...</p>;
-  if (!post) return notFound();
+  const blogContent =
+    blog.body?.html || blog.body?.raw || "Content not available";
 
   return (
-    <div>
-      <h1>{post.title}</h1>
-      <p>{post.date}</p>
-      <p>{post.description}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+    <div className={styles.blogPostContainer}>
+      <div className={`content ${styles.blogPostContent}`}>
+        <h1 className={styles.text}>{blog.title}</h1>
+        <p className={styles.text}>{blog.date.split("T")[0]}</p>
+        <MDXProvider components={MDXComponents}>
+          <div dangerouslySetInnerHTML={{ __html: blogContent }} />
+        </MDXProvider>
+      </div>
     </div>
   );
 }
