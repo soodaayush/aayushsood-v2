@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "test",
+    "meta": {
+      "type": "Blog",
+      "title": "React Hooks",
+      "description": "React Hooks are functions that let you use state and other React features without writing a class. React Hooks are functions that let you use state and other React features without writing a class. React Hooks are functions that let you use state and other React features without writing a class.",
+      "date": "2025-01-01"
+    },
+    "content": "\nReact Hooks are functions that let you use state and other React features without writing a class.\n\n![Diagram of React Hooks](/assets/books/1984.webp)\n\n## Commonly Used Hooks\n\n```javascript\nimport React, { useState } from \"react\";\n\nfunction Example() {\n  const [count, setCount] = useState(0);\n  return (\n    <div>\n      <p>You clicked {count} times</p>\n      <button onClick={() => setCount(count + 1)}>Click me</button>\n    </div>\n  );\n}\n```\n"
+  },
+  {
+    "slug": "test2",
+    "meta": {
+      "type": "Blog",
+      "title": "Brand New Website!",
+      "description": "React Hooks are functions that let you use state and other React features without writing a class. React Hooks are functions that let you use state and other React features without writing a class. React Hooks are functions that let you use state and other React features without writing a class.",
+      "date": "2025-02-01"
+    },
+    "content": "\nReact Hooks are functions that let you use state and other React features without writing a class.\nReact Hooks are functions that let you use state and other React features without writing a class. React Hooks are functions that let you use state and other React features without writing a class.\n\n![Alt text](/assets/projects/thumbnails/coindeno.webp)\n\n## Commonly Used Hooks\n\n```javascript\nimport React, { useState } from \"react\";\n\nfunction Example() {\n  const [count, setCount] = useState(0);\n  return (\n    <div>\n      <p>You clicked {count} times</p>\n      <button onClick={() => setCount(count + 1)}>Click me</button>\n    </div>\n  );\n}\n```\n"
+  }
+]
