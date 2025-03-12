@@ -8,7 +8,7 @@
 }
 
 .details {
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 
@@ -22,4 +22,13 @@
 
 .text {
   margin: 0;
+}
+
+.title {
+  font-size: 50px;
+}
+
+.mdxContainer {
+  text-align: justify;
+  width: 100%;
 }

@@ -1,18 +1,16 @@
 [
   {
-    "slug": "test",
+    "slug": "new-website",
     "meta": {
-      "type": "Blog",
-      "title": "React Hooks",
-      "description": "React Hooks are functions that let you use state and other React features without writing a class. React Hooks are functions that let you use state and other React features without writing a class. React Hooks are functions that let you use state and other React features without writing a class.",
-      "date": "2025-01-01"
+      "title": "New Website!",
+      "description": "This is my first ever blog post! I will be going into the new website, why I built it, and what tech stack was used!",
+      "date": "2025-03-12"
     },
-    "content": "\nReact Hooks are functions that let you use state and other React features without writing a class.\n\n![Diagram of React Hooks](/assets/books/1984.webp)\n\n## Commonly Used Hooks\n\n```javascript\nimport React, { useState } from \"react\";\n\nfunction Example() {\n  const [count, setCount] = useState(0);\n  return (\n    <div>\n      <p>You clicked {count} times</p>\n      <button onClick={() => setCount(count + 1)}>Click me</button>\n    </div>\n  );\n}\n```\n"
+    "content": "\nHello World! This may seem new to you, but I now have a website that better shows who I am and my interests. I will be going into why I decided to make an entirely new website from scratch, what tools I used, and the trials and tribulations faced during the journey.\n\n## The Old Website\n\n![Old Website](/assets/blog/new-website/old-website.webp)\n\nI had developed the first iteration of my personal portfolio during the winter break of 2023. It served as a good showcase of my skills and projects at the time, but I had felt that the interface was not as appealing, and that there could have been more information present. I was thinking of updating the original website itself, but found that since I had developed it in basic HTML, CSS, and JavaScript, that it would become tedious to implement complex features such as a blog. I had decided on creating a new website that uses an actual frontend framework to simplify the process of building it along with future updates.\n\n## Tech Stack\n\nFor this website, I had decided to use the [Next.js](https://nextjs.org/) framework, which is powered by [React.js](https://react.dev/). For all animations on this website, the [motion](https://motion.dev/) package was used as it provided a simple and seamless experience when creating them. The [react-icons](https://react-icons.github.io/react-icons/) package was used in a few places on this website, mainly in the Interests section on the Home page and the mobile header. And finally, [MDX](https://mdxjs.com/) was used to make it easier for me to write blogs as I was already familiar with Markdown.\n\n## Commonly Used Hooks\n\n```javascript\nimport React, { useState } from \"react\";\n\nfunction Example() {\n  const [count, setCount] = useState(0);\n  return (\n    <div>\n      <p>You clicked {count} times</p>\n      <button onClick={() => setCount(count + 1)}>Click me</button>\n    </div>\n  );\n}\n```\n"
   },
   {
     "slug": "test2",
     "meta": {
-      "type": "Blog",
       "title": "Brand New Website!",
       "description": "React Hooks are functions that let you use state and other React features without writing a class. React Hooks are functions that let you use state and other React features without writing a class. React Hooks are functions that let you use state and other React features without writing a class.",
       "date": "2025-02-01"

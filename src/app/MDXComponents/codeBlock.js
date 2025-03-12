@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../styles/blog/codeblock.module.css";
 
 const CodeBlock = ({ children, className }) => {

@@ -1,0 +1,33 @@
+---
+title: "New Website!"
+description: "This is my first ever blog post! I will be going into the new website, why I built it, and what tech stack was used!"
+date: "2025-03-12"
+---
+
+Hello World! This may seem new to you, but I now have a website that better shows who I am and my interests. I will be going into why I decided to make an entirely new website from scratch, what tools I used, and the trials and tribulations faced during the journey.
+
+## The Old Website
+
+![Old Website](/assets/blog/new-website/old-website.webp)
+
+I had developed the first iteration of my personal portfolio during the winter break of 2023. It served as a good showcase of my skills and projects at the time, but I had felt that the interface was not as appealing, and that there could have been more information present. I was thinking of updating the original website itself, but found that since I had developed it in basic HTML, CSS, and JavaScript, that it would become tedious to implement complex features such as a blog. I had decided on creating a new website that uses an actual frontend framework to simplify the process of building it along with future updates.
+
+## Tech Stack
+
+For this website, I had decided to use the [Next.js](https://nextjs.org/) framework, which is powered by [React.js](https://react.dev/). For all animations on this website, the [motion](https://motion.dev/) package was used as it provided a simple and seamless experience when creating them. The [react-icons](https://react-icons.github.io/react-icons/) package was used in a few places on this website, mainly in the Interests section on the Home page and the mobile header. And finally, [MDX](https://mdxjs.com/) was used to make it easier for me to write blogs as I was already familiar with Markdown.
+
+## Commonly Used Hooks
+
+```javascript
+import React, { useState } from "react";
+
+function Example() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
+```

@@ -10,10 +10,12 @@ import styles from "../../styles/blog/blogPost.module.css";
 
 import CodeBlock from "@/app/MDXComponents/codeBlock";
 import CustomImage from "@/app/MDXComponents/image";
+import CustomLink from "@/app/MDXComponents/link";
 
 const components = {
   img: CustomImage,
   pre: CodeBlock,
+  a: CustomLink,
 };
 
 export default function BlogPost() {
@@ -41,9 +43,15 @@ export default function BlogPost() {
   return (
     <div className={styles.blogPostContainer}>
       <div className={`content ${styles.blogPostContent}`}>
-        <h1>{post.meta.title}</h1>
-        <p>{post.meta.date}</p>
-        <MDXRemote components={components} {...mdxContent} />
+        <div className={styles.details}>
+          <h1 className={`${styles.text} ${styles.title}`}>
+            {post.meta.title}
+          </h1>
+          <p className={styles.text}>{post.meta.date}</p>
+        </div>
+        <div className={styles.mdxContainer}>
+          <MDXRemote components={components} {...mdxContent} />
+        </div>
       </div>
     </div>
   );
