@@ -14,20 +14,22 @@ I had developed the first iteration of my personal portfolio during the winter b
 
 ## Tech Stack
 
-For this website, I had decided to use the [Next.js](https://nextjs.org/) framework, which is powered by [React.js](https://react.dev/). For all animations on this website, the [motion](https://motion.dev/) package was used as it provided a simple and seamless experience when creating them. The [react-icons](https://react-icons.github.io/react-icons/) package was used in a few places on this website, mainly in the Interests section on the Home page and the mobile header. And finally, [MDX](https://mdxjs.com/) was used to make it easier for me to write blogs as I was already familiar with Markdown.
+For this website, I had decided to use the [Next.js](https://nextjs.org/) framework, which is powered by [React.js](https://react.dev/). For all animations on this website, the [motion](https://motion.dev/) package was used as it provided a simple and seamless experience when creating them. The [react-icons](https://react-icons.github.io/react-icons/) package was used in a few places on this website, mainly in the Interests section on the Home page and the mobile header. [MDX](https://mdxjs.com/) was used to make it easier for me to write blogs as I was already familiar with Markdown. I use [Cloudflare](https://www.cloudflare.com/) to host this website, as it provides a simple setup and little to no hassle.
 
-## Commonly Used Hooks
+## Updates
 
-```javascript
-import React, { useState } from "react";
+Most of the updates made on this new iteration mostly concern the home page. I reworked the entire projects section to be a carousel that is guided by you, the user. This way, the section does not take up as much space as the first iteration did, which is essential when adding more projects to the list.
 
-function Example() {
-  const [count, setCount] = useState(0);
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
-    </div>
-  );
-}
-```
+![Projects Section](/assets/blog/new-website/projects.webp)
+
+The interests section also was reworked, as I found the first iteration of the section to be irrelevant, as it offered no more information about myself. Now, there is a paragraph under each interest explaining why I chose it along with some creators I follow that specialize under that interest.
+
+![Projects Section](/assets/blog/new-website/interests.webp)
+
+## Additions
+
+There were many new additions to the website, which were mostly new pages. In an effort to further make this website personal to me, I added three pages: The blog, my reading list, and my resume. I had decided on integrating a blog onto this website as I desired a creative outlet for writing about certain items of interest and to also just improve my writing skills in general. As of right now, there is only one blog post (this one!), but there will be more to arrive in the near future. The reading list section lists all books I have read so far. I wanted to add this piece to the new iteration as a place to showcase my growth and to connect with like-minded people through reading. I added a resume page as I want to showcase my achievements and projects along with providing an outlet for employers to view it.
+
+## Trials & Tribulations
+
+Unironically, this blog was the hardest section of the website to implement. Back when the website launched around January 2025, I already had a fully working solution for this blog. But there was just one problem. Remember when I told you that this website was hosted on Cloudflare? It turns out Cloudflare runs website on something called the Edge Runtime. This runtime is an alternative to traditional Node.js runtime, designed for lower latency and better performance. Since this website was created using Node.js, the blog was utilized to use Node.js packages such as `fn` and `path`. Since those two packages, which simplified the blogging process, were not allowed, I had to find a different method of displaying blogs. I eventually found a method to quell this roadblock by generating a JSON file containing each blog post (in the form of a MDX file), and fetching that JSON file to render each post.
