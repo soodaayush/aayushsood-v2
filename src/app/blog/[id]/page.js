@@ -11,11 +11,13 @@ import styles from "../../styles/blog/blogPost.module.css";
 import CodeBlock from "@/app/MDXComponents/codeBlock";
 import CustomImage from "@/app/MDXComponents/image";
 import CustomLink from "@/app/MDXComponents/link";
+import CustomText from "@/app/MDXComponents/text";
 
 const components = {
   img: CustomImage,
   pre: CodeBlock,
   a: CustomLink,
+  p: CustomText,
 };
 
 export default function BlogPost() {

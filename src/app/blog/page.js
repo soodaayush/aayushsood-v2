@@ -1,35 +1,38 @@
-import Link from "next/link";
-import { getPosts } from "../../../utils/fetchPosts";
+import BlogList from "../components/blog/blogList";
 
-import styles from "../styles/blog/blog.module.css";
+export const metadata = {
+  title: "Blog | Aayush Sood",
+  description:
+    "Browse my stories ranging from life to technology to anything I desire to write about.",
+  creator: "Aayush Sood",
+  openGraph: {
+    title: "Blog | Aayush Sood",
+    description:
+      "Browse my stories ranging from life to technology to anything I desire to write about.",
+    url: "https://www.aayushsood.com/blog",
+    siteName: "Aayush Sood's Blog",
+    images: [
+      {
+        url: "https://www.aayushsood.com/assets/openGraph/banner.png",
+        width: 800,
+        height: 600,
+        alt: "Aayush Sood's Blog",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Aayush Sood",
+    description:
+      "Browse my stories ranging from life to technology to anything I desire to write about.",
+    images: ["https://www.aayushsood.com/assets/openGraph/banner.png"],
+  },
+  alternates: {
+    canonical: "https://www.aayushsood.com/blog",
+  },
+};
 
-export default function BlogIndex() {
-  const posts = getPosts();
-
-  return (
-    <div className={styles.blogContainer}>
-      <div className={`content ${styles.blogContent}`}>
-        <h1 className={styles.blogTitle}>Blog</h1>
-        <div className={styles.blogList}>
-          {posts.map((post) => (
-            <Link
-              className={styles.blogPost}
-              key={post.slug}
-              href={`/blog/${post.slug}`}
-            >
-              <h1 className={`${styles.text} ${styles.title}`}>
-                {post.meta.title}
-              </h1>
-              <p className={`${styles.text} ${styles.date}`}>
-                {post.meta.date}
-              </p>
-              <p className={`${styles.text} ${styles.date}`}>
-                {post.meta.description}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+export default function Blog() {
+  return <BlogList />;
 }

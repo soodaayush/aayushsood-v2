@@ -171,6 +171,22 @@ export default function Header() {
               <div className={styles.menuSection}>
                 <Link
                   className={styles.menuLink}
+                  href="/blog"
+                  onClick={openHamburgerMenu}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={styles.menuButton}
+                  >
+                    <h2 className={styles.menuLinkText}>Blog</h2>
+                    <div>
+                      <FaBlog className={styles.pageIcon} />
+                    </div>
+                  </motion.div>
+                </Link>
+                <Link
+                  className={styles.menuLink}
                   href="/books"
                   onClick={openHamburgerMenu}
                 >
