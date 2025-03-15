@@ -33,12 +33,13 @@ export default function MdxRenderer({ rawContent }) {
     processMdx();
   }, [rawContent]);
 
-  if (!mdxSource)
-    return <div className="animate-pulse">Loading content...</div>;
+  if (!mdxSource) {
+    return <div>Loading content...</div>;
+  }
 
   return (
     <div className={styles.mdxContainer}>
-      <MDXRemote components={components} {...mdxSource} />
+      <MDXRemote {...mdxSource} components={components} />
     </div>
   );
 }
