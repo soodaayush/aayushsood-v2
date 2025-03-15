@@ -1,7 +1,6 @@
-// app/blog/[slug]/page.js
 import { notFound } from "next/navigation";
 import { getPostBySlug, getPosts } from "../../../../utils/fetchPosts";
-import MdxRenderer from "./MDXRenderer";
+import MdxRenderer from "../../components/blog/MDXRenderer";
 
 import styles from "../../styles/blog/blogPost.module.css";
 

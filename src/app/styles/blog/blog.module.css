@@ -48,3 +48,21 @@
 .description {
   margin-top: 10px;
 }
+
+@media (min-width: 0px) {
+  .blogPost {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .blogPost {
+    width: 60%;
+  }
+}
+
+@media (min-width: 2100px) {
+  .blogPost {
+    width: 50%;
+  }
+}
