@@ -3,14 +3,63 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: justify;
+
+  padding: 20px;
+}
+
+.details {
   text-align: left;
+  width: 100%;
+}
+
+.blogPostContentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .blogPostContent {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
   flex-direction: column;
-  border: 1px solid red;
+}
+
+.text {
+  margin: 0;
+}
+
+.title {
+  font-size: 50px;
+}
+
+.mdxContainer {
+  text-align: justify;
+  width: 100%;
+}
+
+@media (min-width: 0px) {
+  .blogPostContent {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .blogPostContent {
+    width: 60%;
+  }
+}
+
+@media (min-width: 2100px) {
+  .blogPostContent {
+    width: 50%;
+  }
+}
+
+@media (min-width: 2700px) {
+  .blogPostContent {
+    width: 40%;
+  }
 }

@@ -1,54 +1,38 @@
-// import styles from "../styles/blog/blog.module.css";
-// import Image from "next/image";
+import BlogList from "../components/blog/blogList";
 
-// import Link from "next/link";
+export const metadata = {
+  title: "Blog | Aayush Sood",
+  description:
+    "Browse my stories ranging from life to technology to anything I desire to write about.",
+  creator: "Aayush Sood",
+  openGraph: {
+    title: "Blog | Aayush Sood",
+    description:
+      "Browse my stories ranging from life to technology to anything I desire to write about.",
+    url: "https://www.aayushsood.com/blog",
+    siteName: "Aayush Sood's Blog",
+    images: [
+      {
+        url: "https://www.aayushsood.com/assets/openGraph/banner.png",
+        width: 800,
+        height: 600,
+        alt: "Aayush Sood's Blog",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Aayush Sood",
+    description:
+      "Browse my stories ranging from life to technology to anything I desire to write about.",
+    images: ["https://www.aayushsood.com/assets/openGraph/banner.png"],
+  },
+  alternates: {
+    canonical: "https://www.aayushsood.com/blog",
+  },
+};
 
-// import { promises as fs } from "fs";
-// import path from "path";
-// import { compileMDX } from "next-mdx-remote/rsc";
-
-// export default async function Blog() {
-//   const filenames = await fs.readdir(path.join(process.cwd(), "src/app/posts"));
-
-//   const blogPosts = await Promise.all(
-//     filenames.map(async (filename) => {
-//       const content = await fs.readFile(
-//         path.join(process.cwd(), "src/app/posts", filename),
-//         "utf-8"
-//       );
-
-//       const { frontmatter } = await compileMDX({
-//         source: content,
-//         options: {
-//           parseFrontmatter: true,
-//         },
-//       });
-
-//       return {
-//         filename,
-//         slug: filename.replace(".mdx", ""),
-//         ...frontmatter,
-//       };
-//     })
-//   );
-
-//   return (
-//     <div className={styles.blogContainer}>
-//       <div className={`content ${styles.blogContent}`}>
-//         <h1 className={styles.blogTitle}>Blog</h1>
-//         <div className={styles.blogList}>
-//           {blogPosts.map((post, index) => (
-//             <Link
-//               className={styles.blogPost}
-//               key={index}
-//               href={`/blog/${post.slug}`}
-//             >
-//               <h1 className={styles.title}>{post.title}</h1>
-//               <p className={styles.date}>{post.date}</p>
-//             </Link>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+export default function Blog() {
+  return <BlogList />;
+}

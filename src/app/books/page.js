@@ -41,7 +41,9 @@ export default function Books() {
   return (
     <div className={styles.booksContainer}>
       <div className={`content ${styles.booksContent}`}>
-        <h1 className={styles.booksTitle}>Reading List</h1>
+        <h1 className={styles.booksTitle}>
+          Collection of books that I&apos;ve read
+        </h1>
         <div className={styles.booksList}>
           {books
             .sort((a, b) => a.title.localeCompare(b.title))

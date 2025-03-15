@@ -141,11 +141,12 @@ export default function Resume() {
                 >
                   CodeForces.com
                 </a>
-                , Rating 1001, since 2024
+                , aiming to increase rating above 1600+ by the end of 2025 -
+                since 2024
               </li>
               <li>
                 Public Relations Manager for Nova Scotia Secondary School
-                Students’ Association{" "}
+                Students&apos; Association{" "}
                 <a
                   className={`${styles.link} ${styles.underline}`}
                   href="https://www.nsssa.ca/"
@@ -153,14 +154,14 @@ export default function Resume() {
                 >
                   (NSSSA)
                 </a>
-                , since 2024
+                - since 2024
               </li>
               <li>
                 Peer Tutoring fellow grade 10 & 11 students in Mathematics and
-                Sciences, since 2024
+                Sciences - since 2024
               </li>
               <li>
-                Completed Harvard’s CS50x: Introduction to Computer Science
+                Completed Harvard&apos;s CS50x: Introduction to Computer Science
                 course on{" "}
                 <a
                   className={`${styles.link} ${styles.underline}`}
@@ -169,11 +170,13 @@ export default function Resume() {
                 >
                   edX
                 </a>
-                , 2024
+                , gaining a foundational understanding of Computer Science
+                principles and proficiency in C - 2024
               </li>
               <li>
                 Invited to and participated in an exclusive summer math camp
-                hosted by Dalhousie University, 2024
+                hosted by Dalhousie University, focusing on Calculus,
+                Probability, Topology, and Cosmology - 2024
               </li>
               <li>
                 Volunteered 200+ hours as a Camp Counselor during Canada Games
@@ -185,11 +188,11 @@ export default function Resume() {
                 >
                   (CGC)
                 </a>{" "}
-                Summer Camp, Halifax, 2024
+                Summer Camp in Halifax - 2024
               </li>
               <li>
                 Recipient of the Student Council Innovative Mind Award in Grade
-                10, 2024
+                10 - 2024
               </li>
               <li>
                 Made{" "}
@@ -201,15 +204,15 @@ export default function Resume() {
                   Honour Rolls
                 </a>{" "}
                 and received Certificate of Distinction in Junior division of
-                University of Waterloo’s Canadian Computing Competition (CCC),
-                2024
+                University of Waterloo&apos;s Canadian Computing Competition
+                (CCC) - 2024
               </li>
               <li>
-                Cabinet Member on Nova Scotia Minister of Education’s Student
-                Advisory Council (MSAC), since 2024
+                Cabinet Member on Nova Scotia Minister of Education&apos;s
+                Student Advisory Council (MSAC) - since 2024
               </li>
               <li>
-                Executive of Bay View High School’s Student Council and Founder
+                Executive of Bay View High&apos;s Student Council and Founder
                 and President of the{" "}
                 <a
                   className={`${styles.link} ${styles.underline}`}
@@ -218,11 +221,11 @@ export default function Resume() {
                 >
                   Technology Club
                 </a>
-                , since 2023
+                - since 2023
               </li>
               <li>
                 Recipient of the Mathematics Achievement & Citizenship Awards in
-                Grade 9, 2023
+                Grade 9 - 2023
               </li>
               <li>
                 Won first place in a regional{" "}
@@ -233,7 +236,7 @@ export default function Resume() {
                 >
                   Improv
                 </a>{" "}
-                competition during Grade 9 at Ridgecliff Middle School, 2023
+                competition during Grade 9 at Ridgecliff Middle School - 2023
               </li>
               <li>
                 Completed 85+ challenges on{" "}
@@ -244,11 +247,12 @@ export default function Resume() {
                 >
                   LeetCode.com
                 </a>
-                , since 2022
+                , improving proficiency in data structures and algorithms -
+                since 2022
               </li>
               <li>
                 Earned several medals in regional Brazilian Jiu Jitsu
-                competitions, 2022-2024
+                competitions - 2022-2024
               </li>
               <li>
                 Mentoring fellow Brazilian Jiu Jitsu practitioners at{" "}
@@ -259,7 +263,7 @@ export default function Resume() {
                 >
                   Titans MMA
                 </a>
-                , since 2022
+                - since 2022
               </li>
               <li>
                 Completed 50+ challenges on{" "}
@@ -270,11 +274,12 @@ export default function Resume() {
                 >
                   FrontendMentor.io
                 </a>
-                , since 2020
+                , focusing on responsive web design and accessibility best
+                practices - since 2020
               </li>
               <li>
                 Recipient of Bronze Star and Bronze Medallion of the Nova Scotia
-                Lifesaving Society, 2019-2021
+                Lifesaving Society - 2019-2021
               </li>
             </ul>
           </div>
@@ -295,21 +300,21 @@ export default function Resume() {
               </div>
               <ul className={styles.projectNotes}>
                 <li>
-                  Managing social media accounts across multiple platforms to
-                  increase engagement and brand awareness
+                  Increased social media engagement by 35% through targeted
+                  content creation and platform optimization
                 </li>
                 <li>
                   Creating and curating content that aligns with our
                   organization&apos;s mission and values
                 </li>
                 <li>
-                  Developing and maintaining relationships with businesses,
-                  securing funding and partnership opportunities
+                  Secured funding for leadership conferences and established
+                  partnerships with 5 local businesses to sponsor events
                 </li>
                 <li>
-                  Consulted the NSSSA infrastructure group on cybersecurity
-                  issues, providing insights on security best practices and risk
-                  mitigation
+                  Consulted on cybersecurity issues, recommending specific
+                  security best practices (e.g., multi-factor authentication,
+                  complex passwords)
                 </li>
               </ul>
             </div>
@@ -325,8 +330,9 @@ export default function Resume() {
               </div>
               <ul className={styles.projectNotes}>
                 <li>
-                  Developed a Bay View High School Mobile app to present the
-                  school with a handheld presence
+                  Developed a comprehensive mobile app to provide students with
+                  centralized access to school news, announcements, events, and
+                  essential information
                 </li>
                 <li>
                   Application developed using React Native framework, JavaScript
@@ -337,8 +343,8 @@ export default function Resume() {
                   Android devices
                 </li>
                 <li>
-                  Application also submitted as a final project for Harvard’s
-                  CS50x course
+                  Application also submitted as a final project for
+                  Harvard&apos;s CS50x course
                 </li>
               </ul>
             </div>
@@ -353,17 +359,13 @@ export default function Resume() {
               </div>
               <ul className={styles.projectNotes}>
                 <li>
-                  Collaborated with counsellors to design engaging activities,
-                  including sports, arts and crafts, and team-building exercises
-                  for children aged 5 - 12
+                  Volunteered 200+ hours, contributing to camp operations and
+                  creating engaging activities that maintained high levels of
+                  camper engagement and participation throughout the summer
                 </li>
                 <li>
                   Monitored campers&apos; behavior and well-being, ensuring a
-                  safe and inclusive environment for all participant
-                </li>
-                <li>
-                  Volunteered 200+ hours contributing to camp operations and
-                  enhancing the overall camper experience
+                  safe and inclusive environment for all participants
                 </li>
                 <li>
                   Encouraged campers to participate, build friendships, and
@@ -420,7 +422,8 @@ export default function Resume() {
                 <li>
                   Provided input on school cell phone usage policies that
                   resulted in a new directive that was implemented in September
-                  2024
+                  2024 that balanced educational needs with responsible
+                  technology use
                 </li>
                 <li>
                   Conducted research and analysis on various educational trends,
@@ -446,13 +449,13 @@ export default function Resume() {
                 </li>
                 <li>
                   Under my leadership, Tech Club grew from 3-4 to 30+ members
-                  with a median 20+ member attendance on a weekly basis
+                  with an average 20+ member attendance on a weekly basis,
+                  fostering a thriving learning community
                 </li>
                 <li>
-                  Mentoring and fostering a learning community by guiding
-                  students in tech-related topics, planning interactive
-                  sessions, and creating an inclusive space for skill
-                  development
+                  Facilitating weekly tech workshops on topics such as Web
+                  Development, Python Scripting, Cybersecurity, empowering
+                  students with practical skills
                 </li>
                 <li>
                   Advocating for student interests by collaborating with
@@ -531,7 +534,8 @@ export default function Resume() {
               <ul className={styles.projectNotes}>
                 <li>
                   Led and organized kids classes aged 5 - 15 in Brazilian Jiu
-                  Jitsu, focusing on technique, form, and physical fitness
+                  Jitsu, teaching self-defense, discipline, and respect, leading
+                  to improved confidence and physical fitness
                 </li>
                 <li>
                   Taught students a variety of techniques, including
@@ -553,7 +557,7 @@ export default function Resume() {
           </div>
         </div>
         <div className={styles.sectionContainer}>
-          <h1 className={styles.sectionHeading}>Extracurricular Skills</h1>
+          <h1 className={styles.sectionHeading}>Skills</h1>
           <hr className={styles.divider} />
           <div className={styles.technicalSkillsContainer}>
             <div className={styles.skill}>

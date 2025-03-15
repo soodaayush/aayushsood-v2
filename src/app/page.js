@@ -96,9 +96,9 @@ export default function Home() {
               className={styles.welcomeText}
             />
             <p>
-              I'm based in Nova Scotia, Canada, and I'm passionate about Math,
-              Software Engineering, Gaming, and Jiu Jitsu. <br />
-              I'm an aspiring software intern with coding passion,
+              I&apos;m based in Nova Scotia, Canada, and I&apos;m passionate
+              about Math, Software Engineering, Gaming, and Jiu Jitsu. <br />
+              I&apos;m an aspiring software intern with coding passion,
               problem-solving skills, and eagerness to contribute.
             </p>
           </div>

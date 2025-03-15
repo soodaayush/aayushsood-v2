@@ -34,9 +34,9 @@ export default function Header() {
             <h1>Aayush Sood</h1>
           </Link>
           <div className={styles.pages}>
-            {/* <Link className={styles.title} href="/blog">
+            <Link className={styles.title} href="/blog">
               <h2>Blog</h2>
-            </Link> */}
+            </Link>
             <Link className={styles.title} href="/books">
               <h2>Books</h2>
             </Link>
@@ -169,6 +169,22 @@ export default function Header() {
                 </motion.button>
               </div>
               <div className={styles.menuSection}>
+                <Link
+                  className={styles.menuLink}
+                  href="/blog"
+                  onClick={openHamburgerMenu}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={styles.menuButton}
+                  >
+                    <h2 className={styles.menuLinkText}>Blog</h2>
+                    <div>
+                      <FaBlog className={styles.pageIcon} />
+                    </div>
+                  </motion.div>
+                </Link>
                 <Link
                   className={styles.menuLink}
                   href="/books"
