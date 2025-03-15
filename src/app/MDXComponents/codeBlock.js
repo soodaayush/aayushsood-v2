@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "../styles/blog/codeblock.module.css";
 
 const CodeBlock = ({ children, className }) => {

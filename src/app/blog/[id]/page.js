@@ -1,45 +1,53 @@
-"use client";
-
-import { usePathname } from "next/navigation";
-import { getPostBySlug } from "../../../../utils/fetchPosts";
-import { MDXRemote } from "next-mdx-remote";
-import { useState, useEffect } from "react";
-import { serialize } from "next-mdx-remote/serialize";
+import { notFound } from "next/navigation";
+import { getPostBySlug, getPosts } from "../../../../utils/fetchPosts";
+import MdxRenderer from "./MDXRenderer";
 
 import styles from "../../styles/blog/blogPost.module.css";
 
-import CodeBlock from "@/app/MDXComponents/codeBlock";
-import CustomImage from "@/app/MDXComponents/image";
-import CustomLink from "@/app/MDXComponents/link";
-import CustomText from "@/app/MDXComponents/text";
+export async function generateMetadata({ params }) {
+  const post = getPostBySlug(params.id);
 
-const components = {
-  img: CustomImage,
-  pre: CodeBlock,
-  a: CustomLink,
-  p: CustomText,
-};
+  return {
+    title: `${post?.meta.title ?? "Post not Found"} | Aayush Sood`,
+    description:
+      post?.meta.description || "Explore insights and articles by Aayush Sood",
+    openGraph: {
+      title: `${post?.meta.title ?? "Post not Found"} | Aayush Sood`,
+      description: post?.meta.description || "A blog post by Aayush Sood",
+      type: "article",
+      publishedTime: post?.meta.date || "",
+      url: `https://www.aayushsood.com/blog/${params.id}`,
+      images: [
+        {
+          url: "https://www.aayushsood.com/assets/openGraph/banner.png",
+          width: 800,
+          height: 600,
+          alt: "Aayush Sood's Blog Post",
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${post?.meta.title ?? "Post not Found"} | Aayush Sood`,
+      description: post?.meta.description || "A blog post by Aayush Sood",
+      images: ["https://www.aayushsood.com/assets/openGraph/banner.png"],
+    },
+    alternates: {
+      canonical: `https://www.aayushsood.com/blog/${params.id}`,
+    },
+  };
+}
 
-export default function BlogPost() {
-  const pathname = usePathname();
-  const slug = pathname.split("/").pop();
-  const [post, setPost] = useState(null);
-  const [mdxContent, setMdxContent] = useState(null);
+export async function generateStaticParams() {
+  return getPosts().map((post) => ({ slug: post.slug }));
+}
 
-  useEffect(() => {
-    async function fetchPost() {
-      const fetchedPost = getPostBySlug(slug);
-      if (fetchedPost) {
-        const serializedContent = await serialize(fetchedPost.content);
-        setPost(fetchedPost);
-        setMdxContent(serializedContent);
-      }
-    }
-    fetchPost();
-  }, [slug]);
+export default function BlogPost({ params }) {
+  const post = getPostBySlug(params.id);
 
-  if (!post || !mdxContent) {
-    return <div>Loading...</div>;
+  if (!post) {
+    notFound();
   }
 
   return (
@@ -51,9 +59,7 @@ export default function BlogPost() {
           </h1>
           <p className={styles.text}>{post.meta.date}</p>
         </div>
-        <div className={styles.mdxContainer}>
-          <MDXRemote components={components} {...mdxContent} />
-        </div>
+        <MdxRenderer rawContent={post.content} />
       </div>
     </div>
   );
