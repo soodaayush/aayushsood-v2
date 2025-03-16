@@ -153,7 +153,7 @@ export default function Resume() {
                   target="_blank"
                 >
                   (NSSSA)
-                </a>
+                </a>{" "}
                 - since 2024
               </li>
               <li>
@@ -220,7 +220,7 @@ export default function Resume() {
                   target="_blank"
                 >
                   Technology Club
-                </a>
+                </a>{" "}
                 - since 2023
               </li>
               <li>
@@ -262,7 +262,7 @@ export default function Resume() {
                   target="_blank"
                 >
                   Titans MMA
-                </a>
+                </a>{" "}
                 - since 2022
               </li>
               <li>
