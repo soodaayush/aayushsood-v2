@@ -1,6 +1,6 @@
 .homeContainer {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 }
@@ -127,7 +127,7 @@
 .interestsContainer {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   padding: 20px;
   width: 100%;
