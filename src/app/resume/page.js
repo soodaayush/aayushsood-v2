@@ -133,6 +133,17 @@ export default function Resume() {
           <div className={styles.accomplishmentList}>
             <ul>
               <li>
+                Won third place in{" "}
+                <a
+                  className={`${styles.link} ${styles.underline}`}
+                  href="https://www.lockheedmartin.com/en-us/who-we-are/communities/cyber-quest.html"
+                  target="_blank"
+                >
+                  Lockheed Martin CYBERQUEST Competition
+                </a>{" "}
+                - 2025
+              </li>
+              <li>
                 Competitively programming on{" "}
                 <a
                   className={`${styles.link} ${styles.underline}`}
