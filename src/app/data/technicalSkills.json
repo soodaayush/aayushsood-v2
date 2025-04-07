@@ -14,7 +14,7 @@
   {
     "type": "Backend",
     "skills": [
-      { "id": 8, "name": "Python", "experience": "1 Year" },
+      { "id": 8, "name": "Python", "experience": "2 Years" },
       { "id": 9, "name": "Node.js", "experience": "3 Years" },
       { "id": 10, "name": "Firebase", "experience": "2 Years" },
       { "id": 11, "name": "SQL", "experience": "2 Years" },
