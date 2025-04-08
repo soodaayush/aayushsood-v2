@@ -62,6 +62,7 @@
 
 .sectionHeading {
   margin: 0;
+  font-size: 25px;
 }
 
 .divider {
@@ -76,6 +77,7 @@
   flex-direction: column;
   width: 100%;
   gap: 10px;
+  padding: 0 20px 0 20px;
 }
 
 .school {
@@ -98,6 +100,10 @@
   margin: 0;
 }
 
+.accomplishmentContainer {
+  padding: 0 20px 0 20px;
+}
+
 .accomplishmentTextContainer {
   display: flex;
   justify-content: space-between;
@@ -106,12 +112,17 @@
   gap: 20px;
 }
 
+.list {
+  margin: 0;
+}
+
 .projectContainer {
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
   width: 100%;
+  padding: 0 20px 0 20px;
   gap: 10px;
 }
 
@@ -123,6 +134,10 @@
   flex-direction: column;
 }
 
+.projectTitle {
+  font-weight: bolder;
+}
+
 .projectDetails {
   display: flex;
   justify-content: space-between;
@@ -131,8 +146,17 @@
   gap: 20px;
 }
 
+.techStack {
+  font-weight: 400;
+}
+
+.projectNotes {
+  margin: 0;
+}
+
 .technicalSkillsContainer {
   width: 100%;
+  padding: 0 20px 0 20px;
 }
 
 .skill {
@@ -211,7 +235,7 @@
 
 @media (min-width: 900px) {
   .projectHeading {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -223,7 +247,7 @@
 
 @media (min-width: 925px) {
   .accomplishmentHeader {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 

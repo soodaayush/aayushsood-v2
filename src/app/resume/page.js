@@ -43,7 +43,7 @@ export default function Resume() {
       <div className={`content ${styles.resumeContentContainer}`}>
         <div className={styles.intro}>
           <h1 className={styles.name}>
-            Aayush Sood{" "}
+            Aayush Sood
             <a href="assets/resume/resume.pdf" target="_blank">
               <Image
                 src={PDF}
@@ -54,7 +54,6 @@ export default function Resume() {
               />
             </a>
           </h1>
-
           <div className={styles.links}>
             <a className={styles.link} href="tel:9027894315" target="_blank">
               +1 (902) 789-4315
@@ -104,7 +103,7 @@ export default function Resume() {
               </div>
               <div className={styles.schoolDetails}>
                 <i className={styles.text}>Secondary School - Grade 11</i>
-                <p className={styles.text}>Sep. 2023 - Present</p>
+                <i className={styles.text}>Sep. 2023 - Present</i>
               </div>
             </div>
             <div className={styles.school}>
@@ -114,186 +113,188 @@ export default function Resume() {
               </div>
               <div className={styles.schoolDetails}>
                 <i className={styles.text}>Middle School</i>
-                <p className={styles.text}>Sep. 2019 - Jun. 2023</p>
+                <i className={styles.text}>Sep. 2019 - Jun. 2023</i>
               </div>
             </div>
           </div>
         </div>
-        <div className={styles.sectionContainer}>
+        <div className={`${styles.sectionContainer}`}>
           <h1 className={styles.sectionHeading}>Accomplishments</h1>
           <hr className={styles.divider} />
-          <div className={styles.accomplishmentTextContainer}>
-            <h1 className={`${styles.text} ${styles.accomplishmentHeader}`}>
-              Some of my notable achievements, including but not limited to:
-            </h1>
-            <h1 className={`${styles.text} ${styles.accomplishmentHeader}`}>
-              Since 2019
-            </h1>
-          </div>
-          <div className={styles.accomplishmentList}>
-            <ul>
-              <li>
-                Won third place in Lockheed Martin{" "}
-                <a
-                  className={`${styles.link} ${styles.underline}`}
-                  href="https://www.lockheedmartin.com/en-us/who-we-are/communities/cyber-quest.html"
-                  target="_blank"
-                >
-                  CYBERQUEST
-                </a>{" "}
-                Competition, demonstrating skills in cryptography, forensics,
-                and network security - 2025
-              </li>
-              <li>
-                Competitively programming on{" "}
-                <a
-                  className={`${styles.link} ${styles.underline}`}
-                  href="https://codeforces.com/profile/aayushsood"
-                  target="_blank"
-                >
-                  CodeForces.com
-                </a>
-                , aiming to increase rating above 1600+ by the end of 2025 -
-                since 2024
-              </li>
-              <li>
-                Public Relations Manager for Nova Scotia Secondary School
-                Students&apos; Association{" "}
-                <a
-                  className={`${styles.link} ${styles.underline}`}
-                  href="https://www.nsssa.ca/"
-                  target="_blank"
-                >
-                  (NSSSA)
-                </a>{" "}
-                - since 2024
-              </li>
-              <li>
-                Peer Tutoring fellow grade 10 & 11 students in Mathematics and
-                Sciences - since 2024
-              </li>
-              <li>
-                Completed Harvard&apos;s CS50x: Introduction to Computer Science
-                course on{" "}
-                <a
-                  className={`${styles.link} ${styles.underline}`}
-                  href="https://courses.edx.org/certificates/51884bfbb2734dc4bbdf1eca77ce83db"
-                  target="_blank"
-                >
-                  edX
-                </a>
-                , gaining a foundational understanding of Computer Science
-                principles and proficiency in C - 2024
-              </li>
-              <li>
-                Invited to and participated in an exclusive summer math camp
-                hosted by Dalhousie University, focusing on Calculus,
-                Probability, Topology, and Cosmology - 2024
-              </li>
-              <li>
-                Volunteered 200+ hours as a Camp Counselor during Canada Games
-                Centre{" "}
-                <a
-                  className={`${styles.link} ${styles.underline}`}
-                  href="https://canadagamescentre.ca/"
-                  target="_blank"
-                >
-                  (CGC)
-                </a>{" "}
-                Summer Camp in Halifax - 2024
-              </li>
-              <li>
-                Recipient of the Student Council Innovative Mind Award in Grade
-                10 - 2024
-              </li>
-              <li>
-                Made{" "}
-                <a
-                  className={`${styles.link} ${styles.underline}`}
-                  href="https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024CCCResults.pdf"
-                  target="_blank"
-                >
-                  Honour Rolls
-                </a>{" "}
-                and received Certificate of Distinction in Junior division of
-                University of Waterloo&apos;s Canadian Computing Competition
-                (CCC) - 2024
-              </li>
-              <li>
-                Cabinet Member on Nova Scotia Minister of Education&apos;s
-                Student Advisory Council (MSAC) - since 2024
-              </li>
-              <li>
-                Executive of Bay View High&apos;s Student Council and Founder
-                and President of the{" "}
-                <a
-                  className={`${styles.link} ${styles.underline}`}
-                  href="https://bvh-tech-club.netlify.app/"
-                  target="_blank"
-                >
-                  Technology Club
-                </a>{" "}
-                - since 2023
-              </li>
-              <li>
-                Recipient of the Mathematics Achievement & Citizenship Awards in
-                Grade 9 - 2023
-              </li>
-              <li>
-                Won first place in a regional{" "}
-                <a
-                  className={`${styles.link} ${styles.underline}`}
-                  href="https://improv.ca/"
-                  target="_blank"
-                >
-                  Improv
-                </a>{" "}
-                competition during Grade 9 at Ridgecliff Middle School - 2023
-              </li>
-              <li>
-                Completed 85+ challenges on{" "}
-                <a
-                  className={`${styles.link} ${styles.underline}`}
-                  href="https://leetcode.com/u/soodaayush/"
-                  target="_blank"
-                >
-                  LeetCode.com
-                </a>
-                , improving proficiency in data structures and algorithms -
-                since 2022
-              </li>
-              <li>
-                Earned several medals in regional Brazilian Jiu Jitsu
-                competitions - 2022-2024
-              </li>
-              <li>
-                Mentoring fellow Brazilian Jiu Jitsu practitioners at{" "}
-                <a
-                  className={`${styles.link} ${styles.underline}`}
-                  href="https://titansmaaf.ca/"
-                  target="_blank"
-                >
-                  Titans MMA
-                </a>{" "}
-                - since 2022
-              </li>
-              <li>
-                Completed 50+ challenges on{" "}
-                <a
-                  className={`${styles.link} ${styles.underline}`}
-                  href="https://www.frontendmentor.io/profile/soodaayush"
-                  target="_blank"
-                >
-                  FrontendMentor.io
-                </a>
-                , focusing on responsive web design and accessibility best
-                practices - since 2020
-              </li>
-              <li>
-                Recipient of Bronze Star and Bronze Medallion of the Nova Scotia
-                Lifesaving Society - 2019-2021
-              </li>
-            </ul>
+          <div className={styles.accomplishmentContainer}>
+            <div className={styles.accomplishmentTextContainer}>
+              <h1 className={`${styles.text} ${styles.accomplishmentHeader}`}>
+                Some of my notable achievements, including but not limited to:
+              </h1>
+              <h1 className={`${styles.text} ${styles.accomplishmentHeader}`}>
+                Since 2019
+              </h1>
+            </div>
+            <div className={styles.accomplishmentList}>
+              <ul className={styles.list}>
+                <li>
+                  Won third place in Lockheed Martin{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://www.lockheedmartin.com/en-us/who-we-are/communities/cyber-quest.html"
+                    target="_blank"
+                  >
+                    CYBERQUEST
+                  </a>{" "}
+                  Competition, demonstrating skills in cryptography, forensics,
+                  and network security - 2025
+                </li>
+                <li>
+                  Competitively programming on{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://codeforces.com/profile/aayushsood"
+                    target="_blank"
+                  >
+                    CodeForces.com
+                  </a>
+                  , aiming to increase rating above 1600+ by the end of 2025 -
+                  since 2024
+                </li>
+                <li>
+                  Public Relations Manager for Nova Scotia Secondary School
+                  Students&apos; Association{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://www.nsssa.ca/"
+                    target="_blank"
+                  >
+                    (NSSSA)
+                  </a>{" "}
+                  - since 2024
+                </li>
+                <li>
+                  Peer Tutoring fellow grade 10 & 11 students in Mathematics and
+                  Sciences - since 2024
+                </li>
+                <li>
+                  Completed Harvard&apos;s CS50x: Introduction to Computer
+                  Science course on{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://courses.edx.org/certificates/51884bfbb2734dc4bbdf1eca77ce83db"
+                    target="_blank"
+                  >
+                    edX
+                  </a>
+                  , gaining a foundational understanding of Computer Science
+                  principles and proficiency in C - 2024
+                </li>
+                <li>
+                  Invited to and participated in an exclusive summer math camp
+                  hosted by Dalhousie University, focusing on Calculus,
+                  Probability, Topology, and Cosmology - 2024
+                </li>
+                <li>
+                  Volunteered 200+ hours as a Camp Counselor during Canada Games
+                  Centre{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://canadagamescentre.ca/"
+                    target="_blank"
+                  >
+                    (CGC)
+                  </a>{" "}
+                  Summer Camp in Halifax - 2024
+                </li>
+                <li>
+                  Recipient of the Student Council Innovative Mind Award in
+                  Grade 10 - 2024
+                </li>
+                <li>
+                  Made{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024CCCResults.pdf"
+                    target="_blank"
+                  >
+                    Honour Rolls
+                  </a>{" "}
+                  and received Certificate of Distinction in Junior division of
+                  University of Waterloo&apos;s Canadian Computing Competition
+                  (CCC) - 2024
+                </li>
+                <li>
+                  Cabinet Member on Nova Scotia Minister of Education&apos;s
+                  Student Advisory Council (MSAC) - since 2024
+                </li>
+                <li>
+                  Executive of Bay View High&apos;s Student Council and Founder
+                  and President of the{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://bvh-tech-club.netlify.app/"
+                    target="_blank"
+                  >
+                    Technology Club
+                  </a>{" "}
+                  - since 2023
+                </li>
+                <li>
+                  Recipient of the Mathematics Achievement & Citizenship Awards
+                  in Grade 9 - 2023
+                </li>
+                <li>
+                  Won first place in a regional{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://improv.ca/"
+                    target="_blank"
+                  >
+                    Improv
+                  </a>{" "}
+                  competition during Grade 9 at Ridgecliff Middle School - 2023
+                </li>
+                <li>
+                  Completed 85+ challenges on{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://leetcode.com/u/soodaayush/"
+                    target="_blank"
+                  >
+                    LeetCode.com
+                  </a>
+                  , improving proficiency in data structures and algorithms -
+                  since 2022
+                </li>
+                <li>
+                  Earned several medals in regional Brazilian Jiu Jitsu
+                  competitions - 2022-2024
+                </li>
+                <li>
+                  Mentoring fellow Brazilian Jiu Jitsu practitioners at{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://titansmaaf.ca/"
+                    target="_blank"
+                  >
+                    Titans MMA
+                  </a>{" "}
+                  - since 2022
+                </li>
+                <li>
+                  Completed 50+ challenges on{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://www.frontendmentor.io/profile/soodaayush"
+                    target="_blank"
+                  >
+                    FrontendMentor.io
+                  </a>
+                  , focusing on responsive web design and accessibility best
+                  practices - since 2020
+                </li>
+                <li>
+                  Recipient of Bronze Star and Bronze Medallion of the Nova
+                  Scotia Lifesaving Society - 2019-2021
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className={styles.sectionContainer}>
@@ -302,7 +303,9 @@ export default function Resume() {
           <div className={styles.projectContainer}>
             <div className={styles.project}>
               <div className={styles.projectDetails}>
-                <p className={`${styles.text} ${styles.projectHeading}`}>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
                   Nova Scotia Secondary School Students&apos; Association - PR
                   Manager
                 </p>
@@ -332,9 +335,14 @@ export default function Resume() {
             </div>
             <div className={styles.project}>
               <div className={styles.projectDetails}>
-                <p className={`${styles.text} ${styles.projectHeading}`}>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
                   Bay View High School - Mobile App |
-                  <i> React Native, JavaScript, Expo, Git</i>
+                  <i className={styles.techStack}>
+                    {" "}
+                    React Native, JavaScript, Expo, Git
+                  </i>
                 </p>
                 <p className={`${styles.text} ${styles.projectHeading}`}>
                   July 2024 - September 2024
@@ -362,7 +370,9 @@ export default function Resume() {
             </div>
             <div className={styles.project}>
               <div className={styles.projectDetails}>
-                <p className={`${styles.text} ${styles.projectHeading}`}>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
                   Canada Games Centre Volunteer - Camp Counselor
                 </p>
                 <p className={`${styles.text} ${styles.projectHeading}`}>
@@ -388,8 +398,11 @@ export default function Resume() {
             </div>
             <div className={styles.project}>
               <div className={styles.projectDetails}>
-                <p className={`${styles.text} ${styles.projectHeading}`}>
-                  Ben Eater&apos;s 6502 Project |<i> Python, Assembly</i>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
+                  Ben Eater&apos;s 6502 Project |
+                  <i className={styles.techStack}> Python, Assembly</i>
                 </p>
                 <p className={`${styles.text} ${styles.projectHeading}`}>
                   April 2024 - July 2024
@@ -411,7 +424,9 @@ export default function Resume() {
             </div>
             <div className={styles.project}>
               <div className={styles.projectDetails}>
-                <p className={`${styles.text} ${styles.projectHeading}`}>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
                   Nova Scotia Education Minister&apos;s Student Advisory Council
                   - Cabinet Member
                 </p>
@@ -446,7 +461,9 @@ export default function Resume() {
             </div>
             <div className={styles.project}>
               <div className={styles.projectDetails}>
-                <p className={`${styles.text} ${styles.projectHeading}`}>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
                   Student Council Executive & Tech Club President
                 </p>
                 <p className={`${styles.text} ${styles.projectHeading}`}>
@@ -483,9 +500,14 @@ export default function Resume() {
             </div>
             <div className={styles.project}>
               <div className={styles.projectDetails}>
-                <p className={`${styles.text} ${styles.projectHeading}`}>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
                   CoinDeno - Mobile App |
-                  <i> React Native, Git, REST, Firebase, CoinGecko APIs</i>
+                  <i className={styles.techStack}>
+                    {" "}
+                    React Native, Git, REST, Firebase, CoinGecko APIs
+                  </i>
                 </p>
                 <p className={`${styles.text} ${styles.projectHeading}`}>
                   July 2022 - September 2022
@@ -505,9 +527,11 @@ export default function Resume() {
             </div>
             <div className={styles.project}>
               <div className={styles.projectDetails}>
-                <p className={`${styles.text} ${styles.projectHeading}`}>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
                   CoinDeno - Web App |
-                  <i>
+                  <i className={styles.techStack}>
                     {" "}
                     React.js, JavaScript, REST, Git, Firebase, CoinGecko APIs
                   </i>
@@ -536,7 +560,9 @@ export default function Resume() {
             </div>
             <div className={styles.project}>
               <div className={styles.projectDetails}>
-                <p className={`${styles.text} ${styles.projectHeading}`}>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
                   Mentor - Titans MMA
                 </p>
                 <p className={`${styles.text} ${styles.projectHeading}`}>
