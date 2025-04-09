@@ -12,6 +12,7 @@ import Link from "next/link";
 import styles from "../../styles/global/header.module.css";
 
 import GitHub from "../../../../public/assets/header-icons/github.svg";
+import Linktree from "../../../../public/assets/header-icons/linktree.svg";
 import LeetCode from "../../../../public/assets/header-icons/leetcode.svg";
 import LinkedIn from "../../../../public/assets/header-icons/linkedin.svg";
 import YouTube from "../../../../public/assets/header-icons/youtube.svg";
@@ -66,57 +67,12 @@ export default function Header() {
             whileTap={{ scale: 0.95 }}
             className={styles.button}
           >
-            <a href="https://leetcode.com/u/soodaayush/" target="_blank">
+            <a href="https://linktr.ee/aayushsood" target="_blank">
               <Image
-                src={LeetCode}
+                src={Linktree}
                 width={40}
                 height={40}
-                alt="LeetCode"
-                className={styles.svg}
-              />
-            </a>
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className={styles.button}
-          >
-            <a href="https://www.linkedin.com/in/soodaayush/" target="_blank">
-              <Image
-                src={LinkedIn}
-                width={40}
-                height={40}
-                alt="GitHub"
-                className={styles.svg}
-              />
-            </a>
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className={styles.button}
-          >
-            <a href="https://www.youtube.com/@soodaayush" target="_blank">
-              <Image
-                src={YouTube}
-                width={40}
-                height={40}
-                alt="GitHub"
-                className={styles.svg}
-              />
-            </a>
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className={styles.button}
-          >
-            <a href="https://titansmaaf.ca/" target="_blank">
-              <Image
-                src={titans}
-                width={40}
-                height={40}
-                alt="Titans MMA"
+                alt="Linktree"
                 className={styles.svg}
               />
             </a>
@@ -242,7 +198,7 @@ export default function Header() {
                   </motion.div>
                 </a>
                 <a
-                  href="https://leetcode.com/u/soodaayush/"
+                  href="https://linktr.ee/aayushsood"
                   target="_blank"
                   className={styles.menuLink}
                 >
@@ -251,79 +207,13 @@ export default function Header() {
                     whileTap={{ scale: 0.95 }}
                     className={styles.menuButton}
                   >
-                    <h2 className={styles.menuLinkText}>LeetCode</h2>
+                    <h2 className={styles.menuLinkText}>Linktree</h2>
                     <div>
                       <Image
-                        src={LeetCode}
+                        src={Linktree}
                         width={40}
                         height={40}
                         alt="LeetCode"
-                        className={styles.svg}
-                      />
-                    </div>
-                  </motion.div>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/soodaayush/"
-                  target="_blank"
-                  className={styles.menuLink}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={styles.menuButton}
-                  >
-                    <h2 className={styles.menuLinkText}>LinkedIn</h2>
-                    <div>
-                      <Image
-                        src={LinkedIn}
-                        width={40}
-                        height={40}
-                        alt="LinkedIn"
-                        className={styles.svg}
-                      />
-                    </div>
-                  </motion.div>
-                </a>
-                <a
-                  href="https://www.youtube.com/@soodaayush"
-                  target="_blank"
-                  className={styles.menuLink}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={styles.menuButton}
-                  >
-                    <h2 className={styles.menuLinkText}>YouTube</h2>
-                    <div>
-                      <Image
-                        src={YouTube}
-                        width={40}
-                        height={40}
-                        alt="YouTube"
-                        className={styles.svg}
-                      />
-                    </div>
-                  </motion.div>
-                </a>
-                <a
-                  href="https://titansmaaf.ca/"
-                  target="_blank"
-                  className={styles.menuLink}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={styles.menuButton}
-                  >
-                    <h2 className={styles.menuLinkText}>Titans MMA</h2>
-                    <div>
-                      <Image
-                        src={titans}
-                        width={40}
-                        height={40}
-                        alt="Titans MMA"
                         className={styles.svg}
                       />
                     </div>
