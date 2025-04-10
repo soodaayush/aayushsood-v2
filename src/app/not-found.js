@@ -7,6 +7,8 @@ import styles from "./styles/global/404.module.css";
 
 import { GoArrowUpLeft } from "react-icons/go";
 
+// Test
+
 export default function NotFound() {
   return (
     <div className={styles.notFoundContainer}>
