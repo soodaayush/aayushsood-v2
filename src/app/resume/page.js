@@ -133,6 +133,29 @@ export default function Resume() {
             <div className={styles.accomplishmentList}>
               <ul className={styles.list}>
                 <li>
+                  Section Lead in{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://codeinplace.stanford.edu/"
+                    target="_blank"
+                  >
+                    Stanford&apos;s
+                  </a>{" "}
+                  Code in Place - 2025
+                </li>
+                <li>
+                  IT Coordinator for Nova Scotia Secondary School Students&apos;
+                  Association{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://www.nsssa.ca/"
+                    target="_blank"
+                  >
+                    (NSSSA)
+                  </a>{" "}
+                  - since 2025
+                </li>
+                <li>
                   Won third place in Lockheed Martin{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
@@ -217,7 +240,7 @@ export default function Resume() {
                   </a>{" "}
                   and received Certificate of Distinction in Junior division of
                   University of Waterloo&apos;s Canadian Computing Competition
-                  (CCC) - 2024
+                  (CCC), Score: 66/75 - 2024
                 </li>
                 <li>
                   Cabinet Member on Nova Scotia Minister of Education&apos;s
