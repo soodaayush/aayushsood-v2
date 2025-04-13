@@ -133,7 +133,7 @@ export default function Resume() {
             <div className={styles.accomplishmentList}>
               <ul className={styles.list}>
                 <li>
-                  Section Lead in{" "}
+                  Section Leader in{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
                     href="https://codeinplace.stanford.edu/"
@@ -141,7 +141,7 @@ export default function Resume() {
                   >
                     Stanford&apos;s
                   </a>{" "}
-                  Code in Place - 2025
+                  Code in Place program - 2025
                 </li>
                 <li>
                   IT Coordinator for Nova Scotia Secondary School Students&apos;
@@ -153,7 +153,8 @@ export default function Resume() {
                   >
                     (NSSSA)
                   </a>{" "}
-                  - since 2025
+                  - since April 2025; Public Relations Manager - since September
+                  2024
                 </li>
                 <li>
                   Won third place in Lockheed Martin{" "}
@@ -178,18 +179,6 @@ export default function Resume() {
                   </a>
                   , aiming to increase rating above 1600+ by the end of 2025 -
                   since 2024
-                </li>
-                <li>
-                  Public Relations Manager for Nova Scotia Secondary School
-                  Students&apos; Association{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://www.nsssa.ca/"
-                    target="_blank"
-                  >
-                    (NSSSA)
-                  </a>{" "}
-                  - since 2024
                 </li>
                 <li>
                   Peer Tutoring fellow grade 10 & 11 students in Mathematics and
