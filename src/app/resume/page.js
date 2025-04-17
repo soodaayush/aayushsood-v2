@@ -157,6 +157,20 @@ export default function Resume() {
                   2024
                 </li>
                 <li>
+                  Received Certificate of Distinction in Senior Division of
+                  University of Waterloo&apos;s Canadian Computing Competition
+                  (CCC), Score: 45/75 - 2025; made{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024CCCResults.pdf"
+                    target="_blank"
+                  >
+                    Honour Rolls
+                  </a>{" "}
+                  and received Certificate of Distinction in Junior division,
+                  Score: 66/75 - 2024
+                </li>
+                <li>
                   Won third place in Lockheed Martin{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
@@ -217,19 +231,6 @@ export default function Resume() {
                 <li>
                   Recipient of the Student Council Innovative Mind Award in
                   Grade 10 - 2024
-                </li>
-                <li>
-                  Made{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024CCCResults.pdf"
-                    target="_blank"
-                  >
-                    Honour Rolls
-                  </a>{" "}
-                  and received Certificate of Distinction in Junior division of
-                  University of Waterloo&apos;s Canadian Computing Competition
-                  (CCC), Score: 66/75 - 2024
                 </li>
                 <li>
                   Cabinet Member on Nova Scotia Minister of Education&apos;s
