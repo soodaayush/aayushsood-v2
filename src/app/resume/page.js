@@ -273,7 +273,16 @@ export default function Resume() {
                     LeetCode.com
                   </a>
                   , improving proficiency in data structures and algorithms -
-                  since 2022
+                  since 2022; Completed 50+ challenges on{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://www.frontendmentor.io/profile/soodaayush"
+                    target="_blank"
+                  >
+                    FrontendMentor.io
+                  </a>
+                  , focusing on responsive web design and accessibility best
+                  practices - since 2020
                 </li>
                 <li>
                   Earned several medals in regional Brazilian Jiu Jitsu
@@ -289,22 +298,6 @@ export default function Resume() {
                     Titans MMA
                   </a>{" "}
                   - since 2022
-                </li>
-                <li>
-                  Completed 50+ challenges on{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://www.frontendmentor.io/profile/soodaayush"
-                    target="_blank"
-                  >
-                    FrontendMentor.io
-                  </a>
-                  , focusing on responsive web design and accessibility best
-                  practices - since 2020
-                </li>
-                <li>
-                  Recipient of Bronze Star and Bronze Medallion of the Nova
-                  Scotia Lifesaving Society - 2019-2021
                 </li>
               </ul>
             </div>
