@@ -1,5 +1,15 @@
 [
   {
+    "name": "IWKids",
+    "image": "/assets/projects/thumbnails/IWKids.webp",
+    "description": "IWKids is an AI-powered mobile app that enhances the ER experience for kids and families, built for the Youth AI Pitch Competition where our team placed 2nd out of 25 teams.",
+    "tags": ["React Native", "Expo", "Twilio", "OpenAI API"],
+    "year": 2025,
+    "github": "https://github.com/soodaayush/IWKids",
+    "gradient": "linear-gradient(#176C5C, #1B7862, #1E8368)",
+    "rotate": "rotate(358deg)"
+  },
+  {
     "name": "BVHS Mobile App",
     "image": "/assets/projects/thumbnails/bvh-mobile-app.webp",
     "description": "A mobile app I created for my high school for an easier distribution of information. This was created for Harvard University's CS50x.",
@@ -10,16 +20,6 @@
     "rotate": "rotate(2deg)"
   },
   {
-    "name": "Ben Eater's 8-Bit Project",
-    "image": "/assets/projects/thumbnails/8-bit-computer.webp",
-    "description": "A project involving the creation of an 8-bit CPU, inspired by Ben Eater.",
-    "tags": ["Hardware"],
-    "year": 2024,
-    "github": "https://github.com/soodaayush/8-bit-project",
-    "gradient": "linear-gradient(#C68A3E, #C26F3E, #BE543E)",
-    "rotate": "rotate(358deg)"
-  },
-  {
     "name": "Ben Eater's 6502 Project",
     "image": "/assets/projects/thumbnails/6502.webp",
     "description": "A series of hardware projects surrounding the 6502 CPU, inspired by Ben Eater.",
@@ -27,7 +27,7 @@
     "year": 2024,
     "github": "https://github.com/soodaayush/6502-project",
     "gradient": "linear-gradient(#715C6A, #924D60, #B33E56)",
-    "rotate": "rotate(2deg)"
+    "rotate": "rotate(358deg)"
   },
   {
     "name": "LlamaTalk",
@@ -37,7 +37,7 @@
     "year": 2024,
     "github": "https://github.com/soodaayush/llamatalk",
     "gradient": "linear-gradient(#238F76, #1E8A7D, #188583)",
-    "rotate": "rotate(358deg)"
+    "rotate": "rotate(2deg)"
   },
   {
     "name": "Arduino-based School Yoga Project",
@@ -47,7 +47,7 @@
     "year": 2024,
     "github": "https://github.com/soodaayush/arduino-school-yoga-project",
     "gradient": "linear-gradient(#894B15, #9C6512, #A8760F)",
-    "rotate": "rotate(2deg)"
+    "rotate": "rotate(358deg)"
   },
   {
     "name": "WordSmith",
@@ -58,7 +58,7 @@
     "year": 2024,
     "github": "https://github.com/soodaayush/wordsmith",
     "gradient": "linear-gradient(#433873, #323B71, #213E6F)",
-    "rotate": "rotate(358deg)"
+    "rotate": "rotate(2deg)"
   },
   {
     "name": "LeetCode",
@@ -68,7 +68,7 @@
     "year": 2022,
     "github": "https://github.com/soodaayush/leetcode",
     "gradient": "linear-gradient(#176C5C, #1B7862, #1E8368)",
-    "rotate": "rotate(2deg)"
+    "rotate": "rotate(358deg)"
   },
   {
     "name": "CoinDeno",
@@ -79,7 +79,7 @@
     "year": 2022,
     "github": "https://github.com/soodaayush/coindeno",
     "gradient": "linear-gradient(#2082AB, #22699C, #23508D)",
-    "rotate": "rotate(358deg)"
+    "rotate": "rotate(2deg)"
   },
   {
     "name": "Pac Man",
@@ -90,7 +90,7 @@
     "year": 2021,
     "github": "https://github.com/soodaayush/pac-man",
     "gradient": "linear-gradient(#5D427F, #825B8F, #9B6B9A)",
-    "rotate": "rotate(2deg)"
+    "rotate": "rotate(358deg)"
   },
   {
     "name": "CoinDeno Web",
@@ -101,7 +101,7 @@
     "year": 2021,
     "github": "https://github.com/soodaayush/coindeno-web",
     "gradient": "linear-gradient(#C57D3E, #C2683E, #BF533E)",
-    "rotate": "rotate(358deg)"
+    "rotate": "rotate(2deg)"
   },
   {
     "name": "Frontend Mentor Challenges",
@@ -112,7 +112,7 @@
     "year": 2020,
     "github": "https://github.com/soodaayush/frontend-mentor-challenges",
     "gradient": "linear-gradient(#715D6A, #914E60, #B03F56)",
-    "rotate": "rotate(2deg)"
+    "rotate": "rotate(358deg)"
   },
   {
     "name": "LearnWithMe",
@@ -123,6 +123,6 @@
     "year": 2020,
     "github": "https://github.com/soodaayush/learn-with-me",
     "gradient": "linear-gradient(#269273, #208C7A, #198681)",
-    "rotate": "rotate(358deg)"
+    "rotate": "rotate(2deg)"
   }
 ]
