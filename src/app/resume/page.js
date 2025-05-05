@@ -133,6 +133,18 @@ export default function Resume() {
             <div className={styles.accomplishmentList}>
               <ul className={styles.list}>
                 <li>
+                  Won second place in IWK Youth{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://www.smu.ca/ai-summit/may3.html"
+                    target="_blank"
+                  >
+                    AI Pitch
+                  </a>{" "}
+                  Competition at the Atlantic AI Summit 2025, hosted by Saint
+                  Mary&apos;s University (SMU) - 2025
+                </li>
+                <li>
                   Section Leader in{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
@@ -564,7 +576,7 @@ export default function Resume() {
                 <li>Integrated Google Auth for seamless user authentication</li>
               </ul>
             </div>
-            <div className={styles.project}>
+            {/* <div className={styles.project}>
               <div className={styles.projectDetails}>
                 <p
                   className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
@@ -597,7 +609,7 @@ export default function Resume() {
                   confidence, and self-discipline
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className={styles.sectionContainer}>
