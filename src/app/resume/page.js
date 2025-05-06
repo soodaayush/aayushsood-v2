@@ -521,41 +521,14 @@ export default function Resume() {
                 <p
                   className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
                 >
-                  CoinDeno - Mobile App |
-                  <i className={styles.techStack}>
-                    {" "}
-                    React Native, Git, REST, Firebase, CoinGecko APIs
-                  </i>
-                </p>
-                <p className={`${styles.text} ${styles.projectHeading}`}>
-                  July 2022 - September 2022
-                </p>
-              </div>
-              <ul className={styles.projectNotes}>
-                <li>
-                  Created the React Native mobile enabled version of the
-                  CoinDeno Web, enabled for both iOS and Android and hosted on
-                  the Android Play Store
-                </li>
-                <li>
-                  Leveraged the React Native framework for a consistent
-                  cross-platform experience
-                </li>
-              </ul>
-            </div>
-            <div className={styles.project}>
-              <div className={styles.projectDetails}>
-                <p
-                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
-                >
-                  CoinDeno - Web App |
+                  CoinDeno |
                   <i className={styles.techStack}>
                     {" "}
                     React.js, JavaScript, REST, Git, Firebase, CoinGecko APIs
                   </i>
                 </p>
                 <p className={`${styles.text} ${styles.projectHeading}`}>
-                  August 2021 - July 2022
+                  August 2021 - September 2022
                 </p>
               </div>
               <ul className={styles.projectNotes}>
@@ -574,6 +547,15 @@ export default function Resume() {
                   and fast iteration
                 </li>
                 <li>Integrated Google Auth for seamless user authentication</li>
+                <li>
+                  Created the React Native mobile enabled version of the
+                  CoinDeno Web, enabled for both iOS and Android and hosted on
+                  the Android Play Store
+                </li>
+                <li>
+                  Leveraged the React Native framework for a consistent
+                  cross-platform experience
+                </li>
               </ul>
             </div>
             {/* <div className={styles.project}>

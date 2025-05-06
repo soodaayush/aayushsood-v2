@@ -30,16 +30,6 @@
     "rotate": "rotate(358deg)"
   },
   {
-    "name": "LlamaTalk",
-    "image": "/assets/projects/thumbnails/llamatalk.webp",
-    "description": "A chatbot that allows you to interact with Meta's Codellama, through a service called Ollama.",
-    "tags": ["HTML", "SCSS", "JavaScript", "Codellama"],
-    "year": 2024,
-    "github": "https://github.com/soodaayush/llamatalk",
-    "gradient": "linear-gradient(#238F76, #1E8A7D, #188583)",
-    "rotate": "rotate(2deg)"
-  },
-  {
     "name": "Arduino-based School Yoga Project",
     "image": "/assets/projects/thumbnails/arduino-yoga-project.webp",
     "description": "An Arduino project that reminds the user to meditate. This was used as a submission for my Yoga exam.",
@@ -47,7 +37,7 @@
     "year": 2024,
     "github": "https://github.com/soodaayush/arduino-school-yoga-project",
     "gradient": "linear-gradient(#894B15, #9C6512, #A8760F)",
-    "rotate": "rotate(358deg)"
+    "rotate": "rotate(2deg)"
   },
   {
     "name": "WordSmith",
@@ -58,7 +48,7 @@
     "year": 2024,
     "github": "https://github.com/soodaayush/wordsmith",
     "gradient": "linear-gradient(#433873, #323B71, #213E6F)",
-    "rotate": "rotate(2deg)"
+    "rotate": "rotate(358deg)"
   },
   {
     "name": "LeetCode",
@@ -68,7 +58,7 @@
     "year": 2022,
     "github": "https://github.com/soodaayush/leetcode",
     "gradient": "linear-gradient(#176C5C, #1B7862, #1E8368)",
-    "rotate": "rotate(358deg)"
+    "rotate": "rotate(2deg)"
   },
   {
     "name": "CoinDeno",
@@ -79,7 +69,7 @@
     "year": 2022,
     "github": "https://github.com/soodaayush/coindeno",
     "gradient": "linear-gradient(#2082AB, #22699C, #23508D)",
-    "rotate": "rotate(2deg)"
+    "rotate": "rotate(358deg)"
   },
   {
     "name": "Pac Man",
@@ -90,7 +80,7 @@
     "year": 2021,
     "github": "https://github.com/soodaayush/pac-man",
     "gradient": "linear-gradient(#5D427F, #825B8F, #9B6B9A)",
-    "rotate": "rotate(358deg)"
+    "rotate": "rotate(2deg)"
   },
   {
     "name": "CoinDeno Web",
@@ -101,7 +91,7 @@
     "year": 2021,
     "github": "https://github.com/soodaayush/coindeno-web",
     "gradient": "linear-gradient(#C57D3E, #C2683E, #BF533E)",
-    "rotate": "rotate(2deg)"
+    "rotate": "rotate(358deg)"
   },
   {
     "name": "Frontend Mentor Challenges",
@@ -112,17 +102,6 @@
     "year": 2020,
     "github": "https://github.com/soodaayush/frontend-mentor-challenges",
     "gradient": "linear-gradient(#715D6A, #914E60, #B03F56)",
-    "rotate": "rotate(358deg)"
-  },
-  {
-    "name": "LearnWithMe",
-    "website": "https://learningwithme.netlify.app/",
-    "image": "/assets/projects/thumbnails/learn-with-me.webp",
-    "description": "An informational website created for a tutor based in New Delhi, India, where services are provided.",
-    "tags": ["HTML", "SCSS"],
-    "year": 2020,
-    "github": "https://github.com/soodaayush/learn-with-me",
-    "gradient": "linear-gradient(#269273, #208C7A, #198681)",
     "rotate": "rotate(2deg)"
   }
 ]
