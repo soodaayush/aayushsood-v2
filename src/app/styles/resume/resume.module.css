@@ -64,7 +64,7 @@
 
 .sectionHeading {
   margin: 0;
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .divider {
@@ -100,6 +100,7 @@
 
 .text {
   margin: 0;
+  font-size: 14px;
 }
 
 .accomplishmentContainer {
@@ -154,6 +155,7 @@
 
 .projectNotes {
   margin: 0;
+  width: 100%;
 }
 
 .technicalSkillsContainer {
@@ -243,13 +245,13 @@
 
 @media (max-width: 900px) {
   .projectHeading {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
 @media (min-width: 900px) {
   .projectHeading {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 

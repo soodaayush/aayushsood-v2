@@ -55,12 +55,16 @@ export default function Resume() {
             </a>
           </h1>
           <div className={styles.links}>
-            <a className={styles.link} href="tel:9027894315" target="_blank">
+            <a
+              className={`${styles.link} ${styles.text}`}
+              href="tel:9027894315"
+              target="_blank"
+            >
               +1 (902) 789-4315
             </a>{" "}
             <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
             <a
-              className={`${styles.link} ${styles.underline}`}
+              className={`${styles.link} ${styles.text} ${styles.underline}`}
               href="mailto:aayush.sood@icloud.com"
               target="_blank"
             >
@@ -68,7 +72,7 @@ export default function Resume() {
             </a>{" "}
             <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
             <a
-              className={`${styles.link} ${styles.underline}`}
+              className={`${styles.link} ${styles.text} ${styles.underline}`}
               href="https://www.linkedin.com/in/soodaayush/"
               target="_blank"
             >
@@ -76,7 +80,7 @@ export default function Resume() {
             </a>{" "}
             <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
             <a
-              className={`${styles.link} ${styles.underline}`}
+              className={`${styles.link} ${styles.text} ${styles.underline}`}
               href="https://github.com/soodaayush"
               target="_blank"
             >
@@ -84,7 +88,7 @@ export default function Resume() {
             </a>
             <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
             <a
-              className={`${styles.link} ${styles.underline}`}
+              className={`${styles.link} ${styles.text} ${styles.underline}`}
               href="https://www.aayushsood.com/"
               target="_blank"
             >
@@ -132,7 +136,7 @@ export default function Resume() {
             </div>
             <div className={styles.accomplishmentList}>
               <ul className={styles.list}>
-                <li>
+                <li className={styles.text}>
                   Won second place in IWK Youth{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
@@ -144,7 +148,7 @@ export default function Resume() {
                   Competition at the Atlantic AI Summit 2025, hosted by Saint
                   Mary&apos;s University (SMU) - 2025
                 </li>
-                <li>
+                <li className={styles.text}>
                   Section Leader in{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
@@ -155,7 +159,7 @@ export default function Resume() {
                   </a>{" "}
                   Code in Place program - 2025
                 </li>
-                <li>
+                <li className={styles.text}>
                   IT Coordinator for Nova Scotia Secondary School Students&apos;
                   Association{" "}
                   <a
@@ -168,7 +172,7 @@ export default function Resume() {
                   - since April 2025; Public Relations Manager - since September
                   2024
                 </li>
-                <li>
+                <li className={styles.text}>
                   Received Certificate of Distinction in Senior Division of
                   University of Waterloo&apos;s Canadian Computing Competition
                   (CCC), Score: 45/75 - 2025; made{" "}
@@ -182,7 +186,7 @@ export default function Resume() {
                   and received Certificate of Distinction in Junior division,
                   Score: 66/75 - 2024
                 </li>
-                <li>
+                <li className={styles.text}>
                   Won third place in Lockheed Martin{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
@@ -194,7 +198,7 @@ export default function Resume() {
                   Competition, demonstrating skills in cryptography, forensics,
                   and network security - 2025
                 </li>
-                <li>
+                <li className={styles.text}>
                   Competitively programming on{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
@@ -206,11 +210,11 @@ export default function Resume() {
                   , aiming to increase rating above 1600+ by the end of 2025 -
                   since 2024
                 </li>
-                <li>
+                <li className={styles.text}>
                   Peer Tutoring fellow grade 10 & 11 students in Mathematics and
                   Sciences - since 2024
                 </li>
-                <li>
+                <li className={styles.text}>
                   Completed Harvard&apos;s CS50x: Introduction to Computer
                   Science course on{" "}
                   <a
@@ -223,12 +227,12 @@ export default function Resume() {
                   , gaining a foundational understanding of Computer Science
                   principles and proficiency in C - 2024
                 </li>
-                <li>
+                <li className={styles.text}>
                   Invited to and participated in an exclusive summer math camp
                   hosted by Dalhousie University, focusing on Calculus,
                   Probability, Topology, and Cosmology - 2024
                 </li>
-                <li>
+                <li className={styles.text}>
                   Volunteered 200+ hours as a Camp Counselor during Canada Games
                   Centre{" "}
                   <a
@@ -240,15 +244,15 @@ export default function Resume() {
                   </a>{" "}
                   Summer Camp in Halifax - 2024
                 </li>
-                <li>
+                <li className={styles.text}>
                   Recipient of the Student Council Innovative Mind Award in
                   Grade 10 - 2024
                 </li>
-                <li>
+                <li className={styles.text}>
                   Cabinet Member on Nova Scotia Minister of Education&apos;s
                   Student Advisory Council (MSAC) - since 2024
                 </li>
-                <li>
+                <li className={styles.text}>
                   Executive of Bay View High&apos;s Student Council and Founder
                   and President of the{" "}
                   <a
@@ -260,11 +264,11 @@ export default function Resume() {
                   </a>{" "}
                   - since 2023
                 </li>
-                <li>
+                <li className={styles.text}>
                   Recipient of the Mathematics Achievement & Citizenship Awards
                   in Grade 9 - 2023
                 </li>
-                <li>
+                <li className={styles.text}>
                   Won first place in a regional{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
@@ -275,7 +279,7 @@ export default function Resume() {
                   </a>{" "}
                   competition during Grade 9 at Ridgecliff Middle School - 2023
                 </li>
-                <li>
+                <li className={styles.text}>
                   Completed 85+ challenges on{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
@@ -296,11 +300,11 @@ export default function Resume() {
                   , focusing on responsive web design and accessibility best
                   practices - since 2020
                 </li>
-                <li>
+                <li className={styles.text}>
                   Earned several medals in regional Brazilian Jiu Jitsu
                   competitions - 2022-2024
                 </li>
-                <li>
+                <li className={styles.text}>
                   Mentoring fellow Brazilian Jiu Jitsu practitioners at{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
@@ -331,7 +335,7 @@ export default function Resume() {
                   September 2024 - Present
                 </p>
               </div>
-              <ul className={styles.projectNotes}>
+              <ul className={`${styles.projectNotes} ${styles.text}`}>
                 <li>
                   Increased social media engagement by 35% through targeted
                   content creation and platform optimization
@@ -366,7 +370,7 @@ export default function Resume() {
                   July 2024 - September 2024
                 </p>
               </div>
-              <ul className={styles.projectNotes}>
+              <ul className={`${styles.projectNotes} ${styles.text}`}>
                 <li>
                   Developed a comprehensive mobile app to provide students with
                   centralized access to school news, announcements, events, and
@@ -397,7 +401,7 @@ export default function Resume() {
                   July 2024 - August 2024
                 </p>
               </div>
-              <ul className={styles.projectNotes}>
+              <ul className={`${styles.projectNotes} ${styles.text}`}>
                 <li>
                   Volunteered 200+ hours, contributing to camp operations and
                   creating engaging activities that maintained high levels of
@@ -426,7 +430,7 @@ export default function Resume() {
                   April 2024 - July 2024
                 </p>
               </div>
-              <ul className={styles.projectNotes}>
+              <ul className={`${styles.projectNotes} ${styles.text}`}>
                 <li>
                   A collection of hardware bread-boarding project surrounding
                   the 6502 CPU, inspired by{" "}
@@ -452,7 +456,7 @@ export default function Resume() {
                   January 2024 - Present
                 </p>
               </div>
-              <ul className={styles.projectNotes}>
+              <ul className={`${styles.projectNotes} ${styles.text}`}>
                 <li>
                   Representing the views and concerns of students & teachers
                   from diverse backgrounds to ensure their voices are heard in
@@ -488,7 +492,7 @@ export default function Resume() {
                   September 2023 - Present
                 </p>
               </div>
-              <ul className={styles.projectNotes}>
+              <ul className={`${styles.projectNotes} ${styles.text}`}>
                 <li>
                   Leading and organizing initiatives such as school events,
                   fundraisers, tech workshops, and hands-on projects to enhance
@@ -531,7 +535,7 @@ export default function Resume() {
                   August 2021 - September 2022
                 </p>
               </div>
-              <ul className={styles.projectNotes}>
+              <ul className={`${styles.projectNotes} ${styles.text}`}>
                 <li>
                   Created a React website that allows tracking and portfolio
                   management of various Cryptocurrencies
@@ -599,7 +603,7 @@ export default function Resume() {
           <hr className={styles.divider} />
           <div className={styles.technicalSkillsContainer}>
             <div className={styles.skill}>
-              <b>Soft Skills: </b>
+              <b className={styles.text}>Soft Skills: </b>
               <p className={styles.text}>
                 <label className={`${styles.text} ${styles.space}`}>
                   &nbsp;
@@ -609,7 +613,7 @@ export default function Resume() {
               </p>
             </div>
             <div className={styles.skill}>
-              <b>Programming Languages: </b>
+              <b className={styles.text}>Programming Languages: </b>
               <p className={styles.text}>
                 <label className={`${styles.text} ${styles.space}`}>
                   &nbsp;
@@ -618,7 +622,7 @@ export default function Resume() {
               </p>
             </div>
             <div className={styles.skill}>
-              <b>Programming Frameworks: </b>
+              <b className={styles.text}>Programming Frameworks: </b>
               <p className={styles.text}>
                 <label className={`${styles.text} ${styles.space}`}>
                   &nbsp;
@@ -627,7 +631,7 @@ export default function Resume() {
               </p>
             </div>
             <div className={styles.skill}>
-              <b>Developer Tools: </b>
+              <b className={styles.text}>Developer Tools: </b>
               <p className={styles.text}>
                 <label className={`${styles.text} ${styles.space}`}>
                   &nbsp;
@@ -637,7 +641,7 @@ export default function Resume() {
               </p>
             </div>
             <div className={styles.skill}>
-              <b>Programming Libraries: </b>
+              <b className={styles.text}>Programming Libraries: </b>
               <p className={styles.text}>
                 <label className={`${styles.text} ${styles.space}`}>
                   &nbsp;
@@ -646,7 +650,7 @@ export default function Resume() {
               </p>
             </div>
             <div className={styles.skill}>
-              <b>Productivity Tools and OS: </b>{" "}
+              <b className={styles.text}>Productivity Tools and OS: </b>{" "}
               <p className={styles.text}>
                 <label className={`${styles.text} ${styles.space}`}>
                   &nbsp;
