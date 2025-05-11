@@ -12,6 +12,7 @@ const components = {
   p: dynamic(() => import("../../MDXComponents/text"), { ssr: false }),
   a: dynamic(() => import("../../MDXComponents/link"), { ssr: false }),
   pre: dynamic(() => import("../../MDXComponents/codeBlock"), { ssr: false }),
+  ul: dynamic(() => import("../../MDXComponents/list"), { ssr: false }),
 };
 
 export default function MdxRenderer({ rawContent }) {
