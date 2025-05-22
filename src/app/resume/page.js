@@ -140,7 +140,7 @@ export default function Resume() {
                   Recipient of the Nova Scotia Lieutenant Governor&apos;s{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
-                    href="https://www.smu.ca/ai-summit/may3.html"
+                    href="https://lt.gov.ns.ca/honours-awards/awards"
                     target="_blank"
                   >
                     Education Medal
