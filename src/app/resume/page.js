@@ -137,6 +137,18 @@ export default function Resume() {
             <div className={styles.accomplishmentList}>
               <ul className={styles.list}>
                 <li className={styles.text}>
+                  Recipient of the Nova Scotia Lieutenant Governor&apos;s{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://www.smu.ca/ai-summit/may3.html"
+                    target="_blank"
+                  >
+                    Education Medal
+                  </a>
+                  , awarded for outstanding leadership and academic achievement
+                  - 2025
+                </li>
+                <li className={styles.text}>
                   Won second place in IWK Youth{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
