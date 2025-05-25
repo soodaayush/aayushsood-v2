@@ -240,7 +240,14 @@ export default function Resume() {
                   principles and proficiency in C - 2024
                 </li>
                 <li className={styles.text}>
-                  Invited to and participated in an exclusive summer math camp
+                  Invited to and participated in an exclusive summer math{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://aarms.math.ca/event/dalhousie-math-camp-2024/"
+                    target="_blank"
+                  >
+                    camp
+                  </a>{" "}
                   hosted by Dalhousie University, focusing on Calculus,
                   Probability, Topology, and Cosmology - 2024
                 </li>
