@@ -169,7 +169,8 @@ export default function Resume() {
                   >
                     Stanford&apos;s
                   </a>{" "}
-                  Code in Place program - 2025
+                  Code in Place program, teaching Python and supporting beginner
+                  learners in a global online classroom - 2025
                 </li>
                 <li className={styles.text}>
                   IT Coordinator for Nova Scotia Secondary School Students&apos;
