@@ -4,16 +4,25 @@
 
 ## Inspiration
 
-This is a second iteration of my portfolio website, as I felt that my first one looked old and stale. I decided on using a framework (Next.js) to develop this new website to make the process easier.
+The first version of my portfolio felt… dated. I wanted something cleaner, more dynamic, and easier to maintain. So I gave it a complete makeover, this time powered by Next.js. It's not just a redesign; it's a rethinking of how I present myself online.
 
 ## Challenges
 
-Understanding how Next.js works and making sure I wrote code in a framework-based manner.
+Switching to a full-featured framework like Next.js came with its own learning curve. Routing, SSR, file-based structures; it was a lot at first. Adapting my habits from plain React to the Next.js way of doing things was a key challenge.
 
 ## Lessons Learned
 
-I learned Next.js and its differences when compared to React and other frameworks. 
+- How Next.js differs from traditional React projects
+- File-based routing and API routes
+- Performance optimization and static site generation
+- The value of frameworks in scaling personal projects
 
 ## The Website
 
-Welcome to my portfolio! Here, you can explore my portfolio, reading list, and résumé.
+This site is more than just a résumé. It’s a hub where you can:
+
+- View my projects
+- Browse my reading list
+- Check out my résumé
+
+Thanks for stopping by. Hope you enjoy exploring!
