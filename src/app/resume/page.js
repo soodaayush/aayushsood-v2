@@ -110,16 +110,6 @@ export default function Resume() {
                 <i className={styles.text}>Sep. 2023 - Present</i>
               </div>
             </div>
-            <div className={styles.school}>
-              <div className={styles.schoolDetails}>
-                <b className={styles.text}>Ridgecliff Middle School</b>
-                <p className={styles.text}>Beechville, NS</p>
-              </div>
-              <div className={styles.schoolDetails}>
-                <i className={styles.text}>Middle School</i>
-                <i className={styles.text}>Sep. 2019 - Jun. 2023</i>
-              </div>
-            </div>
           </div>
         </div>
         <div className={`${styles.sectionContainer}`}>
@@ -136,10 +126,6 @@ export default function Resume() {
             </div>
             <div className={styles.accomplishmentList}>
               <ul className={styles.list}>
-                <li className={styles.text}>
-                  Recipient of the Tech Club MVP & School Advisory Council
-                  Awards in Grade 11 - 2025
-                </li>
                 <li className={styles.text}>
                   Recipient of the Nova Scotia Lieutenant Governor&apos;s{" "}
                   <a
@@ -228,10 +214,6 @@ export default function Resume() {
                   since 2024
                 </li>
                 <li className={styles.text}>
-                  Peer Tutoring fellow grade 10 & 11 students in Mathematics and
-                  Sciences - since 2024
-                </li>
-                <li className={styles.text}>
                   Completed Harvard&apos;s CS50x: Introduction to Computer
                   Science course on{" "}
                   <a
@@ -243,34 +225,6 @@ export default function Resume() {
                   </a>
                   , gaining a foundational understanding of Computer Science
                   principles and proficiency in C - 2024
-                </li>
-                <li className={styles.text}>
-                  Invited to and participated in an exclusive summer math{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://aarms.math.ca/event/dalhousie-math-camp-2024/"
-                    target="_blank"
-                  >
-                    camp
-                  </a>{" "}
-                  hosted by Dalhousie University, focusing on Calculus,
-                  Probability, Topology, and Cosmology - 2024
-                </li>
-                <li className={styles.text}>
-                  Volunteered 200+ hours as a Camp Counselor during Canada Games
-                  Centre{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://canadagamescentre.ca/"
-                    target="_blank"
-                  >
-                    (CGC)
-                  </a>{" "}
-                  Summer Camp in Halifax - 2024
-                </li>
-                <li className={styles.text}>
-                  Recipient of the Student Council Innovative Mind Award in
-                  Grade 10 - 2024
                 </li>
                 <li className={styles.text}>
                   Cabinet Member on Nova Scotia Minister of Education&apos;s
@@ -287,21 +241,6 @@ export default function Resume() {
                     Technology Club
                   </a>{" "}
                   - since 2023
-                </li>
-                <li className={styles.text}>
-                  Recipient of the Mathematics Achievement & Citizenship Awards
-                  in Grade 9 - 2023
-                </li>
-                <li className={styles.text}>
-                  Won first place in a regional{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://improv.ca/"
-                    target="_blank"
-                  >
-                    Improv
-                  </a>{" "}
-                  competition during Grade 9 at Ridgecliff Middle School - 2023
                 </li>
                 <li className={styles.text}>
                   Completed 85+ challenges on{" "}
@@ -321,23 +260,8 @@ export default function Resume() {
                   >
                     FrontendMentor.io
                   </a>
-                  , focusing on responsive web design and accessibility best
-                  practices - since 2020
-                </li>
-                <li className={styles.text}>
-                  Earned several medals in regional Brazilian Jiu Jitsu
-                  competitions - 2022-2024
-                </li>
-                <li className={styles.text}>
-                  Mentoring fellow Brazilian Jiu Jitsu practitioners at{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://titansmaaf.ca/"
-                    target="_blank"
-                  >
-                    Titans MMA
-                  </a>{" "}
-                  - since 2022
+                  , focussed on responsive web design and accessibility - since
+                  2020
                 </li>
               </ul>
             </div>
@@ -352,30 +276,24 @@ export default function Resume() {
                 <p
                   className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
                 >
-                  Nova Scotia Secondary School Students&apos; Association - PR
-                  Manager
+                  IWKids - Mobile App |
+                  <i className={styles.techStack}>
+                    {" "}
+                    React Native, JavaScript, Expo, Git, OpenAI API
+                  </i>
                 </p>
                 <p className={`${styles.text} ${styles.projectHeading}`}>
-                  September 2024 - Present
+                  Apr 2025 - May 2025
                 </p>
               </div>
               <ul className={`${styles.projectNotes} ${styles.text}`}>
                 <li>
-                  Increased social media engagement by 35% through targeted
-                  content creation and platform optimization
+                  Developed an AI-powered mobile app to help families navigate
+                  emergency room visits at the IWK
                 </li>
                 <li>
-                  Creating and curating content that aligns with our
-                  organization&apos;s mission and values
-                </li>
-                <li>
-                  Secured funding for leadership conferences and established
-                  partnerships with 5 local businesses to sponsor events
-                </li>
-                <li>
-                  Consulted on cybersecurity issues, recommending specific
-                  security best practices (e.g., multi-factor authentication,
-                  complex passwords)
+                  Created for the Youth AI Pitch Competition hosted at the
+                  Atlantic Canada AI Summit in May 2025
                 </li>
               </ul>
             </div>
@@ -391,54 +309,21 @@ export default function Resume() {
                   </i>
                 </p>
                 <p className={`${styles.text} ${styles.projectHeading}`}>
-                  July 2024 - September 2024
+                  Jul 2024 - Sep 2024
                 </p>
               </div>
               <ul className={`${styles.projectNotes} ${styles.text}`}>
                 <li>
-                  Developed a comprehensive mobile app to provide students with
-                  centralized access to school news, announcements, events, and
-                  essential information
+                  Developed a Bay View High School Mobile app to improve
+                  communication between staff and student body
                 </li>
                 <li>
-                  Application developed using React Native framework, JavaScript
-                  and deployed using Expo
+                  Provides students with centralized to school news,
+                  announcements, events, and essential information
                 </li>
                 <li>
-                  The mobile app provides full compatibility with iOS and
-                  Android devices
-                </li>
-                <li>
-                  Application also submitted as a final project for
-                  Harvard&apos;s CS50x course
-                </li>
-              </ul>
-            </div>
-            <div className={styles.project}>
-              <div className={styles.projectDetails}>
-                <p
-                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
-                >
-                  Canada Games Centre Volunteer - Camp Counselor
-                </p>
-                <p className={`${styles.text} ${styles.projectHeading}`}>
-                  July 2024 - August 2024
-                </p>
-              </div>
-              <ul className={`${styles.projectNotes} ${styles.text}`}>
-                <li>
-                  Volunteered 200+ hours, contributing to camp operations and
-                  creating engaging activities that maintained high levels of
-                  camper engagement and participation throughout the summer
-                </li>
-                <li>
-                  Monitored campers&apos; behavior and well-being, ensuring a
-                  safe and inclusive environment for all participants
-                </li>
-                <li>
-                  Encouraged campers to participate, build friendships, and
-                  adhere to camp rules, promoting a fun and respectful
-                  atmosphere
+                  Application submitted as a final project for Harvard&apos;s
+                  CS50x course
                 </li>
               </ul>
             </div>
@@ -451,7 +336,7 @@ export default function Resume() {
                   <i className={styles.techStack}> Python, Assembly</i>
                 </p>
                 <p className={`${styles.text} ${styles.projectHeading}`}>
-                  April 2024 - July 2024
+                  Apr 2024 - Jul 2024
                 </p>
               </div>
               <ul className={`${styles.projectNotes} ${styles.text}`}>
@@ -473,90 +358,14 @@ export default function Resume() {
                 <p
                   className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
                 >
-                  Nova Scotia Education Minister&apos;s Student Advisory Council
-                  - Cabinet Member
-                </p>
-                <p className={`${styles.text} ${styles.projectHeading}`}>
-                  January 2024 - Present
-                </p>
-              </div>
-              <ul className={`${styles.projectNotes} ${styles.text}`}>
-                <li>
-                  Representing the views and concerns of students & teachers
-                  from diverse backgrounds to ensure their voices are heard in
-                  policy-making processes
-                </li>
-                <li>
-                  Proudly represented Bay View High School&apos;s district while
-                  collaborating with the Education Minister and other council
-                  members to provide feedback on existing and proposed
-                  educational policies and initiative
-                </li>
-                <li>
-                  Provided input on school cell phone usage policies that
-                  resulted in a new directive that was implemented in September
-                  2024 that balanced educational needs with responsible
-                  technology use
-                </li>
-                <li>
-                  Conducted research and analysis on various educational trends,
-                  challenges, and opportunities in collaboration with other
-                  participating members
-                </li>
-              </ul>
-            </div>
-            <div className={styles.project}>
-              <div className={styles.projectDetails}>
-                <p
-                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
-                >
-                  Student Council Executive & Tech Club President
-                </p>
-                <p className={`${styles.text} ${styles.projectHeading}`}>
-                  September 2023 - Present
-                </p>
-              </div>
-              <ul className={`${styles.projectNotes} ${styles.text}`}>
-                <li>
-                  Leading and organizing initiatives such as school events,
-                  fundraisers, tech workshops, and hands-on projects to enhance
-                  student engagement
-                </li>
-                <li>
-                  Under my leadership, Tech Club grew from 3-4 to 30+ members
-                  with an average 20+ member attendance on a weekly basis,
-                  fostering a thriving learning community
-                </li>
-                <li>
-                  Facilitating weekly tech workshops on topics such as Web
-                  Development, Python Scripting, Cybersecurity, empowering
-                  students with practical skills
-                </li>
-                <li>
-                  Advocating for student interests by collaborating with
-                  administration, gathering feedback, and ensuring student
-                  voices are represented in decision-making
-                </li>
-                <li>
-                  Managing operations and resources, including funding requests,
-                  club materials, and coordination among council members and
-                  club participants
-                </li>
-              </ul>
-            </div>
-            <div className={styles.project}>
-              <div className={styles.projectDetails}>
-                <p
-                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
-                >
-                  CoinDeno |
+                  CoinDeno Web / Mobile |
                   <i className={styles.techStack}>
                     {" "}
-                    React.js, JavaScript, REST, Git, Firebase, CoinGecko APIs
+                    React.js, React Native, REST, Git, Firebase, CoinGecko APIs
                   </i>
                 </p>
                 <p className={`${styles.text} ${styles.projectHeading}`}>
-                  August 2021 - September 2022
+                  Aug 2021 - Sep 2022
                 </p>
               </div>
               <ul className={`${styles.projectNotes} ${styles.text}`}>
@@ -569,21 +378,7 @@ export default function Resume() {
                   development, with CoinGecko REST APIs for cryptocurrency data
                   integration
                 </li>
-                <li>
-                  Deployed the application using continuous integration and
-                  continuous deployment (CI/CD) practices, ensuring reliability
-                  and fast iteration
-                </li>
-                <li>Integrated Google Auth for seamless user authentication</li>
-                <li>
-                  Created the React Native mobile enabled version of the
-                  CoinDeno Web, enabled for both iOS and Android and hosted on
-                  the Android Play Store
-                </li>
-                <li>
-                  Leveraged the React Native framework for a consistent
-                  cross-platform experience
-                </li>
+                <li>Created a mobile-enabled version for iOS and Android</li>
               </ul>
             </div>
             {/* <div className={styles.project}>
