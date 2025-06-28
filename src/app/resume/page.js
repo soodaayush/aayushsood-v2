@@ -381,56 +381,12 @@ export default function Resume() {
                 <li>Created a mobile-enabled version for iOS and Android</li>
               </ul>
             </div>
-            {/* <div className={styles.project}>
-              <div className={styles.projectDetails}>
-                <p
-                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
-                >
-                  Mentor - Titans MMA
-                </p>
-                <p className={`${styles.text} ${styles.projectHeading}`}>
-                  February 2021 - Present
-                </p>
-              </div>
-              <ul className={styles.projectNotes}>
-                <li>
-                  Led and organized kids classes aged 5 - 15 in Brazilian Jiu
-                  Jitsu, teaching self-defense, discipline, and respect, leading
-                  to improved confidence and physical fitness
-                </li>
-                <li>
-                  Taught students a variety of techniques, including
-                  self-defense, striking, grappling, and forms, while
-                  emphasizing the importance of discipline, respect, and
-                  perseverance
-                </li>
-                <li>
-                  Ensured a safe training environment by enforcing gym rules,
-                  teaching proper techniques to prevent injuries
-                </li>
-                <li>
-                  Acted as a mentor and role model, fostering a positive and
-                  inclusive atmosphere that encourages personal growth,
-                  confidence, and self-discipline
-                </li>
-              </ul>
-            </div> */}
           </div>
         </div>
         <div className={styles.sectionContainer}>
           <h1 className={styles.sectionHeading}>Skills</h1>
           <hr className={styles.divider} />
           <div className={styles.technicalSkillsContainer}>
-            <div className={styles.skill}>
-              <b className={styles.text}>Soft Skills: </b>
-              <p className={styles.text}>
-                <label className={`${styles.text} ${styles.space}`}>
-                  &nbsp;
-                </label>
-                Leadership, Mentorship, Communication, Community Building,
-                Promoting Inclusivity
-              </p>
-            </div>
             <div className={styles.skill}>
               <b className={styles.text}>Programming Languages: </b>
               <p className={styles.text}>
