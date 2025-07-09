@@ -35,9 +35,9 @@
   {
     "type": "Mobile",
     "skills": [
-      { "id": 19, "name": "React Native", "experience": "2 Years" },
-      { "id": 20, "name": "iOS", "experience": "2 Years" },
-      { "id": 21, "name": "Android", "experience": "2 Years" }
+      { "id": 19, "name": "React Native", "experience": "3 Years" },
+      { "id": 20, "name": "iOS", "experience": "3 Years" },
+      { "id": 21, "name": "Android", "experience": "3 Years" }
     ]
   }
 ]
