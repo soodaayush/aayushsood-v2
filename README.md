@@ -23,6 +23,7 @@ This site is more than just a résumé. It’s a hub where you can:
 
 - View my projects
 - Browse my reading list
+- Read my blog
 - Check out my résumé
 
 Thanks for stopping by. Hope you enjoy exploring!
