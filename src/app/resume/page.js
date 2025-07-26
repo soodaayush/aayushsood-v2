@@ -127,16 +127,16 @@ export default function Resume() {
             <div className={styles.accomplishmentList}>
               <ul className={styles.list}>
                 <li className={styles.text}>
-                  Valedictorian of{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
                     href="https://www.shad.ca/"
                     target="_blank"
                   >
                     SHAD
-                  </a>
-                  , a national STEAM program recognizing youth for excellence in
-                  innovation, leadership, and academics - 2025
+                  </a>{" "}
+                  UNB Valedictorian - SHAD is a national STEAM program
+                  recognizing youth for excellence in innovation, leadership,
+                  and academics - 2025
                 </li>
                 <li className={styles.text}>
                   Recipient of the Nova Scotia Lieutenant Governor&apos;s{" "}
