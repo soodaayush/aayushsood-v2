@@ -117,8 +117,8 @@ export default function Home() {
               <Image
                 className={styles.picture}
                 src={Aayush}
-                height={250}
-                width={250}
+                height={275}
+                width={233}
                 alt="Aayush"
               />
             </motion.div>
