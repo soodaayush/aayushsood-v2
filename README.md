@@ -1,6 +1,6 @@
 # Portfolio Website v2
 
-![Portfolio _ Aayush Sood](https://github.com/user-attachments/assets/fbb31acb-c629-480f-8053-afc4caf39d59)
+<img width="1920" height="1080" alt="Portfolio _ Aayush Sood" src="https://github.com/user-attachments/assets/b71e4d0d-9355-4aba-a294-e8334a103486" />
 
 ## Inspiration
 
