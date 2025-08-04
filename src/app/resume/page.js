@@ -184,8 +184,8 @@ export default function Resume() {
                   >
                     (NSSSA)
                   </a>{" "}
-                  - since April 2025; Public Relations Manager - since September
-                  2024
+                  - since April 2025; Public Relations Manager - September 2024
+                  to June 2025
                 </li>
                 <li className={styles.text}>
                   Received Certificate of Distinction in Senior Division of
@@ -240,7 +240,7 @@ export default function Resume() {
                 </li>
                 <li className={styles.text}>
                   Cabinet Member on Nova Scotia Minister of Education&apos;s
-                  Student Advisory Council (MSAC) - since 2024
+                  Student Advisory Council (MSAC) - 2024 to 2025
                 </li>
                 <li className={styles.text}>
                   Executive of Bay View High&apos;s Student Council and Founder
@@ -255,7 +255,7 @@ export default function Resume() {
                   - since 2023
                 </li>
                 <li className={styles.text}>
-                  Completed 85+ challenges on{" "}
+                  Completed 90+ challenges on{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
                     href="https://leetcode.com/u/soodaayush/"
