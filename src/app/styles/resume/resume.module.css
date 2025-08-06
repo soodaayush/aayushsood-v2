@@ -267,6 +267,23 @@
   }
 }
 
+@media (min-width: 500px) {
+  .accomplishmentHeader {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .accomplishmentTextContainer {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .accomplishmentHeader {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 840px) {
   .skill {
     align-items: start;
@@ -288,14 +305,44 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 455px) {
   .name {
     font-size: 30px;
   }
 }
 
-@media (min-width: 430px) {
+@media (min-width: 455px) {
   .name {
     font-size: 50px;
+  }
+}
+
+@media (max-width: 330px) {
+  .name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .schoolDetails {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .projectDetails {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .list {
+    padding-left: 0;
+  }
+
+  .projectNotes {
+    padding-left: 0;
   }
 }

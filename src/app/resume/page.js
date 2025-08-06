@@ -347,7 +347,7 @@ export default function Resume() {
                   Ben Eater&apos;s 6502 Project |
                   <i className={styles.techStack}> Python, Assembly</i>
                 </p>
-                <p className={`${styles.text} ${styles.projectHeading}`}>
+                <p className={`${styles.text}  ${styles.projectHeading}`}>
                   Apr 2024 - Jul 2024
                 </p>
               </div>
