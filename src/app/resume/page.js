@@ -151,7 +151,7 @@ export default function Resume() {
                   - 2025
                 </li>
                 <li className={styles.text}>
-                  Won second place in IWK Youth{" "}
+                  Placed second in IWK Youth{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
                     href="https://www.smu.ca/ai-summit/may3.html"
@@ -202,7 +202,7 @@ export default function Resume() {
                   Score: 66/75 - 2024
                 </li>
                 <li className={styles.text}>
-                  Won third place in Lockheed Martin{" "}
+                  Placed third in Lockheed Martin{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
                     href="https://www.lockheedmartin.com/en-us/who-we-are/communities/cyber-quest.html"
