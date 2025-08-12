@@ -2,9 +2,9 @@
   {
     "type": "Frontend",
     "skills": [
-      { "id": 1, "name": "HTML", "experience": "4 Years" },
-      { "id": 2, "name": "CSS", "experience": "4 Years" },
-      { "id": 3, "name": "SCSS", "experience": "4 Years" },
+      { "id": 1, "name": "HTML", "experience": "5 Years" },
+      { "id": 2, "name": "CSS", "experience": "5 Years" },
+      { "id": 3, "name": "SCSS", "experience": "5 Years" },
       { "id": 4, "name": "JavaScript", "experience": "3 Years" },
       { "id": 5, "name": "Tailwind CSS", "experience": "3 Years" },
       { "id": 6, "name": "React", "experience": "3 Years" },
@@ -25,11 +25,11 @@
     "type": "DevOps/Tools",
     "skills": [
       { "id": 13, "name": "Cloudflare", "experience": "2 Years" },
-      { "id": 14, "name": "Netlify", "experience": "4 Years" },
+      { "id": 14, "name": "Netlify", "experience": "5 Years" },
       { "id": 15, "name": "NPM", "experience": "3 Years" },
       { "id": 16, "name": "Yarn", "experience": "2 Years" },
-      { "id": 17, "name": "Git", "experience": "4 Years" },
-      { "id": 18, "name": "GitHub", "experience": "4 Years" }
+      { "id": 17, "name": "Git", "experience": "5 Years" },
+      { "id": 18, "name": "GitHub", "experience": "5 Years" }
     ]
   },
   {
