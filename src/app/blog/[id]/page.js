@@ -5,7 +5,7 @@ import posts from "../../../../public/posts.json";
 import styles from "../../styles/blog/blogPost.module.css";
 
 export async function generateMetadata({ params }) {
-  const { id } = await params;
+  const { id } = params;
   const post = posts.find((p) => p.slug === id);
 
   if (!post) {
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogPostPage({ params }) {
-  const { id } = await params;
+  const { id } = params;
 
   const post = posts.find((p) => p.slug === id);
   if (!post) return notFound();
