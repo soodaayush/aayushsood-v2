@@ -76,3 +76,49 @@ svg {
     width: 40%;
   }
 }
+
+/* globals.css */
+.blog-content {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.blog-content img {
+  display: block; /* removes inline spacing */
+  max-width: 100%; /* shrink to fit container */
+  height: auto; /* keep aspect ratio */
+  border: 2px solid #30353b;
+  border-radius: 10px;
+  margin: 1rem auto; /* space & center */
+}
+
+.blog-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content p {
+  font-size: 1.125rem;
+}
+
+.blog-content a {
+  color: #f8fafc;
+  transition: 0.15s ease-in-out;
+  border-bottom: 3px solid #718de1;
+}
+
+.blog-content a:hover {
+  opacity: 0.75;
+}
+
+.blog-content ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+}

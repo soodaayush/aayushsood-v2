@@ -2,5 +2,8 @@
 User-agent: *
 Allow: /
 
+# Host
+Host: https://www.aayushsood.com/
+
 # Sitemaps
 Sitemap: https://www.aayushsood.com/sitemap.xml

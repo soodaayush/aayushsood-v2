@@ -34,20 +34,13 @@
   font-size: 50px;
 }
 
-.mdxContainer {
-  text-align: justify;
-  width: 100%;
-}
-
-
-
 @media (min-width: 0px) {
   .blogPostContent {
     width: 100%;
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1050px) {
   .blogPostContent {
     width: 60%;
   }

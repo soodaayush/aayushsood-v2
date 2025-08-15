@@ -1,12 +1,12 @@
+import { marked } from "marked";
 import { notFound } from "next/navigation";
-import { getPostBySlug, getPosts } from "../../../../utils/fetchPosts";
-import MdxRenderer from "../../components/blog/MDXRenderer";
+import posts from "../../../../public/posts.json";
 
 import styles from "../../styles/blog/blogPost.module.css";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
-  const post = await getPostBySlug(id);
+  const post = posts.find((p) => p.slug === id);
 
   if (!post) {
     return {
@@ -45,18 +45,18 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export async function generateStaticParams() {
-  const posts = await getPosts();
-  return posts.map((post) => ({ id: post.slug }));
-}
-
-export default async function BlogPost({ params }) {
+export default async function BlogPostPage({ params }) {
   const { id } = await params;
-  const post = await getPostBySlug(id);
 
-  if (!post) {
-    notFound();
-  }
+  const post = posts.find((p) => p.slug === id);
+  if (!post) return notFound();
+
+  let htmlContent = marked.parse(post.content);
+
+  htmlContent = htmlContent.replace(
+    /<a /g,
+    '<a target="_blank" rel="noopener noreferrer" '
+  );
 
   return (
     <div className={styles.blogPostContainer}>
@@ -68,7 +68,10 @@ export default async function BlogPost({ params }) {
             </h1>
             <p className={styles.text}>{post.meta.date}</p>
           </div>
-          <MdxRenderer rawContent={post.content} />
+          <div
+            className="blog-content"
+            dangerouslySetInnerHTML={{ __html: htmlContent }}
+          />
         </div>
       </div>
     </div>
