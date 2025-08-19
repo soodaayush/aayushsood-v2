@@ -30,13 +30,13 @@
     "react-type-animation": "^3.2.0",
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.1",
-    "remark-html": "^16.0.1"
+    "remark-html": "^16.0.1",
+    "esbuild": "0.14.47"
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.13.13",
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
     "eslint-config-next": "15.1.2"
-  },
-  "esbuild": "0.14.47"
+  }
 }
