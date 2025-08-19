@@ -36,13 +36,19 @@ export default function Projects({ projects }) {
     <div className={styles.projectsContainer}>
       <div className={`content ${styles.projectContent}`}>
         <h1 className={styles.sectionHeading}>Projects</h1>
-        <motion.div className={styles.projectList}>
+        <motion.div
+          initial={{ opacity: 0, y: 50, visibility: "hidden" }}
+          whileInView={{ opacity: 1, y: 0, visibility: "visible" }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className={styles.projectList}
+        >
           {visibleProjects.map((project) => (
             <motion.div
               key={project.name}
-              className={styles.projectCard}
+              className={`${styles.projectCard}`}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.5 }}
             >
               <Project {...project} />

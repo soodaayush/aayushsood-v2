@@ -127,6 +127,19 @@ export default function Resume() {
             <div className={styles.accomplishmentList}>
               <ul className={styles.list}>
                 <li className={styles.text}>
+                  Invited to and participated in the Quantum School for Young
+                  Students{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://uwaterloo.ca/institute-for-quantum-computing/outreach/qsys"
+                    target="_blank"
+                  >
+                    (QSYS)
+                  </a>{" "}
+                  hosted by University of Waterloo, focusing on Quantum Physics,
+                  Quantum Mechanics, Quantum Optics and Linear Algebra - 2025
+                </li>
+                <li className={styles.text}>
                   <a
                     className={`${styles.link} ${styles.underline}`}
                     href="https://www.shad.ca/"
@@ -382,15 +395,14 @@ export default function Resume() {
               </div>
               <ul className={`${styles.projectNotes} ${styles.text}`}>
                 <li>
-                  Created a React website that allows tracking and portfolio
-                  management of various Cryptocurrencies
+                  Created a website and mobile app that allows tracking and
+                  portfolio management of various cryptocurrencies
                 </li>
                 <li>
                   Utilized React, Firebase, and Redux for application
                   development, with CoinGecko REST APIs for cryptocurrency data
                   integration
                 </li>
-                <li>Created a mobile-enabled version for iOS and Android</li>
               </ul>
             </div>
           </div>

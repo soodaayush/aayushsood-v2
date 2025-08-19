@@ -180,5 +180,12 @@
     "cover": "/assets/books/theHotZone.webp",
     "bookLink": "https://a.co/d/1MMeVNL",
     "authorLink": "https://www.amazon.ca/stores/Richard-Preston/author/B000AQ793U"
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "cover": "/assets/books/theGreatGatsby.webp",
+    "bookLink": "https://a.co/d/7YYNZpl",
+    "authorLink": "https://www.amazon.ca/stores/F.-Scott-Fitzgerald/author/B000AQ0J28"
   }
 ]
