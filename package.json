@@ -37,6 +37,10 @@
     "@cloudflare/next-on-pages": "^1.13.13",
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
-    "eslint-config-next": "15.1.2"
+    "eslint-config-next": "15.1.2",
+    "vercel": "44.5.5"
+  },
+  "overrides": {
+    "vercel": "$vercel"
   }
 }
