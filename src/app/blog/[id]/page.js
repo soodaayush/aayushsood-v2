@@ -5,7 +5,7 @@ import posts from "../../../../public/posts.json";
 import styles from "../../styles/blog/blogPost.module.css";
 
 export async function generateMetadata({ params }) {
-  const { id } = params;
+  const { id } = await params;
   const post = posts.find((p) => p.slug === id);
 
   if (!post) {
@@ -17,8 +17,11 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `${post.meta.title} | Aayush Sood`,
+    author: "Aayush Sood",
     description: post.meta.description,
+    keywords: post.meta.keywords,
     openGraph: {
+      locale: "en_US",
       title: `${post.meta.title} | Aayush Sood`,
       description: post.meta.description,
       type: "article",
@@ -46,7 +49,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogPostPage({ params }) {
-  const { id } = params;
+  const { id } = await params;
 
   const post = posts.find((p) => p.slug === id);
   if (!post) return notFound();
