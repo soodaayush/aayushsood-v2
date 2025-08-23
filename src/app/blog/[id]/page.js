@@ -2,6 +2,8 @@ import { marked } from "marked";
 import { notFound } from "next/navigation";
 import posts from "../../../../public/posts.json";
 
+import BackToTopButton from "@/app/components/blog/backToTopButton";
+
 import styles from "../../styles/blog/blogPost.module.css";
 
 export async function generateMetadata({ params }) {
@@ -75,6 +77,7 @@ export default async function BlogPostPage({ params }) {
             className="blog-content"
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
+          <BackToTopButton />
         </div>
       </div>
     </div>
