@@ -1,0 +1,18 @@
+.backToTop {
+  font-family: "Wotfard", sans-serif;
+  background: transparent;
+  color: #f8fafc;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+  margin-top: 50px;
+}
+
+.backToTop:hover {
+  opacity: 0.75;
+}
+
+.text {
+  margin: 0;
+}
