@@ -10,17 +10,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mdx-js/loader": "^3.1.0",
-    "@mdx-js/react": "^3.1.0",
-    "@next/mdx": "^15.4.5",
-    "@next/third-parties": "^15.4.5",
-    "@types/mdx": "^2.0.13",
+    "@next/third-parties": "^15.5.0",
     "gray-matter": "^4.0.3",
-    "marked": "^16.1.2",
-    "mdx-bundler": "^10.1.1",
+    "marked": "^16.2.0",
     "motion": "^12.23.12",
-    "next": "^15.4.5",
-    "next-mdx-remote": "^5.0.0",
+    "next": "^15.5.0",
     "next-sitemap": "^4.2.3",
     "path": "^0.12.7",
     "react": "^19.1.1",
@@ -30,11 +24,9 @@
     "react-type-animation": "^3.2.0",
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.1",
-    "remark-html": "^16.0.1",
-    "esbuild": "0.14.47"
+    "remark-html": "^16.0.1"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.13",
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
     "eslint-config-next": "15.1.2",

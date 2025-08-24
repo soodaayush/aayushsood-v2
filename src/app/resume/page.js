@@ -106,7 +106,7 @@ export default function Resume() {
                 <p className={styles.text}>Upper Tantallon, NS</p>
               </div>
               <div className={styles.schoolDetails}>
-                <i className={styles.text}>Secondary School - Grade 11</i>
+                <i className={styles.text}>Secondary School - Grade 12</i>
                 <i className={styles.text}>Sep. 2023 - Present</i>
               </div>
             </div>
