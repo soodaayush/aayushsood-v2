@@ -1,12 +1,11 @@
 "use client";
 
 import { motion } from "motion/react";
+import { FaGithub } from "react-icons/fa";
+import { IoIosLink } from "react-icons/io";
 
 import Image from "next/image";
 import styles from "../../styles/home/project.module.css";
-
-import GitHub from "../../../../public/assets/header-icons/github.svg";
-import Link from "../../../../public/assets/projects/link.svg";
 
 export default function Project(props) {
   return (
@@ -41,23 +40,11 @@ export default function Project(props) {
         <div className={styles.year}>{props.year}</div>
         <div>
           <a href={props.github} className={styles.link} target="_blank">
-            <Image
-              className={styles.githubLogo}
-              src={GitHub}
-              height={25}
-              width={25}
-              alt="GitHub"
-            />
+            <FaGithub className={styles.githubLogo} />
           </a>
           {props.website && (
             <a href={props.website} className={styles.link} target="_blank">
-              <Image
-                className={styles.githubLogo}
-                src={Link}
-                height={25}
-                width={25}
-                alt="Website"
-              />
+              <IoIosLink className={styles.githubLogo} />
             </a>
           )}
         </div>

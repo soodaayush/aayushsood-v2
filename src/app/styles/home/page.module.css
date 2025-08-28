@@ -11,7 +11,7 @@
   align-items: center;
   padding: 60px 20px 60px 20px;
   width: 100%;
-  background: linear-gradient(180deg, #090f1d, #0a1124, #090e1a, #12192c);
+  background: var(--welcome-background-color);
 }
 
 .welcomeContent {
@@ -34,16 +34,16 @@
 }
 
 .curve {
-  background: #12192b;
   padding: 0;
   margin: 0;
   width: 100%;
+  background: var(--curve-background-color);
 }
 
 .svg {
-  fill: #090e1a;
   margin: 0;
   padding: 0;
+  fill: var(--curve-fill-color);
 }
 
 .profileImageContainer {
@@ -113,11 +113,11 @@
 .projectToggle {
   font-family: "Wotfard", sans-serif;
   background: transparent;
-  color: #f8fafc;
   border: none;
   outline: none;
   cursor: pointer;
   transition: 0.15s ease-in-out;
+  color: var(--text-color);
 }
 
 .projectToggle:hover {
@@ -156,7 +156,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .welcomeContent {
     display: flex;
     justify-content: center;
@@ -187,6 +187,10 @@
   .welcomeText {
     font-size: 20px;
   }
+
+  .description {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 430px) {
@@ -195,20 +199,42 @@
   }
 }
 
-@media (min-width: 485px) {
+@media (min-width: 850px) {
   .welcomeText {
     font-size: 30px;
   }
+
+  .description {
+    font-size: 11px;
+  }
 }
 
-@media (min-width: 760px) {
+@media (min-width: 960px) {
   .welcomeText {
     font-size: 40px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .welcomeText {
+    font-size: 45px;
+  }
+
+  .description {
+    font-size: 13px;
   }
 }
 
 @media (min-width: 1200px) {
   .welcomeText {
     font-size: 50px;
+  }
+
+  .description {
+    font-size: 16px;
   }
 }

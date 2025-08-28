@@ -17,7 +17,7 @@
 }
 
 .interestContainer:hover .interestTitle {
-  color: #64ffda;
+  color: var(--header-hover-color);
 }
 
 .interestIcon {
@@ -33,9 +33,9 @@
 }
 
 .link {
-  color: #f8fafc;
-  border-bottom: 2px solid #64ffda;
   transition: 0.15s ease-in-out;
+  border-bottom: 2px solid var(--header-hover-color);
+  color: var(--text-color);
 }
 
 .linkTexts {

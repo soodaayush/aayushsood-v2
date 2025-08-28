@@ -11,7 +11,7 @@
 }
 
 .technicalSkillContainer:hover .skillType {
-  color: #64ffda;
+  color: var(--header-hover-color);
 }
 
 .skillType {

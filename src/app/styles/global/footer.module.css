@@ -13,8 +13,8 @@
 }
 
 .contact {
-  color: #f8fafc;
   transition: 0.15s ease-in-out;
+  color: var(--text-color);
 }
 
 .contact:hover {
