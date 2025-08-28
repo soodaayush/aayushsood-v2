@@ -1,6 +1,9 @@
 import styles from "../styles/resume/resume.module.css";
 
-import { FaRegFilePdf } from "react-icons/fa";
+import { FaRegFilePdf, FaGithub } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
+import { FaLinkedinIn } from "react-icons/fa";
+import { HiGlobeAmericas } from "react-icons/hi2";
 
 export const metadata = {
   title: "Resume | Aayush Sood",
@@ -48,42 +51,38 @@ export default function Resume() {
           </h1>
           <div className={styles.links}>
             <a
-              className={`${styles.link} ${styles.text}`}
-              href="tel:9027894315"
-              target="_blank"
-            >
-              +1 (902) 789-4315
-            </a>{" "}
-            <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
-            <a
-              className={`${styles.link} ${styles.text} ${styles.underline}`}
+              className={`${styles.contact} ${styles.link} ${styles.text} ${styles.underline}`}
               href="mailto:aayush.sood@icloud.com"
               target="_blank"
             >
+              <IoMdMail />
               aayush.sood@icloud.com
             </a>{" "}
             <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
             <a
-              className={`${styles.link} ${styles.text} ${styles.underline}`}
+              className={`${styles.contact} ${styles.link} ${styles.text} ${styles.underline}`}
               href="https://www.linkedin.com/in/soodaayush/"
               target="_blank"
             >
-              linkedin.com/in/soodaayush
+              <FaLinkedinIn />
+              in/soodaayush
             </a>{" "}
             <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
             <a
-              className={`${styles.link} ${styles.text} ${styles.underline}`}
+              className={`${styles.contact} ${styles.link} ${styles.text} ${styles.underline}`}
               href="https://github.com/soodaayush"
               target="_blank"
             >
+              <FaGithub />
               github.com/soodaayush
             </a>
             <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
             <a
-              className={`${styles.link} ${styles.text} ${styles.underline}`}
+              className={`${styles.contact} ${styles.link} ${styles.text} ${styles.underline}`}
               href="https://www.aayushsood.com/"
               target="_blank"
             >
+              <HiGlobeAmericas />
               aayushsood.com
             </a>
           </div>
