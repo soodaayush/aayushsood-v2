@@ -28,7 +28,7 @@ export default function Welcome() {
             deletionSpeed={35}
             className={styles.welcomeText}
           />
-          <p>
+          <p className={styles.description}>
             I&apos;m based in Nova Scotia, Canada, and I&apos;m passionate about
             Math, Software Engineering, Gaming, and Jiu Jitsu. <br />
             I&apos;m an aspiring software intern with coding passion,

@@ -53,11 +53,29 @@ export default function Header() {
             className={styles.button}
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
-            {theme === "light" ? (
-              <FaMoon className={styles.pageIcon} />
-            ) : (
-              <FaSun className={styles.pageIcon} />
-            )}
+            <AnimatePresence mode="wait" initial={false}>
+              {theme === "light" ? (
+                <motion.div
+                  key="moon"
+                  initial={{ rotate: -90, scale: 0, opacity: 0 }}
+                  animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                  exit={{ rotate: 90, scale: 0, opacity: 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                >
+                  <FaMoon className={styles.pageIcon} />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="sun"
+                  initial={{ rotate: 90, scale: 0, opacity: 0 }}
+                  animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                  exit={{ rotate: -90, scale: 0, opacity: 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                >
+                  <FaSun className={styles.pageIcon} />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.1 }}
@@ -167,6 +185,25 @@ export default function Header() {
                 </Link>
               </div>
               <div className={styles.menuSection}>
+                <div className={styles.menuLink}>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={styles.menuButton}
+                    onClick={() =>
+                      setTheme(theme === "light" ? "dark" : "light")
+                    }
+                  >
+                    <h2 className={styles.menuLinkText}>Theme</h2>
+                    <div>
+                      {theme === "light" ? (
+                        <FaMoon className={styles.pageIcon} />
+                      ) : (
+                        <FaSun className={styles.pageIcon} />
+                      )}
+                    </div>
+                  </motion.div>
+                </div>
                 <a
                   href="https://github.com/soodaayush"
                   target="_blank"
