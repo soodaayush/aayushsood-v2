@@ -34,8 +34,8 @@ html.light {
   color: black;
   background: #fff;
   --mobile-header-background: #ccd6e0;
-  --header-border: rgba(0, 0, 0, 0.1);
-  --header-background: rgba(255, 255, 255, 0.5);
+  --header-border: rgba(0, 0, 0, 0.08);
+  --header-background: rgba(245, 248, 250, 0.7);
   --header-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   --header-backdrop-filter: blur(8px);
   --text-color: #000;
