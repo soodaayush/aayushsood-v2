@@ -4,6 +4,7 @@ import Header from "./components/global/header";
 import Footer from "./components/global/footer";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { ThemeProvider } from "next-themes";
 
 export const viewport = {
   width: "device-width",
@@ -149,16 +150,18 @@ export const runtime = "edge";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <Header />
-        {children}
-        <Footer />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-        <GoogleAnalytics gaId="G-ZSFY8QD3JM" />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
+          {children}
+          <Footer />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          />
+          <GoogleAnalytics gaId="G-ZSFY8QD3JM" />
+        </ThemeProvider>
       </body>
     </html>
   );

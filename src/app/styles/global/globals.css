@@ -28,8 +28,70 @@ html {
 
 body {
   margin: 0;
+}
+
+html.light {
+  color: black;
+  background: #fff;
+  --mobile-header-background: #ccd6e0;
+  --header-border: rgba(0, 0, 0, 0.1);
+  --header-background: rgba(255, 255, 255, 0.5);
+  --header-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --header-backdrop-filter: blur(8px);
+  --text-color: #000;
+  --background-color: #fff;
+  --welcome-background-color: linear-gradient(
+    180deg,
+    #f8fafc,
+    #edf2f7,
+    #e2e8f0,
+    #cbd5e0
+  );
+  --curve-background-color: #ccd6e0;
+  --curve-fill-color: #fff;
+  --header-hover-color: #0f766e;
+  --technical-skills-background-hover-color: #e2e8f0;
+  --project-text-color: #f8fafc;
+  --project-tag-background: #e8c9ea;
+  --creator-underline-color: #0f766e;
+  --blog-post-border: #3e454b;
+  --blog-link-underline-color: #2563eb;
+  --blog-image-border: #e2e8f0;
+  --book-author-color: #758295;
+  --home-link-color: #7b2cbf;
+  --resume-border: #d1d5db;
+}
+
+html.dark {
   background: #090e1a;
   color: #f8fafc;
+  --mobile-header-background: #090e1a;
+  --header-border: #202534;
+  --header-background: rgba(11, 17, 32, 0.5);
+  --header-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --header-backdrop-filter: blur(5px);
+  --text-color: #f8fafc;
+  --background-color: #fff;
+  --welcome-background-color: linear-gradient(
+    180deg,
+    #090f1d,
+    #0a1124,
+    #090e1a,
+    #12192c
+  );
+  --curve-background-color: #12192b;
+  --curve-fill-color: #090e1a;
+  --header-hover-color: #64ffda;
+  --technical-skills-background-hover-color: #e2e8f0;
+  --project-text-color: #f8fafc;
+  --project-tag-background: #171e29;
+  --creator-underline-color: #0f766e;
+  --blog-post-border: #3e454b;
+  --blog-link-underline-color: #718de1;
+  --blog-image-border: #30353b;
+  --book-author-color: #758295;
+  --home-link-color: #e6b3ff;
+  --resume-border: #202534;
 }
 
 a {
@@ -89,9 +151,9 @@ svg {
   display: block;
   max-width: 100%;
   height: auto;
-  border: 2px solid #30353b;
   margin: 0 auto;
   border-radius: 10px;
+  border: 2px solid var(--blog-image-border);
 }
 
 .blog-content h1 {
@@ -110,9 +172,9 @@ svg {
 }
 
 .blog-content a {
-  color: #f8fafc;
   transition: 0.15s ease-in-out;
-  border-bottom: 3px solid #718de1;
+  border-bottom: 3px solid var(--blog-link-underline-color);
+  color: var(--text-color);
 }
 
 .blog-content a:hover {

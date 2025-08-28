@@ -11,9 +11,9 @@
 }
 
 .link {
-  color: #f8fafc;
   cursor: pointer;
   transition: 0.15s ease-in-out;
+  color: var(--text-color);
 }
 
 .link:hover {
@@ -28,6 +28,6 @@
 }
 
 .bookAuthor {
-  color: #758295;
+  color: var(--book-author-color);
   cursor: pointer;
 }

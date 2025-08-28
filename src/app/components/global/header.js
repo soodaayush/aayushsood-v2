@@ -1,23 +1,27 @@
 "use client";
 
 import { motion, AnimatePresence } from "motion/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 
-import { FaBlog, FaBook } from "react-icons/fa";
+import { FaBlog, FaBook, FaGithub, FaMoon, FaSun } from "react-icons/fa";
+import { SiLinktree } from "react-icons/si";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoClose } from "react-icons/io5";
 import { BsFileEarmarkPersonFill } from "react-icons/bs";
 
-import Image from "next/image";
 import Link from "next/link";
 
 import styles from "../../styles/global/header.module.css";
 
-import GitHub from "../../../../public/assets/header-icons/github.svg";
-import Linktree from "../../../../public/assets/header-icons/linktree.svg";
-import menu from "../../../../public/assets/header-icons/menu.svg";
-import close from "../../../../public/assets/header-icons/close.svg";
-
 export default function Header() {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
+
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   function openHamburgerMenu() {
     setHamburgerMenu(!hamburgerMenu);
@@ -47,15 +51,21 @@ export default function Header() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             className={styles.button}
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+          >
+            {theme === "light" ? (
+              <FaMoon className={styles.pageIcon} />
+            ) : (
+              <FaSun className={styles.pageIcon} />
+            )}
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className={styles.button}
           >
             <a href="https://github.com/soodaayush" target="_blank">
-              <Image
-                src={GitHub}
-                width={40}
-                height={40}
-                alt="GitHub"
-                className={styles.svg}
-              />
+              <FaGithub className={styles.pageIcon} />
             </a>
           </motion.button>
           <motion.button
@@ -64,13 +74,7 @@ export default function Header() {
             className={styles.button}
           >
             <a href="https://linktr.ee/aayushsood" target="_blank">
-              <Image
-                src={Linktree}
-                width={40}
-                height={40}
-                alt="Linktree"
-                className={styles.svg}
-              />
+              <SiLinktree className={styles.pageIcon} />
             </a>
           </motion.button>
         </div>
@@ -80,13 +84,9 @@ export default function Header() {
             whileTap={{ scale: 0.95 }}
             className={styles.button}
           >
-            <Image
-              src={menu}
-              width={40}
-              height={40}
-              alt="Menu"
+            <RxHamburgerMenu
               onClick={openHamburgerMenu}
-              className={styles.svg}
+              className={styles.pageIcon}
             />
           </motion.button>
         </div>
@@ -110,13 +110,9 @@ export default function Header() {
                   whileTap={{ scale: 0.95 }}
                   className={styles.button}
                 >
-                  <Image
-                    src={close}
-                    width={40}
-                    height={40}
-                    alt="Close"
+                  <IoClose
                     onClick={openHamburgerMenu}
-                    className={styles.svg}
+                    className={styles.pageIcon}
                   />
                 </motion.button>
               </div>
@@ -183,13 +179,7 @@ export default function Header() {
                   >
                     <h2 className={styles.menuLinkText}>GitHub</h2>
                     <div>
-                      <Image
-                        src={GitHub}
-                        width={40}
-                        height={40}
-                        alt="GitHub"
-                        className={styles.svg}
-                      />
+                      <FaGithub className={styles.pageIcon} />
                     </div>
                   </motion.div>
                 </a>
@@ -205,13 +195,7 @@ export default function Header() {
                   >
                     <h2 className={styles.menuLinkText}>Linktree</h2>
                     <div>
-                      <Image
-                        src={Linktree}
-                        width={40}
-                        height={40}
-                        alt="LeetCode"
-                        className={styles.svg}
-                      />
+                      <SiLinktree className={styles.pageIcon} />
                     </div>
                   </motion.div>
                 </a>

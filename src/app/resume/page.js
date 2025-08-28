@@ -1,8 +1,6 @@
-import Image from "next/image";
-
 import styles from "../styles/resume/resume.module.css";
 
-import PDF from "../../../public/assets/header-icons/pdf.svg";
+import { FaRegFilePdf } from "react-icons/fa";
 
 export const metadata = {
   title: "Resume | Aayush Sood",
@@ -45,13 +43,7 @@ export default function Resume() {
           <h1 className={styles.name}>
             Aayush Sood
             <a href="assets/resume/resume.pdf" target="_blank">
-              <Image
-                src={PDF}
-                width={40}
-                height={40}
-                alt="GitHub"
-                className={styles.svg}
-              />
+              <FaRegFilePdf className={styles.svg} />
             </a>
           </h1>
           <div className={styles.links}>

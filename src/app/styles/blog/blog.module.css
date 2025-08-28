@@ -29,12 +29,12 @@
   padding: 20px;
   width: 60%;
   border-radius: 5px;
-  border: 2px #3e454b solid;
+  border: 2px solid var(--blog-post-border);
 }
 
 .text {
-  color: #f8fafc;
   margin: 0;
+  color: var(--text-color);
 }
 
 .title {

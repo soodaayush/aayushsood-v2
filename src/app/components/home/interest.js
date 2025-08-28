@@ -1,18 +1,31 @@
 "use client";
 
 import { motion } from "motion/react";
+import { useTheme } from "next-themes";
 
 import styles from "../../styles/home/interest.module.css";
 
 export default function Interest(props) {
+  const { theme } = useTheme();
+
+  const hoverStyles =
+    theme === "dark"
+      ? {
+          backgroundColor: "#2f4f4f",
+          boxShadow: "0px 10px 15px rgba(255, 255, 255, 0.2)",
+        }
+      : {
+          backgroundColor: "#ddd",
+          boxShadow: "0px 10px 15px rgba(0, 0, 0, 0.2)",
+        };
+
   return (
     <motion.div
       initial={{ scale: 1, opacity: 0.9 }}
       whileHover={{
-        scale: 1.1, 
-        boxShadow: "0px 10px 15px rgba(0, 0, 0, 0.2)", 
-        transition: { duration: 0.3 }, 
-        backgroundColor: "#2f4f4f", 
+        scale: 1.1,
+        transition: { duration: 0.3 },
+        ...hoverStyles,
       }}
       className={styles.interestContainer}
     >
