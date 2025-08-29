@@ -2,11 +2,24 @@
 
 import { motion } from "motion/react";
 import { TypeAnimation } from "react-type-animation";
+import { useTheme } from "next-themes";
+
 import Image from "next/image";
 import styles from "../../styles/home/page.module.css";
 import Aayush from "../../../../public/assets/welcome/aayush.webp";
 
 export default function Welcome() {
+  const { theme } = useTheme();
+
+  const hoverStyles =
+    theme === "dark"
+      ? {
+          boxShadow: "0 0 20px rgba(255, 255, 255, 0.7)",
+        }
+      : {
+          boxShadow: "0 0 20px rgba(113, 141, 225, 0.55)",
+        };
+
   return (
     <div className={styles.welcomeContainer}>
       <div className={`content ${styles.welcomeContent}`}>
@@ -42,8 +55,8 @@ export default function Welcome() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           whileHover={{
             scale: 1.05,
-            boxShadow: "0 0 20px rgba(255, 255, 255, 0.7)",
             transition: { type: "spring", stiffness: 300, damping: 15 },
+            ...hoverStyles,
           }}
           className={styles.profileImageContainer}
         >
