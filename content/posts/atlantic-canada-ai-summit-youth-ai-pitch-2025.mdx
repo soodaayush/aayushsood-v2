@@ -1,0 +1,205 @@
+---
+title: "Bay View High at Atlantic Canada AI Summit: Lessons in AI and Collaboration"
+description: "My experiences in developing IWKids and competing at the Youth AI Pitch Competition with the Bay View High School Tech Club, exploring how AI can make a real difference in our community!"
+date: "September 1, 2025"
+keywords:
+  [
+    "Aayush Sood",
+    "Youth AI Pitch Competition",
+    "Atlantic Canada AI Summit",
+    "IWKids app",
+    "Student AI challenge",
+    "Bay View High School Tech Club",
+    "STEM student projects",
+    "AI prototyping for kids’ ER",
+    "IWK Hospital innovation",
+    "Saint Mary's University AI event",
+    “AI healthcare innovation”,
+    “student pitch competition”,
+    “emergency room AI app”
+  ]
+---
+
+![Youth AI Pitch Competition Banner](/assets/blog/atlantic-canada-ai-summit-youth-ai-pitch/competition-banner.webp)
+
+After winning the [Lockheed Martin CYBERQUEST Competition](/blog/lockheed-martin-cyberquest-2025), our [Bay View High School Tech Club](https://bvh-tech-club.netlify.app/) turned its attention to a new challenge, one that aimed to tackle a real problem affecting our community.
+
+The [Atlantic Canada AI Summit](https://www.smu.ca/ai-summit/index.html), hosted at [Saint Mary's University](https://www.smu.ca/) (SMU) in May 2025, aimed to showcase cutting-edge AI research, facilitate industry-academia collaboration, and highlight exceptional AI talent in the region. One of their programs featured was the [Youth AI Pitch Competition](https://www.smu.ca/ai-summit/may3.html), which tasked middle and high school teams to come up with innovative AI-driven solutions to enhance the Emergency Room experience for kids and their families at the [IWK Hospital](https://iwkhealth.ca/). The competition consisted of Generative AI workshops facilitated by SMU Master of Business Analytics students, with the contest commencing later in the afternoon.
+
+Similar to CYBERQUEST, each team consisted of 3-5 members. I spread the word to Tech Club members and quickly found interested participants. Our team consisted of me, Seth, Yaya, and Baruch. Our team was assembled at the beginning of April, giving us about three weeks to create a prototype and pitch for the May 3 competition.
+
+Unlike CYBERQUEST, we now had to create a semi-functional product addressing a real community problem, rather than practicing hacking techniques.
+
+We then began our research on problems that affect the Emergency Room and their potential solutions.
+
+# Planning
+
+![Youth AI Pitch Competition Banner](/assets/blog/atlantic-canada-ai-summit-youth-ai-pitch/emergency-room.webp)
+
+When conducting our research on how we can improve the Emergency Room experience, we identified five main problems that cause stress for children and their parents:
+
+- Long wait times
+- Confusing procedures
+- Overwhelmed parents
+- Busy staff can't give 1:1 attention
+- Kids pick up on adult emotions, stressed parents result in overwhelmed kids
+
+We had identified problems that affect the Emergency Room but weren't sure what a potential solution would look like, so I hosted a Tech Club workshop focused on finding a solution for this competition.
+
+During the workshop, I organized our members in groups, similar to the competition, and tasked them with proposing a concept of what a solution for these problems could look like. I gave them 30 minutes to develop an idea, then 15 minutes to pitch it to the rest of the club.
+
+Many ideas were proposed, such as:
+
+- An AI chatbot
+- Games for children
+- Feedback system for hospital staff
+- Virtual calls with doctors
+
+Although the ideas were very different, they all used one medium: mobile devices.
+
+It made sense, the majority of the population today have mobile devices, and if we can make the Emergency Room experience easier for families through these devices, it would be really beneficial for the community.
+
+Since the app was designed to enhance the IWK Emergency Room experience for children and families, we named it **IWKids.**
+
+We came up with reasons why the app would benefit all stakeholders:
+
+- Kids are calmer, engaged, and less stressed.
+- Parents feel reassured, supported, and well-informed.
+- Emergency Room Staff can focus more on clinical care.
+- Reduced Emergency Room traffic due to self-diagnostic features.
+- Increased system efficiencies due to integration with provincial systems.
+- Overall better healthcare experience for all stakeholders.
+
+As the Technical Lead of the team, I began developing a mobile app that combined all of these ideas together.
+
+# Prototyping
+
+![IWKids Thumbnail](/assets/blog/atlantic-canada-ai-summit-youth-ai-pitch/iwkids-thumbnail.webp)
+
+I decided on creating a [React Native](https://reactnative.dev/) (a tool for creating mobile apps for iOS and Android) app powered by [Expo](https://expo.dev/) (a tool that eases the process of creating mobile apps). For integrating an AI chatbot in the app, I used [OpenAI's](https://openai.com/) APIs (a platform for creating AI-powered applications) to power a medical diagnostic platform capable of providing preliminary diagnoses, as well as [Twilio](https://www.twilio.com/) (a platform for sending SMS messages and notifications) to enable the transmission of SMS text messages for communication and notifications to families.
+
+When approaching the overall design of the app, I made sure it was consistent with the IWK brand. IWK has a [branding guide](https://www.iwk.nshealth.ca/logo/logo-files/IWK-Brand-Identity-Guide-2020-v15.pdf), which I used to find their typography, colors, logo, and used them throughout the app.
+
+![IWKids Home Screen](/assets/blog/atlantic-canada-ai-summit-youth-ai-pitch/iwkids-home-screen.webp)
+
+I designed a simple home page with a column of buttons leading to other sections of the app, keeping navigation straightforward for a critical system like this.
+
+The chatbot was one of the most essential screens on the app, as it pre-diagnosed potential patients before they stepped inside the hospital. If the chatbot believes that your condition was serious, it would advise you to check into IWK. The AI model was programmed with this prompt:
+
+"_ChatGPT should act like a medical assistant in a children's hospital. It should talk in a friendly, comforting tone and keep responses brief. It should diagnose medical conditions and determine and recommend if people need to go to the Emergency Room or explore other options._"
+
+This prompt allowed the chatbot to approach patients' issues with the right attitude and tone, especially in dire situations that cause stress and anxiety. In the real-world, we theorized that a medical AI model that is vetted by the IWK Hospital would be used instead of a standard ChatGPT model.
+
+I worked on the check-in mechanism, where you provide your name and phone number and are immediately put into a queue. Your place in the queue would be communicated to your phone number via SMS transmission. After checking in, users could view hospital wait times, which would be connected to hospital databases in a production environment.
+
+I developed a feedback mechanism after a patient's consultation finishes, where they simply provide a smiley or frowny face along with a description.
+
+Other smaller features included games for children, quick links to useful resources, and a map of IWK.
+
+If you're interested in exploring the code behind IWKids, we've made the project available on [GitHub](https://github.com/soodaayush/IWKids). Feel free to check it out!
+
+The flowchart below describes the simplified Emergency Room journey of a patient:
+
+![ER Journey](/assets/blog/atlantic-canada-ai-summit-youth-ai-pitch/er-journey.webp)
+
+Along with the prototype, we developed a slideshow outlining our pitch, making us ready for the big day that lay ahead.
+
+# Competition Day
+
+![Sobey School of Business](/assets/blog/atlantic-canada-ai-summit-youth-ai-pitch/sobey-school-of-business.webp)
+
+The big day arrived, and we were all ready to enter the halls of the Sobey School of Business, where we were promptly registered.
+
+When we entered the lecture hall, we saw about 20 other teams; clearly, many students around Halifax were passionate about tackling the same challenges.
+
+We started the morning with snacks and presentations on how AI can be used to push false narratives, biases in AI, and how AI can be used to make our lives easier through various tools such as:
+
+- [Krea](https://www.krea.ai/) - uses AI to generate and edit images, videos, and animations.
+- [Perplexity Pages](https://www.perplexity.ai/hub/blog/perplexity-pages) - lets users transform research and search results into structured, visually-rich articles and reports.
+- [Cursor IDE](https://cursor.com/) - an AI-powered code editor.
+
+The organizers initiated an activity where we were to form larger groups and describe a positive usage of AI. Each group is to pitch to organizers and their fellow peers, serving as a warm-up to the eventual competition.
+
+![Positive AI Usage Pitch](/assets/blog/atlantic-canada-ai-summit-youth-ai-pitch/positive-ai-usage-pitch.webp)
+
+Our group presented an AI news reporter that will keep tabs on world events 24/7.
+
+Following the informative presentations, we were given some time to iterate on our prototypes and pitches.
+
+![Team Iterating Pitch](/assets/blog/atlantic-canada-ai-summit-youth-ai-pitch/team-iterating-pitch.webp)
+
+The structure of the competition was explained to us:
+
+- There are qualifying rounds, where 3-4 teams are sent to rooms around the building to pitch their ideas for a maximum of five minutes to SMU professors.
+- Eight teams who qualified will be sent to the conference room to pitch their ideas in front of a panel of judges along with an audience consisting of families and professionals.
+- The top 3 teams win a cash prize.
+
+At lunch, we visited sponsor booths and spoke with companies such as [CGI](https://www.cgi.com/canada/), [Ernst & Young](https://www.ey.com/), and representatives from SMU about their visions for AI.
+
+As our team was escorted our room, we immediately started adding features to our app and refining our pitch. Teams were provided advisors, mostly SMU Business students, who would make recommendation on what to include/exclude from our prototypes and pitches. The advisors were very impressed with our product and pitch and were anticipating a potential podium finish.
+
+During the hour, I quickly built a Tic-tac-toe game to demonstrate how children's games could be integrated into the app.
+
+We planned our pitch to be 2 minutes of explaining the problems in the Emergency Room, covered by Baruch, Yaya, and Seth, following up with me leading a demo of the mobile app.
+
+![Team Presenting Qualifying Pitch](/assets/blog/atlantic-canada-ai-summit-youth-ai-pitch/qualifier-pitching.webp)
+
+We commenced our qualifying pitch for IWKids, and I thought at the time that we did well despite many areas for improvement. The judges were very impressed with the Tic-tac-toe game I hastily put together in a matter of 20 minutes.
+
+We watched the other teams pitch their ambitious ideas, and we didn't know if we would qualify. Following the presentations, all teams were sent to the conference room, where the organizers would announce the teams that would advance forward to present their ideas to the judges.
+
+![Team Sitting](/assets/blog/atlantic-canada-ai-summit-youth-ai-pitch/team-sitting.webp)
+
+While sitting, we were eagerly awaiting the results. After some 30 minutes of silence, the organizers began to read the teams who succeeded from each room.
+
+We heard our team's name and immediately began celebrating. We weren't done yet, but we were one more step closer to potentially placing well at this competition.
+
+The competition officially began, and we were the third team to present.
+
+It was our turn to pitch our idea, and we walked onto the stage in front of a panel of judges and a large audience. We were all nervous being up there, but we believed in our idea and product, which eased our fears.
+
+![Team Pitching](/assets/blog/atlantic-canada-ai-summit-youth-ai-pitch/team-pitching.webp)
+
+Similar to the qualifying round, Baruch, Seth, and Yaya explained the problems we were tackling and how our app helps all stakeholders, following up with me demoing the mobile app.
+
+![Team Demo](/assets/blog/atlantic-canada-ai-summit-youth-ai-pitch/team-demo.webp)
+
+During my demo, I emphasized the chatbot along with our SMS integration. To make the judges extremely aware of SMS, we placed a phone at the table in front of them, and thankfully, our demo worked as the device successfully received its message. At the end, we all felt pretty good about the presentation.
+
+The other teams finished presenting, and we waited anxiously for the results. We were told to hold back for some time as the judges would deliberate on the winners.
+
+Our team decided to discuss with other groups regarding their performances and products, as every single group proposed very creative ideas that can genuinely benefit the lives of people in our communities.
+
+We were then asked to be seated as the judges were about to unveil the winners of this competition.
+
+The judges acknowledged that all pitches were excellent and innovative, making it a hard decision for them to decide the top three winners.
+
+They began to announce winners. Third place was announced and it wasn't our group, we were confused as to if this was a positive or negative sign. They announced second place, which was a mobile app that aimed to ease the Emergency Room experience for both patients and IWK staff, and we knew then that we had [achieved](https://www.instagram.com/p/DJNVjHVSZC3/) second place.
+
+Our group name was announced, and we were all ecstatic to earn our second podium finish in just a month, right after CYBERQUEST, and we won a $500 cheque and a certificate!
+
+![Team Holding Cheque](/assets/blog/atlantic-canada-ai-summit-youth-ai-pitch/team-holding-cheque.webp)
+
+There was a ceremony for the winners, where we were all on the stage holding our cheques and getting our photos taken. We were very thrilled to have earned this distinction, as we poured several hours into planning, prototyping, and executing our pitches.
+
+# Future Possibilities
+
+![Future Possibilities](/assets/blog/atlantic-canada-ai-summit-youth-ai-pitch/future-possibilities.webp)
+
+There were several features we had in mind regarding the future of this app, ranging from small quality-of-life features such as live wait times to larger integrations such as Digital Twins. I'll discuss a couple of the main features we wanted to see.
+
+A [digital twin](https://en.wikipedia.org/wiki/Digital_twin) is the most interesting out of the seven features. It essentially is a virtual copy of a real object, system, or process that mirrors its behavior, allowing you to monitor, test, and improve it safely in a digital space. In this context, the digital twin would be the interior and exterior of the IWK Hospital, which can allow staff to improve processes.
+
+Health Tracking is another feature that has been implemented in other apps, but would be different with IWKids. [Nova Scotia Health](https://www.nshealth.ca/) is currently working on [One Person One Record (OPOR)](https://physicians.nshealth.ca/topics/nova-scotia-provider-digital-health-toolkit/one-person-one-record-opor), a digital health system that brings all patient information into all unified record, helping providers deliver safer, faster, and more coordinated care. An integration of OPOR with IWKids would be revolutionary as health data in Nova Scotia is mostly kept on paper.
+
+# Takeaways & Impact
+
+![Team Photo](/assets/blog/atlantic-canada-ai-summit-youth-ai-pitch/team-photo.webp)
+
+This was our first pitch competition, and it taught me a lot about presenting ideas clearly and working collaboratively under pressure. I gained creative problem-solving skills and learned how to clearly present technical ideas to a broader audience.
+
+The experience also made AI tangible. Instead of seeing it as abstract algorithms behind the scenes, I saw how it can be applied to solve real problems in our community. Working with my team, we brainstormed, prototyped, and turned an idea into a project we were truly proud of.
+
+This project wasn't just a school assignment, it showed me how AI, technology, and teamwork can create real impact. It also proved you don't need to be an expert; curiosity, collaboration, and asking the right questions are enough to make a difference.
+
+The competition may be running again next year, and I hope to see Tech Club compete to further contribute to our community! Looking ahead, I'm eager to keep seeking challenges where we push ourselves, learn new skills, and use technology to make a difference.
