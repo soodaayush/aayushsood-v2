@@ -55,8 +55,8 @@
         "link": "https://www.youtube.com/@Vsauce"
       },
       {
-        "name": "Kurzgesagt",
-        "link": "https://www.youtube.com/@kurzgesagt"
+        "name": "Jeremy Krug",
+        "link": "https://www.youtube.com/@JeremyKrug"
       },
       {
         "name": "The Organic Chemistry Tutor",
@@ -84,6 +84,10 @@
       {
         "name": "RealLifeLore",
         "link": "https://www.youtube.com/@RealLifeLore"
+      },
+      {
+        "name": "Search Party",
+        "link": "https://www.youtube.com/@SearchParty"
       }
     ]
   },
@@ -111,6 +115,10 @@
       {
         "name": "ONE Championship",
         "link": "https://www.youtube.com/@ONEChampionship"
+      },
+      {
+        "name": "FloGrappling",
+        "link": "https://www.youtube.com/@FloGrappling"
       }
     ]
   },
