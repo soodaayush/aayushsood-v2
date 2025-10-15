@@ -187,5 +187,12 @@
     "cover": "/assets/books/theGreatGatsby.webp",
     "bookLink": "https://a.co/d/7YYNZpl",
     "authorLink": "https://www.amazon.ca/stores/F.-Scott-Fitzgerald/author/B000AQ0J28"
+  },
+  {
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "cover": "/assets/books/sapiens.webp",
+    "bookLink": "https://a.co/d/4RjZBLX",
+    "authorLink": "https://www.amazon.ca/stores/Yuval-Noah-Harari/author/B00J21BCIW"
   }
 ]
