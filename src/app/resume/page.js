@@ -180,8 +180,9 @@ export default function Resume() {
                   2025
                 </li>
                 <li className={styles.text}>
-                  IT Coordinator for Nova Scotia Secondary School Students&apos;
-                  Association{" "}
+                  IT Coordinator (&apos;25-present) & PR Manager
+                  (&apos;24-&apos;25) in Nova Scotia Secondary School
+                  Students&apos; Association{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
                     href="https://www.nsssa.ca/"
@@ -189,8 +190,8 @@ export default function Resume() {
                   >
                     (NSSSA)
                   </a>{" "}
-                  - since April 2025; Public Relations Manager - September 2024
-                  to June 2025
+                  - Rebuilt the website, upgraded digital systems, ran
+                  provincial social media, and secured sponsorships
                 </li>
                 <li className={styles.text}>
                   Received Certificate of Distinction in Senior Division of
