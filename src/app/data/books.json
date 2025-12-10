@@ -194,5 +194,12 @@
     "cover": "/assets/books/sapiens.webp",
     "bookLink": "https://a.co/d/4RjZBLX",
     "authorLink": "https://www.amazon.ca/stores/Yuval-Noah-Harari/author/B00J21BCIW"
+  },
+  {
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "cover": "/assets/books/frankenstein.webp",
+    "bookLink": "https://a.co/d/2mvNGf5",
+    "authorLink": "https://www.amazon.ca/stores/Mary-Shelley/author/B00R1DJSQQ"
   }
 ]
