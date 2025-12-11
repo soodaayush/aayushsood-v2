@@ -118,6 +118,17 @@ export default function Resume() {
             <div className={styles.accomplishmentList}>
               <ul className={styles.list}>
                 <li className={styles.text}>
+                  Currently competing in AFA&apos;s{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://www.uscyberpatriot.org/"
+                    target="_blank"
+                  >
+                    CyberPatriot
+                  </a>{" "}
+                  Competition, demonstrating skills in digital protection - 2025
+                </li>
+                <li className={styles.text}>
                   Invited to and participated in the Quantum School for Young
                   Students{" "}
                   <a
@@ -243,10 +254,6 @@ export default function Resume() {
                   </a>
                   , gaining a foundational understanding of Computer Science
                   principles and proficiency in C - 2024
-                </li>
-                <li className={styles.text}>
-                  Cabinet Member on Nova Scotia Minister of Education&apos;s
-                  Student Advisory Council (MSAC) - 2024 to 2025
                 </li>
                 <li className={styles.text}>
                   Executive of Bay View High&apos;s Student Council and Founder
