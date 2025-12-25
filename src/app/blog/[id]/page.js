@@ -7,7 +7,8 @@ import BackToTopButton from "@/app/components/blog/backToTopButton";
 import styles from "../../styles/blog/blogPost.module.css";
 
 export async function generateMetadata({ params }) {
-  const { id } = await params;
+  const resolvedParams = await params; // <-- unwrap the promise
+  const { id } = resolvedParams;
   const post = posts.find((p) => p.slug === id);
 
   if (!post) {
@@ -18,8 +19,9 @@ export async function generateMetadata({ params }) {
   }
 
   return {
+    metadataBase: new URL("https://www.aayushsood.com"),
     title: `${post.meta.title} | Aayush Sood`,
-    author: "Aayush Sood",
+    authors: [{ name: "Aayush Sood" }],
     description: post.meta.description,
     keywords: post.meta.keywords,
     openGraph: {
@@ -51,7 +53,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogPostPage({ params }) {
-  const { id } = await params;
+  const resolvedParams = await params; // <-- unwrap the promise
+  const { id } = resolvedParams;
 
   const post = posts.find((p) => p.slug === id);
   if (!post) return notFound();
