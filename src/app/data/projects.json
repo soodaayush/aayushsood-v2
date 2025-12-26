@@ -25,6 +25,7 @@
     "description": "A discrete-logic 8-bit breadboard computer built to explore low-level computation, timing, and control signals.",
     "tags": ["Arduino"],
     "year": 2024,
+    "github": "https://github.com/soodaayush/8-bit-project",
     "gradient": "linear-gradient(#C57D3E, #C2683E, #BF533E)",
     "rotate": "rotate(358deg)"
   },
