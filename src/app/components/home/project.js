@@ -39,9 +39,11 @@ export default function Project(props) {
       <div className={styles.links}>
         <div className={styles.year}>{props.year}</div>
         <div>
-          <a href={props.github} className={styles.link} target="_blank">
-            <FaGithub className={styles.githubLogo} />
-          </a>
+          {props.github && (
+            <a href={props.github} className={styles.link} target="_blank">
+              <FaGithub className={styles.githubLogo} />
+            </a>
+          )}
           {props.website && (
             <a href={props.website} className={styles.link} target="_blank">
               <IoIosLink className={styles.githubLogo} />
