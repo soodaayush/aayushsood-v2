@@ -168,6 +168,10 @@ svg {
   width: 100%;
 }
 
+.blog-content p:has(em) {
+  text-align: center;
+}
+
 .blog-content em {
   font-size: 1em;
 }
