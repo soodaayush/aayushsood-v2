@@ -56,10 +56,10 @@ export default function Projects({ projects }) {
           ))}
         </motion.div>
         <div className={styles.projectToggles}>
-          <button className={styles.projectToggle} onClick={prevProject}>
+          <button className={styles.projectToggle} onClick={prevProject} name="Previous project">
             ← Prev
           </button>
-          <button className={styles.projectToggle} onClick={nextProject}>
+          <button className={styles.projectToggle} onClick={nextProject} name="Next project">
             Next →
           </button>
         </div>
