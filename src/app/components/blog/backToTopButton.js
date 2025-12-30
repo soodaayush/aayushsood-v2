@@ -24,7 +24,7 @@ export default function BackToTopButton() {
   };
 
   return (
-    <button onClick={scrollToTop} className={styles.backToTop}>
+    <button onClick={scrollToTop} className={styles.backToTop} name="Back to top">
       <h1 className={styles.text}>↑ Back to Top</h1>
     </button>
   );

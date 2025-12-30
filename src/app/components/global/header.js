@@ -52,6 +52,7 @@ export default function Header() {
             whileTap={{ scale: 0.95 }}
             className={styles.button}
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            name="Navigation menu"
           >
             <AnimatePresence mode="wait" initial={false}>
               {theme === "light" ? (
@@ -81,6 +82,7 @@ export default function Header() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             className={styles.button}
+            name="GitHub"
           >
             <a href="https://github.com/soodaayush" target="_blank">
               <FaGithub className={styles.pageIcon} />
@@ -90,6 +92,7 @@ export default function Header() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             className={styles.button}
+            name="Linktree"
           >
             <a href="https://linktr.ee/aayushsood" target="_blank">
               <SiLinktree className={styles.pageIcon} />
@@ -101,6 +104,7 @@ export default function Header() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             className={styles.button}
+            name="Mobile navigation menu"
           >
             <RxHamburgerMenu
               onClick={openHamburgerMenu}
@@ -127,6 +131,7 @@ export default function Header() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   className={styles.button}
+                  name="Close mobile navigation menu"
                 >
                   <IoClose
                     onClick={openHamburgerMenu}

@@ -154,7 +154,7 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
-          {children}
+          <main>{children}</main>
           <Footer />
           <script
             type="application/ld+json"

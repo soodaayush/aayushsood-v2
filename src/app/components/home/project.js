@@ -30,7 +30,7 @@ export default function Project(props) {
         {props.tags
           .sort((a, b) => a.localeCompare(b))
           .map((tag, index) => (
-            <button className={styles.tag} key={index}>
+            <button className={styles.tag} key={index} name={tag}>
               {tag}
             </button>
           ))}
