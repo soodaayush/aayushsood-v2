@@ -40,27 +40,6 @@
     "rotate": "rotate(2deg)"
   },
   {
-    "name": "Arduino-based School Yoga Project",
-    "image": "/assets/projects/thumbnails/arduino-yoga-project.webp",
-    "description": "An Arduino project that reminds the user to meditate. This was used as a submission for my Yoga exam.",
-    "tags": ["Arduino", "C++"],
-    "year": 2024,
-    "github": "https://github.com/soodaayush/arduino-school-yoga-project",
-    "gradient": "linear-gradient(#894B15, #9C6512, #A8760F)",
-    "rotate": "rotate(358deg)"
-  },
-  {
-    "name": "WordSmith",
-    "website": "https://wordsmithy.netlify.app/",
-    "image": "/assets/projects/thumbnails/wordsmith.webp",
-    "description": "This website is a word-guessing game where players try to uncover a secret word by guessing and receiving feedback on shared letters.",
-    "tags": ["HTML", "SCSS", "JavaScript"],
-    "year": 2024,
-    "github": "https://github.com/soodaayush/wordsmith",
-    "gradient": "linear-gradient(#433873, #323B71, #213E6F)",
-    "rotate": "rotate(2deg)"
-  },
-  {
     "name": "LeetCode",
     "image": "/assets/projects/thumbnails/leetcode.webp",
     "description": "A collection of my solved LeetCode problems, written in multiple languages.",
