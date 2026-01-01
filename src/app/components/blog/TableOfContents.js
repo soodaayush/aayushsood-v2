@@ -31,12 +31,16 @@ export default function TableOfContents({ items }) {
   const scrollToSection = (e, id) => {
     e.preventDefault();
     const target = document.getElementById(id);
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
+    if (!target) return;
+
+    const headerOffset = 120;
+    const rect = target.getBoundingClientRect();
+    const offsetPosition = window.scrollY + rect.top - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
   };
 
   if (!items?.length) return null;
