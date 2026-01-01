@@ -14,9 +14,11 @@
 
 .blogPostContentContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  gap: 2rem;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
 .blogPostContent {
@@ -33,6 +35,49 @@
 .title {
   line-height: 1.2;
   margin-bottom: 20px;
+}
+
+.blogPostToc {
+  position: sticky;
+  top: 10rem;
+  flex-shrink: 0;
+  height: fit-content;
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.blogPostContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.blogPostToc h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.blogPostToc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blogPostToc a {
+  display: block;
+  padding: 0.4rem 0.2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  color: #959ea5;
+}
+
+.blogPostToc a:hover {
+  color: #c3e0e8;
 }
 
 @media (max-width: 600px) {
@@ -86,5 +131,11 @@
 @media (min-width: 3500px) {
   .blogPostContent {
     width: 20%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .blogPostToc {
+    display: none;
   }
 }

@@ -3,12 +3,53 @@ import { notFound } from "next/navigation";
 import posts from "../../../../public/posts.json";
 
 import BackToTopButton from "@/app/components/blog/backToTopButton";
+import TableOfContents from "@/app/components/blog/TableOfContents";
 
 import styles from "../../styles/blog/blogPost.module.css";
 
+function slugify(anyText) {
+  const text = (anyText ?? "").toString().replace(/\s+/g, " ").trim();
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+}
+
+function getTocFromMarkdown(markdown) {
+  const lines = markdown.split(/\r?\n/);
+  const headings = [];
+
+  lines.forEach((line) => {
+    const trimmed = line.trim();
+    if (trimmed.startsWith("# ")) {
+      headings.push({
+        text: trimmed.slice(2).trim(),
+        depth: 1,
+        id: slugify(trimmed.slice(2).trim()),
+      });
+    } else if (trimmed.startsWith("## ")) {
+      headings.push({
+        text: trimmed.slice(3).trim(),
+        depth: 2,
+        id: slugify(trimmed.slice(3).trim()),
+      });
+    } else if (trimmed.startsWith("### ")) {
+      headings.push({
+        text: trimmed.slice(4).trim(),
+        depth: 3,
+        id: slugify(trimmed.slice(4).trim()),
+      });
+    }
+  });
+
+  return headings.filter((h) => h.depth >= 1 && h.depth <= 4);
+}
+
 export async function generateMetadata({ params }) {
-  const resolvedParams = await params; // <-- unwrap the promise
+  const resolvedParams = await params;
   const { id } = resolvedParams;
+
   const post = posts.find((p) => p.slug === id);
 
   if (!post) {
@@ -53,14 +94,15 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogPostPage({ params }) {
-  const resolvedParams = await params; // <-- unwrap the promise
+  const resolvedParams = await params;
   const { id } = resolvedParams;
 
   const post = posts.find((p) => p.slug === id);
   if (!post) return notFound();
 
-  let htmlContent = marked.parse(post.content);
+  const toc = getTocFromMarkdown(post.content);
 
+  let htmlContent = marked.parse(post.content);
   htmlContent = htmlContent.replace(
     /<a /g,
     '<a target="_blank" rel="noopener noreferrer" '
@@ -82,6 +124,11 @@ export default async function BlogPostPage({ params }) {
           />
           <BackToTopButton />
         </div>
+        {toc.length >= 2 && (
+          <aside className={styles.blogPostToc}>
+            <TableOfContents items={toc} />
+          </aside>
+        )}
       </div>
     </div>
   );
