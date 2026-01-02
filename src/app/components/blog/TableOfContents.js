@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import LikeButton from "./likeButton";
 
-export default function TableOfContents({ items }) {
+export default function TableOfContents({ items, postId }) {
   const mounted = useRef(false);
 
   useEffect(() => {
@@ -65,6 +66,7 @@ export default function TableOfContents({ items }) {
           </a>
         ))}
       </p>
+      <LikeButton postId={postId} />
     </nav>
   );
 }
