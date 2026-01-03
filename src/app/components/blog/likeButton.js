@@ -44,11 +44,7 @@ export default function LikeButton({ postId }) {
   }, [postId, uid]);
 
   if (likeCount === null || !userLikedLoaded) {
-    return (
-      <div>
-        <div>Loading...</div>
-      </div>
-    );
+    return <div></div>;
   }
 
   async function handleLike() {
@@ -91,29 +87,30 @@ export default function LikeButton({ postId }) {
   } ${loading || liked ? styles.disabled : ""}`;
 
   return (
-    <button
-      onClick={handleLike}
-      disabled={liked || loading}
-      className={buttonClass}
-    >
-      <svg viewBox="0 0 24 24" className={styles.svg}>
-        {liked ? (
-          <path
-            className={styles.heartPath}
-            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-          />
-        ) : (
-          <path
-            className={styles.heartOutline}
-            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-          />
-        )}
-      </svg>
-
-      {likeCount}
-    </button>
+    <div className={styles.container}>
+      <div
+        onClick={handleLike}
+        disabled={liked || loading}
+        className={buttonClass}
+      >
+        <svg viewBox="0 0 24 24" className={styles.svg}>
+          {liked ? (
+            <path
+              className={styles.heartPath}
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          ) : (
+            <path
+              className={styles.heartOutline}
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+              fill="none"
+              stroke="#ff1a81"
+              strokeWidth="2"
+            />
+          )}
+        </svg>
+      </div>
+      <p className={styles.likeCount}>{likeCount}</p>
+    </div>
   );
 }

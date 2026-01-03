@@ -72,7 +72,7 @@ html.dark {
   --header-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   --header-backdrop-filter: blur(5px);
   --text-color: #f8fafc;
-  --background-color: #fff;
+  --background-color: #090e1a;
   --welcome-background-color: linear-gradient(
     180deg,
     #090f1d,
