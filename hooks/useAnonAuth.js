@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getAuth, signInAnonymously, onAuthStateChanged } from "firebase/auth";
-import { db, auth } from "../libs/firebaseConfig";
+import { signInAnonymously, onAuthStateChanged } from "firebase/auth";
+import { auth } from "../libs/firebaseConfig";
 
 export function useAnonAuth() {
   const [uid, setUid] = useState(null);

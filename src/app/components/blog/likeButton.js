@@ -11,10 +11,13 @@ import {
 import { db } from "../../../../libs/firebaseConfig";
 import { useAnonAuth } from "../../../../hooks/useAnonAuth";
 
+import styles from "../../styles/blog/likeButton.module.css";
+
 export default function LikeButton({ postId }) {
   const uid = useAnonAuth();
   const [liked, setLiked] = useState(false);
-  const [likeCount, setLikeCount] = useState(0);
+  const [likeCount, setLikeCount] = useState(null);
+  const [userLikedLoaded, setUserLikedLoaded] = useState(false);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -22,28 +25,37 @@ export default function LikeButton({ postId }) {
     const unsubscribe = onSnapshot(postRef, (snap) => {
       if (snap.exists()) {
         setLikeCount(snap.data().likeCount || 0);
+      } else {
+        setLikeCount(0);
       }
     });
-
     return () => unsubscribe();
   }, [postId]);
 
   useEffect(() => {
-    if (!uid) return; // wait until auth resolves
+    if (!uid) return;
 
     const likeRef = doc(db, "posts", postId, "likes", uid);
-
     const unsubscribe = onSnapshot(likeRef, (snap) => {
       setLiked(snap.exists());
+      setUserLikedLoaded(true);
     });
-
     return () => unsubscribe();
   }, [postId, uid]);
+
+  if (likeCount === null || !userLikedLoaded) {
+    return (
+      <div>
+        <div>Loading...</div>
+      </div>
+    );
+  }
 
   async function handleLike() {
     if (!uid || liked || loading) return;
 
-    setLiked(true); // ✅ optimistic update
+    setLiked(true);
+    setLikeCount((c) => c + 1);
     setLoading(true);
 
     const postRef = doc(db, "posts", postId);
@@ -54,46 +66,54 @@ export default function LikeButton({ postId }) {
         const postSnap = await transaction.get(postRef);
         const likeSnap = await transaction.get(likeRef);
 
-        // If post doesn't exist, create it
         if (!postSnap.exists()) {
           transaction.set(postRef, { likeCount: 0 });
         }
 
-        // If user already liked, abort
         if (likeSnap.exists()) {
           throw new Error("Already liked");
         }
 
-        // Create a like document for this user
         transaction.set(likeRef, { likedAt: serverTimestamp() });
-
-        // Increment likeCount
         transaction.update(postRef, { likeCount: increment(1) });
       });
-
-      console.log("Liked successfully!");
     } catch (err) {
       console.error(err.message);
-      setLiked(false); // revert if something went wrong
+      setLiked(false);
+      setLikeCount((c) => Math.max(0, c - 1));
     } finally {
       setLoading(false);
     }
   }
 
+  const buttonClass = `${styles.button} ${
+    liked ? styles.liked : styles.unliked
+  } ${loading || liked ? styles.disabled : ""}`;
+
   return (
     <button
       onClick={handleLike}
       disabled={liked || loading}
-      style={{
-        padding: "0.5rem 1rem",
-        borderRadius: "0.25rem",
-        backgroundColor: liked ? "#f87171" : "#3b82f6",
-        color: "#fff",
-        cursor: liked || loading ? "not-allowed" : "pointer",
-        fontSize: "1rem",
-      }}
+      className={buttonClass}
     >
-      {liked ? `❤️ Liked (${likeCount})` : `🤍 Like (${likeCount})`}
+      <svg viewBox="0 0 24 24" className={styles.svg}>
+        {liked ? (
+          <path
+            className={styles.heartPath}
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          />
+        ) : (
+          <path
+            className={styles.heartOutline}
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+        )}
+      </svg>
+
+      {likeCount}
     </button>
   );
 }
