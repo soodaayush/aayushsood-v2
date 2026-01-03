@@ -61,6 +61,7 @@ html.light {
   --resume-border: #d1d5db;
   --toc-text-color: #727b9e;
   --toc-text-hover-color: #262d40;
+  --heart-fill-color: #e9156e;
 }
 
 html.dark {
@@ -95,6 +96,7 @@ html.dark {
   --resume-border: #202534;
   --toc-text-color: #959ea5;
   --toc-text-hover-color: #c3e0e8;
+  --heart-fill-color: #e9156e;
 }
 
 a {
