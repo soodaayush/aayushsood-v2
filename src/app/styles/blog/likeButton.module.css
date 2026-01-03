@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-family: "Wotfard", sans-serif;
+  gap: 0.5rem;
+  transition: 0.15s ease-in-out;
+  margin-right: 10px;
+}
+
+.likeCount,
+.liked {
+  color: var(--heart-fill-color);
+}
+
+.button:hover {
+  opacity: 0.75;
+}
+
+.svg {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  transition: none;
+}
+
+.heartPath {
+  fill: transparent;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 140 160;
+  stroke-dashoffset: 140;
+}
+
+@keyframes heartFillBottomToTop {
+  0% {
+    stroke-dashoffset: 140;
+    fill: transparent;
+    stroke-opacity: 1;
+    transform: scale(1);
+  }
+  40% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+    stroke-opacity: 0.8;
+    transform: scale(1.05);
+  }
+  60% {
+    stroke-dashoffset: 0;
+    fill: var(--heart-fill-color);
+    stroke-opacity: 0.3;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: currentColor;
+    stroke-opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.button:not(.disabled) .heartPath {
+  stroke-dasharray: 140 160;
+  stroke-dashoffset: 140;
+}
+
+.liked .heartPath {
+  animation: heartFillBottomToTop 0.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.button:active:not(.disabled) .svg {
+  transform: scale(1.1);
+  transition: transform 0.1s ease;
+}

@@ -126,7 +126,7 @@ export default async function BlogPostPage({ params }) {
         </div>
         {toc.length >= 2 && (
           <aside className={styles.blogPostToc}>
-            <TableOfContents items={toc} />
+            <TableOfContents items={toc} postId={post.slug} />
           </aside>
         )}
       </div>

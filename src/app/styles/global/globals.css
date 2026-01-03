@@ -59,6 +59,9 @@ html.light {
   --book-author-color: #758295;
   --home-link-color: #7b2cbf;
   --resume-border: #d1d5db;
+  --toc-text-color: #727b9e;
+  --toc-text-hover-color: #262d40;
+  --heart-fill-color: #e9156e;
 }
 
 html.dark {
@@ -70,7 +73,7 @@ html.dark {
   --header-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   --header-backdrop-filter: blur(5px);
   --text-color: #f8fafc;
-  --background-color: #fff;
+  --background-color: #090e1a;
   --welcome-background-color: linear-gradient(
     180deg,
     #090f1d,
@@ -91,6 +94,9 @@ html.dark {
   --book-author-color: #758295;
   --home-link-color: #e6b3ff;
   --resume-border: #202534;
+  --toc-text-color: #959ea5;
+  --toc-text-hover-color: #c3e0e8;
+  --heart-fill-color: #e9156e;
 }
 
 a {

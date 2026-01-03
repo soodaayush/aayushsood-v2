@@ -48,7 +48,6 @@
   overflow-y: auto;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .blogPostToc h2 {
@@ -70,11 +69,11 @@
   border-radius: 4px;
   font-size: 0.9rem;
   transition: all 0.2s;
-  color: #959ea5;
+  color: var(--toc-text-color);
 }
 
 .blogPostToc a:hover {
-  color: #c3e0e8;
+  color: var(--toc-text-hover-color);
 }
 
 @media (max-width: 600px) {
