@@ -118,7 +118,7 @@ export default function Resume() {
             <div className={styles.accomplishmentList}>
               <ul className={styles.list}>
                 <li className={styles.text}>
-                  Currently competing in AFA&apos;s{" "}
+                  Competed as a Gold Tier team in the AFA{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
                     href="https://www.uscyberpatriot.org/"
@@ -126,7 +126,7 @@ export default function Resume() {
                   >
                     CyberPatriot
                   </a>{" "}
-                  Competition, demonstrating skills in digital protection - 2025
+                  Competition, demonstrating cybersecurity skills - 2025
                 </li>
                 <li className={styles.text}>
                   Invited to and participated in the Quantum School for Young
