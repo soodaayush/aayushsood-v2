@@ -201,5 +201,12 @@
     "cover": "/assets/books/frankenstein.webp",
     "bookLink": "https://a.co/d/2mvNGf5",
     "authorLink": "https://www.amazon.ca/stores/Mary-Shelley/author/B00R1DJSQQ"
+  },
+  {
+    "title": "The Handmaid's Tale",
+    "author": "Margaret Atwood",
+    "cover": "/assets/books/theHandmaidsTale.webp",
+    "bookLink": "https://a.co/d/6AhTY4e",
+    "authorLink": "https://www.amazon.ca/stores/Margaret-Atwood/author/B000AQTHI0"
   }
 ]
