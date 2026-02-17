@@ -43,7 +43,7 @@ export default function Welcome() {
           />
           <p className={styles.description}>
             I&apos;m based in Nova Scotia, Canada, and I&apos;m passionate about
-            Math, Software Engineering, Gaming, and Jiu Jitsu. <br />
+            Math, Software Engineering, Geopolitics, and Jiu Jitsu. <br />
             I&apos;m an aspiring software intern with coding passion,
             problem-solving skills, and eagerness to contribute.
           </p>
