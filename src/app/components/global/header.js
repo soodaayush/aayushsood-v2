@@ -52,7 +52,7 @@ export default function Header() {
             whileTap={{ scale: 0.95 }}
             className={styles.button}
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            name="Navigation menu"
+            name="Toggle theme"
           >
             <AnimatePresence mode="wait" initial={false}>
               {theme === "light" ? (

@@ -42,11 +42,26 @@ export default function Welcome() {
             className={styles.welcomeText}
           />
           <p className={styles.description}>
-            I&apos;m based in Nova Scotia, Canada, and I&apos;m passionate about
-            Math, Software Engineering, Geopolitics, and Jiu Jitsu. <br />
-            I&apos;m an aspiring software intern with coding passion,
-            problem-solving skills, and eagerness to contribute.
+            I&apos;m based in Nova Scotia, Canada, passionate about Math,
+            Software Engineering, Geopolitics, and Jiu Jitsu. <br />
+            I&apos;m a developer focused on building clean web and mobile
+            experiences, with strong problem-solving skills <br /> and an
+            eagerness to contribute.
           </p>
+          <div className={styles.ctaButtons}>
+            <a
+              href="#projects"
+              className={`${styles.ctaButton} ${styles.ctaButtonPrimary}`}
+            >
+              View Projects
+            </a>
+            <a
+              href="/resume"
+              className={`${styles.ctaButton} ${styles.ctaButtonSecondary}`}
+            >
+              Resume
+            </a>
+          </div>
         </div>
 
         <motion.div

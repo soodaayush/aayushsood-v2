@@ -5,7 +5,7 @@ export default function Footer() {
     <div className={styles.footerContainer}>
       <div className={`content ${styles.footerContent}`}>
         <div>
-          <label>© 2023 - Present Aayush Sood. All Rights Reserved.</label>
+          <p>© 2023 - Present Aayush Sood. All Rights Reserved.</p>
         </div>
         <div>
           <a className={styles.contact} href="mailto:aayush.sood@icloud.com">

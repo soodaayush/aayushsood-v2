@@ -30,9 +30,9 @@ export default function Project(props) {
         {props.tags
           .sort((a, b) => a.localeCompare(b))
           .map((tag, index) => (
-            <button className={styles.tag} key={index} name={tag}>
+            <span className={styles.tag} key={index}>
               {tag}
-            </button>
+            </span>
           ))}
       </div>
       <p className={styles.description}>{props.description}</p>
@@ -40,12 +40,12 @@ export default function Project(props) {
         <div className={styles.year}>{props.year}</div>
         <div>
           {props.github && (
-            <a href={props.github} className={styles.link} target="_blank">
+            <a href={props.github} className={styles.link} target="_blank" rel="noopener noreferrer">
               <FaGithub className={styles.githubLogo} />
             </a>
           )}
           {props.website && (
-            <a href={props.website} className={styles.link} target="_blank">
+            <a href={props.website} className={styles.link} target="_blank" rel="noopener noreferrer">
               <IoIosLink className={styles.githubLogo} />
             </a>
           )}

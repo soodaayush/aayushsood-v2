@@ -55,6 +55,17 @@
   font-size: 50px;
   padding-bottom: 20px;
   text-align: center;
+  position: relative;
+}
+
+.sectionHeading::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--header-hover-color);
+  margin: 8px auto 0;
+  border-radius: 2px;
 }
 
 .technicalSkillsContainer {
@@ -72,6 +83,44 @@
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-family: "Wotfard", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.ctaButtonPrimary {
+  background: var(--header-hover-color);
+  color: var(--background-color);
+  border: 2px solid var(--header-hover-color);
+}
+
+.ctaButtonPrimary:hover {
+  opacity: 0.85;
+}
+
+.ctaButtonSecondary {
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+}
+
+.ctaButtonSecondary:hover {
+  opacity: 0.65;
 }
 
 .projectsContainer {
@@ -122,6 +171,35 @@
 
 .projectToggle:hover {
   opacity: 0.75;
+}
+
+.dotIndicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-color);
+  opacity: 0.3;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out, background 0.2s ease-in-out;
+  border: none;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.dot:hover {
+  opacity: 0.6;
+}
+
+.dotActive {
+  opacity: 1;
+  background: var(--header-hover-color);
 }
 
 .interestsContainer {
