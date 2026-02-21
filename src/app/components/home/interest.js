@@ -21,11 +21,14 @@ export default function Interest(props) {
 
   return (
     <motion.div
-      initial={{ scale: 1, opacity: 0.9 }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: props.index * 0.08 }}
       whileHover={{
         scale: 1.1,
-        transition: { duration: 0.3 },
         ...hoverStyles,
+        transition: { type: "spring", stiffness: 450, damping: 20 },
       }}
       className={styles.interestContainer}
     >

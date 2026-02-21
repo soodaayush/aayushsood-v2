@@ -15,11 +15,16 @@ export default function BlogList() {
       <div className={`content ${styles.blogContent}`}>
         <h1 className={styles.blogTitle}>Blog</h1>
         <div className={styles.blogList}>
-          {posts.map((post) => (
+          {posts.map((post, index) => (
             <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
               whileHover={{
                 scale: 1.1,
                 boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
+                transition: { type: "spring", stiffness: 450, damping: 20 },
               }}
               className={styles.blogPost}
               key={post.slug}

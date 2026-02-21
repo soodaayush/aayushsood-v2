@@ -21,9 +21,14 @@ export default function TechnicalSkill(props) {
 
   return (
     <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: props.index * 0.1 }}
       whileHover={{
         scale: 1.1,
         ...hoverStyles,
+        transition: { type: "spring", stiffness: 450, damping: 20 },
       }}
       className={styles.technicalSkillContainer}
     >

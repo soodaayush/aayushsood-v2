@@ -1,8 +1,18 @@
+"use client";
+
+import { motion } from "motion/react";
+
 import styles from "../../styles/global/footer.module.css";
 
 export default function Footer() {
   return (
-    <div className={styles.footerContainer}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className={styles.footerContainer}
+    >
       <div className={`content ${styles.footerContent}`}>
         <div>
           <p>© 2023 - Present Aayush Sood. All Rights Reserved.</p>
@@ -13,6 +23,6 @@ export default function Footer() {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

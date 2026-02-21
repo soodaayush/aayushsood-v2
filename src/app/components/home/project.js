@@ -8,11 +8,18 @@ import Image from "next/image";
 import styles from "../../styles/home/project.module.css";
 
 export default function Project(props) {
+  const rawDeg = parseFloat(props.rotate.replace(/rotate\(|deg\)/g, ""));
+  const rotateDeg = rawDeg > 180 ? rawDeg - 360 : rawDeg;
+
   return (
     <motion.div
-      style={{
-        background: props.gradient,
-        transform: props.rotate,
+      style={{ background: props.gradient }}
+      initial={{ rotate: rotateDeg }}
+      animate={{ rotate: rotateDeg }}
+      transition={{ rotate: { duration: 0 } }}
+      whileHover={{
+        scale: 1.1,
+        transition: { type: "spring", stiffness: 450, damping: 20 },
       }}
       className={styles.projectContainer}
     >
@@ -40,12 +47,22 @@ export default function Project(props) {
         <div className={styles.year}>{props.year}</div>
         <div>
           {props.github && (
-            <a href={props.github} className={styles.link} target="_blank" rel="noopener noreferrer">
+            <a
+              href={props.github}
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub className={styles.githubLogo} />
             </a>
           )}
           {props.website && (
-            <a href={props.website} className={styles.link} target="_blank" rel="noopener noreferrer">
+            <a
+              href={props.website}
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <IoIosLink className={styles.githubLogo} />
             </a>
           )}
