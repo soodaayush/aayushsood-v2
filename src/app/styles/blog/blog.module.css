@@ -39,8 +39,30 @@
 
 .title {
   line-height: 1.2;
-  font-size: 28px;
+  font-size: 27px;
   margin-bottom: 20px;
+  position: relative;
+  width: fit-content;
+  transition: color 0.15s ease-in-out;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--header-hover-color);
+  transition: width 0.25s ease-out;
+}
+
+.blogPost:hover .title {
+  color: var(--header-hover-color);
+}
+
+.blogPost:hover .title::after {
+  width: 100%;
 }
 
 .date {
@@ -49,6 +71,68 @@
 
 .description {
   margin-top: 10px;
+}
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-size: 17px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.arrows {
+  display: inline-flex;
+  align-items: center;
+}
+
+.arrows span {
+  display: flex;
+  align-items: center;
+  font-weight: lighter;
+  color: var(--blog-link-underline-color);
+  opacity: 0;
+  transform: translateX(-5px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  font-size: 28px;
+  font-style: normal;
+  line-height: 1;
+}
+
+.arrows span:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.arrows span:nth-child(3) {
+  transition-delay: 0.24s;
+}
+
+.arrows span:nth-child(4) {
+  transition-delay: 0.36s;
+}
+
+.blogPost:hover .arrows span:nth-child(1) {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.readMore:hover .arrows span:nth-child(2) {
+  opacity: 0.65;
+  transform: translateX(0);
+}
+
+.readMore:hover .arrows span:nth-child(3) {
+  opacity: 0.3;
+  transform: translateX(0);
+}
+
+.readMore:hover .arrows span:nth-child(4) {
+  opacity: 0.15;
+  transform: translateX(0);
 }
 
 @media (min-width: 0px) {

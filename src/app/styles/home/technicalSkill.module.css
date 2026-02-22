@@ -50,7 +50,17 @@
   cursor: default;
 }
 
-@media (max-width: 579px) {
+@media (max-width: 900px) {
+  .technicalSkillContainer {
+    width: 100%;
+  }
+
+  .skillTitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 580px) {
   .technicalSkillContainer {
     height: auto;
   }

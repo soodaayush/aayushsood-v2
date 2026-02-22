@@ -21,11 +21,6 @@ export default function BlogList() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
-              whileHover={{
-                scale: 1.1,
-                boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
-                transition: { type: "spring", stiffness: 450, damping: 20 },
-              }}
               className={styles.blogPost}
               key={post.slug}
             >
@@ -39,6 +34,15 @@ export default function BlogList() {
                 <p className={`${styles.text} ${styles.description}`}>
                   {post.meta.description}
                 </p>
+                <div className={styles.readMore}>
+                  Read more
+                  <span className={styles.arrows} aria-hidden="true">
+                    <span>›</span>
+                    <span>›</span>
+                    <span>›</span>
+                    <span>›</span>
+                  </span>
+                </div>
               </Link>
             </motion.div>
           ))}

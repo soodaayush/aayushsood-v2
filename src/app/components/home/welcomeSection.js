@@ -44,10 +44,12 @@ export default function Welcome() {
           />
           <p className={styles.description}>
             I&apos;m based in Nova Scotia, Canada, passionate about Math,
-            Software Engineering, Geopolitics, and Jiu Jitsu. <br />
+            Software Engineering, Geopolitics, and Jiu Jitsu.
+          </p>
+          <p className={styles.description}>
             I&apos;m a developer passionate about creating scalable,
-            high-quality software with clean architecture, with strong <br />
-            problem-solving skills and an eagerness to contribute.
+            high-quality software with clean architecture, backed by <br />
+            strong problem-solving skills and an eagerness to contribute.
           </p>
           <div className={styles.ctaButtons}>
             <motion.a

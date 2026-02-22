@@ -5,7 +5,12 @@
   break-inside: avoid;
   text-align: justify;
   overflow: visible;
-  text-align: justify;
+}
+
+@media (max-width: 600px) {
+  .interestContainer {
+    text-align: left;
+  }
 }
 
 .interestTitle {
