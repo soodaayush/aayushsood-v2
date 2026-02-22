@@ -12,12 +12,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.15s ease-in-out;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  transition: color 0.15s ease-in-out;
   overflow: visible;
+}
+
+.interestTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--header-hover-color);
+  transition: width 0.25s ease-out;
 }
 
 .interestContainer:hover .interestTitle {
   color: var(--header-hover-color);
+}
+
+.interestContainer:hover .interestTitle::after {
+  width: 100%;
 }
 
 .interestIcon {

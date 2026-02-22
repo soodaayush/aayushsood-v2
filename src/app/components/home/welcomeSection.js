@@ -39,6 +39,7 @@ export default function Welcome() {
             ]}
             speed={40}
             deletionSpeed={35}
+            wrapper="div"
             className={styles.welcomeText}
           />
           <p className={styles.description}>
