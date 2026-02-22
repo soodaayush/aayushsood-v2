@@ -39,14 +39,38 @@ export default function Welcome() {
             ]}
             speed={40}
             deletionSpeed={35}
+            wrapper="div"
             className={styles.welcomeText}
           />
           <p className={styles.description}>
-            I&apos;m based in Nova Scotia, Canada, and I&apos;m passionate about
-            Math, Software Engineering, Geopolitics, and Jiu Jitsu. <br />
-            I&apos;m an aspiring software intern with coding passion,
-            problem-solving skills, and eagerness to contribute.
+            I&apos;m based in Nova Scotia, Canada, passionate about Math,
+            Software Engineering, Geopolitics, and Jiu Jitsu.
           </p>
+          <p className={styles.description}>
+            I&apos;m a developer passionate about creating scalable,
+            high-quality software with clean architecture, backed by <br />
+            strong problem-solving skills and an eagerness to contribute.
+          </p>
+          <div className={styles.ctaButtons}>
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 450, damping: 20 }}
+              href="#projects"
+              className={`${styles.ctaButton} ${styles.ctaButtonPrimary}`}
+            >
+              View Projects
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 450, damping: 20 }}
+              href="/resume"
+              className={`${styles.ctaButton} ${styles.ctaButtonSecondary}`}
+            >
+              Resume
+            </motion.a>
+          </div>
         </div>
 
         <motion.div
@@ -55,7 +79,7 @@ export default function Welcome() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           whileHover={{
             scale: 1.05,
-            transition: { type: "spring", stiffness: 300, damping: 15 },
+            transition: { type: "spring", stiffness: 450, damping: 20 },
             ...hoverStyles,
           }}
           className={styles.profileImageContainer}

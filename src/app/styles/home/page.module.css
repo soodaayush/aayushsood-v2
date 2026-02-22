@@ -22,6 +22,16 @@
 
 .welcomeText {
   white-space: pre-line;
+  min-height: 3.2em;
+}
+
+.description {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.description + .description {
+  margin-top: 8px;
 }
 
 .picture {
@@ -55,6 +65,17 @@
   font-size: 50px;
   padding-bottom: 20px;
   text-align: center;
+  position: relative;
+}
+
+.sectionHeading::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--header-hover-color);
+  margin: 8px auto 0;
+  border-radius: 2px;
 }
 
 .technicalSkillsContainer {
@@ -72,6 +93,44 @@
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-family: "Wotfard", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.ctaButtonPrimary {
+  background: var(--header-hover-color);
+  color: var(--background-color);
+  border: 2px solid var(--header-hover-color);
+}
+
+.ctaButtonPrimary:hover {
+  opacity: 0.85;
+}
+
+.ctaButtonSecondary {
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+}
+
+.ctaButtonSecondary:hover {
+  opacity: 0.65;
 }
 
 .projectsContainer {
@@ -124,6 +183,35 @@
   opacity: 0.75;
 }
 
+.dotIndicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-color);
+  opacity: 0.3;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out, background 0.2s ease-in-out;
+  border: none;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.dot:hover {
+  opacity: 0.6;
+}
+
+.dotActive {
+  opacity: 1;
+  background: var(--header-hover-color);
+}
+
 .interestsContainer {
   display: flex;
   flex-direction: column;
@@ -162,6 +250,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 32px;
   }
 }
 
@@ -236,5 +325,60 @@
 
   .description {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  .sectionHeading {
+    font-size: 36px;
+  }
+
+  .projectCard {
+    flex: 0 0 auto;
+  }
+
+  .projectList {
+    gap: 16px;
+  }
+
+  .welcomeContainer {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 1150px) and (min-width: 761px) {
+  .projectCard {
+    flex: 0 0 45%;
+  }
+}
+
+@media (max-width: 900px) {
+  .technicalSkillsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 580px) {
+  .technicalSkillsList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .sectionHeading {
+    font-size: 28px;
+  }
+
+  .picture {
+    width: 160px !important;
+    height: auto !important;
+  }
+
+  .profileImageContainer {
+    width: 160px;
   }
 }

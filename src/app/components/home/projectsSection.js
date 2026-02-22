@@ -33,9 +33,17 @@ export default function Projects({ projects }) {
   }
 
   return (
-    <div className={styles.projectsContainer}>
+    <div id="projects" className={styles.projectsContainer}>
       <div className={`content ${styles.projectContent}`}>
-        <h1 className={styles.sectionHeading}>Projects</h1>
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className={styles.sectionHeading}
+        >
+          Projects
+        </motion.h1>
         <motion.div
           initial={{ opacity: 0, y: 50, visibility: "hidden" }}
           whileInView={{ opacity: 1, y: 0, visibility: "visible" }}
@@ -59,6 +67,16 @@ export default function Projects({ projects }) {
           <button className={styles.projectToggle} onClick={prevProject} name="Previous project">
             ← Prev
           </button>
+          <div className={styles.dotIndicators}>
+            {projects.map((_, i) => (
+              <button
+                key={i}
+                className={`${styles.dot} ${i === currentIndex ? styles.dotActive : ""}`}
+                onClick={() => setCurrentIndex(i)}
+                name={`Go to project ${i + 1}`}
+              />
+            ))}
+          </div>
           <button className={styles.projectToggle} onClick={nextProject} name="Next project">
             Next →
           </button>

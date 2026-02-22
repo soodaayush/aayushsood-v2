@@ -14,6 +14,8 @@ import Link from "next/link";
 
 import styles from "../../styles/global/header.module.css";
 
+const HOVER_SPRING = { type: "spring", stiffness: 450, damping: 20 };
+
 export default function Header() {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
 
@@ -50,9 +52,10 @@ export default function Header() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
+            transition={HOVER_SPRING}
             className={styles.button}
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            name="Navigation menu"
+            name="Toggle theme"
           >
             <AnimatePresence mode="wait" initial={false}>
               {theme === "light" ? (
@@ -81,6 +84,7 @@ export default function Header() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
+            transition={HOVER_SPRING}
             className={styles.button}
             name="GitHub"
           >
@@ -91,6 +95,7 @@ export default function Header() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
+            transition={HOVER_SPRING}
             className={styles.button}
             name="Linktree"
           >
@@ -103,6 +108,7 @@ export default function Header() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
+            transition={HOVER_SPRING}
             className={styles.button}
             name="Mobile navigation menu"
           >
@@ -130,6 +136,7 @@ export default function Header() {
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
+                  transition={HOVER_SPRING}
                   className={styles.button}
                   name="Close mobile navigation menu"
                 >
@@ -148,6 +155,7 @@ export default function Header() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
+                    transition={HOVER_SPRING}
                     className={styles.menuButton}
                   >
                     <h2 className={styles.menuLinkText}>Blog</h2>
@@ -164,6 +172,7 @@ export default function Header() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
+                    transition={HOVER_SPRING}
                     className={styles.menuButton}
                   >
                     <h2 className={styles.menuLinkText}>Books</h2>
@@ -180,6 +189,7 @@ export default function Header() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
+                    transition={HOVER_SPRING}
                     className={styles.menuButton}
                   >
                     <h2 className={styles.menuLinkText}>Resume</h2>
@@ -194,6 +204,7 @@ export default function Header() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
+                    transition={HOVER_SPRING}
                     className={styles.menuButton}
                     onClick={() =>
                       setTheme(theme === "light" ? "dark" : "light")
@@ -217,6 +228,7 @@ export default function Header() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
+                    transition={HOVER_SPRING}
                     className={styles.menuButton}
                   >
                     <h2 className={styles.menuLinkText}>GitHub</h2>
@@ -233,6 +245,7 @@ export default function Header() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
+                    transition={HOVER_SPRING}
                     className={styles.menuButton}
                   >
                     <h2 className={styles.menuLinkText}>Linktree</h2>

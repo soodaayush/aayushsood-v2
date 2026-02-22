@@ -14,9 +14,25 @@
   color: var(--header-hover-color);
 }
 
+.technicalSkillContainer:hover .skillType::after {
+  width: 100%;
+}
+
 .skillType {
   margin: 0;
-  transition: 0.15s ease-in-out;
+  position: relative;
+  transition: color 0.15s ease-in-out;
+}
+
+.skillType::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--header-hover-color);
+  transition: width 0.25s ease-out;
 }
 
 .technicalSkill {
@@ -34,7 +50,17 @@
   cursor: default;
 }
 
-@media (max-width: 579px) {
+@media (max-width: 900px) {
+  .technicalSkillContainer {
+    width: 100%;
+  }
+
+  .skillTitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 580px) {
   .technicalSkillContainer {
     height: auto;
   }

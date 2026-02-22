@@ -1,0 +1,503 @@
+"use client";
+
+import styles from "../../styles/resume/resume.module.css";
+import { motion } from "motion/react";
+
+import {
+  FaRegFilePdf,
+  FaGithub,
+  FaGraduationCap,
+  FaTrophy,
+  FaCode,
+  FaTools,
+} from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
+import { FaLinkedinIn } from "react-icons/fa";
+import { HiGlobeAmericas } from "react-icons/hi2";
+
+const fadeUp = { hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0 } };
+const transition = { duration: 0.45, ease: "easeOut" };
+
+function Chips({ items }) {
+  return (
+    <div className={styles.chipContainer}>
+      {items.map((item) => (
+        <span key={item} className={styles.chip}>
+          {item}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+export default function ResumeContent() {
+  return (
+    <div className={styles.resumeContainer}>
+      <div className={`content ${styles.resumeContentContainer}`}>
+        <motion.div
+          className={styles.intro}
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          <h1 className={styles.name}>
+            Aayush Sood
+            <a href="assets/resume/resume.pdf" target="_blank">
+              <FaRegFilePdf className={styles.svg} />
+            </a>
+          </h1>
+          <div className={styles.links}>
+            <a
+              className={`${styles.contact} ${styles.link} ${styles.text} ${styles.underline}`}
+              href="mailto:aayush.sood@icloud.com"
+              target="_blank"
+            >
+              <IoMdMail />
+              aayush.sood@icloud.com
+            </a>
+            <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
+            <a
+              className={`${styles.contact} ${styles.link} ${styles.text} ${styles.underline}`}
+              href="https://www.linkedin.com/in/soodaayush/"
+              target="_blank"
+            >
+              <FaLinkedinIn />
+              in/soodaayush
+            </a>
+            <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
+            <a
+              className={`${styles.contact} ${styles.link} ${styles.text} ${styles.underline}`}
+              href="https://github.com/soodaayush"
+              target="_blank"
+            >
+              <FaGithub />
+              github.com/soodaayush
+            </a>
+            <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
+            <a
+              className={`${styles.contact} ${styles.link} ${styles.text} ${styles.underline}`}
+              href="https://www.aayushsood.com/"
+              target="_blank"
+            >
+              <HiGlobeAmericas />
+              aayushsood.com
+            </a>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className={styles.sectionContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-40px" }}
+          variants={fadeUp}
+          transition={transition}
+        >
+          <div className={styles.sectionHeadingRow}>
+            <FaGraduationCap className={styles.sectionIcon} />
+            <h1 className={styles.sectionHeading}>Education</h1>
+          </div>
+          <hr className={styles.divider} />
+          <div className={styles.schoolContainer}>
+            <div className={styles.school}>
+              <div className={styles.schoolDetails}>
+                <b className={styles.text}>Bay View High School</b>
+                <p className={styles.text}>Upper Tantallon, NS</p>
+              </div>
+              <div className={styles.schoolDetails}>
+                <i className={styles.text}>Secondary School - Grade 12</i>
+                <i className={styles.text}>Sep. 2023 - Present</i>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className={styles.sectionContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-40px" }}
+          variants={fadeUp}
+          transition={transition}
+        >
+          <div className={styles.sectionHeadingRow}>
+            <FaTrophy className={styles.sectionIcon} />
+            <h1 className={styles.sectionHeading}>Accomplishments</h1>
+          </div>
+          <hr className={styles.divider} />
+          <div className={styles.accomplishmentContainer}>
+            <div className={styles.accomplishmentTextContainer}>
+              <h1 className={`${styles.text} ${styles.accomplishmentHeader}`}>
+                Some of my notable achievements, including but not limited to:
+              </h1>
+              <h1 className={`${styles.text} ${styles.accomplishmentHeader}`}>
+                Since 2019
+              </h1>
+            </div>
+            <div className={styles.accomplishmentList}>
+              <ul className={styles.list}>
+                <li className={styles.text}>
+                  Competed as a Gold Tier team in the AFA{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://www.uscyberpatriot.org/"
+                    target="_blank"
+                  >
+                    CyberPatriot
+                  </a>{" "}
+                  Competition, demonstrating cybersecurity skills - 2025
+                </li>
+                <li className={styles.text}>
+                  Invited to and participated in the Quantum School for Young
+                  Students{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://uwaterloo.ca/institute-for-quantum-computing/outreach/qsys"
+                    target="_blank"
+                  >
+                    (QSYS)
+                  </a>{" "}
+                  hosted by University of Waterloo, focusing on Quantum Physics,
+                  Quantum Mechanics, Quantum Optics and Linear Algebra - 2025
+                </li>
+                <li className={styles.text}>
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://www.shad.ca/"
+                    target="_blank"
+                  >
+                    SHAD
+                  </a>{" "}
+                  UNB Valedictorian - SHAD is a national STEAM program
+                  recognizing youth for excellence in innovation, leadership,
+                  and academics - 2025
+                </li>
+                <li className={styles.text}>
+                  Recipient of the Nova Scotia Lieutenant Governor&apos;s{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://lt.gov.ns.ca/honours-awards/awards"
+                    target="_blank"
+                  >
+                    Education Medal
+                  </a>
+                  , awarded for outstanding leadership and academic achievement
+                  - 2025
+                </li>
+                <li className={styles.text}>
+                  Placed second in IWK Youth{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://www.smu.ca/ai-summit/may3.html"
+                    target="_blank"
+                  >
+                    AI Pitch
+                  </a>{" "}
+                  Competition at the Atlantic AI Summit 2025, hosted by Saint
+                  Mary&apos;s University (SMU) - 2025
+                </li>
+                <li className={styles.text}>
+                  Section Leader in{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://codeinplace.stanford.edu/"
+                    target="_blank"
+                  >
+                    Stanford
+                  </a>{" "}
+                  University&apos;s Code in Place program, teaching Python and
+                  supporting beginner learners in a global online classroom -
+                  2025
+                </li>
+                <li className={styles.text}>
+                  IT Coordinator (&apos;25-present) &amp; PR Manager
+                  (&apos;24-&apos;25) in Nova Scotia Secondary School
+                  Students&apos; Association{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://www.nsssa.ca/"
+                    target="_blank"
+                  >
+                    (NSSSA)
+                  </a>{" "}
+                  - Rebuilt the website, upgraded digital systems, ran
+                  provincial social media, and secured sponsorships
+                </li>
+                <li className={styles.text}>
+                  Received Certificate of Distinction in Senior Division of
+                  University of Waterloo&apos;s Canadian Computing Competition
+                  (CCC), Score: 45/75 - 2025; made{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024CCCResults.pdf"
+                    target="_blank"
+                  >
+                    Honour Rolls
+                  </a>{" "}
+                  and received Certificate of Distinction in Junior division,
+                  Score: 66/75 - 2024
+                </li>
+                <li className={styles.text}>
+                  Placed third in Lockheed Martin{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://www.lockheedmartin.com/en-us/who-we-are/communities/cyber-quest.html"
+                    target="_blank"
+                  >
+                    CYBERQUEST
+                  </a>{" "}
+                  Competition, demonstrating skills in cryptography, forensics,
+                  and network security - 2025
+                </li>
+                <li className={styles.text}>
+                  Competitively programming on{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://codeforces.com/profile/aayushsood"
+                    target="_blank"
+                  >
+                    CodeForces.com
+                  </a>
+                  , aiming to increase rating above 1600+ by the end of 2025 -
+                  since 2024
+                </li>
+                <li className={styles.text}>
+                  Completed Harvard&apos;s CS50x: Introduction to Computer
+                  Science course on{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://courses.edx.org/certificates/51884bfbb2734dc4bbdf1eca77ce83db"
+                    target="_blank"
+                  >
+                    edX
+                  </a>
+                  , gaining a foundational understanding of Computer Science
+                  principles and proficiency in C - 2024
+                </li>
+                <li className={styles.text}>
+                  Executive of Bay View High&apos;s Student Council and Founder
+                  and President of the{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://bvh-tech-club.netlify.app/"
+                    target="_blank"
+                  >
+                    Technology Club
+                  </a>{" "}
+                  - since 2023
+                </li>
+                <li className={styles.text}>
+                  Completed 90+ challenges on{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://leetcode.com/u/soodaayush/"
+                    target="_blank"
+                  >
+                    LeetCode.com
+                  </a>
+                  , improving proficiency in data structures and algorithms -
+                  since 2022; Completed 50+ challenges on{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://www.frontendmentor.io/profile/soodaayush"
+                    target="_blank"
+                  >
+                    FrontendMentor.io
+                  </a>
+                  , focussed on responsive web design and accessibility - since
+                  2020
+                </li>
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className={styles.sectionContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-40px" }}
+          variants={fadeUp}
+          transition={transition}
+        >
+          <div className={styles.sectionHeadingRow}>
+            <FaCode className={styles.sectionIcon} />
+            <h1 className={styles.sectionHeading}>Projects</h1>
+          </div>
+          <hr className={styles.divider} />
+          <div className={styles.projectContainer}>
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
+                  IWKids - Mobile App
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  Apr 2025 - May 2025
+                </p>
+              </div>
+              <p className={`${styles.text} ${styles.techStackLabel}`}>
+                React Native, JavaScript, Expo, Git, OpenAI API
+              </p>
+              <ul className={`${styles.projectNotes} ${styles.text}`}>
+                <li>
+                  Developed an AI-powered mobile app to help families navigate
+                  emergency room visits at the IWK
+                </li>
+                <li>
+                  Created for the Youth AI Pitch Competition hosted at the
+                  Atlantic Canada AI Summit in May 2025
+                </li>
+              </ul>
+            </div>
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
+                  Bay View High School - Mobile App
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  Jul 2024 - Sep 2024
+                </p>
+              </div>
+              <p className={`${styles.text} ${styles.techStackLabel}`}>
+                React Native, JavaScript, Expo, Git
+              </p>
+              <ul className={`${styles.projectNotes} ${styles.text}`}>
+                <li>
+                  Developed a Bay View High School Mobile app to improve
+                  communication between staff and student body
+                </li>
+                <li>
+                  Provides students with centralized access to school news,
+                  announcements, events, and essential information
+                </li>
+                <li>
+                  Application submitted as a final project for Harvard&apos;s
+                  CS50x course
+                </li>
+              </ul>
+            </div>
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
+                  Ben Eater&apos;s 6502 Project
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  Apr 2024 - Jul 2024
+                </p>
+              </div>
+              <p className={`${styles.text} ${styles.techStackLabel}`}>
+                Python, Assembly
+              </p>
+              <ul className={`${styles.projectNotes} ${styles.text}`}>
+                <li>
+                  A collection of hardware bread-boarding projects surrounding
+                  the 6502 CPU, inspired by{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://eater.net/"
+                    target="_blank"
+                  >
+                    Ben Eater
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
+                  CoinDeno Web / Mobile
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  Aug 2021 - Sep 2022
+                </p>
+              </div>
+              <p className={`${styles.text} ${styles.techStackLabel}`}>
+                React.js, React Native, REST, Git, Firebase, CoinGecko APIs
+              </p>
+              <ul className={`${styles.projectNotes} ${styles.text}`}>
+                <li>
+                  Created a website and mobile app that allows tracking and
+                  portfolio management of various cryptocurrencies
+                </li>
+                <li>
+                  Utilized React, Firebase, and Redux for application
+                  development, with CoinGecko REST APIs for cryptocurrency data
+                  integration
+                </li>
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className={styles.sectionContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-40px" }}
+          variants={fadeUp}
+          transition={transition}
+        >
+          <div className={styles.sectionHeadingRow}>
+            <FaTools className={styles.sectionIcon} />
+            <h1 className={styles.sectionHeading}>Skills</h1>
+          </div>
+          <hr className={styles.divider} />
+          <div className={styles.technicalSkillsContainer}>
+            <div className={styles.skill}>
+              <b className={styles.text}>Programming Languages</b>
+              <Chips
+                items={["Python", "C++", "JavaScript", "SQL", "HTML", "CSS/SCSS"]}
+              />
+            </div>
+            <div className={styles.skill}>
+              <b className={styles.text}>Programming Frameworks</b>
+              <Chips items={["React", "React Native", "Node.js"]} />
+            </div>
+            <div className={styles.skill}>
+              <b className={styles.text}>Developer Tools</b>
+              <Chips
+                items={[
+                  "Firebase",
+                  "Cloudflare",
+                  "Netlify",
+                  "Git",
+                  "GitHub",
+                  "iOS",
+                  "Android",
+                  "Yarn",
+                  "NPM",
+                ]}
+              />
+            </div>
+            <div className={styles.skill}>
+              <b className={styles.text}>Programming Libraries</b>
+              <Chips items={["Tailwind", "Bootstrap"]} />
+            </div>
+            <div className={styles.skill}>
+              <b className={styles.text}>Productivity Tools and OS</b>
+              <Chips
+                items={[
+                  "MS Office",
+                  "MS Teams",
+                  "Google Suite",
+                  "Jira",
+                  "Adobe Photoshop",
+                  "OBS Studio",
+                  "Linux",
+                ]}
+              />
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}

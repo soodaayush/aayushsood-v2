@@ -7,7 +7,17 @@ import styles from "../../styles/books/book.module.css";
 
 export default function Book(props) {
   return (
-    <motion.div className={styles.bookContainer}>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      whileHover={{
+        scale: 1.1,
+        transition: { type: "spring", stiffness: 450, damping: 20 },
+      }}
+      className={styles.bookContainer}
+    >
       <Image
         className={styles.image}
         src={props.cover}
