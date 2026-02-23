@@ -16,18 +16,89 @@
   flex-direction: column;
 }
 
-.blogList {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  gap: 20px;
+/* ── Timeline ── */
+
+.timeline {
+  position: relative;
+  width: 60%;
 }
 
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--header-hover-color);
+  opacity: 0.2;
+}
+
+.yearGroup {
+  margin-bottom: 8px;
+}
+
+.yearRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.yearDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--header-hover-color);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  box-shadow:
+    0 0 0 3px var(--background-color),
+    0 0 0 5px var(--header-hover-color);
+}
+
+.yearLabel {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--header-hover-color);
+}
+
+.postRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.postDot {
+  margin-top: 26px;
+  margin-left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--text-color);
+  opacity: 0.35;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition:
+    opacity 0.15s ease,
+    background 0.15s ease;
+}
+
+.postRow:hover .postDot {
+  background: var(--header-hover-color);
+  opacity: 1;
+}
+
+/* ── Post card ── */
+
 .blogPost {
+  flex: 1;
+  min-width: 0;
   padding: 20px;
-  width: 60%;
   border-radius: 5px;
   border: 2px solid var(--blog-post-border);
 }
@@ -39,7 +110,7 @@
 
 .title {
   line-height: 1.2;
-  font-size: 27px;
+  font-size: 26px;
   margin-bottom: 20px;
   position: relative;
   width: fit-content;
@@ -55,10 +126,6 @@
   height: 2px;
   background-color: var(--header-hover-color);
   transition: width 0.25s ease-out;
-}
-
-.blogPost:hover .title {
-  color: var(--header-hover-color);
 }
 
 .blogPost:hover .title::after {
@@ -135,20 +202,16 @@
   transform: translateX(0);
 }
 
-@media (min-width: 0px) {
-  .blogPost {
+/* ── Responsive ── */
+
+@media (max-width: 1000px) {
+  .timeline {
     width: 100%;
   }
 }
 
-@media (min-width: 1000px) {
-  .blogPost {
-    width: 60%;
-  }
-}
-
 @media (min-width: 2100px) {
-  .blogPost {
+  .timeline {
     width: 50%;
   }
 }

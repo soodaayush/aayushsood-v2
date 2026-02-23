@@ -10,10 +10,6 @@
   border-radius: 20px;
 }
 
-.technicalSkillContainer:hover .skillType {
-  color: var(--header-hover-color);
-}
-
 .technicalSkillContainer:hover .skillType::after {
   width: 100%;
 }

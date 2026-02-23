@@ -35,10 +35,6 @@
   transition: width 0.25s ease-out;
 }
 
-.interestContainer:hover .interestTitle {
-  color: var(--header-hover-color);
-}
-
 .interestContainer:hover .interestTitle::after {
   width: 100%;
 }
