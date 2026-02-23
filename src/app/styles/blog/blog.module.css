@@ -100,7 +100,6 @@
   min-width: 0;
   padding: 20px;
   border-radius: 5px;
-  border: 2px solid var(--blog-post-border);
 }
 
 .text {
@@ -112,24 +111,15 @@
   line-height: 1.2;
   font-size: 26px;
   margin-bottom: 20px;
-  position: relative;
-  width: fit-content;
-  transition: color 0.15s ease-in-out;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  transition: text-decoration-color 0.15s ease-in-out;
 }
 
-.title::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--header-hover-color);
-  transition: width 0.25s ease-out;
-}
-
-.blogPost:hover .title::after {
-  width: 100%;
+.blogPost:hover .title {
+  text-decoration-color: var(--header-hover-color);
 }
 
 .date {
