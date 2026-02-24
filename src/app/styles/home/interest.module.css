@@ -17,26 +17,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   width: fit-content;
   margin: 0 auto;
-  transition: color 0.15s ease-in-out;
-  overflow: visible;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  transition: text-decoration-color 0.15s ease-in-out;
 }
 
-.interestTitle::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--header-hover-color);
-  transition: width 0.25s ease-out;
-}
-
-.interestContainer:hover .interestTitle::after {
-  width: 100%;
+.interestContainer:hover .interestTitle {
+  text-decoration-color: var(--header-hover-color);
 }
 
 .interestIcon {
