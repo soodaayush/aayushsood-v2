@@ -113,7 +113,15 @@
   margin: 0;
 }
 
-@media (min-width: 840px) {
+.links {
+  display: none;
+}
+
+.pages {
+  display: none;
+}
+
+@media (min-width: 841px) {
   .menu {
     display: none;
   }
@@ -130,14 +138,6 @@
 @media (max-width: 840px) {
   .menu {
     display: block;
-  }
-
-  .links {
-    display: none;
-  }
-
-  .pages {
-    display: none;
   }
 }
 

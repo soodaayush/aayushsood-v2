@@ -14,7 +14,6 @@
 *::after,
 *::before {
   box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 
 html {
@@ -108,10 +107,8 @@ svg {
   display: block;
 }
 
-@media (min-width: 0px) {
-  .content {
-    width: 100%;
-  }
+.content {
+  width: 100%;
 }
 
 @media (min-width: 1895px) {
@@ -179,7 +176,7 @@ svg {
 }
 
 .blog-content em {
-  font-size: 1em;
+  font-style: italic;
 }
 
 .blog-content a {

@@ -22,13 +22,11 @@
   width: 100%;
 }
 
-@media (min-width: 800px) {
-  .booksTitle {
-    font-size: 50px;
-  }
+.booksTitle {
+  font-size: 50px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 799px) {
   .booksTitle {
     font-size: 30px;
   }
