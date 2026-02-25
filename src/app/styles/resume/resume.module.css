@@ -251,10 +251,8 @@
 
 /* ── Responsive widths ─────────────────────────────── */
 
-@media (min-width: 0px) {
-  .resumeContentContainer {
-    width: 100%;
-  }
+.resumeContentContainer {
+  width: 100%;
 }
 
 @media (min-width: 1075px) {
@@ -327,7 +325,7 @@
 }
 
 /* Larger tap targets for contact links on mobile */
-@media (max-width: 985px) {
+@media (max-width: 984px) {
   .links {
     flex-direction: column;
     gap: 2px;
@@ -353,31 +351,21 @@
   }
 }
 
-@media (max-width: 900px) {
+.projectHeading {
+  font-size: 16px;
+}
+
+@media (max-width: 899px) {
   .projectHeading {
     font-size: 14px;
   }
 }
 
-@media (min-width: 900px) {
-  .projectHeading {
-    font-size: 16px;
-  }
+.accomplishmentHeader {
+  font-size: 20px;
 }
 
-@media (max-width: 925px) {
-  .accomplishmentHeader {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 925px) {
-  .accomplishmentHeader {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 500px) {
+@media (max-width: 924px) {
   .accomplishmentHeader {
     font-size: 18px;
   }
@@ -394,15 +382,13 @@
   }
 }
 
+.name {
+  font-size: 50px;
+}
+
 @media (max-width: 455px) {
   .name {
     font-size: 30px;
-  }
-}
-
-@media (min-width: 455px) {
-  .name {
-    font-size: 50px;
   }
 }
 

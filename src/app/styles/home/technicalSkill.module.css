@@ -10,29 +10,17 @@
   border-radius: 20px;
 }
 
-.technicalSkillContainer:hover .skillType {
-  color: var(--header-hover-color);
-}
-
-.technicalSkillContainer:hover .skillType::after {
-  width: 100%;
-}
-
 .skillType {
   margin: 0;
-  position: relative;
-  transition: color 0.15s ease-in-out;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  transition: text-decoration-color 0.15s ease-in-out;
 }
 
-.skillType::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--header-hover-color);
-  transition: width 0.25s ease-out;
+.technicalSkillContainer:hover .skillType {
+  text-decoration-color: var(--header-hover-color);
 }
 
 .technicalSkill {

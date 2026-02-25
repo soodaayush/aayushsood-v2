@@ -76,21 +76,17 @@
   color: var(--toc-text-hover-color);
 }
 
-@media (max-width: 600px) {
+.blogPostContentContainer {
+  width: 100%;
+}
+
+.title {
+  font-size: 50px;
+}
+
+@media (max-width: 599px) {
   .title {
     font-size: 30px;
-  }
-}
-
-@media (min-width: 600px) {
-  .title {
-    font-size: 50px;
-  }
-}
-
-@media (min-width: 0px) {
-  .blogPostContentContainer {
-    width: 100%;
   }
 }
 
