@@ -31,6 +31,15 @@ export default function Book(props) {
       <a className={styles.link} href={props.authorLink} target="_blank">
         <label className={styles.bookAuthor}>{props.author}</label>
       </a>
+      {props.rating && (
+        <div className={styles.stars} aria-label={`Rating: ${props.rating} out of 5`}>
+          {Array.from({ length: 5 }, (_, i) => (
+            <span key={i} className={i < props.rating ? styles.starFilled : styles.starEmpty}>
+              ★
+            </span>
+          ))}
+        </div>
+      )}
     </motion.div>
   );
 }
