@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import LikeButton from "./likeButton";
 
 export default function TableOfContents({ items, postId }) {
   const mounted = useRef(false);
+  const [activeId, setActiveId] = useState(null);
 
   useEffect(() => {
     if (mounted.current) return;
@@ -27,6 +28,25 @@ export default function TableOfContents({ items, postId }) {
     });
 
     mounted.current = true;
+  }, [items]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const threshold = 140;
+      let current = null;
+      for (const item of items) {
+        const el = document.getElementById(item.id);
+        if (el && el.getBoundingClientRect().top <= threshold) {
+          current = item.id;
+        }
+      }
+      setActiveId(current);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [items]);
 
   const scrollToSection = (e, id) => {
@@ -60,6 +80,8 @@ export default function TableOfContents({ items, postId }) {
               padding: "0.25rem 0",
               textDecoration: "none",
               fontSize: "15px",
+              color: activeId === h.id ? "var(--header-hover-color)" : undefined,
+              transition: "color 0.2s ease",
             }}
           >
             {h.text}

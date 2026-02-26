@@ -31,3 +31,18 @@
   color: var(--book-author-color);
   cursor: pointer;
 }
+
+.stars {
+  margin-top: 4px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.starFilled {
+  color: var(--header-hover-color);
+}
+
+.starEmpty {
+  color: var(--book-author-color);
+  opacity: 0.35;
+}
