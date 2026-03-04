@@ -43,11 +43,11 @@ export const metadata = {
     siteName: "Aayush Sood",
     images: [
       {
-        url: "https://www.aayushsood.com/assets/openGraph/banner.png",
-        width: 800,
-        height: 600,
+        url: "https://www.aayushsood.com/assets/openGraph/home.png",
+        width: 1200,
+        height: 630,
         type: "image/png",
-        alt: "Blue text on dark background",
+        alt: "Aayush Sood - Fullstack Developer",
       },
     ],
     locale: "en_US",
@@ -102,7 +102,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Aayush Sood",
     description: "Aayush Sood's Portfolio",
-    images: ["https://www.aayushsood.com/assets/openGraph/banner.png"],
+    images: ["https://www.aayushsood.com/assets/openGraph/home.png"],
   },
   alternates: {
     canonical: "https://www.aayushsood.com/",
@@ -144,6 +144,19 @@ const structuredData = {
     addressRegion: "Nova Scotia",
     addressCountry: "Canada",
   },
+  knowsAbout: [
+    "Web Development",
+    "Fullstack Development",
+    "Software Engineering",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Competitive Programming",
+    "Mathematics",
+    "Brazilian Jiu Jitsu",
+  ],
 };
 
 export const runtime = "edge";
