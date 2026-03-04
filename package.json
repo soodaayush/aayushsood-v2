@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "prebuild": "node scripts/generate-og-images.mjs",
     "postbuild": "next-sitemap",
     "build": "next build",
     "start": "next start",
@@ -11,6 +12,7 @@
   },
   "dependencies": {
     "@next/third-parties": "^16.1.6",
+    "@resvg/resvg-js": "^2.6.2",
     "firebase": "^12.9.0",
     "gray-matter": "^4.0.3",
     "marked": "^17.0.2",
@@ -26,7 +28,8 @@
     "react-type-animation": "^3.2.0",
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.1",
-    "remark-html": "^16.0.1"
+    "remark-html": "^16.0.1",
+    "satori": "^0.24.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.3",

@@ -24,9 +24,9 @@ export const metadata = {
     siteName: "Aayush Sood's Blog",
     images: [
       {
-        url: "https://www.aayushsood.com/assets/openGraph/banner.png",
-        width: 800,
-        height: 600,
+        url: "https://www.aayushsood.com/assets/openGraph/blog.png",
+        width: 1200,
+        height: 630,
         alt: "Aayush Sood's Blog",
       },
     ],
@@ -37,7 +37,7 @@ export const metadata = {
     title: "Blog | Aayush Sood",
     description:
       "Browse my stories ranging from life to technology to anything I desire to write about.",
-    images: ["https://www.aayushsood.com/assets/openGraph/banner.png"],
+    images: ["https://www.aayushsood.com/assets/openGraph/blog.png"],
   },
   alternates: {
     canonical: "https://www.aayushsood.com/blog",

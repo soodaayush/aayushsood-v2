@@ -28,7 +28,7 @@ export const metadata = {
     siteName: "Aayush Sood's Books",
     images: [
       {
-        url: "https://www.aayushsood.com/assets/openGraph/banner.png",
+        url: "https://www.aayushsood.com/assets/openGraph/books.png",
         width: 800,
         height: 600,
         alt: "Aayush Sood's Books",
@@ -41,7 +41,7 @@ export const metadata = {
     title: "Books | Aayush Sood",
     description:
       "Explore the books I've read and get insights into the knowledge that shaped my journey.",
-    images: ["https://www.aayushsood.com/assets/openGraph/banner.png"],
+    images: ["https://www.aayushsood.com/assets/openGraph/books.png"],
   },
   alternates: {
     canonical: "https://www.aayushsood.com/books",

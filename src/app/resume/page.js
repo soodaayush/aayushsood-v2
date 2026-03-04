@@ -26,7 +26,7 @@ export const metadata = {
     siteName: "Aayush Sood's Resume",
     images: [
       {
-        url: "https://www.aayushsood.com/assets/openGraph/banner.png",
+        url: "https://www.aayushsood.com/assets/openGraph/resume.png",
         width: 800,
         height: 600,
         alt: "Aayush Sood's Resume",
@@ -39,7 +39,7 @@ export const metadata = {
     title: "Resume | Aayush Sood",
     description:
       "View my resume and explore my experience, skills, and education.",
-    images: ["https://www.aayushsood.com/assets/openGraph/banner.png"],
+    images: ["https://www.aayushsood.com/assets/openGraph/resume.png"],
   },
   alternates: {
     canonical: "https://www.aayushsood.com/resume",

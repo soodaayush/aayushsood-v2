@@ -74,10 +74,10 @@ export async function generateMetadata({ params }) {
       url: `https://www.aayushsood.com/blog/${id}`,
       images: [
         {
-          url: "https://www.aayushsood.com/assets/openGraph/banner.png",
-          width: 800,
-          height: 600,
-          alt: "Aayush Sood's Blog Post",
+          url: `https://www.aayushsood.com/assets/openGraph/posts/${id}.png`,
+          width: 1200,
+          height: 630,
+          alt: post.meta.title,
         },
       ],
     },
@@ -85,7 +85,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title: `${post.meta.title} | Aayush Sood`,
       description: post.meta.description,
-      images: ["https://www.aayushsood.com/assets/openGraph/banner.png"],
+      images: [`https://www.aayushsood.com/assets/openGraph/posts/${id}.png`],
     },
     alternates: {
       canonical: `https://www.aayushsood.com/blog/${id}`,
@@ -126,7 +126,7 @@ export default async function BlogPostPage({ params }) {
       name: "Aayush Sood",
       url: "https://www.aayushsood.com",
     },
-    image: "https://www.aayushsood.com/assets/openGraph/banner.png",
+    image: `https://www.aayushsood.com/assets/openGraph/posts/${post.slug}.png`,
     keywords: post.meta.keywords,
     inLanguage: "en-US",
     isPartOf: {
