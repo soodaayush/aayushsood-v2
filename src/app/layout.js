@@ -144,6 +144,19 @@ const structuredData = {
     addressRegion: "Nova Scotia",
     addressCountry: "Canada",
   },
+  knowsAbout: [
+    "Web Development",
+    "Fullstack Development",
+    "Software Engineering",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Competitive Programming",
+    "Mathematics",
+    "Brazilian Jiu Jitsu",
+  ],
 };
 
 export const runtime = "edge";

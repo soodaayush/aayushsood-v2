@@ -108,28 +108,64 @@ export default async function BlogPostPage({ params }) {
     '<a target="_blank" rel="noopener noreferrer" '
   );
 
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.meta.title,
+    description: post.meta.description,
+    datePublished: post.meta.date,
+    dateModified: post.meta.date,
+    url: `https://www.aayushsood.com/blog/${post.slug}`,
+    author: {
+      "@type": "Person",
+      name: "Aayush Sood",
+      url: "https://www.aayushsood.com",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Aayush Sood",
+      url: "https://www.aayushsood.com",
+    },
+    image: "https://www.aayushsood.com/assets/openGraph/banner.png",
+    keywords: post.meta.keywords,
+    inLanguage: "en-US",
+    isPartOf: {
+      "@type": "Blog",
+      name: "Aayush Sood's Blog",
+      url: "https://www.aayushsood.com/blog",
+    },
+  };
+
   return (
-    <div className={styles.blogPostContainer}>
-      <div className={`content ${styles.blogPostContentContainer}`}>
-        <div className={styles.blogPostContent}>
-          <div className={styles.details}>
-            <h1 className={`${styles.text} ${styles.title}`}>
-              {post.meta.title}
-            </h1>
-            <p className={styles.text}>{post.meta.date}</p>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleStructuredData),
+        }}
+      />
+      <div className={styles.blogPostContainer}>
+        <div className={`content ${styles.blogPostContentContainer}`}>
+          <div className={styles.blogPostContent}>
+            <div className={styles.details}>
+              <h1 className={`${styles.text} ${styles.title}`}>
+                {post.meta.title}
+              </h1>
+              <p className={styles.text}>{post.meta.date}</p>
+            </div>
+            <div
+              className="blog-content"
+              dangerouslySetInnerHTML={{ __html: htmlContent }}
+            />
+            <BackToTopButton />
           </div>
-          <div
-            className="blog-content"
-            dangerouslySetInnerHTML={{ __html: htmlContent }}
-          />
-          <BackToTopButton />
+          {toc.length >= 2 && (
+            <aside className={styles.blogPostToc}>
+              <TableOfContents items={toc} postId={post.slug} />
+            </aside>
+          )}
         </div>
-        {toc.length >= 2 && (
-          <aside className={styles.blogPostToc}>
-            <TableOfContents items={toc} postId={post.slug} />
-          </aside>
-        )}
       </div>
-    </div>
+    </>
   );
 }

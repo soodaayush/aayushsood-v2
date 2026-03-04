@@ -5,6 +5,19 @@ export const metadata = {
   description:
     "View my resume and explore my experience, skills, and education.",
   creator: "Aayush Sood",
+  keywords: [
+    "resume",
+    "CV",
+    "Aayush Sood",
+    "developer resume",
+    "software engineer",
+    "fullstack developer",
+    "work experience",
+    "skills",
+    "education",
+    "Nova Scotia",
+    "Canada",
+  ],
   openGraph: {
     title: "Resume | Aayush Sood",
     description:
