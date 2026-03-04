@@ -1,14 +1,26 @@
-import { readFileSync } from "fs";
-import { join } from "path";
 import { ImageResponse } from "next/og";
 
+export const runtime = "edge";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function Image() {
-  const fontData = readFileSync(
-    join(process.cwd(), "public/assets/fonts/wotfard-regular-webfont.ttf")
-  );
+async function loadFont() {
+  try {
+    const res = await fetch(
+      "https://www.aayushsood.com/assets/fonts/wotfard-regular-webfont.ttf"
+    );
+    return await res.arrayBuffer();
+  } catch {
+    return null;
+  }
+}
+
+export default async function Image() {
+  const fontData = await loadFont();
+  const fonts = fontData
+    ? [{ name: "Wotfard", data: fontData, weight: 400, style: "normal" }]
+    : [];
+  const fontFamily = fontData ? "Wotfard" : "sans-serif";
 
   return new ImageResponse(
     (
@@ -20,15 +32,14 @@ export default function Image() {
           flexDirection: "column",
           backgroundColor: "#090e1a",
           padding: "64px 80px 56px",
+          fontFamily,
         }}
       >
-        {/* URL breadcrumb */}
         <div
           style={{
             display: "flex",
             color: "#8892a4",
             fontSize: "18px",
-            fontFamily: "Wotfard",
             letterSpacing: "0.06em",
             marginBottom: "48px",
           }}
@@ -36,7 +47,6 @@ export default function Image() {
           aayushsood.com
         </div>
 
-        {/* Main content */}
         <div
           style={{
             flex: 1,
@@ -48,37 +58,23 @@ export default function Image() {
           <div
             style={{
               fontSize: "80px",
-              fontFamily: "Wotfard",
               color: "#718de1",
               margin: "0 0 16px 0",
               lineHeight: 1.1,
-              fontWeight: 400,
             }}
           >
             Aayush Sood
           </div>
           <div
-            style={{
-              fontSize: "30px",
-              fontFamily: "Wotfard",
-              color: "#f8fafc",
-              margin: "0 0 12px 0",
-            }}
+            style={{ fontSize: "30px", color: "#f8fafc", margin: "0 0 12px 0" }}
           >
             Fullstack Developer
           </div>
-          <div
-            style={{
-              fontSize: "22px",
-              fontFamily: "Wotfard",
-              color: "#8892a4",
-            }}
-          >
+          <div style={{ fontSize: "22px", color: "#8892a4" }}>
             Nova Scotia, Canada
           </div>
         </div>
 
-        {/* Footer */}
         <div
           style={{
             display: "flex",
@@ -88,21 +84,12 @@ export default function Image() {
             flexShrink: 0,
           }}
         >
-          <span
-            style={{
-              color: "#8892a4",
-              fontSize: "18px",
-              fontFamily: "Wotfard",
-            }}
-          >
+          <span style={{ color: "#8892a4", fontSize: "18px" }}>
             Portfolio · Blog · Books · Resume
           </span>
         </div>
       </div>
     ),
-    {
-      ...size,
-      fonts: [{ name: "Wotfard", data: fontData, weight: 400, style: "normal" }],
-    }
+    { ...size, fonts }
   );
 }

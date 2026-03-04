@@ -1,10 +1,20 @@
-import { readFileSync } from "fs";
-import { join } from "path";
 import { ImageResponse } from "next/og";
 import posts from "../../../../public/posts.json";
 
+export const runtime = "edge";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+
+async function loadFont() {
+  try {
+    const res = await fetch(
+      "https://www.aayushsood.com/assets/fonts/wotfard-regular-webfont.ttf"
+    );
+    return await res.arrayBuffer();
+  } catch {
+    return null;
+  }
+}
 
 export default async function Image({ params }) {
   const { id } = await params;
@@ -14,9 +24,11 @@ export default async function Image({ params }) {
   const description = post?.meta?.description ?? "";
   const date = post?.meta?.date ?? "";
 
-  const fontData = readFileSync(
-    join(process.cwd(), "public/assets/fonts/wotfard-regular-webfont.ttf")
-  );
+  const fontData = await loadFont();
+  const fonts = fontData
+    ? [{ name: "Wotfard", data: fontData, weight: 400, style: "normal" }]
+    : [];
+  const fontFamily = fontData ? "Wotfard" : "sans-serif";
 
   return new ImageResponse(
     <div
@@ -27,6 +39,7 @@ export default async function Image({ params }) {
         flexDirection: "column",
         backgroundColor: "#090e1a",
         padding: "64px 80px 56px",
+        fontFamily,
       }}
     >
       {/* URL breadcrumb */}
@@ -35,7 +48,6 @@ export default async function Image({ params }) {
           display: "flex",
           color: "#8892a4",
           fontSize: "18px",
-          fontFamily: "Wotfard",
           letterSpacing: "0.06em",
           marginBottom: "48px",
         }}
@@ -55,11 +67,9 @@ export default async function Image({ params }) {
         <div
           style={{
             fontSize: title.length > 55 ? "50px" : "62px",
-            fontFamily: "Wotfard",
             color: "#718de1",
             margin: "0 0 28px 0",
             lineHeight: 1.2,
-            fontWeight: 400,
           }}
         >
           {title}
@@ -69,7 +79,6 @@ export default async function Image({ params }) {
           <div
             style={{
               fontSize: "22px",
-              fontFamily: "Wotfard",
               color: "#f8fafc",
               lineHeight: 1.5,
             }}
@@ -92,31 +101,12 @@ export default async function Image({ params }) {
           flexShrink: 0,
         }}
       >
-        <span
-          style={{
-            color: "#8892a4",
-            fontSize: "20px",
-            fontFamily: "Wotfard",
-          }}
-        >
-          Aayush Sood
-        </span>
+        <span style={{ color: "#8892a4", fontSize: "20px" }}>Aayush Sood</span>
         {date && (
-          <span
-            style={{
-              color: "#8892a4",
-              fontSize: "18px",
-              fontFamily: "Wotfard",
-            }}
-          >
-            {date}
-          </span>
+          <span style={{ color: "#8892a4", fontSize: "18px" }}>{date}</span>
         )}
       </div>
     </div>,
-    {
-      ...size,
-      fonts: [{ name: "Wotfard", data: fontData, weight: 400, style: "normal" }],
-    },
+    { ...size, fonts },
   );
 }
