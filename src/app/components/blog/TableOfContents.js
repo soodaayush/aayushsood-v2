@@ -70,6 +70,23 @@ export default function TableOfContents({ items, postId }) {
     <nav aria-label="Table of contents">
       <h2>TABLE OF CONTENTS</h2>
       <p style={{ paddingLeft: 0 }}>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          style={{
+            display: "block",
+            padding: "0.25rem 0",
+            textDecoration: "none",
+            fontSize: "15px",
+            color: activeId === null ? "var(--header-hover-color)" : undefined,
+            transition: "color 0.2s ease",
+          }}
+        >
+          Introduction
+        </a>
         {items.map((h) => (
           <a
             key={h.id}
