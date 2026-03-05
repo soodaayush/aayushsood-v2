@@ -5,17 +5,17 @@
       { "id": 1, "name": "HTML", "experience": "5 Years" },
       { "id": 2, "name": "CSS/SCSS", "experience": "5 Years" },
       { "id": 3, "name": "JavaScript", "experience": "3 Years" },
-      { "id": 4, "name": "Tailwind CSS", "experience": "3 Years" },
+      { "id": 4, "name": "Tailwind CSS", "experience": "1 Year" },
       { "id": 5, "name": "React", "experience": "3 Years" },
-      { "id": 6, "name": "Bootstrap CSS", "experience": "2 Years" }
+      { "id": 6, "name": "Bootstrap CSS", "experience": "6 Months" }
     ]
   },
   {
     "type": "Backend",
     "skills": [
-      { "id": 7, "name": "Python", "experience": "2 Years" },
+      { "id": 7, "name": "Python", "experience": "1 Year" },
       { "id": 8, "name": "Node.js", "experience": "3 Years" },
-      { "id": 9, "name": "Firebase", "experience": "2 Years" },
+      { "id": 9, "name": "Firebase", "experience": "1 Year" },
       { "id": 10, "name": "C++", "experience": "1 Year" }
     ]
   },
@@ -33,9 +33,9 @@
   {
     "type": "Mobile",
     "skills": [
-      { "id": 17, "name": "React Native", "experience": "3 Years" },
-      { "id": 18, "name": "iOS", "experience": "3 Years" },
-      { "id": 19, "name": "Android", "experience": "3 Years" }
+      { "id": 17, "name": "React Native", "experience": "1 Year" },
+      { "id": 18, "name": "iOS", "experience": "1 Year" },
+      { "id": 19, "name": "Android", "experience": "1 Year" }
     ]
   }
 ]
