@@ -88,11 +88,10 @@
 }
 
 .technicalSkillsList {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
 }
 
 .ctaButtons {
@@ -353,11 +352,7 @@
 
 @media (max-width: 900px) {
   .technicalSkillsList {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: start;
-    gap: 20px;
-    width: 100%;
   }
 }
 
