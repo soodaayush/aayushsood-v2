@@ -146,24 +146,26 @@ export default async function BlogPostPage({ params }) {
       />
       <div className={styles.blogPostContainer}>
         <div className={`content ${styles.blogPostContentContainer}`}>
-          <div className={styles.blogPostContent}>
-            <div className={styles.details}>
-              <h1 className={`${styles.text} ${styles.title}`}>
-                {post.meta.title}
-              </h1>
-              <p className={styles.text}>{post.meta.date}</p>
-            </div>
-            <div
-              className="blog-content"
-              dangerouslySetInnerHTML={{ __html: htmlContent }}
-            />
-            <BackToTopButton />
+          <div className={styles.details}>
+            <h1 className={`${styles.text} ${styles.title}`}>
+              {post.meta.title}
+            </h1>
+            <p className={styles.text}>{post.meta.date}</p>
           </div>
-          {toc.length >= 2 && (
-            <aside className={styles.blogPostToc}>
-              <TableOfContents items={toc} postId={post.slug} />
-            </aside>
-          )}
+          <div className={styles.blogPostRow}>
+            <div className={styles.blogPostContent}>
+              <div
+                className="blog-content"
+                dangerouslySetInnerHTML={{ __html: htmlContent }}
+              />
+              <BackToTopButton />
+            </div>
+            {toc.length >= 2 && (
+              <aside className={styles.blogPostToc}>
+                <TableOfContents items={toc} postId={post.slug} />
+              </aside>
+            )}
+          </div>
         </div>
       </div>
     </>
