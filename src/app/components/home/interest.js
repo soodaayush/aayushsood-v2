@@ -1,10 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "motion/react";
 
 import styles from "../../styles/home/interest.module.css";
 
 export default function Interest(props) {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -13,13 +16,27 @@ export default function Interest(props) {
       transition={{ duration: 0.5, delay: props.index * 0.08 }}
       className={styles.interestContainer}
     >
-      <h1 className={styles.interestTitle}>
-        <div className={styles.interestIcon}>{props.icon}</div>
-        {props.name}
-      </h1>
-      <p>{props.description}</p>
-      <div className={styles.links}>
-        <p>My favorite creators I follow are: </p>
+      <div className={styles.iconWrapper}>{props.icon}</div>
+      <h3 className={styles.interestTitle}>{props.name}</h3>
+
+      <div className={styles.descriptionWrapper}>
+        <p
+          className={`${styles.description} ${
+            expanded ? styles.descriptionExpanded : styles.descriptionCollapsed
+          }`}
+        >
+          {props.description}
+        </p>
+        <button
+          className={styles.toggleButton}
+          onClick={() => setExpanded(!expanded)}
+        >
+          {expanded ? "Show less ↑" : "Read more ↓"}
+        </button>
+      </div>
+
+      <div className={styles.creatorsSection}>
+        <p className={styles.creatorsLabel}>Creators</p>
         <div className={styles.linkTexts}>
           {props.channels
             .sort((a, b) => a.name.localeCompare(b.name))
@@ -29,6 +46,7 @@ export default function Interest(props) {
                 key={index}
                 href={channel.link}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {channel.name}
               </a>

@@ -14,12 +14,22 @@
 }
 
 .booksList {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
   width: 100%;
+}
+
+@media (max-width: 900px) {
+  .booksList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .booksList {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .booksTitle {

@@ -13,33 +13,57 @@ export default function Book(props) {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       whileHover={{
-        scale: 1.1,
+        scale: 1.03,
         transition: { type: "spring", stiffness: 450, damping: 20 },
       }}
-      className={styles.bookContainer}
+      className={styles.bookCard}
     >
-      <Image
-        className={styles.image}
-        src={props.cover}
-        height={450}
-        width={300}
-        alt={props.title}
-      />
-      <a className={styles.link} href={props.bookLink} target="_blank">
-        <h1 className={styles.bookTitle}>{props.title}</h1>
-      </a>
-      <a className={styles.link} href={props.authorLink} target="_blank">
-        <label className={styles.bookAuthor}>{props.author}</label>
-      </a>
-      {props.rating && (
-        <div className={styles.stars} aria-label={`Rating: ${props.rating} out of 5`}>
-          {Array.from({ length: 5 }, (_, i) => (
-            <span key={i} className={i < props.rating ? styles.starFilled : styles.starEmpty}>
-              ★
-            </span>
-          ))}
+      <div className={styles.coverWrapper}>
+        <Image
+          className={styles.image}
+          src={props.cover}
+          height={450}
+          width={300}
+          alt={props.title}
+          sizes="(max-width: 600px) 45vw, (max-width: 1000px) 25vw, 15vw"
+        />
+        <div className={styles.overlay}>
+          {props.rating && (
+            <div
+              className={styles.stars}
+              aria-label={`Rating: ${props.rating} out of 5`}
+            >
+              {Array.from({ length: 5 }, (_, i) => (
+                <span
+                  key={i}
+                  className={
+                    i < props.rating ? styles.starFilled : styles.starEmpty
+                  }
+                >
+                  ★
+                </span>
+              ))}
+            </div>
+          )}
+          <h3 className={styles.bookTitle}>{props.title}</h3>
+          <a
+            className={styles.bookAuthor}
+            href={props.authorLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {props.author}
+          </a>
+          <a
+            className={styles.viewLink}
+            href={props.bookLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View on Amazon →
+          </a>
         </div>
-      )}
+      </div>
     </motion.div>
   );
 }
