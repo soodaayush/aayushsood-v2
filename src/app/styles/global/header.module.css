@@ -58,7 +58,11 @@
   border: none;
   outline: none;
   cursor: pointer;
-  gap: 20px;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .headerMenu {

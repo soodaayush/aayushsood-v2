@@ -186,7 +186,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 0;
 }
 
 .dot {
@@ -194,11 +194,13 @@
   height: 8px;
   border-radius: 50%;
   background: var(--text-color);
+  background-clip: content-box;
   opacity: 0.3;
   cursor: pointer;
   transition: opacity 0.2s ease-in-out, background 0.2s ease-in-out;
   border: none;
-  padding: 0;
+  padding: 8px;
+  box-sizing: content-box;
   flex-shrink: 0;
 }
 

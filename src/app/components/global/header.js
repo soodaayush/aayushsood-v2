@@ -55,7 +55,7 @@ export default function Header() {
             transition={HOVER_SPRING}
             className={styles.button}
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            name="Toggle theme"
+            aria-label="Toggle theme"
           >
             <AnimatePresence mode="wait" initial={false}>
               {theme === "light" ? (
@@ -81,28 +81,30 @@ export default function Header() {
               )}
             </AnimatePresence>
           </motion.button>
-          <motion.button
+          <motion.a
+            href="https://github.com/soodaayush"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             transition={HOVER_SPRING}
             className={styles.button}
-            name="GitHub"
+            aria-label="GitHub"
           >
-            <a href="https://github.com/soodaayush" target="_blank">
-              <FaGithub className={styles.pageIcon} />
-            </a>
-          </motion.button>
-          <motion.button
+            <FaGithub className={styles.pageIcon} />
+          </motion.a>
+          <motion.a
+            href="https://linktr.ee/aayushsood"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             transition={HOVER_SPRING}
             className={styles.button}
-            name="Linktree"
+            aria-label="Linktree"
           >
-            <a href="https://linktr.ee/aayushsood" target="_blank">
-              <SiLinktree className={styles.pageIcon} />
-            </a>
-          </motion.button>
+            <SiLinktree className={styles.pageIcon} />
+          </motion.a>
         </div>
         <div className={styles.menu}>
           <motion.button
@@ -110,7 +112,7 @@ export default function Header() {
             whileTap={{ scale: 0.95 }}
             transition={HOVER_SPRING}
             className={styles.button}
-            name="Mobile navigation menu"
+            aria-label="Open navigation menu"
           >
             <RxHamburgerMenu
               onClick={openHamburgerMenu}
@@ -138,7 +140,7 @@ export default function Header() {
                   whileTap={{ scale: 0.95 }}
                   transition={HOVER_SPRING}
                   className={styles.button}
-                  name="Close mobile navigation menu"
+                  aria-label="Close navigation menu"
                 >
                   <IoClose
                     onClick={openHamburgerMenu}

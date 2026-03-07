@@ -1,8 +1,13 @@
 "use client";
 
 import { motion } from "motion/react";
-import { TypeAnimation } from "react-type-animation";
+import dynamic from "next/dynamic";
 import { useTheme } from "next-themes";
+
+const TypeAnimation = dynamic(
+  () => import("react-type-animation").then((m) => m.TypeAnimation),
+  { ssr: false }
+);
 
 import Image from "next/image";
 import styles from "../../styles/home/page.module.css";
@@ -90,6 +95,7 @@ export default function Welcome() {
             height={275}
             width={233}
             alt="Aayush"
+            priority
           />
         </motion.div>
       </div>

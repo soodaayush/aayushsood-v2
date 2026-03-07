@@ -30,6 +30,7 @@ export default function Project(props) {
           width={250}
           height={150}
           alt={props.name}
+          sizes="(max-width: 450px) 250px, 350px"
         />
       </div>
       <h2 className={styles.projectName}>{props.name}</h2>

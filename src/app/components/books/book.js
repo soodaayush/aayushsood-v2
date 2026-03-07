@@ -26,6 +26,7 @@ export default function Book(props) {
           width={300}
           alt={props.title}
           sizes="(max-width: 600px) 45vw, (max-width: 1000px) 25vw, 15vw"
+          priority={props.priority ?? false}
         />
         <div className={styles.overlay}>
           {props.rating && (

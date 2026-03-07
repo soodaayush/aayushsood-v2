@@ -107,6 +107,10 @@ export default async function BlogPostPage({ params }) {
     /<a /g,
     '<a target="_blank" rel="noopener noreferrer" '
   );
+  htmlContent = htmlContent.replace(
+    /<img /g,
+    '<img loading="lazy" decoding="async" '
+  );
 
   const articleStructuredData = {
     "@context": "https://schema.org",

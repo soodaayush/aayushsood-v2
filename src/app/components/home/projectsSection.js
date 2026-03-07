@@ -74,7 +74,7 @@ export default function Projects({ projects }) {
                 key={i}
                 className={`${styles.dot} ${i === currentIndex ? styles.dotActive : ""}`}
                 onClick={() => setCurrentIndex(i)}
-                name={`Go to project ${i + 1}`}
+                aria-label={`Go to project ${i + 1}`}
               />
             ))}
           </div>

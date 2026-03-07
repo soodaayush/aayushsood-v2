@@ -6,7 +6,7 @@
   border-radius: 20px;
   transition: 0.3s ease-in-out;
   width: 350px;
-  height: 450px;
+  height: 500px;
   box-sizing: border-box;
   color: var(--project-text-color);
   overflow: hidden;
@@ -94,7 +94,7 @@
 @media (max-width: 450px) {
   .projectContainer {
     width: 250px;
-    height: 400px;
+    height: 420px;
   }
 
   .projectName {
