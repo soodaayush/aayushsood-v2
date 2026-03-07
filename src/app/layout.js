@@ -2,6 +2,7 @@ import "./styles/global/globals.css";
 
 import Header from "./components/global/header";
 import Footer from "./components/global/footer";
+import CommandPalette from "./components/global/commandPalette";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeProvider } from "next-themes";
@@ -169,6 +170,7 @@ export default function RootLayout({ children }) {
           <Header />
           <main>{children}</main>
           <Footer />
+          <CommandPalette />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

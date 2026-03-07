@@ -22,6 +22,11 @@ export default function Project(props) {
         transition: { type: "spring", stiffness: 450, damping: 20 },
       }}
       className={styles.projectContainer}
+      onClick={props.onOpen}
+      role="button"
+      tabIndex={0}
+      aria-label={`View details for ${props.name}`}
+      onKeyDown={(e) => e.key === "Enter" && props.onOpen?.()}
     >
       <div className={styles.imageContainer}>
         <Image
