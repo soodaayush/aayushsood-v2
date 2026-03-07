@@ -88,7 +88,7 @@ export default function Books() {
           </h1>
           <div className={styles.booksList}>
             {sortedBooks.map((book, index) => (
-              <Book {...book} key={index} />
+              <Book {...book} key={index} priority={index < 6} />
             ))}
           </div>
         </div>

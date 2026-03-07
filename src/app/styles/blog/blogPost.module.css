@@ -14,18 +14,20 @@
 
 .blogPostContentContainer {
   display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+  flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
-.blogPostContent {
+.blogPostRow {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.blogPostContent {
   flex: 1;
   min-width: 0;
 }
@@ -74,10 +76,6 @@
 
 .blogPostToc a:hover {
   color: var(--toc-text-hover-color);
-}
-
-.blogPostContentContainer {
-  width: 100%;
 }
 
 .title {

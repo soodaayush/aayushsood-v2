@@ -1,55 +1,49 @@
 .technicalSkillContainer {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
   flex-direction: column;
-  width: 260px;
-  height: 700px;
-  padding: 20px;
-  gap: 20px;
-  border-radius: 20px;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--resume-border);
+  gap: 14px;
 }
 
 .skillType {
   margin: 0;
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 2px;
-  transition: text-decoration-color 0.15s ease-in-out;
+  padding: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--header-hover-color);
 }
 
-.technicalSkillContainer:hover .skillType {
-  text-decoration-color: var(--header-hover-color);
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .technicalSkill {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: 100px;
+  border: 1px solid var(--resume-border);
+  transition: border-color 0.15s ease;
+}
+
+.technicalSkill:hover {
+  border-color: var(--header-hover-color);
 }
 
 .skillTitle {
-  padding: 0;
-  margin: 0;
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 14px;
   cursor: default;
 }
 
-@media (max-width: 900px) {
-  .technicalSkillContainer {
-    width: 100%;
-  }
-
-  .skillTitle {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 580px) {
-  .technicalSkillContainer {
-    height: auto;
-  }
+.skillExperience {
+  font-size: 11px;
+  opacity: 0.45;
+  cursor: default;
 }

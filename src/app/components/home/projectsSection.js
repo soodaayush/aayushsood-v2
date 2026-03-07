@@ -47,6 +47,7 @@ export default function Projects({ projects }) {
         <motion.div
           initial={{ opacity: 0, y: 50, visibility: "hidden" }}
           whileInView={{ opacity: 1, y: 0, visibility: "visible" }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className={styles.projectList}
         >
@@ -73,7 +74,7 @@ export default function Projects({ projects }) {
                 key={i}
                 className={`${styles.dot} ${i === currentIndex ? styles.dotActive : ""}`}
                 onClick={() => setCurrentIndex(i)}
-                name={`Go to project ${i + 1}`}
+                aria-label={`Go to project ${i + 1}`}
               />
             ))}
           </div>

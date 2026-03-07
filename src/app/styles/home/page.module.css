@@ -88,11 +88,10 @@
 }
 
 .technicalSkillsList {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
 }
 
 .ctaButtons {
@@ -187,7 +186,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 0;
 }
 
 .dot {
@@ -195,11 +194,13 @@
   height: 8px;
   border-radius: 50%;
   background: var(--text-color);
+  background-clip: content-box;
   opacity: 0.3;
   cursor: pointer;
   transition: opacity 0.2s ease-in-out, background 0.2s ease-in-out;
   border: none;
-  padding: 0;
+  padding: 8px;
+  box-sizing: content-box;
   flex-shrink: 0;
 }
 
@@ -225,10 +226,9 @@
 .interestList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 16px;
-  padding: 16px;
+  gap: 16px;
   width: 100%;
-  margin: 0 auto;
+  align-items: start;
 }
 
 @media (max-width: 875px) {
@@ -353,11 +353,7 @@
 
 @media (max-width: 900px) {
   .technicalSkillsList {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: start;
-    gap: 20px;
-    width: 100%;
   }
 }
 
