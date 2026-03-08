@@ -17,7 +17,7 @@
   z-index: 999;
   border-radius: 12px;
   border: 1px solid var(--header-border);
-  background: var(--header-background);
+  background: var(--palette-background);
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }

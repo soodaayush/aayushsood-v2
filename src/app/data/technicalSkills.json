@@ -37,5 +37,13 @@
       { "id": 18, "name": "iOS", "experience": "1 Year" },
       { "id": 19, "name": "Android", "experience": "1 Year" }
     ]
+  },
+  {
+    "type": "Artificial Intelligence",
+    "skills": [
+      { "id": 20, "name": "ChatGPT", "experience": "1 Year" },
+      { "id": 21, "name": "Claude Code", "experience": "1 Month" },
+      { "id": 22, "name": "NotebookLM", "experience": "3 Months" }
+    ]
   }
 ]

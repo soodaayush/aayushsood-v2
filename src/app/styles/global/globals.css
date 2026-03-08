@@ -61,6 +61,7 @@ html.light {
   --toc-text-color: #727b9e;
   --toc-text-hover-color: #262d40;
   --heart-fill-color: #e9156e;
+  --palette-background: #e5ebf2;
 }
 
 html.dark {
@@ -96,6 +97,7 @@ html.dark {
   --toc-text-color: #959ea5;
   --toc-text-hover-color: #c3e0e8;
   --heart-fill-color: #e9156e;
+  --palette-background: #0d1526;
 }
 
 a {
@@ -158,6 +160,13 @@ svg {
   border-radius: 10px;
   border: 2px solid var(--blog-image-border);
   object-fit: contain;
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4 {
+  scroll-margin-top: 100px;
 }
 
 .blog-content h1 {

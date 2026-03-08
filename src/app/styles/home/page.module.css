@@ -88,10 +88,16 @@
 }
 
 .technicalSkillsList {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
   width: 100%;
+}
+
+.technicalSkillsList > * {
+  flex: 0 0 calc(25% - 12px);
+  min-width: 0;
 }
 
 .ctaButtons {
@@ -139,6 +145,7 @@
   flex-direction: column;
   padding: 20px;
   width: 100%;
+  overflow: hidden;
 }
 
 .projectContent {
@@ -353,15 +360,15 @@
   }
 }
 
-@media (max-width: 1180px) {
-  .technicalSkillsList {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1370px) {
+  .technicalSkillsList > * {
+    flex: 0 0 calc(50% - 8px);
   }
 }
 
-@media (max-width: 615px) {
-  .technicalSkillsList {
-    grid-template-columns: repeat(1, 1fr);
+@media (max-width: 700px) {
+  .technicalSkillsList > * {
+    flex: 0 0 100%;
   }
 }
 

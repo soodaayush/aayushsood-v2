@@ -7,8 +7,9 @@ import {
 } from "react-icons/fa";
 import {
   SiJavascript, SiTailwindcss, SiBootstrap, SiFirebase,
-  SiCplusplus, SiCloudflare, SiNetlify,
+  SiCplusplus, SiCloudflare, SiNetlify, SiOpenai,
 } from "react-icons/si";
+import { RiBrainLine } from "react-icons/ri";
 
 import styles from "../../styles/home/technicalSkill.module.css";
 
@@ -32,6 +33,9 @@ const SKILL_ICONS = {
   "React Native": FaReact,
   "iOS": FaApple,
   "Android": FaAndroid,
+  "ChatGPT": SiOpenai,
+  "Claude Code": RiBrainLine,
+  "NotebookLM": RiBrainLine,
 };
 
 const SKILL_COLORS = {
@@ -54,6 +58,9 @@ const SKILL_COLORS = {
   "React Native": "#61DAFB",
   "iOS": "#A2AAAD",
   "Android": "#3DDC84",
+  "ChatGPT": "#10a37f",
+  "Claude Code": "#cc785c",
+  "NotebookLM": "#4285F4",
 };
 
 export default function TechnicalSkill(props) {
