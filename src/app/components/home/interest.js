@@ -1,13 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "motion/react";
 
 import styles from "../../styles/home/interest.module.css";
 
 export default function Interest(props) {
-  const [expanded, setExpanded] = useState(false);
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -18,22 +15,7 @@ export default function Interest(props) {
     >
       <div className={styles.iconWrapper}>{props.icon}</div>
       <h3 className={styles.interestTitle}>{props.name}</h3>
-
-      <div className={styles.descriptionWrapper}>
-        <p
-          className={`${styles.description} ${
-            expanded ? styles.descriptionExpanded : styles.descriptionCollapsed
-          }`}
-        >
-          {props.description}
-        </p>
-        <button
-          className={styles.toggleButton}
-          onClick={() => setExpanded(!expanded)}
-        >
-          {expanded ? "Show less ↑" : "Read more ↓"}
-        </button>
-      </div>
+      <p className={styles.description}>{props.description}</p>
 
       <div className={styles.creatorsSection}>
         <p className={styles.creatorsLabel}>Creators</p>

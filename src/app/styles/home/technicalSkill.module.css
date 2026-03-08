@@ -37,6 +37,11 @@
   border-color: var(--header-hover-color);
 }
 
+.skillIcon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
 .skillTitle {
   font-size: 14px;
   cursor: default;
