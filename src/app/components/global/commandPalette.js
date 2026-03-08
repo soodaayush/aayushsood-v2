@@ -3,33 +3,24 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
-import { FaBlog, FaBook, FaCode, FaStar, FaHome } from "react-icons/fa";
+import { FaBlog, FaHome } from "react-icons/fa";
 import { IoSearch, IoClose } from "react-icons/io5";
 
 import rawPosts from "../../../../public/posts.json";
-import projects from "../../data/projects.json";
-import books from "../../data/books.json";
-import interests from "../../data/interests.json";
 
 import styles from "../../styles/global/commandPalette.module.css";
 
 const TYPE_ICONS = {
   Page: FaHome,
   Post: FaBlog,
-  Project: FaCode,
-  Book: FaBook,
-  Interest: FaStar,
 };
 
 const TYPE_LABELS = {
   Page: "Pages",
   Post: "Blog Posts",
-  Project: "Projects",
-  Book: "Books",
-  Interest: "Interests",
 };
 
-const TYPE_ORDER = ["Page", "Post", "Project", "Book", "Interest"];
+const TYPE_ORDER = ["Page", "Post"];
 
 const PAGES = [
   { title: "Home", subtitle: "Welcome, projects, interests", href: "/", search: "home welcome" },
@@ -53,30 +44,6 @@ const searchIndex = [
     subtitle: p.meta.description,
     href: `/blog/${p.slug}`,
     search: [p.meta.title, p.meta.description, ...(p.meta.tags ?? []), ...(p.meta.keywords ?? [])].join(" ").toLowerCase(),
-    external: false,
-  })),
-  ...projects.map((p) => ({
-    type: "Project",
-    title: p.name,
-    subtitle: p.description,
-    href: p.github,
-    search: [p.name, p.description, ...p.tags].join(" ").toLowerCase(),
-    external: true,
-  })),
-  ...books.map((b) => ({
-    type: "Book",
-    title: b.title,
-    subtitle: b.author,
-    href: b.bookLink,
-    search: [b.title, b.author].join(" ").toLowerCase(),
-    external: true,
-  })),
-  ...interests.map((i) => ({
-    type: "Interest",
-    title: i.name,
-    subtitle: i.description.length > 90 ? i.description.slice(0, 90) + "…" : i.description,
-    href: "/#interests",
-    search: [i.name, i.description].join(" ").toLowerCase(),
     external: false,
   })),
 ];
@@ -188,7 +155,7 @@ export default function CommandPalette() {
               <input
                 ref={inputRef}
                 className={styles.input}
-                placeholder="Search pages, posts, projects, books, interests…"
+                placeholder="Search pages and posts…"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={handleKeyDown}
@@ -239,7 +206,7 @@ export default function CommandPalette() {
 
             {!query && (
               <p className={styles.hint}>
-                Search across pages, blog posts, projects, books, and interests.
+                Search across pages and blog posts.
               </p>
             )}
 

@@ -48,20 +48,28 @@
 }
 
 .linkTexts {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
 }
 
 .link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 13px;
-  padding: 4px 10px;
-  border-radius: 100px;
+  padding: 6px 10px;
+  border-radius: 8px;
   border: 1px solid var(--resume-border);
   color: var(--text-color);
   text-decoration: none;
+  text-align: center;
+  word-break: break-word;
   transition: border-color 0.15s ease;
+}
+
+.link:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 .link:hover {

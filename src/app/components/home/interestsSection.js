@@ -35,6 +35,7 @@ export default function Interests({ interests }) {
     };
 
     equalize();
+    document.fonts.ready.then(equalize);
     window.addEventListener("resize", equalize);
     return () => window.removeEventListener("resize", equalize);
   }, []);

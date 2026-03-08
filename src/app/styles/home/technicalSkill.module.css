@@ -18,33 +18,48 @@
 }
 
 .skillsList {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
 }
 
 .technicalSkill {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 5px 12px;
-  border-radius: 100px;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
   border: 1px solid var(--resume-border);
-  transition: border-color 0.15s ease;
+  background-color: var(--skill-pill-bg, rgba(128, 128, 128, 0.08));
+  transition: opacity 0.15s ease;
+}
+
+.technicalSkill:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 .technicalSkill:hover {
-  border-color: var(--header-hover-color);
+  opacity: 0.8;
 }
 
 .skillIcon {
-  font-size: 14px;
+  font-size: 16px;
   flex-shrink: 0;
 }
 
+.skillText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
 .skillTitle {
-  font-size: 14px;
+  font-size: 13px;
   cursor: default;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .skillExperience {
