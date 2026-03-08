@@ -7,7 +7,7 @@ import { useTheme } from "next-themes";
 import { FaBlog, FaBook, FaGithub, FaMoon, FaSun } from "react-icons/fa";
 import { SiLinktree } from "react-icons/si";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { IoClose } from "react-icons/io5";
+import { IoClose, IoSearch } from "react-icons/io5";
 import { BsFileEarmarkPersonFill } from "react-icons/bs";
 
 import Link from "next/link";
@@ -49,6 +49,16 @@ export default function Header() {
           </div>
         </div>
         <div className={styles.links}>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            transition={HOVER_SPRING}
+            className={styles.button}
+            onClick={() => window.dispatchEvent(new CustomEvent("open-search"))}
+            aria-label="Search"
+          >
+            <IoSearch className={styles.pageIcon} />
+          </motion.button>
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
@@ -202,6 +212,23 @@ export default function Header() {
                 </Link>
               </div>
               <div className={styles.menuSection}>
+                <div className={styles.menuLink}>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={HOVER_SPRING}
+                    className={styles.menuButton}
+                    onClick={() => {
+                      openHamburgerMenu();
+                      window.dispatchEvent(new CustomEvent("open-search"));
+                    }}
+                  >
+                    <h2 className={styles.menuLinkText}>Search</h2>
+                    <div>
+                      <IoSearch className={styles.pageIcon} />
+                    </div>
+                  </motion.div>
+                </div>
                 <div className={styles.menuLink}>
                   <motion.div
                     whileHover={{ scale: 1.1 }}

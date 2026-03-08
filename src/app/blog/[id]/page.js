@@ -103,14 +103,14 @@ export default async function BlogPostPage({ params }) {
   const toc = getTocFromMarkdown(post.content);
 
   let htmlContent = marked.parse(post.content);
+  toc.forEach(({ id }) => {
+    htmlContent = htmlContent.replace(/<h([1-4])>/, `<h$1 id="${id}">`);
+  });
   htmlContent = htmlContent.replace(
     /<a /g,
     '<a target="_blank" rel="noopener noreferrer" '
   );
-  htmlContent = htmlContent.replace(
-    /<img /g,
-    '<img loading="lazy" decoding="async" '
-  );
+  htmlContent = htmlContent.replace(/<img /g, '<img decoding="async" ');
 
   const articleStructuredData = {
     "@context": "https://schema.org",

@@ -3,11 +3,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import Project from "./project";
+import ProjectModal from "./projectModal";
 import styles from "../../styles/home/page.module.css";
 
 export default function Projects({ projects }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [numVisibleProjects, setNumVisibleProjects] = useState(3);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     const updateVisibleProjects = () => {
@@ -33,6 +35,7 @@ export default function Projects({ projects }) {
   }
 
   return (
+    <>
     <div id="projects" className={styles.projectsContainer}>
       <div className={`content ${styles.projectContent}`}>
         <motion.h1
@@ -60,7 +63,7 @@ export default function Projects({ projects }) {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.5 }}
             >
-              <Project {...project} />
+              <Project {...project} onOpen={() => setSelectedProject(project)} />
             </motion.div>
           ))}
         </motion.div>
@@ -84,5 +87,11 @@ export default function Projects({ projects }) {
         </div>
       </div>
     </div>
+
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
+    </>
   );
 }

@@ -19,7 +19,7 @@ export default function TableOfContents({ items, postId }) {
     allHeadings.forEach((h) => {
       const remainingTocItems = items.slice(tocIndex);
       for (let tocItem of remainingTocItems) {
-        if (h.textContent?.trim() === tocItem.text && !h.id) {
+        if (!h.id) {
           h.id = tocItem.id;
           tocIndex++;
           break;

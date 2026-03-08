@@ -17,15 +17,27 @@ export default function Interests({ interests }) {
       const grid = gridRef.current;
       if (!grid) return;
       const cards = Array.from(grid.children);
-      cards.forEach((c) => (c.style.minHeight = ""));
-      const maxH = Math.max(...cards.map((c) => c.getBoundingClientRect().height));
-      cards.forEach((c) => (c.style.minHeight = `${maxH}px`));
+
+      // Reset all
+      cards.forEach((c) => {
+        c.style.minHeight = "";
+        if (c.lastElementChild) c.lastElementChild.style.minHeight = "";
+      });
+
+      // 1. Equalize creators section heights so row 4 is identical across all cards
+      const creatorsEls = cards.map((c) => c.lastElementChild).filter(Boolean);
+      const maxCreatorsH = Math.max(...creatorsEls.map((el) => el.getBoundingClientRect().height));
+      creatorsEls.forEach((el) => (el.style.minHeight = `${maxCreatorsH}px`));
+
+      // 2. Equalize card heights (now that creators are equalized, 1fr fills the rest evenly)
+      const maxCardH = Math.max(...cards.map((c) => c.getBoundingClientRect().height));
+      cards.forEach((c) => (c.style.minHeight = `${maxCardH}px`));
     };
 
     equalize();
-    const ro = new ResizeObserver(equalize);
-    if (gridRef.current) ro.observe(gridRef.current);
-    return () => ro.disconnect();
+    document.fonts.ready.then(equalize);
+    window.addEventListener("resize", equalize);
+    return () => window.removeEventListener("resize", equalize);
   }, []);
 
   const iconMap = {
