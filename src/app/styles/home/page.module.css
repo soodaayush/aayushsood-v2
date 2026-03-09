@@ -233,22 +233,27 @@
 }
 
 .interestList {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
   width: 100%;
-  align-items: start;
+}
+
+.interestList > * {
+  flex: 0 0 calc(33.333% - 11px);
+  min-width: 0;
 }
 
 @media (max-width: 875px) {
-  .interestList {
-    grid-template-columns: repeat(2, 1fr);
+  .interestList > * {
+    flex: 0 0 calc(50% - 8px);
   }
 }
 
 @media (max-width: 600px) {
-  .interestList {
-    grid-template-columns: repeat(1, 1fr);
+  .interestList > * {
+    flex: 0 0 100%;
   }
 }
 

@@ -6,14 +6,25 @@
   border: 1px solid var(--resume-border);
   gap: 14px;
   break-inside: avoid;
+  transition: border-color 0.2s ease;
+}
+
+.interestContainer:hover {
+  border-color: var(--header-hover-color);
 }
 
 .iconWrapper {
+  justify-self: start;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 30px;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--header-hover-color) 12%, transparent);
+  font-size: 22px;
   color: var(--header-hover-color);
+  flex-shrink: 0;
 }
 
 .interestTitle {
@@ -21,7 +32,7 @@
   padding: 0;
   font-size: 17px;
   font-weight: 600;
-  text-align: center;
+  text-align: left;
 }
 
 .description {
@@ -65,7 +76,7 @@
   text-decoration: none;
   text-align: center;
   word-break: break-word;
-  transition: border-color 0.15s ease;
+  transition: border-color 0.15s ease, background 0.15s ease;
 }
 
 .link:last-child:nth-child(odd) {
@@ -74,4 +85,5 @@
 
 .link:hover {
   border-color: var(--header-hover-color);
+  background: color-mix(in srgb, var(--header-hover-color) 8%, transparent);
 }
