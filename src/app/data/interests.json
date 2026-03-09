@@ -123,37 +123,6 @@
     ]
   },
   {
-    "name": "Programming",
-    "icon": "FaCode",
-    "description": "Programming is both a creative outlet and a problem-solving tool, letting me bring ideas to life through software that makes a real difference. I enjoy exploring different languages, frameworks, and tools while constantly adapting to new technologies.",
-    "channels": [
-      {
-        "name": "Fireship",
-        "link": "https://www.youtube.com/@Fireship"
-      },
-      {
-        "name": "Gennady Korotkevich",
-        "link": "https://www.youtube.com/@que_tourist"
-      },
-      {
-        "name": "Kevin Powell",
-        "link": "https://www.youtube.com/@KevinPowell"
-      },
-      {
-        "name": "CS50",
-        "link": "https://www.youtube.com/@cs50"
-      },
-      {
-        "name": "Academind",
-        "link": "https://www.youtube.com/@academind"
-      },
-      {
-        "name": "Zero To Mastery",
-        "link": "https://zerotomastery.io/"
-      }
-    ]
-  },
-  {
     "name": "Technology",
     "icon": "FaLaptop",
     "description": "Technology is the backbone of modern society, driving innovation and transformation across every field. My fascination stems from its ability to solve complex problems and shape the future, from artificial intelligence to hardware engineering.",
@@ -169,6 +138,18 @@
       {
         "name": "Branch Education",
         "link": "https://www.youtube.com/@BranchEducation"
+      },
+      {
+        "name": "Fireship",
+        "link": "https://www.youtube.com/@Fireship"
+      },
+      {
+        "name": "Gennady Korotkevich",
+        "link": "https://www.youtube.com/@que_tourist"
+      },
+      {
+        "name": "CS50",
+        "link": "https://www.youtube.com/@cs50"
       }
     ]
   }

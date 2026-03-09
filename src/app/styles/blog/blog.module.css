@@ -9,6 +9,18 @@
   font-size: 50px;
 }
 
+@media (max-width: 760px) {
+  .blogTitle {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 450px) {
+  .blogTitle {
+    font-size: 28px;
+  }
+}
+
 .blogContent {
   display: flex;
   justify-content: center;
@@ -106,7 +118,7 @@
   align-items: center;
   gap: 6px;
   margin-top: 16px;
-  font-size: 17px;
+  font-size: 16px;
   color: var(--text-color);
   font-weight: bold;
 }

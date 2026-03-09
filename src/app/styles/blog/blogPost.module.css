@@ -82,9 +82,15 @@
   font-size: 50px;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 760px) {
   .title {
-    font-size: 30px;
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 450px) {
+  .title {
+    font-size: 28px;
   }
 }
 
