@@ -6,12 +6,8 @@
   border: 1px solid var(--resume-border);
   gap: 14px;
   break-inside: avoid;
-  transition: border-color 0.2s ease;
 }
 
-.interestContainer:hover {
-  border-color: var(--header-hover-color);
-}
 
 .iconWrapper {
   justify-self: start;
