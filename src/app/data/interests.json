@@ -2,7 +2,7 @@
   {
     "name": "Gaming",
     "icon": "FaGamepad",
-    "description": "I love immersing myself in diverse virtual worlds, exploring narratives, and tackling challenges. Gaming isn't just about entertainment; it's a gateway to experiencing different cultures, stories, and perspectives. It sharpens my reflexes, strategic thinking, and teamwork skills, all while providing a sense of community through multiplayer experiences and online forums. The evolving nature of gaming technology also fascinates me, from realistic graphics to the rise of virtual and augmented reality, making it a field that constantly piques my interest.",
+    "description": "I love immersing myself in diverse virtual worlds, exploring narratives, and tackling complex challenges. Gaming sharpens my reflexes, strategic thinking, and teamwork skills, all while providing a sense of community through multiplayer experiences.",
     "channels": [
       {
         "name": "CoryxKenshin",
@@ -17,7 +17,7 @@
   {
     "name": "Math",
     "icon": "PiMathOperationsFill",
-    "description": "Math fuels my logical reasoning and analytical skills. I enjoy delving into mathematical puzzles, exploring abstract concepts, and applying them to real-world problems. Whether it's algebra, calculus, or statistics, each area of mathematics offers unique insights into the workings of the universe, enhancing my ability to think critically and solve problems efficiently.",
+    "description": "Math fuels my logical reasoning and problem-solving skills. I enjoy delving into puzzles and abstract concepts, from algebra and calculus to statistics, and applying them to real-world problems.",
     "channels": [
       {
         "name": "3Blue1Brown",
@@ -40,7 +40,7 @@
   {
     "name": "Science",
     "icon": "MdScience",
-    "description": "Science is a vast domain that captures my curiosity with its exploration of the natural world. Physics, in particular, offers a profound understanding of the universe, from the smallest particles to the largest cosmic structures. I am captivated by concepts like relativity, quantum mechanics, and thermodynamics. Science, in general, drives innovation and shapes our future, making it an essential part of our progress. I enjoy staying updated with the latest scientific discoveries and exploring how they can be applied to improve our lives.",
+    "description": "Science captures my curiosity with its exploration of the natural world. Physics in particular fascinates me, from concepts like relativity and quantum mechanics to the latest discoveries shaping our understanding of the universe.",
     "channels": [
       {
         "name": "Veritasium",
@@ -71,7 +71,7 @@
   {
     "name": "Geopolitics",
     "icon": "FaGlobe",
-    "description": "Geopolitics is a fascinating field that delves into the complexities of international relations, power structures, and global conflicts. Understanding the historical context of geopolitical events helps me analyze current affairs more critically. I am particularly interested in how economic policies, cultural exchanges, and technological advancements influence the global stage. This interest allows me to connect the dots between different events and understand their broader implications.",
+    "description": "Geopolitics delves into the complexities of international relations, power structures, and global conflicts. I am particularly interested in how economic policies, cultural exchanges, and technological change influence the global stage.",
     "channels": [
       {
         "name": "Peter Zeihan",
@@ -94,7 +94,7 @@
   {
     "name": "MMA",
     "icon": "MdOutlineSportsMartialArts",
-    "description": "Mixed Martial Arts challenge my physical and mental limits. The sport demands discipline, strategy, and resilience. Training in MMA has taught me the importance of focus, adaptability, and respect for opponents. Beyond the physical benefits, it provides a sense of accomplishment and boosts my confidence. Watching professional fights also offers valuable insights into techniques and strategies, fueling my passion for continuous learning and self-improvement.",
+    "description": "Mixed Martial Arts challenge my physical and mental limits, demanding discipline, strategy, and resilience. Training has taught me focus, adaptability, and respect, while watching professional fights fuels my passion for continuous improvement.",
     "channels": [
       {
         "name": "UFC",
@@ -123,40 +123,9 @@
     ]
   },
   {
-    "name": "Programming",
-    "icon": "FaCode",
-    "description": "Programming is both a creative outlet and a problem-solving tool for me. It allows me to bring ideas to life by developing software and applications that can make a real difference. I enjoy exploring different programming languages, frameworks, and tools, constantly learning and adapting to new technologies. The process of debugging and optimizing code is particularly rewarding, as it challenges my patience and perseverance. Programming is not just a skill; it's a way of thinking that empowers me to tackle complex problems in innovative ways.",
-    "channels": [
-      {
-        "name": "Fireship",
-        "link": "https://www.youtube.com/@Fireship"
-      },
-      {
-        "name": "Gennady Korotkevich",
-        "link": "https://www.youtube.com/@que_tourist"
-      },
-      {
-        "name": "Kevin Powell",
-        "link": "https://www.youtube.com/@KevinPowell"
-      },
-      {
-        "name": "CS50",
-        "link": "https://www.youtube.com/@cs50"
-      },
-      {
-        "name": "Academind",
-        "link": "https://www.youtube.com/@academind"
-      },
-      {
-        "name": "Zero To Mastery",
-        "link": "https://zerotomastery.io/"
-      }
-    ]
-  },
-  {
     "name": "Technology",
     "icon": "FaLaptop",
-    "description": "Technology is the backbone of modern society, driving innovation and transformation in every field. My fascination with technology stems from its ability to solve complex problems and improve our quality of life. Whether it's artificial intelligence, blockchain, or renewable energy, I am excited by the possibilities that technology offers. I enjoy staying ahead of the curve, learning about emerging trends, and exploring how they can be harnessed to create a better future.",
+    "description": "Technology is the backbone of modern society, driving innovation and transformation across every field. My fascination stems from its ability to solve complex problems and shape the future, from artificial intelligence to hardware engineering.",
     "channels": [
       {
         "name": "Ben Eater",
@@ -169,6 +138,18 @@
       {
         "name": "Branch Education",
         "link": "https://www.youtube.com/@BranchEducation"
+      },
+      {
+        "name": "Fireship",
+        "link": "https://www.youtube.com/@Fireship"
+      },
+      {
+        "name": "Gennady Korotkevich",
+        "link": "https://www.youtube.com/@que_tourist"
+      },
+      {
+        "name": "CS50",
+        "link": "https://www.youtube.com/@cs50"
       }
     ]
   }

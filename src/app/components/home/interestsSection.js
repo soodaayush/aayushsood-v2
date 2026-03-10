@@ -18,20 +18,15 @@ export default function Interests({ interests }) {
       if (!grid) return;
       const cards = Array.from(grid.children);
 
-      // Reset all
+      // Reset creators heights
       cards.forEach((c) => {
-        c.style.minHeight = "";
         if (c.lastElementChild) c.lastElementChild.style.minHeight = "";
       });
 
-      // 1. Equalize creators section heights so row 4 is identical across all cards
+      // Equalize creators section heights so they align consistently within each row
       const creatorsEls = cards.map((c) => c.lastElementChild).filter(Boolean);
       const maxCreatorsH = Math.max(...creatorsEls.map((el) => el.getBoundingClientRect().height));
       creatorsEls.forEach((el) => (el.style.minHeight = `${maxCreatorsH}px`));
-
-      // 2. Equalize card heights (now that creators are equalized, 1fr fills the rest evenly)
-      const maxCardH = Math.max(...cards.map((c) => c.getBoundingClientRect().height));
-      cards.forEach((c) => (c.style.minHeight = `${maxCardH}px`));
     };
 
     equalize();

@@ -16,20 +16,11 @@
       { "id": 7, "name": "Python", "experience": "1 Year" },
       { "id": 8, "name": "Node.js", "experience": "3 Years" },
       { "id": 9, "name": "Firebase", "experience": "1 Year" },
-      { "id": 10, "name": "C++", "experience": "1 Year" }
+      { "id": 10, "name": "C++", "experience": "1 Year" },
+      { "id": 15, "name": "Git", "experience": "5 Years" }
     ]
   },
-  {
-    "type": "DevOps/Tools",
-    "skills": [
-      { "id": 11, "name": "Cloudflare", "experience": "2 Years" },
-      { "id": 12, "name": "Netlify", "experience": "5 Years" },
-      { "id": 13, "name": "NPM", "experience": "3 Years" },
-      { "id": 14, "name": "Yarn", "experience": "2 Years" },
-      { "id": 15, "name": "Git", "experience": "5 Years" },
-      { "id": 16, "name": "GitHub", "experience": "5 Years" }
-    ]
-  },
+
   {
     "type": "Mobile",
     "skills": [

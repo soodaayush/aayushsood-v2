@@ -314,6 +314,7 @@
 
   .resumeContentContainer {
     padding: 14px;
+    gap: 12px;
   }
 
   .schoolContainer,
@@ -322,13 +323,25 @@
   .technicalSkillsContainer {
     padding: 0;
   }
+
+  /* Looser list items for readability */
+  .list li,
+  .projectNotes li {
+    margin-bottom: 10px;
+    line-height: 1.85;
+  }
+
+  .text {
+    font-size: 15px;
+  }
 }
 
-/* Larger tap targets for contact links on mobile */
+/* Contact links: 2-column grid on mobile */
 @media (max-width: 984px) {
   .links {
-    flex-direction: column;
-    gap: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 16px;
   }
 
   .linkDivider {
@@ -336,7 +349,7 @@
   }
 
   .contact {
-    padding: 6px 0;
+    padding: 4px 0;
     min-height: 40px;
   }
 }
