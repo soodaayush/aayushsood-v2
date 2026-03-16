@@ -21,7 +21,7 @@ Over the past few weeks I have been experimenting with [Claude Code](https://cla
 
 # What is Claude Code?
 
-Claude Code is Anthropic's AI coding tool that runs directly in your terminal. Unlike a chat interface where you paste code back and forth, it has direct access to your file system and can read your entire codebase, make edits, run commands, and reason across multiple files at once. I used the Visual Studio Code [extension](https://code.claude.com/docs/en/vs-code) for a seamless integration with my editor.
+Claude Code is [Anthropic's](https://www.anthropic.com/) AI coding tool that runs directly in your terminal. Unlike a chat interface where you paste code back and forth, it has direct access to your file system and can read your entire codebase, make edits, run commands, and reason across multiple files at once. I used the Visual Studio Code [extension](https://code.claude.com/docs/en/vs-code) for a seamless integration with my editor.
 
 The key difference from a chat interface is persistent context. Claude Code already knows my project structure, the CSS conventions I use, which libraries are installed, and how components connect. I do not have to re-explain things every session.
 
@@ -29,7 +29,7 @@ The key difference from a chat interface is persistent context. Claude Code alre
 
 ## Site-Wide Search
 
-![Books Section](/assets/blog/using-claude-code-to-improve-my-website/search.png)
+![Books Section](/assets/blog/using-claude-code-to-improve-my-website/search.webp)
 
 The first major feature was a command palette, the kind that opens with `Ctrl+K` and lets you search across the site instantly. If you have ever used VS Code or Linear, you know the pattern.
 
@@ -37,7 +37,7 @@ This required building a new component from scratch: a backdrop overlay, a modal
 
 ## Project Cards and Modals
 
-![Project Card](/assets/blog/using-claude-code-to-improve-my-website/project-card.png)
+![Project Card](/assets/blog/using-claude-code-to-improve-my-website/project-card.webp)
 
 Projects on the home page used to be simple cards with a name, description, and a GitHub/website link. I wanted a way to show more detail without navigating away from the page, so I added project modals. Click a card and a panel slides in with the full project description, tech stack tags, year, and links.
 
@@ -45,7 +45,7 @@ This introduced a new `projectModal.js` component and a matching CSS module. The
 
 ## Technical Skills Overhaul
 
-![Technical Skills Section](/assets/blog/using-claude-code-to-improve-my-website/technical-skills.png)
+![Technical Skills Section](/assets/blog/using-claude-code-to-improve-my-website/technical-skills.webp)
 
 The technical skills section went through the most visible transformation. It started as a plain list of text labels and came out with brand icons for each technology, a consistent two-column pill grid inside each category card, and a new Artificial Intelligence category covering ChatGPT, Claude Code, and NotebookLM.
 
@@ -53,7 +53,7 @@ Getting the layout right across breakpoints took more iterations than I expected
 
 ## Interests Section
 
-![Interests Section](/assets/blog/using-claude-code-to-improve-my-website/interests.png)
+![Interests Section](/assets/blog/using-claude-code-to-improve-my-website/interests.webp)
 
 The interests section was the most iterative part of the sprint. It previously had a "Read More" toggle on each card. I removed it and showed all text upfront, which immediately surfaced a new problem: card heights were wildly inconsistent because description lengths vary so much. I solved this with a JavaScript equalization function using `ResizeObserver`, which caused an infinite loop. I switched to `window.addEventListener("resize", ...)` combined with `document.fonts.ready` to handle font-timing edge cases. Later I trimmed each description to two sentences, which reduced the height variance enough to simplify the whole approach.
 
@@ -67,7 +67,7 @@ Other improvements:
 
 ## Blog Table of Contents
 
-![Blog Table of Contents](/assets/blog/using-claude-code-to-improve-my-website/toc.png)
+![Blog Table of Contents](/assets/blog/using-claude-code-to-improve-my-website/toc.webp)
 
 The blog's table of contents had two separate scroll bugs that took multiple sessions to fully resolve.
 
@@ -77,18 +77,20 @@ The second issue was lazy-loaded images. One of my posts ([Shad UNB 2025](/blog/
 
 ## Mobile Improvements
 
+![Mobile Design Changes](/assets/blog/using-claude-code-to-improve-my-website/mobile-design-changes.webp)
+
 The welcome section on mobile was stacking text above the photo with left-aligned text inside a centered container. I centered everything, moved the photo to the top using CSS `order: -1`, and removed a hardcoded `<br />` tag causing an awkward line break on small screens.
 
 The resume page received a few targeted improvements: contact links changed from a stacked column to a two-column grid, list items got more line-height and spacing for readability, and the base font size bumped from 14px to 15px.
 
 ## Metadata and Performance
 
-![Books Section](/assets/blog/using-claude-code-to-improve-my-website/books.png)
+![Books Section](/assets/blog/using-claude-code-to-improve-my-website/books.webp)
 
 A batch of less visible but important changes shipped in late February and early March:
 
-- JSON-LD structured data was added to every page and blog post for SEO
-- Custom Open Graph images were generated per blog post using Satori and Resvg
+- [JSON-LD](https://json-ld.org/) structured data was added to every page and blog post for SEO
+- Custom Open Graph images were generated per blog post using [Satori](https://github.com/vercel/satori) and [Resvg](https://github.com/thx/resvg-js)
 - The book list gained a star rating system
 - The table of contents gained an active-section tracker that highlights the current heading as you scroll
 - Blog post timestamps were added below each post title
