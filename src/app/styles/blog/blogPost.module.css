@@ -45,6 +45,7 @@
   position: sticky;
   top: 10rem;
   flex-shrink: 0;
+  width: 350px;
   height: fit-content;
   max-height: 85vh;
   overflow-y: auto;
@@ -72,6 +73,8 @@
   font-size: 0.9rem;
   transition: all 0.2s;
   color: var(--toc-text-color);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .blogPostToc a:hover {
