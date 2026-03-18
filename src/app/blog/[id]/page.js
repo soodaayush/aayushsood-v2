@@ -4,6 +4,7 @@ import posts from "../../../../public/posts.json";
 
 import BackToTopButton from "@/app/components/blog/backToTopButton";
 import TableOfContents from "@/app/components/blog/TableOfContents";
+import ViewCounter from "@/app/components/blog/viewCounter";
 
 import styles from "../../styles/blog/blogPost.module.css";
 
@@ -108,7 +109,7 @@ export default async function BlogPostPage({ params }) {
   });
   htmlContent = htmlContent.replace(
     /<a /g,
-    '<a target="_blank" rel="noopener noreferrer" '
+    '<a target="_blank" rel="noopener noreferrer" ',
   );
   htmlContent = htmlContent.replace(/<img /g, '<img decoding="async" ');
 
@@ -163,6 +164,7 @@ export default async function BlogPostPage({ params }) {
                 dangerouslySetInnerHTML={{ __html: htmlContent }}
               />
               <BackToTopButton />
+              <ViewCounter postId={post.slug} />
             </div>
             {toc.length >= 2 && (
               <aside className={styles.blogPostToc}>

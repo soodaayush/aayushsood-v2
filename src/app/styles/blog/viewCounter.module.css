@@ -1,0 +1,49 @@
+.container {
+  display: table;
+  background: var(--view-counter-bg);
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-top: 20px;
+}
+
+.label {
+  margin: 0 0 8px 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--view-counter-label-color);
+}
+
+.display {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: var(--view-counter-display-bg);
+  border-radius: 3px;
+  padding: 8px 14px;
+}
+
+.ghost,
+.digits {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+
+.ghost {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  color: var(--view-counter-ghost-color);
+  pointer-events: none;
+  user-select: none;
+}
+
+.digits {
+  position: relative;
+  color: var(--view-counter-digit-color);
+}

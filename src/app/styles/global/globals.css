@@ -62,6 +62,11 @@ html.light {
   --toc-text-hover-color: #262d40;
   --heart-fill-color: #e9156e;
   --palette-background: #e5ebf2;
+  --view-counter-bg: #2e3440;
+  --view-counter-label-color: #9aa3b2;
+  --view-counter-display-bg: #1a1e28;
+  --view-counter-ghost-color: rgba(255, 255, 255, 0.07);
+  --view-counter-digit-color: #ffffff;
 }
 
 html.dark {
@@ -98,6 +103,11 @@ html.dark {
   --toc-text-hover-color: #c3e0e8;
   --heart-fill-color: #e9156e;
   --palette-background: #0d1526;
+  --view-counter-bg: #2e3440;
+  --view-counter-label-color: #9aa3b2;
+  --view-counter-display-bg: #1a1e28;
+  --view-counter-ghost-color: rgba(255, 255, 255, 0.07);
+  --view-counter-digit-color: #ffffff;
 }
 
 a {
