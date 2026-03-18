@@ -95,8 +95,9 @@ export default function TableOfContents({ items, postId }) {
             style={{
               display: "block",
               padding: "0.25rem 0",
+              paddingLeft: `${(h.depth - 1) * 12}px`,
               textDecoration: "none",
-              fontSize: "15px",
+              fontSize: h.depth === 1 ? "15px" : "13px",
               color: activeId === h.id ? "var(--header-hover-color)" : undefined,
               transition: "color 0.2s ease",
             }}
