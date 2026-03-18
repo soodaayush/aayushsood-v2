@@ -91,6 +91,7 @@ export default function TableOfContents({ items, postId }) {
           <a
             key={h.id}
             href={`#${h.id}`}
+            data-id={h.id}
             onClick={(e) => scrollToSection(e, h.id)}
             style={{
               display: "block",
