@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(du -sh c:/Users/aayus/Development/aayushsood-v2/.next/server/edge/chunks/*)",
+      "Bash(npm install:*)"
+    ]
+  }
+}

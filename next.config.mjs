@@ -1,8 +1,3 @@
-const nextConfig = {
-  serverExternalPackages: ["@resvg/resvg-js", "satori"],
-  experimental: {
-    optimizePackageImports: ["react-icons"],
-  },
-};
+const nextConfig = {};
 
 export default nextConfig;
