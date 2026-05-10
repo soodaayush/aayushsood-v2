@@ -454,7 +454,7 @@ export default function ResumeContent() {
             <div className={styles.skill}>
               <b className={styles.text}>Programming Languages</b>
               <Chips
-                items={["Python", "C++", "JavaScript", "SQL", "HTML", "CSS/SCSS"]}
+                items={["Python", "C++", "JavaScript", "HTML", "CSS/SCSS"]}
               />
             </div>
             <div className={styles.skill}>
@@ -472,8 +472,6 @@ export default function ResumeContent() {
                   "GitHub",
                   "iOS",
                   "Android",
-                  "Yarn",
-                  "NPM",
                 ]}
               />
             </div>
@@ -483,17 +481,7 @@ export default function ResumeContent() {
             </div>
             <div className={styles.skill}>
               <b className={styles.text}>Productivity Tools and OS</b>
-              <Chips
-                items={[
-                  "MS Office",
-                  "MS Teams",
-                  "Google Suite",
-                  "Jira",
-                  "Adobe Photoshop",
-                  "OBS Studio",
-                  "Linux",
-                ]}
-              />
+              <Chips items={["MS Office", "Google Suite", "Linux"]} />
             </div>
           </div>
         </motion.div>
