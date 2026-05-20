@@ -287,7 +287,7 @@ export default function ResumeContent() {
                   - since 2023
                 </li>
                 <li className={styles.text}>
-                  Completed 90+ challenges on{" "}
+                  Completed 100+ challenges on{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
                     href="https://leetcode.com/u/soodaayush/"
