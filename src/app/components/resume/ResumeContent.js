@@ -131,11 +131,36 @@ export default function ResumeContent() {
                 Some of my notable achievements, including but not limited to:
               </h1>
               <h1 className={`${styles.text} ${styles.accomplishmentHeader}`}>
-                Since 2019
+                Since 2020
               </h1>
             </div>
             <div className={styles.accomplishmentList}>
               <ul className={styles.list}>
+                <li className={styles.text}>
+                  Section Leader in{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://codeinplace.stanford.edu/"
+                    target="_blank"
+                  >
+                    Stanford
+                  </a>{" "}
+                  University&apos;s Code in Place (CIP) program, teaching Python
+                  and supporting beginner learners in a global online classroom
+                  - 2025 & 2026
+                </li>
+                <li className={styles.text}>
+                  Selected as a finalist for the University of Toronto{" "}
+                  <a
+                    className={`${styles.link} ${styles.underline}`}
+                    href="https://www.wolfscholars.com/"
+                    target="_blank"
+                  >
+                    Wolf Scholars
+                  </a>{" "}
+                  Program, a competitive scholarship recognizing exceptional
+                  leadership, academic achievement, and community impact - 2026
+                </li>
                 <li className={styles.text}>
                   Competed as a Gold Tier team in the AFA{" "}
                   <a
@@ -197,19 +222,6 @@ export default function ResumeContent() {
                   Mary&apos;s University (SMU) - 2025
                 </li>
                 <li className={styles.text}>
-                  Section Leader in{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://codeinplace.stanford.edu/"
-                    target="_blank"
-                  >
-                    Stanford
-                  </a>{" "}
-                  University&apos;s Code in Place program, teaching Python and
-                  supporting beginner learners in a global online classroom -
-                  2025
-                </li>
-                <li className={styles.text}>
                   IT Coordinator (&apos;25-present) &amp; PR Manager
                   (&apos;24-&apos;25) in Nova Scotia Secondary School
                   Students&apos; Association{" "}
@@ -248,18 +260,6 @@ export default function ResumeContent() {
                   </a>{" "}
                   Competition, demonstrating skills in cryptography, forensics,
                   and network security - 2025
-                </li>
-                <li className={styles.text}>
-                  Competitively programming on{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://codeforces.com/profile/aayushsood"
-                    target="_blank"
-                  >
-                    CodeForces.com
-                  </a>
-                  , aiming to increase rating above 1600+ by the end of 2025 -
-                  since 2024
                 </li>
                 <li className={styles.text}>
                   Completed Harvard&apos;s CS50x: Introduction to Computer
