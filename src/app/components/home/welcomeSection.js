@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 
 const TypeAnimation = dynamic(
   () => import("react-type-animation").then((m) => m.TypeAnimation),
-  { ssr: false }
+  { ssr: false },
 );
 
 import Image from "next/image";
@@ -48,13 +48,9 @@ export default function Welcome() {
             className={styles.welcomeText}
           />
           <p className={styles.description}>
-            I&apos;m based in Nova Scotia, Canada, passionate about Math,
-            Software Engineering, Geopolitics, and Jiu Jitsu.
-          </p>
-          <p className={styles.description}>
-            I&apos;m a developer passionate about creating scalable,
-            high-quality software with clean architecture, backed by <br />
-            strong problem-solving skills and an eagerness to contribute.
+            Incoming Software Engineering @ University of Waterloo. Based in
+            Nova Scotia, Canada, I'm passionate about <br /> building scalable
+            software, mathematics, geopolitics, and Brazilian Jiu-Jitsu.
           </p>
           <div className={styles.ctaButtons}>
             <motion.a
