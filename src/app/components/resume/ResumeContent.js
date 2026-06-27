@@ -101,12 +101,24 @@ export default function ResumeContent() {
           <div className={styles.schoolContainer}>
             <div className={styles.school}>
               <div className={styles.schoolDetails}>
+                <b className={styles.text}>University of Waterloo</b>
+                <p className={styles.text}>Waterloo, ON</p>
+              </div>
+              <div className={styles.schoolDetails}>
+                <i className={styles.text}>
+                  Honours Software Engineering, Co-op (Incoming)
+                </i>
+                <i className={styles.text}>2026 - 2031</i>
+              </div>
+            </div>
+            <div className={styles.school}>
+              <div className={styles.schoolDetails}>
                 <b className={styles.text}>Bay View High School</b>
                 <p className={styles.text}>Upper Tantallon, NS</p>
               </div>
               <div className={styles.schoolDetails}>
                 <i className={styles.text}>Secondary School - Grade 12</i>
-                <i className={styles.text}>Sep. 2023 - Present</i>
+                <i className={styles.text}>Sep. 2023 - Jun. 2026</i>
               </div>
             </div>
           </div>
@@ -148,18 +160,6 @@ export default function ResumeContent() {
                   University&apos;s Code in Place (CIP) program, teaching Python
                   and supporting beginner learners in a global online classroom
                   - 2025 & 2026
-                </li>
-                <li className={styles.text}>
-                  Selected as a finalist for the University of Toronto{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://www.wolfscholars.com/"
-                    target="_blank"
-                  >
-                    Wolf Scholars
-                  </a>{" "}
-                  Program, a competitive scholarship recognizing exceptional
-                  leadership, academic achievement, and community impact - 2026
                 </li>
                 <li className={styles.text}>
                   Competed as a Gold Tier team in the AFA{" "}
@@ -222,7 +222,7 @@ export default function ResumeContent() {
                   Mary&apos;s University (SMU) - 2025
                 </li>
                 <li className={styles.text}>
-                  IT Coordinator (&apos;25-present) &amp; PR Manager
+                  IT Coordinator (&apos;25-&apos;26) &amp; PR Manager
                   (&apos;24-&apos;25) in Nova Scotia Secondary School
                   Students&apos; Association{" "}
                   <a
@@ -232,8 +232,8 @@ export default function ResumeContent() {
                   >
                     (NSSSA)
                   </a>{" "}
-                  - Rebuilt the website, upgraded digital systems, ran
-                  provincial social media, and secured sponsorships
+                  - Rebuilt website, modernized digital systems, managed
+                  provincial social media, secured sponsorships
                 </li>
                 <li className={styles.text}>
                   Received Certificate of Distinction in Senior Division of
@@ -287,25 +287,24 @@ export default function ResumeContent() {
                   - since 2023
                 </li>
                 <li className={styles.text}>
-                  Completed 100+ challenges on{" "}
+                  100+{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
                     href="https://leetcode.com/u/soodaayush/"
                     target="_blank"
                   >
-                    LeetCode.com
-                  </a>
-                  , improving proficiency in data structures and algorithms -
-                  since 2022; Completed 50+ challenges on{" "}
+                    LeetCode
+                  </a>{" "}
+                  problems since 2022, 50+{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
                     href="https://www.frontendmentor.io/profile/soodaayush"
                     target="_blank"
                   >
-                    FrontendMentor.io
-                  </a>
-                  , focussed on responsive web design and accessibility - since
-                  2020
+                    Frontend Mentor
+                  </a>{" "}
+                  challenges since 2020; focused on DSA, responsive web
+                  development, and accessibility
                 </li>
               </ul>
             </div>
