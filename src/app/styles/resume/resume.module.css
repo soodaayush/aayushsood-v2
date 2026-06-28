@@ -181,6 +181,10 @@
 
 .projectTitle {
   font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .projectDetails {
@@ -229,7 +233,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-direction: column;
   gap: 4px;
 }
 
@@ -317,6 +320,10 @@
     gap: 12px;
   }
 
+  .links {
+    flex-direction: column;
+  }
+
   .schoolContainer,
   .accomplishmentContainer,
   .projectContainer,
@@ -355,10 +362,6 @@
 }
 
 @media (min-width: 985px) {
-  .links {
-    flex-direction: row;
-  }
-
   .linkDivider {
     display: block;
   }
@@ -415,6 +418,21 @@
   .schoolDetails {
     flex-direction: column;
     gap: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .skill {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px) {
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 

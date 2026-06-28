@@ -6,8 +6,10 @@ import { motion } from "motion/react";
 import {
   FaRegFilePdf,
   FaGithub,
+  FaPhoneAlt,
   FaGraduationCap,
-  FaTrophy,
+  FaExternalLinkAlt,
+  FaBriefcase,
   FaCode,
   FaTools,
 } from "react-icons/fa";
@@ -53,7 +55,16 @@ export default function ResumeContent() {
               target="_blank"
             >
               <IoMdMail />
-              aayush.sood@icloud.com
+              aayush.sood@uwaterloo.ca
+            </a>
+            <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
+            <a
+              className={`${styles.contact} ${styles.link} ${styles.text} ${styles.underline}`}
+              href="tel:+19027894315"
+              target="_blank"
+            >
+              <FaPhoneAlt />
+              +1 (902) 789-4315
             </a>
             <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
             <a
@@ -71,7 +82,7 @@ export default function ResumeContent() {
               target="_blank"
             >
               <FaGithub />
-              github.com/soodaayush
+              /soodaayush
             </a>
             <p className={`${styles.text} ${styles.linkDivider}`}>|</p>
             <a
@@ -111,203 +122,6 @@ export default function ResumeContent() {
                 <i className={styles.text}>2026 - 2031</i>
               </div>
             </div>
-            <div className={styles.school}>
-              <div className={styles.schoolDetails}>
-                <b className={styles.text}>Bay View High School</b>
-                <p className={styles.text}>Upper Tantallon, NS</p>
-              </div>
-              <div className={styles.schoolDetails}>
-                <i className={styles.text}>Secondary School - Grade 12</i>
-                <i className={styles.text}>Sep. 2023 - Jun. 2026</i>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          className={styles.sectionContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-40px" }}
-          variants={fadeUp}
-          transition={transition}
-        >
-          <div className={styles.sectionHeadingRow}>
-            <FaTrophy className={styles.sectionIcon} />
-            <h1 className={styles.sectionHeading}>Accomplishments</h1>
-          </div>
-          <hr className={styles.divider} />
-          <div className={styles.accomplishmentContainer}>
-            <div className={styles.accomplishmentTextContainer}>
-              <h1 className={`${styles.text} ${styles.accomplishmentHeader}`}>
-                Some of my notable achievements, including but not limited to:
-              </h1>
-              <h1 className={`${styles.text} ${styles.accomplishmentHeader}`}>
-                Since 2020
-              </h1>
-            </div>
-            <div className={styles.accomplishmentList}>
-              <ul className={styles.list}>
-                <li className={styles.text}>
-                  Section Leader in{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://codeinplace.stanford.edu/"
-                    target="_blank"
-                  >
-                    Stanford
-                  </a>{" "}
-                  University&apos;s Code in Place (CIP) program, teaching Python
-                  and supporting beginner learners in a global online classroom
-                  - 2025 & 2026
-                </li>
-                <li className={styles.text}>
-                  Competed as a Gold Tier team in the AFA{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://www.uscyberpatriot.org/"
-                    target="_blank"
-                  >
-                    CyberPatriot
-                  </a>{" "}
-                  Competition, demonstrating cybersecurity skills - 2025
-                </li>
-                <li className={styles.text}>
-                  Invited to and participated in the Quantum School for Young
-                  Students{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://uwaterloo.ca/institute-for-quantum-computing/outreach/qsys"
-                    target="_blank"
-                  >
-                    (QSYS)
-                  </a>{" "}
-                  hosted by University of Waterloo, focusing on Quantum Physics,
-                  Quantum Mechanics, Quantum Optics and Linear Algebra - 2025
-                </li>
-                <li className={styles.text}>
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://www.shad.ca/"
-                    target="_blank"
-                  >
-                    SHAD
-                  </a>{" "}
-                  UNB Valedictorian - SHAD is a national STEAM program
-                  recognizing youth for excellence in innovation, leadership,
-                  and academics - 2025
-                </li>
-                <li className={styles.text}>
-                  Recipient of the Nova Scotia Lieutenant Governor&apos;s{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://lt.gov.ns.ca/honours-awards/awards"
-                    target="_blank"
-                  >
-                    Education Medal
-                  </a>
-                  , awarded for outstanding leadership and academic achievement
-                  - 2025
-                </li>
-                <li className={styles.text}>
-                  Placed second in IWK Youth{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://www.smu.ca/ai-summit/may3.html"
-                    target="_blank"
-                  >
-                    AI Pitch
-                  </a>{" "}
-                  Competition at the Atlantic AI Summit 2025, hosted by Saint
-                  Mary&apos;s University (SMU) - 2025
-                </li>
-                <li className={styles.text}>
-                  IT Coordinator (&apos;25-&apos;26) &amp; PR Manager
-                  (&apos;24-&apos;25) in Nova Scotia Secondary School
-                  Students&apos; Association{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://www.nsssa.ca/"
-                    target="_blank"
-                  >
-                    (NSSSA)
-                  </a>{" "}
-                  - Rebuilt website, modernized digital systems, managed
-                  provincial social media, secured sponsorships
-                </li>
-                <li className={styles.text}>
-                  Received Certificate of Distinction in Senior Division of
-                  University of Waterloo&apos;s Canadian Computing Competition
-                  (CCC), Score: 45/75 - 2025; made{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024CCCResults.pdf"
-                    target="_blank"
-                  >
-                    Honour Rolls
-                  </a>{" "}
-                  and received Certificate of Distinction in Junior division,
-                  Score: 66/75 - 2024
-                </li>
-                <li className={styles.text}>
-                  Placed third in Lockheed Martin{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://www.lockheedmartin.com/en-us/who-we-are/communities/cyber-quest.html"
-                    target="_blank"
-                  >
-                    CYBERQUEST
-                  </a>{" "}
-                  Competition, demonstrating skills in cryptography, forensics,
-                  and network security - 2025
-                </li>
-                <li className={styles.text}>
-                  Completed Harvard&apos;s CS50x: Introduction to Computer
-                  Science course on{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://courses.edx.org/certificates/51884bfbb2734dc4bbdf1eca77ce83db"
-                    target="_blank"
-                  >
-                    edX
-                  </a>
-                  , gaining a foundational understanding of Computer Science
-                  principles and proficiency in C - 2024
-                </li>
-                <li className={styles.text}>
-                  Executive of Bay View High&apos;s Student Council and Founder
-                  and President of the{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://bvh-tech-club.netlify.app/"
-                    target="_blank"
-                  >
-                    Technology Club
-                  </a>{" "}
-                  - since 2023
-                </li>
-                <li className={styles.text}>
-                  100+{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://leetcode.com/u/soodaayush/"
-                    target="_blank"
-                  >
-                    LeetCode
-                  </a>{" "}
-                  problems since 2022, 50+{" "}
-                  <a
-                    className={`${styles.link} ${styles.underline}`}
-                    href="https://www.frontendmentor.io/profile/soodaayush"
-                    target="_blank"
-                  >
-                    Frontend Mentor
-                  </a>{" "}
-                  challenges since 2020; focused on DSA, responsive web
-                  development, and accessibility
-                </li>
-              </ul>
-            </div>
           </div>
         </motion.div>
 
@@ -331,6 +145,13 @@ export default function ResumeContent() {
                   className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
                 >
                   IWKids - Mobile App
+                  <a
+                    className={styles.link}
+                    target="_blank"
+                    href="https://github.com/soodaayush/IWKids"
+                  >
+                    <FaExternalLinkAlt />
+                  </a>
                 </p>
                 <p className={`${styles.text} ${styles.projectHeading}`}>
                   Apr 2025 - May 2025
@@ -342,11 +163,19 @@ export default function ResumeContent() {
               <ul className={`${styles.projectNotes} ${styles.text}`}>
                 <li>
                   Developed an AI-powered mobile app to help families navigate
-                  emergency room visits at the IWK
+                  emergency room visits at the IWK Hospital in Halifax, NS
                 </li>
                 <li>
-                  Created for the Youth AI Pitch Competition hosted at the
-                  Atlantic Canada AI Summit in May 2025
+                  Integrated OpenAI API to provide conversational guidance and
+                  automate user support workflows
+                </li>
+                <li>
+                  Designed and implemented a cross-platform React Native
+                  interface designed for iOS and Android
+                </li>
+                <li>
+                  Placed 2nd at the Atlantic Canada AI Summit Youth AI Pitch
+                  Competition for presenting the application
                 </li>
               </ul>
             </div>
@@ -356,6 +185,13 @@ export default function ResumeContent() {
                   className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
                 >
                   Bay View High School - Mobile App
+                  <a
+                    className={styles.link}
+                    target="_blank"
+                    href="https://github.com/soodaayush/BVHApp"
+                  >
+                    <FaExternalLinkAlt />
+                  </a>
                 </p>
                 <p className={`${styles.text} ${styles.projectHeading}`}>
                   Jul 2024 - Sep 2024
@@ -366,16 +202,16 @@ export default function ResumeContent() {
               </p>
               <ul className={`${styles.projectNotes} ${styles.text}`}>
                 <li>
-                  Developed a Bay View High School Mobile app to improve
-                  communication between staff and student body
+                  Developed a React Native mobile application providing students
+                  access to school announcements, events, and resources
                 </li>
                 <li>
-                  Provides students with centralized access to school news,
-                  announcements, events, and essential information
+                  Implemented responsive UI components and cross-platform
+                  functionality for iOS and Android
                 </li>
                 <li>
-                  Application submitted as a final project for Harvard&apos;s
-                  CS50x course
+                  Built application workflows using Expo to streamline
+                  development, testing, and iteration
                 </li>
               </ul>
             </div>
@@ -385,6 +221,13 @@ export default function ResumeContent() {
                   className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
                 >
                   Ben Eater&apos;s 6502 Project
+                  <a
+                    className={styles.link}
+                    target="_blank"
+                    href="https://github.com/soodaayush/6502-project"
+                  >
+                    <FaExternalLinkAlt />
+                  </a>
                 </p>
                 <p className={`${styles.text} ${styles.projectHeading}`}>
                   Apr 2024 - Jul 2024
@@ -395,7 +238,7 @@ export default function ResumeContent() {
               </p>
               <ul className={`${styles.projectNotes} ${styles.text}`}>
                 <li>
-                  A collection of hardware bread-boarding projects surrounding
+                  A collection of hardware bread-boarding project surrounding
                   the 6502 CPU, inspired by{" "}
                   <a
                     className={`${styles.link} ${styles.underline}`}
@@ -405,6 +248,10 @@ export default function ResumeContent() {
                     Ben Eater
                   </a>
                 </li>
+                <li>
+                  Programmed low-level routines in Assembly to explore CPU
+                  architecture, memory operations, and instruction execution
+                </li>
               </ul>
             </div>
             <div className={styles.project}>
@@ -413,6 +260,13 @@ export default function ResumeContent() {
                   className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
                 >
                   CoinDeno Web / Mobile
+                  <a
+                    className={styles.link}
+                    target="_blank"
+                    href="https://warbaddy.com/"
+                  >
+                    <FaExternalLinkAlt />
+                  </a>
                 </p>
                 <p className={`${styles.text} ${styles.projectHeading}`}>
                   Aug 2021 - Sep 2022
@@ -423,13 +277,122 @@ export default function ResumeContent() {
               </p>
               <ul className={`${styles.projectNotes} ${styles.text}`}>
                 <li>
-                  Created a website and mobile app that allows tracking and
-                  portfolio management of various cryptocurrencies
+                  Developed a cryptocurrency portfolio tracker using React.js
+                  and Firebase with CoinGecko API integration for real-time
+                  market data
                 </li>
                 <li>
-                  Utilized React, Firebase, and Redux for application
-                  development, with CoinGecko REST APIs for cryptocurrency data
-                  integration
+                  mplemented user authentication using Google OAuth and Firebase
+                  Authentication
+                </li>
+                <li>
+                  Built and released a React Native mobile application
+                  supporting Android and iOS platforms
+                </li>
+                <li>
+                  Maintained application releases through iterative deployment
+                  workflows
+                </li>
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className={styles.sectionContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-40px" }}
+          variants={fadeUp}
+          transition={transition}
+        >
+          <div className={styles.sectionHeadingRow}>
+            <FaBriefcase className={styles.sectionIcon} />
+            <h1 className={styles.sectionHeading}>Experience</h1>
+          </div>
+          <hr className={styles.divider} />
+          <div className={styles.projectContainer}>
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
+                  Stanford University&apos;s Code in Place - Section Lead
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  Apr 2025, Apr 2026
+                </p>
+              </div>
+              <ul className={`${styles.projectNotes} ${styles.text}`}>
+                <li>
+                  Led weekly Python instruction sessions for a cohort of 15
+                  learners in Stanford&apos;s global computer science education
+                  initiative
+                </li>
+                <li>
+                  Mentored students through debugging, assignments, and
+                  programming concepts while fostering an inclusive learning
+                  environment
+                </li>
+                <li>
+                  Collaborated with Stanford faculty and global volunteers to
+                  deliver accessible CS education
+                </li>
+              </ul>
+            </div>
+
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
+                  Nova Scotia Secondary School Students&apos; Association - IT
+                  Coordinator
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  Apr 2025 - Jun 2026
+                </p>
+              </div>
+              <ul className={`${styles.projectNotes} ${styles.text}`}>
+                <li>
+                  Managed digital infrastructure across Microsoft 365, Google
+                  Workspace, Moodle, WordPress, and Canva platforms
+                </li>
+                <li>
+                  Handled user account lifecycle management and technical
+                  support through NSSSA helpdesk workflows
+                </li>
+                <li>
+                  Led redesign and modernization of NSSSA&apos;s website,
+                  improving accessibility and information flow for students and
+                  staff
+                </li>
+              </ul>
+            </div>
+
+            <div className={styles.project}>
+              <div className={styles.projectDetails}>
+                <p
+                  className={`${styles.text} ${styles.projectHeading} ${styles.projectTitle}`}
+                >
+                  Student Council Executive & Tech Club President
+                </p>
+                <p className={`${styles.text} ${styles.projectHeading}`}>
+                  Sep 2023 - Jun 2026
+                </p>
+              </div>
+              <ul className={`${styles.projectNotes} ${styles.text}`}>
+                <li>
+                  Led student initiatives including events, fundraisers,
+                  technology workshops, and hands-on projects
+                </li>
+                <li>
+                  Grew Technology Club membership from 3-4 to 30+ members with
+                  20+ weekly attendees through expanded programming
+                </li>
+                <li>
+                  Mentored students in technical skills while managing club
+                  operations and stakeholder collaboration
                 </li>
               </ul>
             </div>
@@ -451,36 +414,24 @@ export default function ResumeContent() {
           <hr className={styles.divider} />
           <div className={styles.technicalSkillsContainer}>
             <div className={styles.skill}>
-              <b className={styles.text}>Programming Languages</b>
+              <b className={styles.text}>Languages:</b>
+              <Chips items={["Python", "C++", "JavaScript", "SQL"]} />
+            </div>
+            <div className={styles.skill}>
+              <b className={styles.text}>Frameworks:</b>
               <Chips
-                items={["Python", "C++", "JavaScript", "HTML", "CSS/SCSS"]}
+                items={["React", "React Native", "Node.js", "HTML", "CSS/SCSS"]}
               />
             </div>
             <div className={styles.skill}>
-              <b className={styles.text}>Programming Frameworks</b>
-              <Chips items={["React", "React Native", "Node.js"]} />
-            </div>
-            <div className={styles.skill}>
-              <b className={styles.text}>Developer Tools</b>
+              <b className={styles.text}>Tools:</b>
               <Chips
-                items={[
-                  "Firebase",
-                  "Cloudflare",
-                  "Netlify",
-                  "Git",
-                  "GitHub",
-                  "iOS",
-                  "Android",
-                ]}
+                items={["Firebase", "Cloudflare", "Netlify", "Git", "GitHub"]}
               />
             </div>
             <div className={styles.skill}>
-              <b className={styles.text}>Programming Libraries</b>
-              <Chips items={["Tailwind", "Bootstrap"]} />
-            </div>
-            <div className={styles.skill}>
-              <b className={styles.text}>Productivity Tools and OS</b>
-              <Chips items={["MS Office", "Google Suite", "Linux"]} />
+              <b className={styles.text}>Operating Systems:</b>
+              <Chips items={["Linux", "Windows", "MacOS"]} />
             </div>
           </div>
         </motion.div>
