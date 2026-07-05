@@ -22,17 +22,6 @@
     "rotate": "rotate(2deg)"
   },
   {
-    "name": "Ben Eater's 8-Bit Project",
-    "image": "/assets/projects/thumbnails/8-bit.webp",
-    "description": "A discrete-logic 8-bit breadboard computer built to explore low-level computation, timing, and control signals.",
-    "details": "A fully functional 8-bit breadboard computer built from discrete 74-series logic chips, following Ben Eater's in-depth tutorial series. The computer includes a custom ALU capable of addition and subtraction, 16 bytes of RAM, a program counter, an instruction decoder with microcode ROM, and a 7-segment display output. Building it from scratch gave me a ground-up understanding of how CPUs fetch, decode, and execute instructions, from clock signals and bus architecture to memory addressing and control logic.",
-    "tags": ["Arduino"],
-    "year": 2024,
-    "github": "https://github.com/soodaayush/8-bit-project",
-    "gradient": "linear-gradient(#C57D3E, #C2683E, #BF533E)",
-    "rotate": "rotate(358deg)"
-  },
-  {
     "name": "Ben Eater's 6502 Project",
     "image": "/assets/projects/thumbnails/6502.webp",
     "description": "A series of hardware projects surrounding the 6502 CPU, inspired by Ben Eater.",
@@ -41,7 +30,7 @@
     "year": 2024,
     "github": "https://github.com/soodaayush/6502-project",
     "gradient": "linear-gradient(#715C6A, #924D60, #B33E56)",
-    "rotate": "rotate(2deg)"
+    "rotate": "rotate(358deg)"
   },
   {
     "name": "LeetCode",
@@ -52,7 +41,7 @@
     "year": 2022,
     "github": "https://github.com/soodaayush/leetcode",
     "gradient": "linear-gradient(#176C5C, #1B7862, #1E8368)",
-    "rotate": "rotate(358deg)"
+    "rotate": "rotate(2deg)"
   },
   {
     "name": "CoinDeno",
@@ -64,7 +53,7 @@
     "year": 2022,
     "github": "https://github.com/soodaayush/coindeno",
     "gradient": "linear-gradient(#2082AB, #22699C, #23508D)",
-    "rotate": "rotate(2deg)"
+    "rotate": "rotate(358deg)"
   },
   {
     "name": "Pac Man",
@@ -76,7 +65,7 @@
     "year": 2021,
     "github": "https://github.com/soodaayush/pac-man",
     "gradient": "linear-gradient(#5D427F, #825B8F, #9B6B9A)",
-    "rotate": "rotate(358deg)"
+    "rotate": "rotate(2deg)"
   },
   {
     "name": "CoinDeno Web",
@@ -88,7 +77,7 @@
     "year": 2021,
     "github": "https://github.com/soodaayush/coindeno-web",
     "gradient": "linear-gradient(#C57D3E, #C2683E, #BF533E)",
-    "rotate": "rotate(2deg)"
+    "rotate": "rotate(358deg)"
   },
   {
     "name": "Frontend Mentor Challenges",
@@ -100,6 +89,6 @@
     "year": 2020,
     "github": "https://github.com/soodaayush/frontend-mentor-challenges",
     "gradient": "linear-gradient(#715D6A, #914E60, #B03F56)",
-    "rotate": "rotate(358deg)"
+    "rotate": "rotate(2deg)"
   }
 ]

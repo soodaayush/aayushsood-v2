@@ -43,9 +43,13 @@ export default function Header() {
             <Link className={styles.title} href="/books">
               <h2>Books</h2>
             </Link>
-            <Link className={styles.title} href="/resume">
+            <a
+              className={styles.title}
+              href="assets/resume/resume.pdf"
+              target="_blank"
+            >
               <h2>Resume</h2>
-            </Link>
+            </a>
           </div>
         </div>
         <div className={styles.links}>
@@ -193,9 +197,10 @@ export default function Header() {
                     </div>
                   </motion.div>
                 </Link>
-                <Link
+                <a
                   className={styles.menuLink}
-                  href="/resume"
+                  href="assets/resume/resume.pdf"
+                  target="_blank"
                   onClick={openHamburgerMenu}
                 >
                   <motion.div
@@ -209,7 +214,7 @@ export default function Header() {
                       <BsFileEarmarkPersonFill className={styles.pageIcon} />
                     </div>
                   </motion.div>
-                </Link>
+                </a>
               </div>
               <div className={styles.menuSection}>
                 <div className={styles.menuLink}>
