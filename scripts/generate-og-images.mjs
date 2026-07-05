@@ -9,11 +9,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 
 const fontData = readFileSync(
-  join(ROOT, "public/assets/fonts/wotfard-regular-webfont.ttf")
+  join(ROOT, "public/assets/fonts/wotfard-regular-webfont.ttf"),
 );
 
 const posts = JSON.parse(
-  readFileSync(join(ROOT, "public/posts.json"), "utf-8")
+  readFileSync(join(ROOT, "public/posts.json"), "utf-8"),
 );
 
 const W = 1200;
@@ -49,15 +49,26 @@ function save(filePath, buffer) {
 }
 
 // Build a standard OG layout as a plain element tree (Satori-compatible)
-function ogLayout({ breadcrumb, title, titleSize, lines, footerLeft, footerRight }) {
-  const resolvedTitleSize =
-    titleSize ?? (title.length > 55 ? "50px" : "62px");
+function ogLayout({
+  breadcrumb,
+  title,
+  titleSize,
+  lines,
+  footerLeft,
+  footerRight,
+}) {
+  const resolvedTitleSize = titleSize ?? (title.length > 55 ? "50px" : "62px");
 
   const contentChildren = [
     {
       type: "div",
       props: {
-        style: { fontSize: resolvedTitleSize, color: C.blue, margin: "0 0 20px 0", lineHeight: 1.2 },
+        style: {
+          fontSize: resolvedTitleSize,
+          color: C.blue,
+          margin: "0 0 20px 0",
+          lineHeight: 1.2,
+        },
         children: title,
       },
     },
@@ -77,10 +88,28 @@ function ogLayout({ breadcrumb, title, titleSize, lines, footerLeft, footerRight
 
   const footerChildren = footerRight
     ? [
-        { type: "span", props: { style: { color: C.muted, fontSize: "20px" }, children: footerLeft } },
-        { type: "span", props: { style: { color: C.muted, fontSize: "18px" }, children: footerRight } },
+        {
+          type: "span",
+          props: {
+            style: { color: C.muted, fontSize: "20px" },
+            children: footerLeft,
+          },
+        },
+        {
+          type: "span",
+          props: {
+            style: { color: C.muted, fontSize: "18px" },
+            children: footerRight,
+          },
+        },
       ]
-    : { type: "span", props: { style: { color: C.muted, fontSize: "18px" }, children: footerLeft } };
+    : {
+        type: "span",
+        props: {
+          style: { color: C.muted, fontSize: "18px" },
+          children: footerLeft,
+        },
+      };
 
   return {
     type: "div",
@@ -98,14 +127,25 @@ function ogLayout({ breadcrumb, title, titleSize, lines, footerLeft, footerRight
         {
           type: "div",
           props: {
-            style: { display: "flex", color: C.muted, fontSize: "18px", letterSpacing: "0.06em", marginBottom: "48px" },
+            style: {
+              display: "flex",
+              color: C.muted,
+              fontSize: "18px",
+              letterSpacing: "0.06em",
+              marginBottom: "48px",
+            },
             children: breadcrumb,
           },
         },
         {
           type: "div",
           props: {
-            style: { flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" },
+            style: {
+              flex: 1,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            },
             children: contentChildren,
           },
         },
@@ -146,11 +186,16 @@ await generate(
     title: "Aayush Sood",
     titleSize: "80px",
     lines: [
-      { text: "Fullstack Developer", color: C.white, size: "30px", margin: "0 0 12px 0" },
+      {
+        text: "Fullstack Developer",
+        color: C.white,
+        size: "30px",
+        margin: "0 0 12px 0",
+      },
       { text: "Nova Scotia, Canada", color: C.muted, size: "22px" },
     ],
     footerLeft: "Portfolio · Blog · Books · Resume",
-  })
+  }),
 );
 
 await generate(
@@ -160,10 +205,14 @@ await generate(
     title: "Blog",
     titleSize: "80px",
     lines: [
-      { text: "Stories from life, technology, and anything in between.", color: C.white, size: "26px" },
+      {
+        text: "Stories from life, technology, and anything in between.",
+        color: C.white,
+        size: "26px",
+      },
     ],
     footerLeft: "Aayush Sood",
-  })
+  }),
 );
 
 await generate(
@@ -173,24 +222,14 @@ await generate(
     title: "Books",
     titleSize: "80px",
     lines: [
-      { text: "A collection of books I've read and the knowledge they shaped.", color: C.white, size: "26px" },
+      {
+        text: "A collection of books I've read and the knowledge they shaped.",
+        color: C.white,
+        size: "26px",
+      },
     ],
     footerLeft: "Aayush Sood",
-  })
-);
-
-await generate(
-  join(ogDir, "resume.png"),
-  ogLayout({
-    breadcrumb: "aayushsood.com / resume",
-    title: "Resume",
-    titleSize: "80px",
-    lines: [
-      { text: "Fullstack Developer", color: C.white, size: "28px", margin: "0 0 16px 0" },
-      { text: "Experience · Skills · Education", color: C.muted, size: "22px" },
-    ],
-    footerLeft: "Aayush Sood",
-  })
+  }),
 );
 
 for (const post of posts) {
@@ -209,7 +248,7 @@ for (const post of posts) {
         : [],
       footerLeft: "Aayush Sood",
       footerRight: post.meta?.date || undefined,
-    })
+    }),
   );
 }
 

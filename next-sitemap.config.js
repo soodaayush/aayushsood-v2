@@ -14,10 +14,10 @@ module.exports = {
   priority: 0.7,
   sitemapSize: 5000,
 
-  exclude: ["/blog", "/books", "/resume", "/"],
+  exclude: ["/blog", "/books", "/"],
 
   additionalPaths: async () => {
-    const additionalPaths = ["/blog", "/books", "/resume", "/"];
+    const additionalPaths = ["/blog", "/books", "/"];
 
     const blogPaths = allBlogs.map((blog) => ({
       loc: `${siteUrl}/blog/${blog.slug}`,

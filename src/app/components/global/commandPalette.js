@@ -23,10 +23,30 @@ const TYPE_LABELS = {
 const TYPE_ORDER = ["Page", "Post"];
 
 const PAGES = [
-  { title: "Home", subtitle: "Welcome, projects, interests", href: "/", search: "home welcome" },
-  { title: "Blog", subtitle: "All blog posts", href: "/blog", search: "blog posts articles" },
-  { title: "Books", subtitle: "Books I've read", href: "/books", search: "books reading" },
-  { title: "Resume", subtitle: "My resume and experience", href: "/resume", search: "resume cv experience" },
+  {
+    title: "Home",
+    subtitle: "Welcome, projects, interests",
+    href: "/",
+    search: "home welcome",
+  },
+  {
+    title: "Blog",
+    subtitle: "All blog posts",
+    href: "/blog",
+    search: "blog posts articles",
+  },
+  {
+    title: "Books",
+    subtitle: "Books I've read",
+    href: "/books",
+    search: "books reading",
+  },
+  {
+    title: "Resume",
+    subtitle: "My resume and experience",
+    href: "/assets/resume/resume.pdf",
+    search: "resume cv experience",
+  },
 ];
 
 const searchIndex = [
@@ -43,7 +63,14 @@ const searchIndex = [
     title: p.meta.title,
     subtitle: p.meta.description,
     href: `/blog/${p.slug}`,
-    search: [p.meta.title, p.meta.description, ...(p.meta.tags ?? []), ...(p.meta.keywords ?? [])].join(" ").toLowerCase(),
+    search: [
+      p.meta.title,
+      p.meta.description,
+      ...(p.meta.tags ?? []),
+      ...(p.meta.keywords ?? []),
+    ]
+      .join(" ")
+      .toLowerCase(),
     external: false,
   })),
 ];
@@ -81,7 +108,10 @@ export default function CommandPalette() {
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
         e.preventDefault();
         setOpen((prev) => {
-          if (!prev) { setQuery(""); setSelectedIndex(0); }
+          if (!prev) {
+            setQuery("");
+            setSelectedIndex(0);
+          }
           return !prev;
         });
       }
@@ -99,7 +129,9 @@ export default function CommandPalette() {
   // Scroll lock
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [open]);
 
   // Focus input when opened
@@ -108,22 +140,34 @@ export default function CommandPalette() {
   }, [open]);
 
   // Reset selection on query change
-  useEffect(() => { setSelectedIndex(0); }, [query]);
+  useEffect(() => {
+    setSelectedIndex(0);
+  }, [query]);
 
-  const navigate = useCallback((item) => {
-    setOpen(false);
-    if (item.external) {
-      window.open(item.href, "_blank", "noopener,noreferrer");
-    } else {
-      router.push(item.href);
-    }
-  }, [router]);
+  const navigate = useCallback(
+    (item) => {
+      setOpen(false);
+      if (item.external) {
+        window.open(item.href, "_blank", "noopener,noreferrer");
+      } else {
+        router.push(item.href);
+      }
+    },
+    [router],
+  );
 
   const handleKeyDown = (e) => {
-    if (e.key === "Escape") { setOpen(false); }
-    else if (e.key === "ArrowDown") { e.preventDefault(); setSelectedIndex((i) => Math.min(i + 1, flat.length - 1)); }
-    else if (e.key === "ArrowUp") { e.preventDefault(); setSelectedIndex((i) => Math.max(i - 1, 0)); }
-    else if (e.key === "Enter" && flat[selectedIndex]) { navigate(flat[selectedIndex]); }
+    if (e.key === "Escape") {
+      setOpen(false);
+    } else if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setSelectedIndex((i) => Math.min(i + 1, flat.length - 1));
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setSelectedIndex((i) => Math.max(i - 1, 0));
+    } else if (e.key === "Enter" && flat[selectedIndex]) {
+      navigate(flat[selectedIndex]);
+    }
   };
 
   let fi = 0;
@@ -187,10 +231,17 @@ export default function CommandPalette() {
                           onClick={() => navigate(item)}
                           onMouseEnter={() => setSelectedIndex(idx)}
                         >
-                          <Icon className={styles.resultIcon} aria-hidden="true" />
+                          <Icon
+                            className={styles.resultIcon}
+                            aria-hidden="true"
+                          />
                           <div className={styles.resultText}>
-                            <span className={styles.resultTitle}>{item.title}</span>
-                            <span className={styles.resultSubtitle}>{item.subtitle}</span>
+                            <span className={styles.resultTitle}>
+                              {item.title}
+                            </span>
+                            <span className={styles.resultSubtitle}>
+                              {item.subtitle}
+                            </span>
                           </div>
                         </button>
                       );
@@ -201,19 +252,26 @@ export default function CommandPalette() {
             )}
 
             {query && results.length === 0 && (
-              <p className={styles.empty}>No results for &ldquo;{query}&rdquo;</p>
-            )}
-
-            {!query && (
-              <p className={styles.hint}>
-                Search across pages and blog posts.
+              <p className={styles.empty}>
+                No results for &ldquo;{query}&rdquo;
               </p>
             )}
 
+            {!query && (
+              <p className={styles.hint}>Search across pages and blog posts.</p>
+            )}
+
             <div className={styles.footer}>
-              <span><kbd className={styles.kbd}>↑</kbd><kbd className={styles.kbd}>↓</kbd> navigate</span>
-              <span><kbd className={styles.kbd}>↵</kbd> open</span>
-              <span><kbd className={styles.kbd}>Esc</kbd> close</span>
+              <span>
+                <kbd className={styles.kbd}>↑</kbd>
+                <kbd className={styles.kbd}>↓</kbd> navigate
+              </span>
+              <span>
+                <kbd className={styles.kbd}>↵</kbd> open
+              </span>
+              <span>
+                <kbd className={styles.kbd}>Esc</kbd> close
+              </span>
             </div>
           </motion.div>
         </>

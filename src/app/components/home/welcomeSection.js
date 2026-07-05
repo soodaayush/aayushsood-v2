@@ -66,7 +66,8 @@ export default function Welcome() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 450, damping: 20 }}
-              href="/resume"
+              href="assets/resume/resume.pdf"
+              target="_blank"
               className={`${styles.ctaButton} ${styles.ctaButtonSecondary}`}
             >
               Resume
