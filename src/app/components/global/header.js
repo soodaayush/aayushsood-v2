@@ -45,7 +45,7 @@ export default function Header() {
             </Link>
             <a
               className={styles.title}
-              href="assets/resume/resume.pdf"
+              href="/assets/resume/resume.pdf"
               target="_blank"
             >
               <h2>Resume</h2>
@@ -199,7 +199,7 @@ export default function Header() {
                 </Link>
                 <a
                   className={styles.menuLink}
-                  href="assets/resume/resume.pdf"
+                  href="/assets/resume/resume.pdf"
                   target="_blank"
                   onClick={openHamburgerMenu}
                 >
