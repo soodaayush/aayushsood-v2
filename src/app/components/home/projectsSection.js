@@ -31,7 +31,8 @@ export default function Projects({ projects }) {
 
   const visibleProjects = [];
   for (let i = 0; i < numVisibleProjects; i++) {
-    visibleProjects.push(projects[(currentIndex + i) % projects.length]);
+    const index = (currentIndex + i) % projects.length;
+    visibleProjects.push({ ...projects[index], index });
   }
 
   return (

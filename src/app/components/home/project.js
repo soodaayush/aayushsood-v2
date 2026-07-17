@@ -8,8 +8,7 @@ import Image from "next/image";
 import styles from "../../styles/home/project.module.css";
 
 export default function Project(props) {
-  const rawDeg = parseFloat(props.rotate.replace(/rotate\(|deg\)/g, ""));
-  const rotateDeg = rawDeg > 180 ? rawDeg - 360 : rawDeg;
+  const rotateDeg = props.index % 2 === 0 ? -2 : 2;
 
   return (
     <motion.div

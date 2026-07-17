@@ -1,14 +1,23 @@
 [
   {
+    "name": "Market Maker",
+    "image": "/assets/projects/thumbnails/market-maker.webp",
+    "description": "A Python simulation exploring how market makers keep markets running by continuously buying and selling assets.",
+    "details": "Built to understand how financial markets operate behind the scenes, this project simulates a market maker that provides liquidity by continuously placing buy and sell orders. The simulation models changing asset prices, inventory-based pricing adjustments, and different trader behaviors including random, momentum, and informed strategies. It tracks trading performance through profit and loss metrics and uses Matplotlib to visualize market activity over time.",
+    "tags": ["Python", "Matplotlib", "Finance", "Simulation"],
+    "year": 2026,
+    "github": "https://github.com/soodaayush/market-maker",
+    "gradient": "linear-gradient(#1E3A5F, #2E5E8A, #5B8FB9)"
+  },
+  {
     "name": "IWKids",
     "image": "/assets/projects/thumbnails/IWKids.webp",
-    "description": "IWKids is an AI-powered mobile app that enhances the ER experience for kids and families, built for the Youth AI Pitch Competition where our team placed 2nd out of 25 teams.",
+    "description": "An AI-powered mobile app that enhances the ER experience for kids and families, built for the Youth AI Pitch Competition where our team placed 2nd.",
     "details": "Built for the Atlantic Canada Youth AI Pitch Competition at the AI Healthcare Summit, IWKids aims to reduce anxiety and improve communication for children visiting the IWK Health Centre's emergency room. The app delivers real-time wait time updates via Twilio SMS, an AI-powered chatbot using the OpenAI API to answer common health questions in child-friendly language, and interactive games and activities to keep kids calm during long waits. Our team of four designed, built, and pitched the full prototype in a few weeks, placing 2nd out of 25 competing teams.",
     "tags": ["React Native", "Expo", "Twilio", "OpenAI API"],
     "year": 2025,
     "github": "https://github.com/soodaayush/IWKids",
-    "gradient": "linear-gradient(#176C5C, #1B7862, #1E8368)",
-    "rotate": "rotate(358deg)"
+    "gradient": "linear-gradient(#2F5DAA, #3E72C4, #5B8ED9)"
   },
   {
     "name": "BVHS Mobile App",
@@ -18,8 +27,7 @@
     "tags": ["React Native", "Expo"],
     "year": 2024,
     "github": "https://github.com/soodaayush/BVHApp",
-    "gradient": "linear-gradient(#6D4D87, #875E92, #A06E9D)",
-    "rotate": "rotate(2deg)"
+    "gradient": "linear-gradient(#1D5B4F, #2A7362, #3F8C79)"
   },
   {
     "name": "Ben Eater's 8-Bit Project",
@@ -29,8 +37,7 @@
     "tags": ["Arduino"],
     "year": 2024,
     "github": "https://github.com/soodaayush/8-bit-project",
-    "gradient": "linear-gradient(#C57D3E, #C2683E, #BF533E)",
-    "rotate": "rotate(358deg)"
+    "gradient": "linear-gradient(#5C3B2E, #7A4F39, #986446)"
   },
   {
     "name": "Ben Eater's 6502 Project",
@@ -40,8 +47,7 @@
     "tags": ["Arduino", "Python", "Assembly", "C++"],
     "year": 2024,
     "github": "https://github.com/soodaayush/6502-project",
-    "gradient": "linear-gradient(#715C6A, #924D60, #B33E56)",
-    "rotate": "rotate(2deg)"
+    "gradient": "linear-gradient(#203A73, #2C5291, #416CB0)"
   },
   {
     "name": "LeetCode",
@@ -51,8 +57,7 @@
     "tags": ["JavaScript", "Python", "C++"],
     "year": 2022,
     "github": "https://github.com/soodaayush/leetcode",
-    "gradient": "linear-gradient(#176C5C, #1B7862, #1E8368)",
-    "rotate": "rotate(358deg)"
+    "gradient": "linear-gradient(#B45309, #C2410C, #B91C1C)"
   },
   {
     "name": "CoinDeno",
@@ -63,20 +68,7 @@
     "tags": ["React Native", "Expo", "Firebase", "JavaScript"],
     "year": 2022,
     "github": "https://github.com/soodaayush/coindeno",
-    "gradient": "linear-gradient(#2082AB, #22699C, #23508D)",
-    "rotate": "rotate(2deg)"
-  },
-  {
-    "name": "Pac Man",
-    "website": "https://pac-man-wb.netlify.app/",
-    "image": "/assets/projects/thumbnails/pac-man.webp",
-    "description": "A website that allows you to play the iconic game, Pac Man.",
-    "details": "A browser-based recreation of the classic Pac-Man arcade game built entirely with HTML, SCSS, and vanilla JavaScript, with no game frameworks. Implements the original ghost AI behavior (Blinky, Pinky, Inky, and Clyde each with distinct chase patterns), pellet and power-up collection, and score tracking. A deep dive into game loop architecture, collision detection, and DOM manipulation without any abstractions.",
-    "tags": ["HTML", "SCSS", "JavaScript"],
-    "year": 2021,
-    "github": "https://github.com/soodaayush/pac-man",
-    "gradient": "linear-gradient(#5D427F, #825B8F, #9B6B9A)",
-    "rotate": "rotate(358deg)"
+    "gradient": "linear-gradient(#0F5C56, #0F766E, #15857E)"
   },
   {
     "name": "CoinDeno Web",
@@ -87,8 +79,7 @@
     "tags": ["React", "Redux", "Firebase", "Tailwind CSS"],
     "year": 2021,
     "github": "https://github.com/soodaayush/coindeno-web",
-    "gradient": "linear-gradient(#C57D3E, #C2683E, #BF533E)",
-    "rotate": "rotate(2deg)"
+    "gradient": "linear-gradient(#1D4ED8, #2563EB, #3B82F6)"
   },
   {
     "name": "Frontend Mentor Challenges",
@@ -99,7 +90,6 @@
     "tags": ["HTML", "SCSS", "JavaScript"],
     "year": 2020,
     "github": "https://github.com/soodaayush/frontend-mentor-challenges",
-    "gradient": "linear-gradient(#715D6A, #914E60, #B03F56)",
-    "rotate": "rotate(358deg)"
+    "gradient": "linear-gradient(#5B21B6, #6D28D9, #7C3AED)"
   }
 ]
