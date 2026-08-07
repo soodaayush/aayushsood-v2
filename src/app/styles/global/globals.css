@@ -68,7 +68,6 @@ html.light {
   --view-counter-ghost-color: rgba(255, 255, 255, 0.07);
   --view-counter-digit-color: #ffffff;
   --highlight-background: #fde047;
-  --highlight-text-color: #000;
 }
 
 html.dark {
@@ -111,7 +110,6 @@ html.dark {
   --view-counter-ghost-color: rgba(255, 255, 255, 0.07);
   --view-counter-digit-color: #ffffff;
   --highlight-background: #fde047;
-  --highlight-text-color: #000;
 }
 
 a {
@@ -203,10 +201,8 @@ svg {
 }
 
 .blog-content mark {
-  background: var(--highlight-background);
-  color: var(--highlight-text-color);
-  padding: 0 0.15em;
-  border-radius: 2px;
+  background: none;
+  color: var(--highlight-background);
 }
 
 .blog-content a {
