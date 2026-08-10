@@ -7,9 +7,10 @@ import {
 } from "react-icons/fa";
 import {
   SiJavascript, SiTailwindcss, SiBootstrap, SiFirebase,
-  SiCplusplus, SiCloudflare, SiNetlify, SiOpenai,
+  SiCplusplus, SiCloudflare, SiNetlify,
 } from "react-icons/si";
 import { RiBrainLine } from "react-icons/ri";
+import { TbBrandOpenai } from "react-icons/tb";
 
 import styles from "../../styles/home/technicalSkill.module.css";
 
@@ -33,7 +34,7 @@ const SKILL_ICONS = {
   "React Native": FaReact,
   "iOS": FaApple,
   "Android": FaAndroid,
-  "ChatGPT": SiOpenai,
+  "ChatGPT": TbBrandOpenai,
   "Claude Code": RiBrainLine,
   "NotebookLM": RiBrainLine,
 };
