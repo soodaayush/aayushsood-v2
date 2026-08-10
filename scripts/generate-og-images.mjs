@@ -235,16 +235,14 @@ await generate(
 for (const post of posts) {
   const title = post.meta?.title ?? "Blog Post";
   const description = post.meta?.description ?? "";
-  const truncDesc =
-    description.length > 120 ? description.slice(0, 120) + "..." : description;
 
   await generate(
     join(postsDir, `${post.slug}.png`),
     ogLayout({
       breadcrumb: "aayushsood.com / blog",
       title,
-      lines: truncDesc
-        ? [{ text: truncDesc, color: C.white, size: "22px" }]
+      lines: description
+        ? [{ text: description, color: C.white, size: "22px" }]
         : [],
       footerLeft: "Aayush Sood",
       footerRight: post.meta?.date || undefined,
