@@ -2,39 +2,32 @@
   {
     "type": "Frontend",
     "skills": [
-      { "id": 1, "name": "HTML", "experience": "5 Years" },
-      { "id": 2, "name": "CSS/SCSS", "experience": "5 Years" },
-      { "id": 3, "name": "JavaScript", "experience": "3 Years" },
-      { "id": 4, "name": "Tailwind CSS", "experience": "1 Year" },
-      { "id": 5, "name": "React", "experience": "3 Years" },
-      { "id": 6, "name": "Bootstrap CSS", "experience": "6 Months" }
+      { "id": 1, "name": "HTML" },
+      { "id": 2, "name": "CSS/SCSS" },
+      { "id": 3, "name": "JavaScript" },
+      { "id": 4, "name": "React" },
+      { "id": 5, "name": "React Native" },
+      { "id": 6, "name": "Tailwind CSS" }
     ]
   },
   {
     "type": "Backend",
     "skills": [
-      { "id": 7, "name": "Python", "experience": "1 Year" },
-      { "id": 8, "name": "Node.js", "experience": "3 Years" },
-      { "id": 9, "name": "Firebase", "experience": "1 Year" },
-      { "id": 10, "name": "C++", "experience": "1 Year" },
-      { "id": 15, "name": "Git", "experience": "5 Years" }
-    ]
-  },
-
-  {
-    "type": "Mobile",
-    "skills": [
-      { "id": 17, "name": "React Native", "experience": "1 Year" },
-      { "id": 18, "name": "iOS", "experience": "1 Year" },
-      { "id": 19, "name": "Android", "experience": "1 Year" }
+      { "id": 7, "name": "Node.js" },
+      { "id": 8, "name": "Python" },
+      { "id": 9, "name": "Firebase" },
+      { "id": 10, "name": "C++" },
+      { "id": 11, "name": "Git" },
+      { "id": 12, "name": "Azure" }
     ]
   },
   {
-    "type": "Artificial Intelligence",
+    "type": "AI & Data Science",
     "skills": [
-      { "id": 20, "name": "ChatGPT", "experience": "1 Year" },
-      { "id": 21, "name": "Claude Code", "experience": "1 Month" },
-      { "id": 22, "name": "NotebookLM", "experience": "3 Months" }
+      { "id": 13, "name": "ChatGPT" },
+      { "id": 14, "name": "Claude Code" },
+      { "id": 15, "name": "Pandas" },
+      { "id": 16, "name": "scikit-learn" }
     ]
   }
 ]
