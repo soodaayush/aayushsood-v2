@@ -11,23 +11,33 @@
     ]
   },
   {
+    "type": "Tools",
+    "skills": [
+      { "id": 7, "name": "Firebase" },
+      { "id": 8, "name": "Cloudflare" },
+      { "id": 9, "name": "Netlify" },
+      { "id": 10, "name": "Git" },
+      { "id": 11, "name": "Linux" }
+    ]
+  },
+  {
     "type": "Backend",
     "skills": [
-      { "id": 7, "name": "Node.js" },
-      { "id": 8, "name": "Python" },
-      { "id": 9, "name": "Firebase" },
-      { "id": 10, "name": "C++" },
-      { "id": 11, "name": "Git" },
-      { "id": 12, "name": "Azure" }
+      { "id": 12, "name": "Node.js" },
+      { "id": 13, "name": "Python" },
+      { "id": 14, "name": "FastAPI" },
+      { "id": 15, "name": "SQL" },
+      { "id": 16, "name": "C++" },
+      { "id": 17, "name": "Microsoft Azure" }
     ]
   },
   {
     "type": "AI & Data Science",
     "skills": [
-      { "id": 13, "name": "ChatGPT" },
-      { "id": 14, "name": "Claude Code" },
-      { "id": 15, "name": "Pandas" },
-      { "id": 16, "name": "scikit-learn" }
+      { "id": 18, "name": "ChatGPT" },
+      { "id": 19, "name": "Claude Code" },
+      { "id": 20, "name": "Pandas" },
+      { "id": 21, "name": "scikit-learn" }
     ]
   }
 ]
