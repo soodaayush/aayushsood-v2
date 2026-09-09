@@ -238,5 +238,13 @@
     "bookLink": "https://a.co/d/6AhTY4e",
     "authorLink": "https://www.amazon.ca/stores/Margaret-Atwood/author/B000AQTHI0",
     "rating": 5
+  },
+  {
+    "title": "Hands-On Machine Learning with Scikit-Learn and PyTorch: Concepts, Tools, and Techniques to Build Intelligent Systems ",
+    "author": "Aurélien Géron",
+    "cover": "/assets/books/hands-on-ml.webp",
+    "bookLink": "https://a.co/d/06tRXmhD",
+    "authorLink": "https://www.amazon.ca/stores/Aur%C3%A9lien-G%C3%A9ron/author/B004MOO740",
+    "rating": 5
   }
 ]

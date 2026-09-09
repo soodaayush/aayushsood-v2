@@ -45,27 +45,20 @@
 .skillIcon {
   font-size: 16px;
   flex-shrink: 0;
-}
-
-.skillText {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
+  color: color-mix(
+    in srgb,
+    var(--skill-color, currentColor),
+    var(--skill-icon-tint) var(--skill-icon-tint-amount)
+  );
 }
 
 .skillTitle {
   font-size: 13px;
   cursor: default;
+  min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.skillExperience {
-  font-size: 11px;
-  opacity: 0.45;
-  cursor: default;
 }
 
 @media (max-width: 380px) {

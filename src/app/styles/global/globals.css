@@ -22,6 +22,11 @@ html {
   line-height: 1.6;
   font-size: 16px;
   font-family: "Wotfard", sans-serif;
+  /* Nudge brand-colored skill icons toward the current background so
+     pale logos (JS, Firebase) stay legible in light mode and dark
+     logos (C++) stay legible in dark mode. Overridden per theme below. */
+  --skill-icon-tint: #000;
+  --skill-icon-tint-amount: 0%;
 }
 
 body {
@@ -49,6 +54,8 @@ html.light {
   --curve-fill-color: #fff;
   --header-hover-color: #0f766e;
   --technical-skills-background-hover-color: #e2e8f0;
+  --skill-icon-tint: #000;
+  --skill-icon-tint-amount: 28%;
   --project-text-color: #f8fafc;
   --project-tag-background: #e8c9ea;
   --creator-underline-color: #0f766e;
@@ -91,6 +98,8 @@ html.dark {
   --curve-fill-color: #090e1a;
   --header-hover-color: #64ffda;
   --technical-skills-background-hover-color: #e2e8f0;
+  --skill-icon-tint: #fff;
+  --skill-icon-tint-amount: 16%;
   --project-text-color: #f8fafc;
   --project-tag-background: #171e29;
   --creator-underline-color: #0f766e;
