@@ -48,9 +48,9 @@ export default function Welcome() {
             className={styles.welcomeText}
           />
           <p className={styles.description}>
-            Incoming Software Engineering @ University of Waterloo. Based in
-            Nova Scotia, Canada, I'm passionate about <br /> building scalable
-            software, mathematics, geopolitics, and Brazilian Jiu-Jitsu.
+            Software Engineering @ University of Waterloo. Based in Nova Scotia,
+            Canada, I'm passionate about <br /> building scalable software,
+            mathematics, geopolitics, and Brazilian Jiu-Jitsu.
           </p>
           <div className={styles.ctaButtons}>
             <motion.a
