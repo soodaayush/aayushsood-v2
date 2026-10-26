@@ -1,4 +1,4 @@
-import posts from "../../../public/posts.json";
+import { getPosts } from "../../../utils/fetchPosts";
 
 const siteUrl = "https://www.aayushsood.com";
 
@@ -15,11 +15,7 @@ function escapeXml(text) {
 }
 
 export function GET() {
-  const sortedPosts = [...posts].sort(
-    (a, b) => new Date(b.meta.date) - new Date(a.meta.date),
-  );
-
-  const items = sortedPosts
+  const items = getPosts()
     .map((post) => {
       const url = `${siteUrl}/blog/${post.slug}`;
       return `    <item>

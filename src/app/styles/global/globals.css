@@ -4,9 +4,7 @@
   src: url("../../../../public/assets/fonts/wotfard-regular-webfont.woff2")
       format("woff2"),
     url("../../../../public/assets/fonts/wotfard-regular-webfont.ttf")
-      format("ttf"),
-    url("../../../../public/assets/fonts/wotfard-regular-webfont.eot")
-      format("eot");
+      format("truetype");
   font-display: swap;
 }
 

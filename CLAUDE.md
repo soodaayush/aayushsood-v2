@@ -10,12 +10,12 @@ Personal portfolio website for Aayush Sood, built with Next.js App Router.
 - **Animations**: Framer Motion (`motion/react`)
 - **Themes**: `next-themes` — dark/light via `html.dark` / `html.light` class
 - **Icons**: `react-icons` (`fa`, `si`, `ri` families)
-- **Blog**: MDX files in `content/posts/`, compiled to `public/posts.json` by `scripts/generatePosts.mjs` (runs in `prebuild`), rendered with `marked` v18; RSS feed at `/feed.xml`
+- **Blog**: MDX files in `content/posts/`, read directly at build time by `utils/fetchPosts.js` (`gray-matter`), rendered with `marked` v18 (plain Markdown — no JSX in posts); RSS feed at `/feed.xml`
 - **Database**: Firebase (Firestore) — used for blog post likes
 - **Analytics**: Google Analytics via `@next/third-parties`
-- **OG Images**: Generated pre-build with Satori + Resvg (`scripts/generate-og-images.mjs`)
+- **OG Images**: Next `opengraph-image.js` files (home, blog, books, each post) using the shared layout in `utils/ogImage.js`
 - **Linting**: ESLint 9 flat config (`eslint.config.mjs`) using `eslint-config-next/core-web-vitals` — ESLint 10 is not yet supported by the Next plugins
-- **Sitemap**: `next-sitemap` runs post-build
+- **Sitemap / robots**: `src/app/sitemap.js` and `src/app/robots.js`
 
 ## Project Structure
 
@@ -26,7 +26,6 @@ src/app/
     home/         # welcomeSection, technicalSkillsSection, projectsSection, interestsSection
     blog/         # TableOfContents, likeButton, backToTopButton
     books/        # book card
-    resume/       # ResumeContent
   styles/
     global/       # globals.css, header/footer/commandPalette modules
     home/         # page, project, interest, technicalSkill modules
@@ -37,15 +36,16 @@ src/app/
     interests.json         # Interest cards with YouTube links
     books.json             # Reading list with ratings
   blog/[id]/page.js        # Blog post page (server component, statically generated)
+  blog/[id]/opengraph-image.js  # Per-post OG image
   feed.xml/route.js        # RSS feed (static route handler)
+  sitemap.js, robots.js    # Generated from posts at build time
+  opengraph-image.js       # Default OG image (also blog/, books/)
   layout.js                # Root layout — ThemeProvider, Header, Footer, CommandPalette
 
-content/posts/             # MDX blog posts (YAML frontmatter)
-public/posts.json          # Compiled blog posts (regenerated in prebuild, committed)
-scripts/                   # generatePosts.mjs (posts.json), generate-og-images.mjs
+content/posts/             # MDX blog posts (YAML frontmatter) — the single source of truth
 libs/                      # firebaseConfig
 hooks/                     # useAnonAuth (anonymous Firebase auth)
-utils/                     # fetchPosts
+utils/                     # fetchPosts (post loader + validation), ogImage (shared OG layout)
 ```
 
 ## Key Conventions
@@ -54,14 +54,15 @@ utils/                     # fetchPosts
 - Theme variables pattern: `--variable-name` defined in `html.light {}` and `html.dark {}` blocks
 - **Server Components** for pages/layouts; `"use client"` for anything with state, effects, or event handlers
 - Data lives in `src/app/data/*.json` — edit these to update site content
-- Blog posts are `.mdx` files in `content/posts/` with YAML frontmatter (`title`, `description`, `date`, `keywords`, `tags`, optional `updated` for `dateModified`). Dates are human-readable (e.g. `"March 15, 2025"`) and converted to ISO for metadata
+- Blog posts are `.mdx` files in `content/posts/` with YAML frontmatter (`title`, `description`, `date`, `keywords`, `tags`, optional `updated` for `dateModified`). Dates are quoted human-readable strings (e.g. `"March 15, 2025"`) and converted to ISO for metadata
+- **Publishing a post**: add an `.mdx` file to `content/posts/` — the page, OG image, sitemap entry, RSS item and command palette entry are all derived from it. The build fails if `title`, `description` or `date` is missing or a date doesn't parse
+- **Client components get post summaries only** (`getPostSummaries()` — no `content`), passed as props from server components. Never import post content into a client component; it ships in every page's JS
 
 ## Scripts
 
 ```bash
 npm run dev        # Dev server with Turbopack
-npm run posts      # Regenerate public/posts.json from content/posts
-npm run build      # Prebuild (posts.json + OG images) → next build → postbuild (sitemap)
+npm run build      # next build (posts, OG images, sitemap, feed all generated here)
 npm run lint       # ESLint (eslint .)
 ```
 

@@ -7,6 +7,8 @@ import CommandPalette from "./components/global/commandPalette";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeProvider } from "next-themes";
 
+import { getPostSummaries } from "../../utils/fetchPosts";
+
 export const viewport = {
   width: "device-width",
   initialScale: 1,
@@ -17,6 +19,7 @@ export const viewport = {
 };
 
 export const metadata = {
+  metadataBase: new URL("https://www.aayushsood.com"),
   title: "Portfolio | Aayush Sood",
   description:
     "Welcome to my personal portfolio. Discover my skills, projects, interests, and experience.",
@@ -45,15 +48,6 @@ export const metadata = {
     description: "Aayush Sood's Portfolio",
     url: "https://www.aayushsood.com/",
     siteName: "Aayush Sood",
-    images: [
-      {
-        url: "https://www.aayushsood.com/assets/openGraph/home.png",
-        width: 1200,
-        height: 630,
-        type: "image/png",
-        alt: "Aayush Sood - Fullstack Developer",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -106,7 +100,6 @@ export const metadata = {
     card: "summary_large_image",
     title: "Aayush Sood",
     description: "Aayush Sood's Portfolio",
-    images: ["https://www.aayushsood.com/assets/openGraph/home.png"],
   },
   alternates: {
     canonical: "https://www.aayushsood.com/",
@@ -174,7 +167,7 @@ export default function RootLayout({ children }) {
           <Header />
           <main>{children}</main>
           <Footer />
-          <CommandPalette />
+          <CommandPalette posts={getPostSummaries()} />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

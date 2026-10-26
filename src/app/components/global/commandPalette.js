@@ -1,12 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
 import { FaBlog, FaHome } from "react-icons/fa";
 import { IoSearch, IoClose } from "react-icons/io5";
-
-import rawPosts from "../../../../public/posts.json";
 
 import styles from "../../styles/global/commandPalette.module.css";
 
@@ -49,46 +47,51 @@ const PAGES = [
   },
 ];
 
-const searchIndex = [
-  ...PAGES.map((pg) => ({
-    type: "Page",
-    title: pg.title,
-    subtitle: pg.subtitle,
-    href: pg.href,
-    search: pg.search,
-    external: false,
-  })),
-  ...rawPosts.map((p) => ({
-    type: "Post",
-    title: p.meta.title,
-    subtitle: p.meta.description,
-    href: `/blog/${p.slug}`,
-    search: [
-      p.meta.title,
-      p.meta.description,
-      ...(p.meta.tags ?? []),
-      ...(p.meta.keywords ?? []),
-    ]
-      .join(" ")
-      .toLowerCase(),
-    external: false,
-  })),
-];
+const pageIndex = PAGES.map((pg) => ({
+  type: "Page",
+  title: pg.title,
+  subtitle: pg.subtitle,
+  href: pg.href,
+  search: pg.search,
+  external: false,
+}));
 
-function runSearch(query) {
+function buildSearchIndex(posts) {
+  return [
+    ...pageIndex,
+    ...posts.map((p) => ({
+      type: "Post",
+      title: p.meta.title,
+      subtitle: p.meta.description,
+      href: `/blog/${p.slug}`,
+      search: [
+        p.meta.title,
+        p.meta.description,
+        ...(p.meta.tags ?? []),
+        ...(p.meta.keywords ?? []),
+      ]
+        .join(" ")
+        .toLowerCase(),
+      external: false,
+    })),
+  ];
+}
+
+function runSearch(searchIndex, query) {
   if (!query.trim()) return [];
   const q = query.toLowerCase();
   return searchIndex.filter((item) => item.search.includes(q));
 }
 
-export default function CommandPalette() {
+export default function CommandPalette({ posts }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef(null);
   const router = useRouter();
 
-  const results = runSearch(query);
+  const searchIndex = useMemo(() => buildSearchIndex(posts), [posts]);
+  const results = runSearch(searchIndex, query);
   const grouped = TYPE_ORDER.reduce((acc, type) => {
     const items = results.filter((r) => r.type === type);
     if (items.length) acc.push({ type, items });
