@@ -139,11 +139,6 @@ export default function CommandPalette() {
     if (open) setTimeout(() => inputRef.current?.focus(), 50);
   }, [open]);
 
-  // Reset selection on query change
-  useEffect(() => {
-    setSelectedIndex(0);
-  }, [query]);
-
   const navigate = useCallback(
     (item) => {
       setOpen(false);
@@ -201,14 +196,20 @@ export default function CommandPalette() {
                 className={styles.input}
                 placeholder="Search pages and posts…"
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e) => {
+                  setQuery(e.target.value);
+                  setSelectedIndex(0);
+                }}
                 onKeyDown={handleKeyDown}
                 aria-label="Search"
               />
               {query && (
                 <button
                   className={styles.clearButton}
-                  onClick={() => setQuery("")}
+                  onClick={() => {
+                    setQuery("");
+                    setSelectedIndex(0);
+                  }}
                   aria-label="Clear search"
                 >
                   <IoClose />

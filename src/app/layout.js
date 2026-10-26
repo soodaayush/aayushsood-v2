@@ -10,7 +10,10 @@ import { ThemeProvider } from "next-themes";
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#12192b",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#12192b" },
+  ],
 };
 
 export const metadata = {
@@ -107,6 +110,9 @@ export const metadata = {
   },
   alternates: {
     canonical: "https://www.aayushsood.com/",
+    types: {
+      "application/rss+xml": "https://www.aayushsood.com/feed.xml",
+    },
   },
 };
 

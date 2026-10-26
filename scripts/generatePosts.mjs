@@ -2,11 +2,13 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const postsDirectory = path.join(process.cwd(), "..", "content/posts");
-const outputFile = path.join(process.cwd(), "..", "public", "posts.json");
+const postsDirectory = path.join(process.cwd(), "content/posts");
+const outputFile = path.join(process.cwd(), "public", "posts.json");
 
 function generatePostsJson() {
-  const slugs = fs.readdirSync(postsDirectory);
+  const slugs = fs
+    .readdirSync(postsDirectory)
+    .filter((file) => file.endsWith(".mdx"));
   const posts = slugs.map((slug) => {
     const realSlug = slug.replace(/\.mdx$/, "");
     const fullPath = path.join(postsDirectory, slug);

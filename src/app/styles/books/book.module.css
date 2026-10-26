@@ -25,8 +25,8 @@
   right: 0;
   background: linear-gradient(
     to top,
-    rgba(9, 14, 26, 0.97) 0%,
-    rgba(9, 14, 26, 0.88) 55%,
+    var(--book-overlay-background) 0%,
+    var(--book-overlay-background-fade) 55%,
     transparent 100%
   );
   padding: 48px 14px 16px;
@@ -58,7 +58,7 @@
 }
 
 .starEmpty {
-  color: #758295;
+  color: var(--book-author-color);
   opacity: 0.35;
 }
 
@@ -66,13 +66,13 @@
   margin: 0;
   font-size: 15px;
   font-weight: 600;
-  color: #f8fafc;
+  color: var(--book-overlay-title-color);
   line-height: 1.3;
 }
 
 .bookAuthor {
   font-size: 13px;
-  color: #8892a4;
+  color: var(--book-overlay-author-color);
   text-decoration: none;
   transition: color 0.15s ease;
 }

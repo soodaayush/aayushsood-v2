@@ -63,6 +63,10 @@ html.light {
   --blog-link-underline-color: #2563eb;
   --blog-image-border: #e2e8f0;
   --book-author-color: #758295;
+  --book-overlay-title-color: #f8fafc;
+  --book-overlay-author-color: #8892a4;
+  --book-overlay-background: rgba(9, 14, 26, 0.97);
+  --book-overlay-background-fade: rgba(9, 14, 26, 0.88);
   --home-link-color: #7b2cbf;
   --resume-border: #d1d5db;
   --toc-text-color: #727b9e;
@@ -107,6 +111,10 @@ html.dark {
   --blog-link-underline-color: #718de1;
   --blog-image-border: #30353b;
   --book-author-color: #758295;
+  --book-overlay-title-color: #f8fafc;
+  --book-overlay-author-color: #8892a4;
+  --book-overlay-background: rgba(9, 14, 26, 0.97);
+  --book-overlay-background-fade: rgba(9, 14, 26, 0.88);
   --home-link-color: #e6b3ff;
   --resume-border: #202534;
   --toc-text-color: #959ea5;

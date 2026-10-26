@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "motion/react";
-import { useState, useEffect } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
 
 import { FaBlog, FaBook, FaGithub, FaMoon, FaSun } from "react-icons/fa";
@@ -20,9 +20,12 @@ export default function Header() {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
 
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
+  // false during SSR, true on the client — avoids theme hydration mismatch
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
   if (!mounted) return null;
 
   function openHamburgerMenu() {

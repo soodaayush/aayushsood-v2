@@ -49,7 +49,7 @@ export default function Welcome() {
           />
           <p className={styles.description}>
             Software Engineering @ University of Waterloo. Based in Nova Scotia,
-            Canada, I'm passionate about <br /> building scalable software,
+            Canada, I&apos;m passionate about <br /> building scalable software,
             mathematics, geopolitics, and Brazilian Jiu-Jitsu.
           </p>
           <div className={styles.ctaButtons}>

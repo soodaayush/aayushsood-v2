@@ -20,9 +20,17 @@ function slugify(anyText) {
 function getTocFromMarkdown(markdown) {
   const lines = markdown.split(/\r?\n/);
   const headings = [];
+  let inCodeBlock = false;
 
   lines.forEach((line) => {
     const trimmed = line.trim();
+    // Skip lines inside fenced code blocks so comments like "# foo" aren't treated as headings
+    if (trimmed.startsWith("```") || trimmed.startsWith("~~~")) {
+      inCodeBlock = !inCodeBlock;
+      return;
+    }
+    if (inCodeBlock) return;
+
     if (trimmed.startsWith("# ")) {
       headings.push({
         text: trimmed.slice(2).trim(),
@@ -45,6 +53,16 @@ function getTocFromMarkdown(markdown) {
   });
 
   return headings.filter((h) => h.depth >= 1 && h.depth <= 4);
+}
+
+function toIsoDate(date) {
+  return new Date(date).toISOString();
+}
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return posts.map((post) => ({ id: post.slug }));
 }
 
 export async function generateMetadata({ params }) {
@@ -71,7 +89,8 @@ export async function generateMetadata({ params }) {
       title: `${post.meta.title} | Aayush Sood`,
       description: post.meta.description,
       type: "article",
-      publishedTime: post.meta.date,
+      publishedTime: toIsoDate(post.meta.date),
+      modifiedTime: toIsoDate(post.meta.updated ?? post.meta.date),
       url: `https://www.aayushsood.com/blog/${id}`,
       images: [
         {
@@ -105,7 +124,7 @@ export default async function BlogPostPage({ params }) {
 
   let htmlContent = marked.parse(post.content);
   toc.forEach(({ id }) => {
-    htmlContent = htmlContent.replace(/<h([1-4])>/, `<h$1 id="${id}">`);
+    htmlContent = htmlContent.replace(/<h([1-3])>/, `<h$1 id="${id}">`);
   });
   htmlContent = htmlContent.replace(
     /<a /g,
@@ -118,8 +137,8 @@ export default async function BlogPostPage({ params }) {
     "@type": "BlogPosting",
     headline: post.meta.title,
     description: post.meta.description,
-    datePublished: post.meta.date,
-    dateModified: post.meta.date,
+    datePublished: toIsoDate(post.meta.date),
+    dateModified: toIsoDate(post.meta.updated ?? post.meta.date),
     url: `https://www.aayushsood.com/blog/${post.slug}`,
     author: {
       "@type": "Person",

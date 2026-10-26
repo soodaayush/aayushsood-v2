@@ -14,7 +14,7 @@ module.exports = {
   priority: 0.7,
   sitemapSize: 5000,
 
-  exclude: ["/blog", "/books", "/"],
+  exclude: ["/blog", "/books", "/", "/feed.xml"],
 
   additionalPaths: async () => {
     const additionalPaths = ["/blog", "/books", "/"];
