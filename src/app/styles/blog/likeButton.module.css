@@ -9,7 +9,7 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  font-family: "Wotfard", sans-serif;
+  font-family: var(--font-wotfard), sans-serif;
   gap: 0.5rem;
   margin-right: 10px;
   transition: opacity 0.15s ease-in-out;

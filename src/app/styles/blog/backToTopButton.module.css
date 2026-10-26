@@ -1,5 +1,5 @@
 .backToTop {
-  font-family: "Wotfard", sans-serif;
+  font-family: var(--font-wotfard), sans-serif;
   background: transparent;
   border: none;
   outline: none;
@@ -14,5 +14,8 @@
 }
 
 .text {
+  display: block;
   margin: 0;
+  font-size: 2em;
+  font-weight: bold;
 }

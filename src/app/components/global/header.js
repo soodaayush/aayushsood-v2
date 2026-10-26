@@ -20,13 +20,13 @@ export default function Header() {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
 
   const { theme, setTheme } = useTheme();
-  // false during SSR, true on the client — avoids theme hydration mismatch
+  // false during SSR, true on the client — the theme is only known on the client,
+  // so only the theme icon waits for this; the rest of the header renders on the server
   const mounted = useSyncExternalStore(
     () => () => {},
     () => true,
     () => false,
   );
-  if (!mounted) return null;
 
   function openHamburgerMenu() {
     setHamburgerMenu(!hamburgerMenu);
@@ -37,21 +37,22 @@ export default function Header() {
       <div className={`content ${styles.headerContent}`}>
         <div className={styles.name}>
           <Link className={styles.title} href="/">
-            <h1>Aayush Sood</h1>
+            <span className={styles.brand}>Aayush Sood</span>
           </Link>
           <div className={styles.pages}>
             <Link className={styles.title} href="/blog">
-              <h2>Blog</h2>
+              <span className={styles.navText}>Blog</span>
             </Link>
             <Link className={styles.title} href="/books">
-              <h2>Books</h2>
+              <span className={styles.navText}>Books</span>
             </Link>
             <a
               className={styles.title}
               href="/assets/resume/resume.pdf"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              <h2>Resume</h2>
+              <span className={styles.navText}>Resume</span>
             </a>
           </div>
         </div>
@@ -74,29 +75,34 @@ export default function Header() {
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
             aria-label="Toggle theme"
           >
-            <AnimatePresence mode="wait" initial={false}>
-              {theme === "light" ? (
-                <motion.div
-                  key="moon"
-                  initial={{ rotate: -90, scale: 0, opacity: 0 }}
-                  animate={{ rotate: 0, scale: 1, opacity: 1 }}
-                  exit={{ rotate: 90, scale: 0, opacity: 0 }}
-                  transition={{ duration: 0.4, ease: "easeInOut" }}
-                >
-                  <FaMoon className={styles.pageIcon} />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="sun"
-                  initial={{ rotate: 90, scale: 0, opacity: 0 }}
-                  animate={{ rotate: 0, scale: 1, opacity: 1 }}
-                  exit={{ rotate: -90, scale: 0, opacity: 0 }}
-                  transition={{ duration: 0.4, ease: "easeInOut" }}
-                >
-                  <FaSun className={styles.pageIcon} />
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {!mounted ? (
+              // Same size as the icon so the header doesn't shift once it appears
+              <span className={styles.pageIcon} />
+            ) : (
+              <AnimatePresence mode="wait" initial={false}>
+                {theme === "light" ? (
+                  <motion.div
+                    key="moon"
+                    initial={{ rotate: -90, scale: 0, opacity: 0 }}
+                    animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                    exit={{ rotate: 90, scale: 0, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                  >
+                    <FaMoon className={styles.pageIcon} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="sun"
+                    initial={{ rotate: 90, scale: 0, opacity: 0 }}
+                    animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                    exit={{ rotate: -90, scale: 0, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                  >
+                    <FaSun className={styles.pageIcon} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            )}
           </motion.button>
           <motion.a
             href="https://github.com/soodaayush"
@@ -130,11 +136,10 @@ export default function Header() {
             transition={HOVER_SPRING}
             className={styles.button}
             aria-label="Open navigation menu"
+            aria-expanded={hamburgerMenu}
+            onClick={openHamburgerMenu}
           >
-            <RxHamburgerMenu
-              onClick={openHamburgerMenu}
-              className={styles.pageIcon}
-            />
+            <RxHamburgerMenu className={styles.pageIcon} />
           </motion.button>
         </div>
         <AnimatePresence>
@@ -158,11 +163,9 @@ export default function Header() {
                   transition={HOVER_SPRING}
                   className={styles.button}
                   aria-label="Close navigation menu"
+                  onClick={openHamburgerMenu}
                 >
-                  <IoClose
-                    onClick={openHamburgerMenu}
-                    className={styles.pageIcon}
-                  />
+                  <IoClose className={styles.pageIcon} />
                 </motion.button>
               </div>
               <div className={styles.menuSection}>
@@ -177,7 +180,7 @@ export default function Header() {
                     transition={HOVER_SPRING}
                     className={styles.menuButton}
                   >
-                    <h2 className={styles.menuLinkText}>Blog</h2>
+                    <span className={styles.menuLinkText}>Blog</span>
                     <div>
                       <FaBlog className={styles.pageIcon} />
                     </div>
@@ -194,7 +197,7 @@ export default function Header() {
                     transition={HOVER_SPRING}
                     className={styles.menuButton}
                   >
-                    <h2 className={styles.menuLinkText}>Books</h2>
+                    <span className={styles.menuLinkText}>Books</span>
                     <div>
                       <FaBook className={styles.pageIcon} />
                     </div>
@@ -204,6 +207,7 @@ export default function Header() {
                   className={styles.menuLink}
                   href="/assets/resume/resume.pdf"
                   target="_blank"
+                  rel="noopener noreferrer"
                   onClick={openHamburgerMenu}
                 >
                   <motion.div
@@ -212,7 +216,7 @@ export default function Header() {
                     transition={HOVER_SPRING}
                     className={styles.menuButton}
                   >
-                    <h2 className={styles.menuLinkText}>Resume</h2>
+                    <span className={styles.menuLinkText}>Resume</span>
                     <div>
                       <BsFileEarmarkPersonFill className={styles.pageIcon} />
                     </div>
@@ -221,33 +225,35 @@ export default function Header() {
               </div>
               <div className={styles.menuSection}>
                 <div className={styles.menuLink}>
-                  <motion.div
+                  <motion.button
+                    type="button"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     transition={HOVER_SPRING}
-                    className={styles.menuButton}
+                    className={`${styles.menuButton} ${styles.menuButtonReset}`}
                     onClick={() => {
                       openHamburgerMenu();
                       window.dispatchEvent(new CustomEvent("open-search"));
                     }}
                   >
-                    <h2 className={styles.menuLinkText}>Search</h2>
+                    <span className={styles.menuLinkText}>Search</span>
                     <div>
                       <IoSearch className={styles.pageIcon} />
                     </div>
-                  </motion.div>
+                  </motion.button>
                 </div>
                 <div className={styles.menuLink}>
-                  <motion.div
+                  <motion.button
+                    type="button"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     transition={HOVER_SPRING}
-                    className={styles.menuButton}
+                    className={`${styles.menuButton} ${styles.menuButtonReset}`}
                     onClick={() =>
                       setTheme(theme === "light" ? "dark" : "light")
                     }
                   >
-                    <h2 className={styles.menuLinkText}>Theme</h2>
+                    <span className={styles.menuLinkText}>Theme</span>
                     <div>
                       {theme === "light" ? (
                         <FaMoon className={styles.pageIcon} />
@@ -255,11 +261,12 @@ export default function Header() {
                         <FaSun className={styles.pageIcon} />
                       )}
                     </div>
-                  </motion.div>
+                  </motion.button>
                 </div>
                 <a
                   href="https://github.com/soodaayush"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={styles.menuLink}
                 >
                   <motion.div
@@ -268,7 +275,7 @@ export default function Header() {
                     transition={HOVER_SPRING}
                     className={styles.menuButton}
                   >
-                    <h2 className={styles.menuLinkText}>GitHub</h2>
+                    <span className={styles.menuLinkText}>GitHub</span>
                     <div>
                       <FaGithub className={styles.pageIcon} />
                     </div>
@@ -277,6 +284,7 @@ export default function Header() {
                 <a
                   href="https://linktr.ee/aayushsood"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={styles.menuLink}
                 >
                   <motion.div
@@ -285,7 +293,7 @@ export default function Header() {
                     transition={HOVER_SPRING}
                     className={styles.menuButton}
                   >
-                    <h2 className={styles.menuLinkText}>Linktree</h2>
+                    <span className={styles.menuLinkText}>Linktree</span>
                     <div>
                       <SiLinktree className={styles.pageIcon} />
                     </div>

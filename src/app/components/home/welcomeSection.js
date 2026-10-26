@@ -29,6 +29,9 @@ export default function Welcome() {
     <div className={styles.welcomeContainer}>
       <div className={`content ${styles.welcomeContent}`}>
         <div>
+          <h1 className={styles.visuallyHidden}>
+            Aayush Sood, Software Engineering student and fullstack developer
+          </h1>
           <TypeAnimation
             sequence={[
               "Hi, I'm Aayush",
@@ -66,8 +69,9 @@ export default function Welcome() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 450, damping: 20 }}
-              href="assets/resume/resume.pdf"
+              href="/assets/resume/resume.pdf"
               target="_blank"
+              rel="noopener noreferrer"
               className={`${styles.ctaButton} ${styles.ctaButtonSecondary}`}
             >
               Resume

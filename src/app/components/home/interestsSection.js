@@ -25,7 +25,9 @@ export default function Interests({ interests }) {
 
       // Equalize creators section heights so they align consistently within each row
       const creatorsEls = cards.map((c) => c.lastElementChild).filter(Boolean);
-      const maxCreatorsH = Math.max(...creatorsEls.map((el) => el.getBoundingClientRect().height));
+      const maxCreatorsH = Math.max(
+        ...creatorsEls.map((el) => el.getBoundingClientRect().height),
+      );
       creatorsEls.forEach((el) => (el.style.minHeight = `${maxCreatorsH}px`));
     };
 
@@ -48,7 +50,7 @@ export default function Interests({ interests }) {
   return (
     <div className={styles.interestsContainer}>
       <div className={`content ${styles.interestsContent}`}>
-        <motion.h1
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -56,7 +58,7 @@ export default function Interests({ interests }) {
           className={styles.sectionHeading}
         >
           Interests
-        </motion.h1>
+        </motion.h2>
         <div className={styles.interestList} ref={gridRef}>
           {interests.map((interest, idx) => {
             const IconComponent = iconMap[interest.icon];

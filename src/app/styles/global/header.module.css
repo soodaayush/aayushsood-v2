@@ -43,6 +43,21 @@
   opacity: 0.75;
 }
 
+/* Sized like the h1/h2 they replaced — the header isn't page content, so it shouldn't use headings */
+.brand {
+  display: block;
+  margin: 0.67em 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.navText {
+  display: block;
+  margin: 0.83em 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
 .links {
   gap: 5px;
 }
@@ -114,7 +129,19 @@
 }
 
 .menuLinkText {
+  display: block;
   margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.menuButtonReset {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
 }
 
 .links {

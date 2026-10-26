@@ -112,9 +112,15 @@ export default async function BlogPostPage({ params }) {
 
   const toc = getTocFromMarkdown(post.content);
 
-  let htmlContent = marked.parse(post.content);
+  // Shift headings down one level (# -> h2, ## -> h3, ...) so the post title stays the page's only h1
+  let htmlContent = marked
+    .parse(post.content)
+    .replace(
+      /<(\/?)h([1-5])>/g,
+      (_, slash, level) => `<${slash}h${+level + 1}>`,
+    );
   toc.forEach(({ id }) => {
-    htmlContent = htmlContent.replace(/<h([1-3])>/, `<h$1 id="${id}">`);
+    htmlContent = htmlContent.replace(/<h([2-4])>/, `<h$1 id="${id}">`);
   });
   htmlContent = htmlContent.replace(
     /<a /g,

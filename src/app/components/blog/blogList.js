@@ -29,9 +29,9 @@ export default function BlogList({ posts }) {
                 className={styles.blogPost}
               >
                 <Link href={`/blog/${post.slug}`}>
-                  <h1 className={`${styles.text} ${styles.title}`}>
+                  <h2 className={`${styles.text} ${styles.title}`}>
                     {post.meta.title}
-                  </h1>
+                  </h2>
                   <div className={styles.meta}>
                     <span className={`${styles.text} ${styles.date}`}>
                       {post.meta.date}

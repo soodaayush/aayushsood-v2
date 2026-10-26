@@ -68,7 +68,8 @@ npm run lint       # ESLint (eslint .)
 
 ## Important Details
 
-- **Blog heading IDs**: Injected server-side in `blog/[id]/page.js` via `.replace(/<h([1-3])>/, ...)` in document order. The TOC parser only picks up `#`–`###` and skips fenced code blocks; keep both in sync.
+- **Blog headings**: Markdown headings render one level down (`#` → `<h2>`, `##` → `<h3>`, …) so the post title is the page's only `<h1>`; `.blog-content h2–h5` styles in `globals.css` match the old sizes. IDs are injected server-side in `blog/[id]/page.js` via `.replace(/<h([2-4])>/, ...)` in document order. The TOC parser only picks up `#`–`###` and skips fenced code blocks; keep both in sync.
+- **Headings / a11y**: one `<h1>` per page. The header brand and nav are styled spans, not headings; home has a visually hidden `<h1>`. New-tab links need `rel="noopener noreferrer"`
 - **Blog images**: Not lazy-loaded (`decoding="async"` only) so TOC scroll positions are accurate.
 - **Theme colors**: All colors are CSS variables. Never hardcode colors in components — add a new variable to `globals.css` instead.
 - **Command palette**: Opens on `Ctrl+K` / `Cmd+K` or via search button in header. Only indexes Pages and Blog Posts.

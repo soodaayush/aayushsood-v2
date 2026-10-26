@@ -3,11 +3,20 @@ import "./styles/global/globals.css";
 import Header from "./components/global/header";
 import Footer from "./components/global/footer";
 import CommandPalette from "./components/global/commandPalette";
+import MotionProvider from "./components/global/motionProvider";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeProvider } from "next-themes";
+import localFont from "next/font/local";
 
 import { getPostSummaries } from "../../utils/fetchPosts";
+
+const wotfard = localFont({
+  src: "../../public/assets/fonts/wotfard-regular-webfont.woff2",
+  weight: "400",
+  display: "swap",
+  variable: "--font-wotfard",
+});
 
 export const viewport = {
   width: "device-width",
@@ -161,18 +170,22 @@ const structuredData = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={wotfard.variable} suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <CommandPalette posts={getPostSummaries()} />
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-          />
-          <GoogleAnalytics gaId="G-ZSFY8QD3JM" />
+          <MotionProvider>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            <CommandPalette posts={getPostSummaries()} />
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(structuredData),
+              }}
+            />
+            <GoogleAnalytics gaId="G-ZSFY8QD3JM" />
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>
