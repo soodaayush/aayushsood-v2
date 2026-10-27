@@ -1,35 +1,53 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
-  getPostStats,
-  hasRecorded,
-  recordPostAction,
-} from "../../../../utils/postStats";
+  doc,
+  increment,
+  onSnapshot,
+  runTransaction,
+} from "firebase/firestore";
+import { db } from "../../../../libs/firebaseConfig";
+import { useAnonAuth } from "../../../../hooks/useAnonAuth";
 
 import styles from "../../styles/blog/viewCounter.module.css";
 
 export default function ViewCounter({ postId }) {
+  const uid = useAnonAuth();
   const [viewCount, setViewCount] = useState(null);
+  const incremented = useRef(false);
 
   useEffect(() => {
-    let cancelled = false;
-
-    // Count a view once per browser; later visits just read the count
-    const request = hasRecorded("view", postId)
-      ? getPostStats(postId)
-      : recordPostAction("view", postId);
-
-    request
-      .then((stats) => {
-        if (!cancelled) setViewCount(stats.viewCount);
-      })
-      .catch((err) => console.error("ViewCounter:", err.message));
-
-    return () => {
-      cancelled = true;
-    };
+    const postRef = doc(db, "posts", postId);
+    const unsubscribe = onSnapshot(postRef, (snap) => {
+      if (snap.exists()) {
+        setViewCount(snap.data().viewCount ?? 0);
+      } else {
+        setViewCount(0);
+      }
+    });
+    return () => unsubscribe();
   }, [postId]);
+
+  useEffect(() => {
+    if (!uid || incremented.current) return;
+    incremented.current = true;
+
+    const postRef = doc(db, "posts", postId);
+
+    runTransaction(db, async (transaction) => {
+      const postSnap = await transaction.get(postRef);
+
+      if (!postSnap.exists()) {
+        transaction.set(postRef, { viewCount: 1, likeCount: 0 });
+      } else {
+        transaction.update(postRef, { viewCount: increment(1) });
+      }
+    }).catch((err) => {
+      console.error("ViewCounter:", err.message);
+      incremented.current = false;
+    });
+  }, [uid, postId]);
 
   const isLoaded = viewCount !== null;
   const digits = isLoaded ? String(viewCount).padStart(6, "0") : "------";

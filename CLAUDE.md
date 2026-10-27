@@ -11,7 +11,7 @@ Personal portfolio website for Aayush Sood, built with Next.js App Router.
 - **Themes**: `next-themes` — dark/light via `html.dark` / `html.light` class
 - **Icons**: `react-icons` (`fa`, `si`, `ri` families)
 - **Blog**: MDX files in `content/posts/`, read directly at build time by `utils/fetchPosts.js` (`gray-matter`), rendered with `marked` v18 (plain Markdown — no JSX in posts); RSS feed at `/feed.xml`
-- **Database**: Firestore (via `firebase-admin`, server-only) — blog post view and like counts, served by `src/app/api/posts/[id]/route.js`. No Firebase SDK in the browser
+- **Database**: Firebase (Firestore) — used for blog post likes
 - **Analytics**: Google Analytics via `@next/third-parties`
 - **OG Images**: Next `opengraph-image.js` files (home, blog, books, each post) using the shared layout in `utils/ogImage.js`
 - **Linting**: ESLint 9 flat config (`eslint.config.mjs`) using `eslint-config-next/core-web-vitals` — ESLint 10 is not yet supported by the Next plugins
@@ -43,8 +43,9 @@ src/app/
   layout.js                # Root layout — ThemeProvider, Header, Footer, CommandPalette
 
 content/posts/             # MDX blog posts (YAML frontmatter) — the single source of truth
-libs/                      # firebaseAdmin (server-only Firestore client)
-utils/                     # fetchPosts (post loader + validation), ogImage (shared OG layout), postStats (client helpers for the counts API)
+libs/                      # firebaseConfig
+hooks/                     # useAnonAuth (anonymous Firebase auth)
+utils/                     # fetchPosts (post loader + validation), ogImage (shared OG layout)
 ```
 
 ## Key Conventions
@@ -72,5 +73,4 @@ npm run lint       # ESLint (eslint .)
 - **Blog images**: Not lazy-loaded (`decoding="async"` only) so TOC scroll positions are accurate.
 - **Theme colors**: All colors are CSS variables. Never hardcode colors in components — add a new variable to `globals.css` instead.
 - **Command palette**: Opens on `Ctrl+K` / `Cmd+K` or via search button in header. Only indexes Pages and Blog Posts.
-- **Environment variables**: `FIREBASE_PROJECT_ID`, `FIREBASE_CLIENT_EMAIL`, `FIREBASE_PRIVATE_KEY` (service account, server-only) in `.env.local` and the host's env settings — never committed, never `NEXT_PUBLIC_`.
-- **View/like counts**: `POST /api/posts/[id]` with `{ action: "view" | "like" }` increments; `GET` reads. Each browser records a view/like once via `localStorage` (`utils/postStats.js`). The API 404s for slugs not in `content/posts`, so `next.config.mjs` traces those files into its function.
+- **Environment variables**: Firebase config stored in `.env.local` (never committed). See `.env.local` for `NEXT_PUBLIC_FIREBASE_*` keys.
