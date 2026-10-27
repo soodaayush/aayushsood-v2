@@ -3,17 +3,32 @@ import "./styles/global/globals.css";
 import Header from "./components/global/header";
 import Footer from "./components/global/footer";
 import CommandPalette from "./components/global/commandPalette";
+import MotionProvider from "./components/global/motionProvider";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeProvider } from "next-themes";
+import localFont from "next/font/local";
+
+import { getPostSummaries } from "../../utils/fetchPosts";
+
+const wotfard = localFont({
+  src: "../../public/assets/fonts/wotfard-regular-webfont.woff2",
+  weight: "400",
+  display: "swap",
+  variable: "--font-wotfard",
+});
 
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#12192b",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#12192b" },
+  ],
 };
 
 export const metadata = {
+  metadataBase: new URL("https://www.aayushsood.com"),
   title: "Portfolio | Aayush Sood",
   description:
     "Welcome to my personal portfolio. Discover my skills, projects, interests, and experience.",
@@ -42,15 +57,6 @@ export const metadata = {
     description: "Aayush Sood's Portfolio",
     url: "https://www.aayushsood.com/",
     siteName: "Aayush Sood",
-    images: [
-      {
-        url: "https://www.aayushsood.com/assets/openGraph/home.png",
-        width: 1200,
-        height: 630,
-        type: "image/png",
-        alt: "Aayush Sood - Fullstack Developer",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -103,10 +109,12 @@ export const metadata = {
     card: "summary_large_image",
     title: "Aayush Sood",
     description: "Aayush Sood's Portfolio",
-    images: ["https://www.aayushsood.com/assets/openGraph/home.png"],
   },
   alternates: {
     canonical: "https://www.aayushsood.com/",
+    types: {
+      "application/rss+xml": "https://www.aayushsood.com/feed.xml",
+    },
   },
 };
 
@@ -162,18 +170,22 @@ const structuredData = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={wotfard.variable} suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <CommandPalette />
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-          />
-          <GoogleAnalytics gaId="G-ZSFY8QD3JM" />
+          <MotionProvider>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            <CommandPalette posts={getPostSummaries()} />
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(structuredData),
+              }}
+            />
+            <GoogleAnalytics gaId="G-ZSFY8QD3JM" />
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>

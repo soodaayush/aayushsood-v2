@@ -1,6 +1,6 @@
 import { marked } from "marked";
 import { notFound } from "next/navigation";
-import posts from "../../../../public/posts.json";
+import { getPosts, getPostBySlug } from "../../../../utils/fetchPosts";
 
 import BackToTopButton from "@/app/components/blog/backToTopButton";
 import TableOfContents from "@/app/components/blog/TableOfContents";
@@ -20,9 +20,17 @@ function slugify(anyText) {
 function getTocFromMarkdown(markdown) {
   const lines = markdown.split(/\r?\n/);
   const headings = [];
+  let inCodeBlock = false;
 
   lines.forEach((line) => {
     const trimmed = line.trim();
+    // Skip lines inside fenced code blocks so comments like "# foo" aren't treated as headings
+    if (trimmed.startsWith("```") || trimmed.startsWith("~~~")) {
+      inCodeBlock = !inCodeBlock;
+      return;
+    }
+    if (inCodeBlock) return;
+
     if (trimmed.startsWith("# ")) {
       headings.push({
         text: trimmed.slice(2).trim(),
@@ -47,11 +55,21 @@ function getTocFromMarkdown(markdown) {
   return headings.filter((h) => h.depth >= 1 && h.depth <= 4);
 }
 
+function toIsoDate(date) {
+  return new Date(date).toISOString();
+}
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return getPosts().map((post) => ({ id: post.slug }));
+}
+
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const { id } = resolvedParams;
 
-  const post = posts.find((p) => p.slug === id);
+  const post = getPostBySlug(id);
 
   if (!post) {
     return {
@@ -61,7 +79,6 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    metadataBase: new URL("https://www.aayushsood.com"),
     title: `${post.meta.title} | Aayush Sood`,
     authors: [{ name: "Aayush Sood" }],
     description: post.meta.description,
@@ -71,22 +88,14 @@ export async function generateMetadata({ params }) {
       title: `${post.meta.title} | Aayush Sood`,
       description: post.meta.description,
       type: "article",
-      publishedTime: post.meta.date,
+      publishedTime: toIsoDate(post.meta.date),
+      modifiedTime: toIsoDate(post.meta.updated ?? post.meta.date),
       url: `https://www.aayushsood.com/blog/${id}`,
-      images: [
-        {
-          url: `https://www.aayushsood.com/assets/openGraph/posts/${id}.png`,
-          width: 1200,
-          height: 630,
-          alt: post.meta.title,
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
       title: `${post.meta.title} | Aayush Sood`,
       description: post.meta.description,
-      images: [`https://www.aayushsood.com/assets/openGraph/posts/${id}.png`],
     },
     alternates: {
       canonical: `https://www.aayushsood.com/blog/${id}`,
@@ -98,14 +107,20 @@ export default async function BlogPostPage({ params }) {
   const resolvedParams = await params;
   const { id } = resolvedParams;
 
-  const post = posts.find((p) => p.slug === id);
+  const post = getPostBySlug(id);
   if (!post) return notFound();
 
   const toc = getTocFromMarkdown(post.content);
 
-  let htmlContent = marked.parse(post.content);
+  // Shift headings down one level (# -> h2, ## -> h3, ...) so the post title stays the page's only h1
+  let htmlContent = marked
+    .parse(post.content)
+    .replace(
+      /<(\/?)h([1-5])>/g,
+      (_, slash, level) => `<${slash}h${+level + 1}>`,
+    );
   toc.forEach(({ id }) => {
-    htmlContent = htmlContent.replace(/<h([1-4])>/, `<h$1 id="${id}">`);
+    htmlContent = htmlContent.replace(/<h([2-4])>/, `<h$1 id="${id}">`);
   });
   htmlContent = htmlContent.replace(
     /<a /g,
@@ -118,8 +133,8 @@ export default async function BlogPostPage({ params }) {
     "@type": "BlogPosting",
     headline: post.meta.title,
     description: post.meta.description,
-    datePublished: post.meta.date,
-    dateModified: post.meta.date,
+    datePublished: toIsoDate(post.meta.date),
+    dateModified: toIsoDate(post.meta.updated ?? post.meta.date),
     url: `https://www.aayushsood.com/blog/${post.slug}`,
     author: {
       "@type": "Person",
@@ -131,7 +146,7 @@ export default async function BlogPostPage({ params }) {
       name: "Aayush Sood",
       url: "https://www.aayushsood.com",
     },
-    image: `https://www.aayushsood.com/assets/openGraph/posts/${post.slug}.png`,
+    image: `https://www.aayushsood.com/blog/${post.slug}/opengraph-image/og`,
     keywords: post.meta.keywords,
     inLanguage: "en-US",
     isPartOf: {

@@ -8,7 +8,7 @@ import TechnicalSkill from "./technicalSkill";
 export default function TechnicalSkills({ skills }) {
   return (
     <div className={styles.technicalSkillsContainer}>
-      <motion.h1
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -16,7 +16,7 @@ export default function TechnicalSkills({ skills }) {
         className={styles.sectionHeading}
       >
         Technical Skills
-      </motion.h1>
+      </motion.h2>
       <div className="content">
         <div className={styles.technicalSkillsList}>
           {skills.map((skill, idx) => (

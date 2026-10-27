@@ -1,23 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { getPosts } from "../../../../utils/fetchPosts";
 
 import { motion } from "motion/react";
 
 import styles from "../../styles/blog/blog.module.css";
 
-export default function BlogList() {
-  const posts = getPosts();
-
+export default function BlogList({ posts }) {
   return (
     <div className={styles.blogContainer}>
       <div className={`content ${styles.blogContent}`}>
         <h1 className={styles.blogTitle}>Blog</h1>
         <div className={styles.blogList}>
           {posts.map((post, index) => {
-            const wordCount = post.content?.split(/\s+/).length ?? 0;
-            const readingTime = Math.max(1, Math.ceil(wordCount / 200));
             const tags =
               post.meta.tags ??
               (post.meta.keywords ?? [])
@@ -34,16 +29,16 @@ export default function BlogList() {
                 className={styles.blogPost}
               >
                 <Link href={`/blog/${post.slug}`}>
-                  <h1 className={`${styles.text} ${styles.title}`}>
+                  <h2 className={`${styles.text} ${styles.title}`}>
                     {post.meta.title}
-                  </h1>
+                  </h2>
                   <div className={styles.meta}>
                     <span className={`${styles.text} ${styles.date}`}>
                       {post.meta.date}
                     </span>
                     <span className={styles.metaDot}>·</span>
                     <span className={styles.readingTime}>
-                      {readingTime} min read
+                      {post.readingTime} min read
                     </span>
                   </div>
                   {tags.length > 0 && (

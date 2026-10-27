@@ -1,5 +1,5 @@
 import BlogList from "../components/blog/blogList";
-import posts from "../../../public/posts.json";
+import { getPosts, getPostSummaries } from "../../../utils/fetchPosts";
 
 export const metadata = {
   title: "Blog | Aayush Sood",
@@ -22,14 +22,6 @@ export const metadata = {
       "Browse my stories ranging from life to technology to anything I desire to write about.",
     url: "https://www.aayushsood.com/blog",
     siteName: "Aayush Sood's Blog",
-    images: [
-      {
-        url: "https://www.aayushsood.com/assets/openGraph/blog.png",
-        width: 1200,
-        height: 630,
-        alt: "Aayush Sood's Blog",
-      },
-    ],
     type: "website",
   },
   twitter: {
@@ -37,7 +29,6 @@ export const metadata = {
     title: "Blog | Aayush Sood",
     description:
       "Browse my stories ranging from life to technology to anything I desire to write about.",
-    images: ["https://www.aayushsood.com/assets/openGraph/blog.png"],
   },
   alternates: {
     canonical: "https://www.aayushsood.com/blog",
@@ -56,11 +47,11 @@ const blogStructuredData = {
     name: "Aayush Sood",
     url: "https://www.aayushsood.com",
   },
-  blogPost: posts.map((post) => ({
+  blogPost: getPosts().map((post) => ({
     "@type": "BlogPosting",
     headline: post.meta.title,
     description: post.meta.description,
-    datePublished: post.meta.date,
+    datePublished: new Date(post.meta.date).toISOString(),
     url: `https://www.aayushsood.com/blog/${post.slug}`,
     author: {
       "@type": "Person",
@@ -76,7 +67,7 @@ export default function Blog() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogStructuredData) }}
       />
-      <BlogList />
+      <BlogList posts={getPostSummaries()} />
     </>
   );
 }

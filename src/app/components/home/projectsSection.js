@@ -37,57 +37,68 @@ export default function Projects({ projects }) {
 
   return (
     <>
-    <div id="projects" className={styles.projectsContainer}>
-      <div className={`content ${styles.projectContent}`}>
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className={styles.sectionHeading}
-        >
-          Projects
-        </motion.h1>
-        <motion.div
-          initial={{ opacity: 0, y: 50, visibility: "hidden" }}
-          whileInView={{ opacity: 1, y: 0, visibility: "visible" }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className={styles.projectList}
-        >
-          {visibleProjects.map((project) => (
-            <motion.div
-              key={project.name}
-              className={`${styles.projectCard}`}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Project {...project} onOpen={() => setSelectedProject(project)} />
-            </motion.div>
-          ))}
-        </motion.div>
-        <div className={styles.projectToggles}>
-          <button className={styles.projectToggle} onClick={prevProject} name="Previous project">
-            ← Prev
-          </button>
-          <div className={styles.dotIndicators}>
-            {projects.map((_, i) => (
-              <button
-                key={i}
-                className={`${styles.dot} ${i === currentIndex ? styles.dotActive : ""}`}
-                onClick={() => setCurrentIndex(i)}
-                aria-label={`Go to project ${i + 1}`}
-              />
+      <div id="projects" className={styles.projectsContainer}>
+        <div className={`content ${styles.projectContent}`}>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className={styles.sectionHeading}
+          >
+            Projects
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, y: 50, visibility: "hidden" }}
+            whileInView={{ opacity: 1, y: 0, visibility: "visible" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className={styles.projectList}
+          >
+            {visibleProjects.map((project) => (
+              <motion.div
+                key={project.name}
+                className={`${styles.projectCard}`}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Project
+                  {...project}
+                  onOpen={() => setSelectedProject(project)}
+                />
+              </motion.div>
             ))}
+          </motion.div>
+          <div className={styles.projectToggles}>
+            <button
+              className={styles.projectToggle}
+              onClick={prevProject}
+              name="Previous project"
+            >
+              ← Prev
+            </button>
+            <div className={styles.dotIndicators}>
+              {projects.map((_, i) => (
+                <button
+                  key={i}
+                  className={`${styles.dot} ${i === currentIndex ? styles.dotActive : ""}`}
+                  onClick={() => setCurrentIndex(i)}
+                  aria-label={`Go to project ${i + 1}`}
+                />
+              ))}
+            </div>
+            <button
+              className={styles.projectToggle}
+              onClick={nextProject}
+              name="Next project"
+            >
+              Next →
+            </button>
           </div>
-          <button className={styles.projectToggle} onClick={nextProject} name="Next project">
-            Next →
-          </button>
         </div>
       </div>
-    </div>
 
       <ProjectModal
         project={selectedProject}

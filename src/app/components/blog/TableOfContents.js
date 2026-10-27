@@ -14,7 +14,7 @@ export default function TableOfContents({ items, postId }) {
     if (!content) return;
 
     let tocIndex = 0;
-    const allHeadings = Array.from(content.querySelectorAll("h1, h2, h3, h4"));
+    const allHeadings = Array.from(content.querySelectorAll("h2, h3, h4"));
 
     allHeadings.forEach((h) => {
       const remainingTocItems = items.slice(tocIndex);
@@ -99,7 +99,8 @@ export default function TableOfContents({ items, postId }) {
               paddingLeft: `${(h.depth - 1) * 12}px`,
               textDecoration: "none",
               fontSize: h.depth === 1 ? "15px" : "13px",
-              color: activeId === h.id ? "var(--header-hover-color)" : undefined,
+              color:
+                activeId === h.id ? "var(--header-hover-color)" : undefined,
               transition: "color 0.2s ease",
             }}
           >

@@ -20,6 +20,18 @@
   align-items: center;
 }
 
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .welcomeText {
   white-space: pre-line;
   min-height: 3.2em;
@@ -62,6 +74,7 @@
 }
 
 .sectionHeading {
+  margin: 0.67em 0;
   font-size: 50px;
   padding-bottom: 20px;
   text-align: center;
@@ -111,7 +124,7 @@
   display: inline-block;
   padding: 10px 24px;
   border-radius: 8px;
-  font-family: "Wotfard", sans-serif;
+  font-family: var(--font-wotfard), sans-serif;
   font-size: 16px;
   cursor: pointer;
   transition: opacity 0.2s ease-in-out;
@@ -176,7 +189,7 @@
 }
 
 .projectToggle {
-  font-family: "Wotfard", sans-serif;
+  font-family: var(--font-wotfard), sans-serif;
   background: transparent;
   border: none;
   outline: none;
