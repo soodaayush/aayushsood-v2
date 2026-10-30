@@ -81,7 +81,8 @@
 }
 
 .headerMenu {
-  padding: 40px;
+  /* Same horizontal padding as .container so the top row lines up with the header */
+  padding: 5px 20px 40px;
   position: fixed;
   top: 0;
   left: 0;
@@ -94,9 +95,10 @@
 .menuClose {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px 0 20px 0;
+  border-bottom: 1px solid var(--header-border);
+  margin-bottom: 16px;
 }
 
 .menuSection {
@@ -105,8 +107,11 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  padding: 20px 0 20px 0;
-  gap: 20px;
+  padding: 8px 0;
+}
+
+.menuSection + .menuSection {
+  border-top: 1px solid var(--header-border);
 }
 
 .menuButton {
@@ -125,13 +130,24 @@
 
 .menuLink {
   width: 100%;
+  padding: 14px 0;
   color: var(--text-color);
+}
+
+.menuLinkActive {
+  color: var(--header-hover-color);
+}
+
+.menuIcon {
+  height: 24px;
+  width: 24px;
+  color: inherit;
 }
 
 .menuLinkText {
   display: block;
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-weight: bold;
 }
 

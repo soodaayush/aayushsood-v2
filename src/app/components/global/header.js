@@ -11,6 +11,7 @@ import { IoClose, IoSearch } from "react-icons/io5";
 import { BsFileEarmarkPersonFill } from "react-icons/bs";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import styles from "../../styles/global/header.module.css";
 
@@ -18,6 +19,7 @@ const HOVER_SPRING = { type: "spring", stiffness: 450, damping: 20 };
 
 export default function Header() {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
+  const pathname = usePathname();
 
   const { theme, setTheme } = useTheme();
   // false during SSR, true on the client — the theme is only known on the client,
@@ -157,6 +159,13 @@ export default function Header() {
               className={styles.headerMenu}
             >
               <div className={styles.menuClose}>
+                <Link
+                  className={styles.title}
+                  href="/"
+                  onClick={openHamburgerMenu}
+                >
+                  <span className={styles.brand}>Aayush Sood</span>
+                </Link>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -170,7 +179,10 @@ export default function Header() {
               </div>
               <div className={styles.menuSection}>
                 <Link
-                  className={styles.menuLink}
+                  className={`${styles.menuLink} ${pathname.startsWith("/blog") ? styles.menuLinkActive : ""}`}
+                  aria-current={
+                    pathname.startsWith("/blog") ? "page" : undefined
+                  }
                   href="/blog"
                   onClick={openHamburgerMenu}
                 >
@@ -182,12 +194,15 @@ export default function Header() {
                   >
                     <span className={styles.menuLinkText}>Blog</span>
                     <div>
-                      <FaBlog className={styles.pageIcon} />
+                      <FaBlog className={styles.menuIcon} />
                     </div>
                   </motion.div>
                 </Link>
                 <Link
-                  className={styles.menuLink}
+                  className={`${styles.menuLink} ${pathname.startsWith("/books") ? styles.menuLinkActive : ""}`}
+                  aria-current={
+                    pathname.startsWith("/books") ? "page" : undefined
+                  }
                   href="/books"
                   onClick={openHamburgerMenu}
                 >
@@ -199,7 +214,7 @@ export default function Header() {
                   >
                     <span className={styles.menuLinkText}>Books</span>
                     <div>
-                      <FaBook className={styles.pageIcon} />
+                      <FaBook className={styles.menuIcon} />
                     </div>
                   </motion.div>
                 </Link>
@@ -218,7 +233,7 @@ export default function Header() {
                   >
                     <span className={styles.menuLinkText}>Resume</span>
                     <div>
-                      <BsFileEarmarkPersonFill className={styles.pageIcon} />
+                      <BsFileEarmarkPersonFill className={styles.menuIcon} />
                     </div>
                   </motion.div>
                 </a>
@@ -238,7 +253,7 @@ export default function Header() {
                   >
                     <span className={styles.menuLinkText}>Search</span>
                     <div>
-                      <IoSearch className={styles.pageIcon} />
+                      <IoSearch className={styles.menuIcon} />
                     </div>
                   </motion.button>
                 </div>
@@ -256,9 +271,9 @@ export default function Header() {
                     <span className={styles.menuLinkText}>Theme</span>
                     <div>
                       {theme === "light" ? (
-                        <FaMoon className={styles.pageIcon} />
+                        <FaMoon className={styles.menuIcon} />
                       ) : (
-                        <FaSun className={styles.pageIcon} />
+                        <FaSun className={styles.menuIcon} />
                       )}
                     </div>
                   </motion.button>
@@ -277,7 +292,7 @@ export default function Header() {
                   >
                     <span className={styles.menuLinkText}>GitHub</span>
                     <div>
-                      <FaGithub className={styles.pageIcon} />
+                      <FaGithub className={styles.menuIcon} />
                     </div>
                   </motion.div>
                 </a>
@@ -295,7 +310,7 @@ export default function Header() {
                   >
                     <span className={styles.menuLinkText}>Linktree</span>
                     <div>
-                      <SiLinktree className={styles.pageIcon} />
+                      <SiLinktree className={styles.menuIcon} />
                     </div>
                   </motion.div>
                 </a>

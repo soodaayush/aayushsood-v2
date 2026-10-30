@@ -4,14 +4,20 @@ import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 import { useTheme } from "next-themes";
 
-const TypeAnimation = dynamic(
-  () => import("react-type-animation").then((m) => m.TypeAnimation),
-  { ssr: false },
-);
-
 import Image from "next/image";
 import styles from "../../styles/home/page.module.css";
 import Aayush from "../../../../public/assets/welcome/aayush.webp";
+
+const GREETING = "Hi, I'm Aayush\nAnd I am a fullstack developer!";
+
+// Server-render the first greeting so the hero has its final size before the animation loads (no layout shift)
+const TypeAnimation = dynamic(
+  () => import("react-type-animation").then((m) => m.TypeAnimation),
+  {
+    ssr: false,
+    loading: () => <div className={styles.welcomeText}>{GREETING}</div>,
+  },
+);
 
 export default function Welcome() {
   const { theme } = useTheme();
@@ -34,9 +40,7 @@ export default function Welcome() {
           </h1>
           <TypeAnimation
             sequence={[
-              "Hi, I'm Aayush",
-              2000,
-              "Hi, I'm Aayush\nAnd I am a fullstack developer!",
+              GREETING,
               2000,
               "Hi, I'm Aayush\nAnd I am a student!",
               2000,
@@ -45,6 +49,7 @@ export default function Welcome() {
               "Hi, I'm Aayush\nAnd I am a competitive programmer!",
               2000,
             ]}
+            preRenderFirstString
             speed={40}
             deletionSpeed={35}
             wrapper="div"
