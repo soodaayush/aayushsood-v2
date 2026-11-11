@@ -23,9 +23,9 @@ export default function Welcome() {
       </div>
       <p className={styles.intro}>
         I&apos;m a Software Engineering student at the University of Waterloo
-        and a full stack developer from Nova Scotia. I build and ship apps, and
-        outside of code I spend my time on math, geopolitics and Brazilian
-        Jiu-Jitsu.
+        and a full stack developer originally from Nova Scotia. I build and ship
+        apps, and outside of code I spend my time on math, geopolitics and
+        Brazilian Jiu-Jitsu.
       </p>
     </>
   );
