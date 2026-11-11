@@ -49,12 +49,12 @@
   color: var(--accent);
 }
 
+/* The title is always on top and its details (tech, dates) always on their own line below, at every width */
 .row {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 2px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px 0;
   padding: 13px 0;
   border-top: 1px solid var(--line);
 }
@@ -116,12 +116,4 @@ a.row:hover {
 
 .contactLinks a:hover {
   color: var(--accent);
-}
-
-/* Under 640px the mono meta sits under the title */
-@media (max-width: 639px) {
-  .row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
