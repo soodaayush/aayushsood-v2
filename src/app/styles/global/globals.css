@@ -144,9 +144,11 @@ svg {
   line-height: 1.5;
 }
 
+/* Links in an article need a visible underline (--line is too faint against the page) */
 .blog-content a {
   text-decoration: underline;
-  text-decoration-color: var(--line);
+  text-decoration-color: var(--muted);
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
