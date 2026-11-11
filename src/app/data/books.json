@@ -2,7 +2,7 @@
   {
     "title": "1984",
     "author": "George Orwell",
-    "cover": "/assets/book-covers/b00.jpg",
+    "cover": "/assets/book-covers/b00.webp",
     "bookLink": "https://a.co/d/1f1wlKi",
     "authorLink": "https://www.amazon.ca/stores/George-Orwell/author/B000AQ0KKY",
     "rating": 5
@@ -10,7 +10,7 @@
   {
     "title": "One Hundred Years of Solitude",
     "author": "Gabriel Garcia Marquez",
-    "cover": "/assets/book-covers/b13.jpg",
+    "cover": "/assets/book-covers/b13.webp",
     "bookLink": "https://a.co/d/2uLHEjo",
     "authorLink": "https://www.amazon.ca/stores/Gabriel-García-Márquez/author/B00MBVAZZQ",
     "rating": 3
@@ -18,7 +18,7 @@
   {
     "title": "Moonwalking with Einstein",
     "author": "Joshua Foer",
-    "cover": "/assets/book-covers/b12.jpg",
+    "cover": "/assets/book-covers/b12.webp",
     "bookLink": "https://a.co/d/chyGiZZ",
     "authorLink": "https://www.amazon.ca/stores/Joshua-Foer/author/B003Z9NQW2",
     "rating": 3
@@ -26,7 +26,7 @@
   {
     "title": "Dune",
     "author": "Frank Herbert",
-    "cover": "/assets/book-covers/b07.jpg",
+    "cover": "/assets/book-covers/b07.webp",
     "bookLink": "https://a.co/d/fkVEtny",
     "authorLink": "https://www.amazon.ca/stores/Frank-Herbert/author/B000APO5OM",
     "rating": 4
@@ -34,7 +34,7 @@
   {
     "title": "Steve Jobs",
     "author": "Walter Isaacson",
-    "cover": "/assets/book-covers/b18.jpg",
+    "cover": "/assets/book-covers/b18.webp",
     "bookLink": "https://a.co/d/5MzbkMM",
     "authorLink": "https://www.amazon.ca/stores/Walter-Isaacson/author/B000APFLB8",
     "rating": 5
@@ -42,7 +42,7 @@
   {
     "title": "Animal Farm",
     "author": "George Orwell",
-    "cover": "/assets/book-covers/b03.jpg",
+    "cover": "/assets/book-covers/b03.webp",
     "bookLink": "https://a.co/d/71bQPGj",
     "authorLink": "https://www.amazon.ca/stores/George-Orwell/author/B000AQ0KKY",
     "rating": 4
@@ -50,7 +50,7 @@
   {
     "title": "Brave New World",
     "author": "Aldous Huxley",
-    "cover": "/assets/book-covers/b05.jpg",
+    "cover": "/assets/book-covers/b05.webp",
     "bookLink": "https://a.co/d/e9HWaqr",
     "authorLink": "https://www.amazon.ca/stores/Aldous-Huxley/author/B000APWRRY",
     "rating": 3
@@ -58,7 +58,7 @@
   {
     "title": "The Kite Runner",
     "author": "Khaled Hosseini",
-    "cover": "/assets/book-covers/b24.jpg",
+    "cover": "/assets/book-covers/b24.webp",
     "bookLink": "https://a.co/d/0dpcblj",
     "authorLink": "https://www.amazon.ca/stores/Khaled-Hosseini/author/B001HCX9N0",
     "rating": 4
@@ -66,7 +66,7 @@
   {
     "title": "Slaughterhouse-Five",
     "author": "Kurt Vonnegut",
-    "cover": "/assets/book-covers/b17.jpg",
+    "cover": "/assets/book-covers/b17.webp",
     "bookLink": "https://a.co/d/2LTz1RJ",
     "authorLink": "https://www.amazon.ca/stores/Kurt-Vonnegut/author/B000APYE16",
     "rating": 4
@@ -74,7 +74,7 @@
   {
     "title": "All Quiet on the Western Front",
     "author": "Erich Maria Remarque",
-    "cover": "/assets/book-covers/b01.jpg",
+    "cover": "/assets/book-covers/b01.webp",
     "bookLink": "https://a.co/d/fiT4Pl1",
     "authorLink": "https://www.amazon.ca/stores/Erich-M.-Remarque/author/B004N8ACZI",
     "rating": 5
@@ -82,7 +82,7 @@
   {
     "title": "The Alchemist",
     "author": "Paulo Coelho",
-    "cover": "/assets/book-covers/b19.jpg",
+    "cover": "/assets/book-covers/b19.webp",
     "bookLink": "https://a.co/d/g1TicqC",
     "authorLink": "https://www.amazon.ca/stores/Paulo-Coelho/author/B000AQ3HB8",
     "rating": 3
@@ -90,7 +90,7 @@
   {
     "title": "The War of the Worlds",
     "author": "H.G. Wells",
-    "cover": "/assets/book-covers/b29.jpg",
+    "cover": "/assets/book-covers/b29.webp",
     "bookLink": "https://a.co/d/dEF8aQs",
     "authorLink": "https://www.amazon.ca/stores/H.-G.-Wells/author/B000AQ4FBE",
     "rating": 4
@@ -98,7 +98,7 @@
   {
     "title": "Twelve Years a Slave",
     "author": "Solomon Northup",
-    "cover": "/assets/book-covers/b30.jpg",
+    "cover": "/assets/book-covers/b30.webp",
     "bookLink": "https://a.co/d/cG45QIM",
     "authorLink": "https://www.amazon.ca/stores/Solomon-Northup/author/B00KJKV848",
     "rating": 4
@@ -106,7 +106,7 @@
   {
     "title": "The Psychology of Money",
     "author": "Morgan Housel",
-    "cover": "/assets/book-covers/b27.jpg",
+    "cover": "/assets/book-covers/b27.webp",
     "bookLink": "https://a.co/d/8m0fY7s",
     "authorLink": "https://www.amazon.ca/stores/Morgan-Housel/author/B084ZNV1LR",
     "rating": 4
@@ -114,7 +114,7 @@
   {
     "title": "The Martian",
     "author": "Andy Weir",
-    "cover": "/assets/book-covers/b25.jpg",
+    "cover": "/assets/book-covers/b25.webp",
     "bookLink": "https://a.co/d/4Od0Kj8",
     "authorLink": "https://www.amazon.ca/stores/Andy-Weir/author/B00G0WYW92",
     "rating": 5
@@ -122,7 +122,7 @@
   {
     "title": "Project Hail Mary",
     "author": "Andy Weir",
-    "cover": "/assets/book-covers/b15.jpg",
+    "cover": "/assets/book-covers/b15.webp",
     "bookLink": "https://a.co/d/cSk7cZx",
     "authorLink": "https://www.amazon.ca/stores/Andy-Weir/author/B00G0WYW92",
     "rating": 5
@@ -130,7 +130,7 @@
   {
     "title": "Principles",
     "author": "Ray Dalio",
-    "cover": "/assets/book-covers/b14.jpg",
+    "cover": "/assets/book-covers/b14.webp",
     "bookLink": "https://a.co/d/8CNJuyb",
     "authorLink": "https://www.amazon.ca/stores/Ray-Dalio/author/B0711LQ9G4",
     "rating": 4
@@ -138,7 +138,7 @@
   {
     "title": "Lord of the Flies",
     "author": "William Golding",
-    "cover": "/assets/book-covers/b11.jpg",
+    "cover": "/assets/book-covers/b11.webp",
     "bookLink": "https://a.co/d/fWB4VBC",
     "authorLink": "https://www.amazon.ca/stores/William-Golding/author/B000APSP20",
     "rating": 4
@@ -146,7 +146,7 @@
   {
     "title": "And Then There Were None",
     "author": "Agatha Christie",
-    "cover": "/assets/book-covers/b02.jpg",
+    "cover": "/assets/book-covers/b02.webp",
     "bookLink": "https://a.co/d/7Ka4Hzq",
     "authorLink": "https://www.amazon.ca/stores/Agatha-Christie/author/B000APENBC",
     "rating": 5
@@ -154,7 +154,7 @@
   {
     "title": "The Invisible Man",
     "author": "H.G. Wells",
-    "cover": "/assets/book-covers/b23.jpg",
+    "cover": "/assets/book-covers/b23.webp",
     "bookLink": "https://a.co/d/6oYaTuH",
     "authorLink": "https://www.amazon.ca/stores/H.-G.-Wells/author/B000AQ4FBE",
     "rating": 3
@@ -162,7 +162,7 @@
   {
     "title": "The Outsiders",
     "author": "S.E. Hinton",
-    "cover": "/assets/book-covers/b26.jpg",
+    "cover": "/assets/book-covers/b26.webp",
     "bookLink": "https://a.co/d/9gMGJBT",
     "authorLink": "https://www.amazon.ca/stores/S.-E.-Hinton/author/B000AQ1R5G",
     "rating": 3
@@ -170,7 +170,7 @@
   {
     "title": "Dune Messiah",
     "author": "Frank Herbert",
-    "cover": "/assets/book-covers/b08.jpg",
+    "cover": "/assets/book-covers/b08.webp",
     "bookLink": "https://a.co/d/7Q4lOrV",
     "authorLink": "https://www.amazon.ca/stores/Frank-Herbert/author/B000APO5OM",
     "rating": 4
@@ -178,7 +178,7 @@
   {
     "title": "Children of Dune",
     "author": "Frank Herbert",
-    "cover": "/assets/book-covers/b06.jpg",
+    "cover": "/assets/book-covers/b06.webp",
     "bookLink": "https://a.co/d/ao2Ia6n",
     "authorLink": "https://www.amazon.ca/stores/Frank-Herbert/author/B000APO5OM",
     "rating": 3
@@ -186,7 +186,7 @@
   {
     "title": "The Road",
     "author": "Cormac McCarthy",
-    "cover": "/assets/book-covers/b28.jpg",
+    "cover": "/assets/book-covers/b28.webp",
     "bookLink": "https://a.co/d/f4wds28",
     "authorLink": "https://www.amazon.ca/stores/Cormac-McCarthy/author/B000APT0OW",
     "rating": 4
@@ -194,7 +194,7 @@
   {
     "title": "Atomic Habits",
     "author": "James Clear",
-    "cover": "/assets/book-covers/b04.jpg",
+    "cover": "/assets/book-covers/b04.webp",
     "bookLink": "https://a.co/d/8dsmlqm",
     "authorLink": "https://www.amazon.ca/stores/James-Clear/author/B07DJTJC3X",
     "rating": 4
@@ -202,7 +202,7 @@
   {
     "title": "The Hot Zone",
     "author": "Richard Preston",
-    "cover": "/assets/book-covers/b22.jpg",
+    "cover": "/assets/book-covers/b22.webp",
     "bookLink": "https://a.co/d/1MMeVNL",
     "authorLink": "https://www.amazon.ca/stores/Richard-Preston/author/B000AQ793U",
     "rating": 5
@@ -210,7 +210,7 @@
   {
     "title": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
-    "cover": "/assets/book-covers/b20.jpg",
+    "cover": "/assets/book-covers/b20.webp",
     "bookLink": "https://a.co/d/7YYNZpl",
     "authorLink": "https://www.amazon.ca/stores/F.-Scott-Fitzgerald/author/B000AQ0J28",
     "rating": 4
@@ -218,7 +218,7 @@
   {
     "title": "Sapiens: A Brief History of Humankind",
     "author": "Yuval Noah Harari",
-    "cover": "/assets/book-covers/b16.jpg",
+    "cover": "/assets/book-covers/b16.webp",
     "bookLink": "https://a.co/d/4RjZBLX",
     "authorLink": "https://www.amazon.ca/stores/Yuval-Noah-Harari/author/B00J21BCIW",
     "rating": 5
@@ -226,7 +226,7 @@
   {
     "title": "Frankenstein",
     "author": "Mary Shelley",
-    "cover": "/assets/book-covers/b09.jpg",
+    "cover": "/assets/book-covers/b09.webp",
     "bookLink": "https://a.co/d/2mvNGf5",
     "authorLink": "https://www.amazon.ca/stores/Mary-Shelley/author/B00R1DJSQQ",
     "rating": 5
@@ -234,7 +234,7 @@
   {
     "title": "The Handmaid's Tale",
     "author": "Margaret Atwood",
-    "cover": "/assets/book-covers/b21.jpg",
+    "cover": "/assets/book-covers/b21.webp",
     "bookLink": "https://a.co/d/6AhTY4e",
     "authorLink": "https://www.amazon.ca/stores/Margaret-Atwood/author/B000AQTHI0",
     "rating": 5
@@ -242,7 +242,7 @@
   {
     "title": "Hands-On Machine Learning with Scikit-Learn and PyTorch: Concepts, Tools, and Techniques to Build Intelligent Systems ",
     "author": "Aurélien Géron",
-    "cover": "/assets/book-covers/b10.jpg",
+    "cover": "/assets/book-covers/b10.webp",
     "bookLink": "https://a.co/d/06tRXmhD",
     "authorLink": "https://www.amazon.ca/stores/Aur%C3%A9lien-G%C3%A9ron/author/B004MOO740",
     "rating": 5

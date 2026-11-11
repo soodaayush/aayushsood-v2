@@ -8,7 +8,7 @@ export default function Welcome() {
       <div className={styles.hero}>
         <Image
           className={styles.photo}
-          src="/assets/welcome/headshot.png"
+          src="/assets/welcome/headshot.webp"
           alt="Aayush Sood"
           width={104}
           height={123}
