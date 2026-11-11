@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "../../styles/blog/toc.module.css";
 
 export default function TableOfContents({ items }) {
+  const [open, setOpen] = useState(false); // phones only; on desktop the list is always shown
   const mounted = useRef(false);
   const [activeId, setActiveId] = useState(null);
 
@@ -67,9 +68,20 @@ export default function TableOfContents({ items }) {
   if (!items?.length) return null;
 
   return (
-    <details className={styles.box}>
-      <summary className={styles.summary}>TABLE OF CONTENTS</summary>
-      <nav aria-label="Table of contents">
+    <div>
+      <button
+        type="button"
+        className={styles.toggle}
+        aria-expanded={open}
+        onClick={() => setOpen(!open)}
+      >
+        TABLE OF CONTENTS
+      </button>
+      <nav
+        aria-label="Table of contents"
+        className={`${styles.nav} ${open ? styles.open : ""}`}
+      >
+        <h2 className={styles.label}>TABLE OF CONTENTS</h2>
         <ul className={styles.list}>
           <li>
             <a
@@ -98,6 +110,6 @@ export default function TableOfContents({ items }) {
           ))}
         </ul>
       </nav>
-    </details>
+    </div>
   );
 }

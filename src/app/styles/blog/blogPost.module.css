@@ -17,8 +17,43 @@
   font-size: 13.5px;
 }
 
+.toc {
+  margin-top: 32px;
+}
+
 .content {
   margin-top: 40px;
+}
+
+/* Desktop: the article and the contents list are one pair, centred under the nav; the list follows the reader */
+@media (min-width: 900px) {
+  .hasToc {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 200px;
+    column-gap: 48px;
+    align-items: start;
+    margin-top: 40px;
+  }
+
+  .hasToc .content {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 0;
+  }
+
+  .hasToc .toc {
+    grid-column: 2;
+    grid-row: 1;
+    position: sticky;
+    top: 24px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    margin: 0;
+  }
+
+  .layout:not(.hasToc) .content {
+    max-width: 664px;
+  }
 }
 
 .footer {

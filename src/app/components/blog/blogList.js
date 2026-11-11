@@ -6,7 +6,7 @@ import styles from "../../styles/blog/blog.module.css";
 
 export default function BlogList({ posts }) {
   return (
-    <div data-width="760">
+    <div data-width="960">
       <h1 className={styles.title}>Blog</h1>
       <p className={styles.count}>
         {posts.length} {posts.length === 1 ? "post" : "posts"}

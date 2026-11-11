@@ -1,41 +1,55 @@
-.box {
-  margin-top: 32px;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.summary {
+/* Phones: a "table of contents" line that opens the list. Desktop: always-open list in the right column. */
+.toggle {
+  width: 100%;
   min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: none;
   color: var(--muted);
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 13.5px;
   text-transform: lowercase;
   cursor: pointer;
-  list-style: none;
 }
 
-.summary::-webkit-details-marker {
-  display: none;
+.toggle[aria-expanded="true"] {
+  border-bottom-color: transparent;
 }
 
-.summary::after {
+.toggle::after {
   content: "+";
 }
 
-.box[open] > .summary::after {
+.toggle[aria-expanded="true"]::after {
   content: "\2212";
 }
 
-.summary:hover {
+.toggle:hover {
   color: var(--accent);
+}
+
+.nav {
+  display: none;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.open {
+  display: block;
+}
+
+.label {
+  display: none;
 }
 
 .list {
   margin: 0;
-  padding: 0 0 12px;
+  padding: 0;
   list-style: none;
 }
 
@@ -55,4 +69,26 @@
 
 .sub {
   font-size: 13.5px;
+}
+
+@media (min-width: 900px) {
+  .toggle {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+    padding: 0;
+    border: 0;
+  }
+
+  .label {
+    display: block;
+    margin: 0 0 8px;
+    color: var(--muted);
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 13.5px;
+    font-weight: 400;
+    text-transform: lowercase;
+  }
 }
