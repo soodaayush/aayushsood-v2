@@ -164,7 +164,7 @@ export default async function BlogPostPage({ params }) {
           __html: JSON.stringify(articleStructuredData),
         }}
       />
-      <article className={styles.post}>
+      <article className={styles.post} data-width="760">
         <h1 className={styles.title}>{post.meta.title}</h1>
         <p className={styles.date}>{post.meta.date}</p>
         {toc.length >= 2 && (

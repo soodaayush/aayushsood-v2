@@ -38,8 +38,8 @@
   gap: 8px 20px;
 }
 
-/* With room to spare, the contents sit in the right margin and follow the reader; the column stays 700px */
-@media (min-width: 1280px) {
+/* With room to spare, the contents sit in the right margin and follow the reader; the column stays 760px */
+@media (min-width: 1300px) {
   .toc {
     position: absolute;
     top: 0;

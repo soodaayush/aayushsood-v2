@@ -52,7 +52,7 @@
   white-space: nowrap;
   border-radius: 4px;
   font-size: 12px;
-  background: color-mix(in srgb, var(--ink) 7%, transparent);
+  background: color-mix(in srgb, var(--ink) 5%, transparent);
 }
 
 .postTitle {
