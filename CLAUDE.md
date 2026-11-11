@@ -55,7 +55,7 @@ utils/                     # fetchPosts (post loader + validation), formatDate (
 
 - **CSS Modules** for all component styles; CSS custom properties in `globals.css` for theming
 - Theme tokens: `--bg --ink --muted --line --accent` live in `:root` (dark) and are overridden in `html.light {}` in `globals.css`
-- **Design**: plain single column: `.shell` is 700px on every page, so the nav and content edges never move between pages (never give a page its own width). Posts put the contents list at the top, under the date, as a collapsible "table of contents" line (no side column). Mono lowercase section labels (`/ projects`), hairline rows, one accent colour. No cards, shadows, gradients or hover effects on images. Reference: `portfolio-redesign/DESIGN.md` (not committed)
+- **Design**: plain single column: `.shell` is 700px on every page, so the nav and content edges never move between pages (never give a page its own width). Posts put the contents list at the top, under the date, as a collapsible "table of contents" line (no side column). Mono lowercase section labels (`/ projects`), hairline rows, one accent colour. No cards, shadows, gradients or hover effects on images. Reference: `docs/DESIGN.md`
 - **Book covers**: every cover sits in the same 2:3 frame (`book.module.css`) and is fitted inside it with `object-fit: contain`, so the grid is even and nothing is cropped (never use `object-fit: cover` for covers). `books.json` keeps each cover's real `width`/`height` for next/image
 - **Images**: every image is WebP (favicons and the apple-touch-icon stay PNG/ICO because browsers need them; OG images are generated PNGs)
 - **Server Components** for pages/layouts; `"use client"` for anything with state, effects, or event handlers
@@ -70,6 +70,7 @@ utils/                     # fetchPosts (post loader + validation), formatDate (
 npm run dev        # Dev server with Turbopack
 npm run build      # next build (posts, OG images, sitemap, feed all generated here)
 npm run lint       # ESLint (eslint .)
+npm run format     # Prettier (defaults, see .prettierrc.json); format:check only verifies
 ```
 
 ## Important Details
@@ -80,4 +81,5 @@ npm run lint       # ESLint (eslint .)
 - **Counters**: `postStats.js` loads the like button and hit counter (Firebase, about 200 KB) once the browser is idle, not with the page.
 - **Theme colors**: Use the five tokens. Never hardcode colors in components; for tints use `color-mix(in srgb, var(--ink) 7%, transparent)`.
 - **Command palette**: Opens on `Ctrl+K` / `Cmd+K` only (the design has no search button). Only indexes Pages and Blog Posts. Loaded on demand; do not import it or `motion` from the layout or pages.
-- **Environment variables**: Firebase config stored in `.env.local` (never committed). See `.env.local` for `NEXT_PUBLIC_FIREBASE_*` keys.
+- **Environment variables**: Firebase config lives in `.env.local` (never committed). Copy `.env.example` to `.env.local` and fill in the `NEXT_PUBLIC_FIREBASE_*` keys.
+- **Errors and headers**: `src/app/error.js` (inside the layout) and `global-error.js` (replaces it) show a plain "Something went wrong" page. `next.config.mjs` sets security headers on every response; there is no Content-Security-Policy on purpose (see the comment there).
