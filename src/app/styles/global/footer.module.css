@@ -26,3 +26,8 @@
   color: var(--accent);
   text-decoration-color: var(--accent);
 }
+
+/* The home page has its own "/ contact" section, so the footer link would repeat it there */
+:global(body):has([data-page="home"]) .contact {
+  display: none;
+}

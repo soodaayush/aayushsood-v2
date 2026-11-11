@@ -17,7 +17,7 @@ import { getPosts } from "../../utils/fetchPosts";
 
 export default function Home() {
   return (
-    <>
+    <div data-page="home">
       <Welcome />
       <Projects featured={featuredProjects} projects={projects} />
       <About roles={roles} />
@@ -25,6 +25,6 @@ export default function Home() {
       <Writing posts={getPosts()} bookCount={books.length} />
       <Interests interests={interests} />
       <Contact />
-    </>
+    </div>
   );
 }
