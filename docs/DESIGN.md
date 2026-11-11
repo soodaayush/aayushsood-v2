@@ -42,7 +42,7 @@ Persist choice in localStorage (try/catch). First visit may follow prefers-color
 ## Content decisions (already made by Aayush)
 - Headline is just his name. Do NOT use "I build apps that people actually use."
 - Intro: "I'm a Software Engineering student at the University of Waterloo and a full stack developer
-  originally from Nova Scotia. I build and ship apps, and outside of code I spend my time on math,
+  originally from Nova Scotia. I build and ship apps. Outside of code, I spend my time on math,
   geopolitics and Brazilian Jiu-Jitsu."
 - Projects: only four, no descriptions, tech on the right: IWKids, CoinDeno, SAP-1, Market Maker.
   No project images.
