@@ -21,3 +21,17 @@
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 14px;
 }
+
+/* Also used by error.js */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+}
+
+button.link {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
