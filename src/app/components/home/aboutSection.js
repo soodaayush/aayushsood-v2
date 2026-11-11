@@ -11,6 +11,12 @@ export default function About({ roles }) {
             <>
               <span>
                 <span className={styles.rowTitle}>{item.role}</span>, {item.org}
+                {item.href && (
+                  <span className={styles.out} aria-hidden="true">
+                    {" "}
+                    ↗
+                  </span>
+                )}
               </span>
               <span className={styles.mono}>{item.dates}</span>
             </>

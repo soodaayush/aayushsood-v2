@@ -63,6 +63,17 @@
   border-bottom: 1px solid var(--line);
 }
 
+/* Marks a row that opens another site */
+.out {
+  color: var(--muted);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 13.5px;
+}
+
+a.row:hover .out {
+  color: var(--accent);
+}
+
 a.row:hover {
   color: var(--accent);
 }
@@ -87,8 +98,16 @@ a.row:hover {
   margin: 0;
 }
 
+.list a {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--ink) 35%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 .list a:hover {
   color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 .more {
@@ -114,6 +133,14 @@ a.row:hover {
   gap: 0 20px;
 }
 
+.contactLinks a {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--ink) 35%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 .contactLinks a:hover {
   color: var(--accent);
+  text-decoration-color: var(--accent);
 }

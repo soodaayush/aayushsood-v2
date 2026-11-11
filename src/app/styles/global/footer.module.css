@@ -15,6 +15,14 @@
   margin: 0;
 }
 
+.footer a {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--ink) 35%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 .footer a:hover {
   color: var(--accent);
+  text-decoration-color: var(--accent);
 }

@@ -21,6 +21,10 @@ export default function Projects({ featured, projects }) {
                 {item.subtitle && (
                   <span className={styles.subtitle}> {item.subtitle}</span>
                 )}
+                <span className={styles.out} aria-hidden="true">
+                  {" "}
+                  ↗
+                </span>
               </span>
               <span className={styles.mono}>{item.tech}</span>
             </a>
