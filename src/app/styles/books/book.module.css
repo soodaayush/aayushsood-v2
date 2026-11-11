@@ -5,7 +5,7 @@
   aspect-ratio: 2 / 3;
   border: 1px solid var(--line);
   border-radius: 3px;
-  background: color-mix(in srgb, var(--ink) 7%, transparent);
+  background: color-mix(in srgb, var(--ink) 3%, transparent);
   overflow: hidden;
 }
 
@@ -26,7 +26,7 @@
   line-clamp: 2;
   overflow: hidden;
   margin-top: 10px;
-  font-size: 14.5px;
+  font-size: 15px;
   line-height: 1.3;
   font-weight: 500;
 }
@@ -34,7 +34,9 @@
 .author {
   /* Only the name is the target, so hovering it is separate from the cover and title link above */
   display: inline-block;
-  margin-top: 3px;
+  /* taller tap area without moving anything */
+  padding: 4px 0;
+  margin: -1px 0 -4px;
   color: var(--muted);
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 12px;

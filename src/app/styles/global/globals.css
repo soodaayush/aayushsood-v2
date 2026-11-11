@@ -72,7 +72,7 @@ svg {
 
 /* Article body (blog posts). Markdown headings render one level down, see blog/[id]/page.js */
 .blog-content {
-  font-size: 17.5px;
+  font-size: 17px;
   line-height: 1.7;
 }
 
@@ -110,7 +110,7 @@ svg {
 .blog-content h5 {
   margin: 28px 0 6px;
   font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 500;
   line-height: 1.5;
 }
@@ -188,7 +188,7 @@ svg {
 
 .blog-content code {
   font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 0.88em;
+  font-size: 15px;
 }
 
 .blog-content pre {

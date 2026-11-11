@@ -5,7 +5,7 @@
   align-items: center;
   gap: 0 20px;
   font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 14px;
+  font-size: 13.5px;
 }
 
 .nav a {
@@ -64,17 +64,16 @@
 /* Phones: a little smaller and closer so the name and the links stay on one line */
 @media (max-width: 480px) {
   .nav {
-    gap: 0 12px;
-    font-size: 13px;
+    gap: 0 10px;
   }
 
   .links {
-    gap: 0 14px;
+    gap: 0 12px;
   }
 
   .toggle {
     margin-left: 0;
-    padding-left: 14px;
-    width: calc(15px + 5ch);
+    padding-left: 12px;
+    width: calc(13px + 5ch);
   }
 }

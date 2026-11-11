@@ -37,7 +37,7 @@ export default function GlobalError({ reset }) {
               background: "none",
               color: "var(--accent)",
               fontFamily: "var(--font-mono), monospace",
-              fontSize: 14,
+              fontSize: 13.5,
               cursor: "pointer",
             }}
           >

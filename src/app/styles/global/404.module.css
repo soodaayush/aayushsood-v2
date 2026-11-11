@@ -19,7 +19,7 @@
   gap: 8px;
   color: var(--accent);
   font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 14px;
+  font-size: 13.5px;
 }
 
 /* Also used by error.js */

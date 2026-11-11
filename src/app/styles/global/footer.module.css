@@ -16,6 +16,9 @@
 }
 
 .footer a {
+  /* a taller tap area without moving anything: padding out, negative margin back */
+  padding: 11px 0;
+  margin: -11px 0;
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, var(--ink) 35%, transparent);
   text-decoration-thickness: 1px;

@@ -10,7 +10,9 @@
 
 .button {
   display: inline-flex;
-  padding: 0;
+  /* a 44px tap area around the 22px heart without moving anything */
+  padding: 11px;
+  margin: -11px;
   border: none;
   background: none;
   color: inherit;

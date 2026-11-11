@@ -37,14 +37,14 @@
 
 .intro {
   margin: 28px 0 0;
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.55;
 }
 
 .heading {
   margin: 68px 0 10px;
   font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 500;
   color: var(--accent);
 }
@@ -120,6 +120,13 @@ a.row:hover {
 .more a,
 .email {
   color: var(--accent);
+}
+
+.more a,
+.contactLinks a {
+  /* a taller tap area without moving anything: padding out, negative margin back */
+  padding: 11px 0;
+  margin: -11px 0;
 }
 
 .contact {
