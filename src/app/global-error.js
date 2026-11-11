@@ -15,10 +15,10 @@ export default function GlobalError({ reset }) {
           <h1
             style={{
               margin: "56px 0 0",
-              fontSize: 40,
+              fontSize: 36,
               fontWeight: 600,
-              letterSpacing: "-0.03em",
-              lineHeight: 1.1,
+              letterSpacing: "-0.025em",
+              lineHeight: 1.15,
             }}
           >
             Something went wrong
