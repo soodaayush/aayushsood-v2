@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@next/third-parties": "^16.2.9",
@@ -22,6 +24,7 @@
   },
   "devDependencies": {
     "eslint": "^9.39.5",
-    "eslint-config-next": "16.4.3"
+    "eslint-config-next": "16.4.3",
+    "prettier": "^3.10.0"
   }
 }
