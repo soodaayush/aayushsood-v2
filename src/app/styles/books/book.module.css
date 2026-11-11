@@ -1,20 +1,30 @@
+/* Same frame for every cover; the cover is fitted inside it (contain), never cropped */
 .frame {
   position: relative;
   width: 100%;
   aspect-ratio: 2 / 3;
-}
-
-/* Sized inline from the cover's own proportions; covers rest on the bottom edge of the frame */
-.cover {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
   border: 1px solid var(--line);
   border-radius: 3px;
+  background: color-mix(in srgb, var(--ink) 7%, transparent);
+  overflow: hidden;
+}
+
+.cover {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .title {
+  /* Long titles stop at two lines so one book can't make its row taller; the full title is in the link's tooltip */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
   margin-top: 10px;
   font-size: 14.5px;
   line-height: 1.3;

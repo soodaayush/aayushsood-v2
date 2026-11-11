@@ -2,9 +2,7 @@ import Image from "next/image";
 
 import styles from "../../styles/books/book.module.css";
 
-const FRAME_RATIO = 2 / 3;
-
-// The cover is drawn at its own proportions inside a 2:3 frame, so nothing is cropped.
+// Every cover sits in the same 2:3 frame and is fitted inside it, so the grid is even and nothing is cropped.
 // The title and cover link to the book, the author to their page. No hover effects.
 export default function Book({
   title,
@@ -16,19 +14,17 @@ export default function Book({
   authorLink,
   eager,
 }) {
-  const ratio = width / height;
-  const coverStyle = {
-    width: `${Math.min(1, ratio / FRAME_RATIO) * 100}%`,
-    height: `${Math.min(1, FRAME_RATIO / ratio) * 100}%`,
-  };
-
   return (
     <div className={styles.book}>
-      <a href={bookLink} target="_blank" rel="noopener noreferrer">
+      <a
+        href={bookLink}
+        title={title.trim()}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div className={styles.frame}>
           <Image
             className={styles.cover}
-            style={coverStyle}
             src={cover}
             alt={`Cover of ${title}`}
             width={width}
