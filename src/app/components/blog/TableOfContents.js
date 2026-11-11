@@ -1,11 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import LikeButton from "./likeButton";
-
 import styles from "../../styles/blog/toc.module.css";
 
-export default function TableOfContents({ items, postId }) {
+export default function TableOfContents({ items }) {
   const mounted = useRef(false);
   const [activeId, setActiveId] = useState(null);
 
@@ -69,36 +67,37 @@ export default function TableOfContents({ items, postId }) {
   if (!items?.length) return null;
 
   return (
-    <nav aria-label="Table of contents">
-      <h2 className={styles.label}>TABLE OF CONTENTS</h2>
-      <ul className={styles.list}>
-        <li>
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-            className={`${styles.link} ${activeId === null ? styles.active : ""}`}
-          >
-            Introduction
-          </a>
-        </li>
-        {items.map((h) => (
-          <li key={h.id}>
+    <details className={styles.box}>
+      <summary className={styles.summary}>TABLE OF CONTENTS</summary>
+      <nav aria-label="Table of contents">
+        <ul className={styles.list}>
+          <li>
             <a
-              href={`#${h.id}`}
-              data-id={h.id}
-              onClick={(e) => scrollToSection(e, h.id)}
-              className={`${styles.link} ${h.depth > 1 ? styles.sub : ""} ${activeId === h.id ? styles.active : ""}`}
-              style={{ paddingLeft: `${(h.depth - 1) * 12}px` }}
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className={`${styles.link} ${activeId === null ? styles.active : ""}`}
             >
-              {h.text}
+              Introduction
             </a>
           </li>
-        ))}
-      </ul>
-      <LikeButton postId={postId} />
-    </nav>
+          {items.map((h) => (
+            <li key={h.id}>
+              <a
+                href={`#${h.id}`}
+                data-id={h.id}
+                onClick={(e) => scrollToSection(e, h.id)}
+                className={`${styles.link} ${h.depth > 1 ? styles.sub : ""} ${activeId === h.id ? styles.active : ""}`}
+                style={{ paddingLeft: `${(h.depth - 1) * 12}px` }}
+              >
+                {h.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </details>
   );
 }

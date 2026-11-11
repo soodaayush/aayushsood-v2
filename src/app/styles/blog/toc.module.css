@@ -1,15 +1,41 @@
-.label {
-  margin: 0 0 8px;
+.box {
+  margin-top: 32px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: var(--muted);
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 13.5px;
-  font-weight: 400;
   text-transform: lowercase;
+  cursor: pointer;
+  list-style: none;
+}
+
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.summary::after {
+  content: "+";
+}
+
+.box[open] > .summary::after {
+  content: "\2212";
+}
+
+.summary:hover {
+  color: var(--accent);
 }
 
 .list {
   margin: 0;
-  padding: 0;
+  padding: 0 0 12px;
   list-style: none;
 }
 

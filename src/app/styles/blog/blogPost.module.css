@@ -17,12 +17,6 @@
   font-size: 13.5px;
 }
 
-.toc {
-  margin: 32px 0 40px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--line);
-}
-
 .content {
   margin-top: 40px;
 }
@@ -36,23 +30,4 @@
   justify-content: space-between;
   align-items: center;
   gap: 8px 20px;
-}
-
-/* With room to spare, the contents sit in the right margin and follow the reader; the column stays 760px */
-@media (min-width: 1300px) {
-  .toc {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: calc(100% + 56px);
-    width: 220px;
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
-
-  .tocInner {
-    position: sticky;
-    top: 24px;
-  }
 }

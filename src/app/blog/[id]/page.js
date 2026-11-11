@@ -5,6 +5,7 @@ import { getPosts, getPostBySlug } from "../../../../utils/fetchPosts";
 import BackToTopButton from "@/app/components/blog/backToTopButton";
 import TableOfContents from "@/app/components/blog/TableOfContents";
 import ViewCounter from "@/app/components/blog/viewCounter";
+import LikeButton from "@/app/components/blog/likeButton";
 
 import styles from "../../styles/blog/blogPost.module.css";
 
@@ -167,19 +168,14 @@ export default async function BlogPostPage({ params }) {
       <article className={styles.post} data-width="760">
         <h1 className={styles.title}>{post.meta.title}</h1>
         <p className={styles.date}>{post.meta.date}</p>
-        {toc.length >= 2 && (
-          <aside className={styles.toc}>
-            <div className={styles.tocInner}>
-              <TableOfContents items={toc} postId={post.slug} />
-            </div>
-          </aside>
-        )}
+        {toc.length >= 2 && <TableOfContents items={toc} />}
         <div
           className={`blog-content ${styles.content}`}
           dangerouslySetInnerHTML={{ __html: htmlContent }}
         />
         <div className={styles.footer}>
           <BackToTopButton />
+          <LikeButton postId={post.slug} />
           <ViewCounter postId={post.slug} />
         </div>
       </article>
