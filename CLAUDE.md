@@ -48,7 +48,7 @@ src/app/
 content/posts/             # MDX blog posts (YAML frontmatter) — the single source of truth
 libs/                      # firebaseConfig
 hooks/                     # useAnonAuth (anonymous Firebase auth)
-utils/                     # fetchPosts (post loader + validation), formatDate ("August 2026"), ogImage (shared OG layout; still uses the old Wotfard font and dark-blue colours)
+utils/                     # fetchPosts (post loader + validation), formatDate ("August 2026"), ogImage (shared OG layout: dark tokens as constants, DM Sans and JetBrains Mono from `public/assets/fonts/*.woff`, which are OFL fonts taken from @fontsource; next/og needs static woff/ttf, not woff2)
 ```
 
 ## Key Conventions

@@ -6,15 +6,8 @@ export const alt = "Aayush Sood's Blog";
 
 export default function Image() {
   return renderOgImage({
-    breadcrumb: "aayushsood.com / blog",
+    label: "/ blog",
     title: "Blog",
-    titleSize: "80px",
-    lines: [
-      {
-        text: "Stories from life, technology, and anything in between.",
-        size: "26px",
-      },
-    ],
-    footerLeft: "Aayush Sood",
+    description: "Stories from life, technology, and anything in between.",
   });
 }
