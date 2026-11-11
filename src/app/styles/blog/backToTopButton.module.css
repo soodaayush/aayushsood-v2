@@ -1,21 +1,15 @@
 .backToTop {
-  font-family: var(--font-wotfard), sans-serif;
-  background: transparent;
+  padding: 0;
+  min-height: 44px;
   border: none;
-  outline: none;
+  background: none;
+  color: var(--muted);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 13.5px;
+  text-transform: lowercase;
   cursor: pointer;
-  transition: 0.15s ease-in-out;
-  margin-top: 50px;
-  color: var(--text-color);
 }
 
 .backToTop:hover {
-  opacity: 0.75;
-}
-
-.text {
-  display: block;
-  margin: 0;
-  font-size: 2em;
-  font-weight: bold;
+  color: var(--accent);
 }

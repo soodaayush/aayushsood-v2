@@ -164,31 +164,25 @@ export default async function BlogPostPage({ params }) {
           __html: JSON.stringify(articleStructuredData),
         }}
       />
-      <div className={styles.blogPostContainer}>
-        <div className={`content ${styles.blogPostContentContainer}`}>
-          <div className={styles.details}>
-            <h1 className={`${styles.text} ${styles.title}`}>
-              {post.meta.title}
-            </h1>
-            <p className={styles.text}>{post.meta.date}</p>
-          </div>
-          <div className={styles.blogPostRow}>
-            <div className={styles.blogPostContent}>
-              <div
-                className="blog-content"
-                dangerouslySetInnerHTML={{ __html: htmlContent }}
-              />
-              <BackToTopButton />
-              <ViewCounter postId={post.slug} />
+      <article className={styles.post}>
+        <h1 className={styles.title}>{post.meta.title}</h1>
+        <p className={styles.date}>{post.meta.date}</p>
+        {toc.length >= 2 && (
+          <aside className={styles.toc}>
+            <div className={styles.tocInner}>
+              <TableOfContents items={toc} postId={post.slug} />
             </div>
-            {toc.length >= 2 && (
-              <aside className={styles.blogPostToc}>
-                <TableOfContents items={toc} postId={post.slug} />
-              </aside>
-            )}
-          </div>
+          </aside>
+        )}
+        <div
+          className={`blog-content ${styles.content}`}
+          dangerouslySetInnerHTML={{ __html: htmlContent }}
+        />
+        <div className={styles.footer}>
+          <BackToTopButton />
+          <ViewCounter postId={post.slug} />
         </div>
-      </div>
+      </article>
     </>
   );
 }

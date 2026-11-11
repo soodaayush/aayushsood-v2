@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import LikeButton from "./likeButton";
 
+import styles from "../../styles/blog/toc.module.css";
+
 export default function TableOfContents({ items, postId }) {
   const mounted = useRef(false);
   const [activeId, setActiveId] = useState(null);
@@ -68,46 +70,34 @@ export default function TableOfContents({ items, postId }) {
 
   return (
     <nav aria-label="Table of contents">
-      <h2>TABLE OF CONTENTS</h2>
-      <p style={{ paddingLeft: 0 }}>
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-          style={{
-            display: "block",
-            padding: "0.25rem 0",
-            textDecoration: "none",
-            fontSize: "15px",
-            color: activeId === null ? "var(--header-hover-color)" : undefined,
-            transition: "color 0.2s ease",
-          }}
-        >
-          Introduction
-        </a>
-        {items.map((h) => (
+      <h2 className={styles.label}>TABLE OF CONTENTS</h2>
+      <ul className={styles.list}>
+        <li>
           <a
-            key={h.id}
-            href={`#${h.id}`}
-            data-id={h.id}
-            onClick={(e) => scrollToSection(e, h.id)}
-            style={{
-              display: "block",
-              padding: "0.25rem 0",
-              paddingLeft: `${(h.depth - 1) * 12}px`,
-              textDecoration: "none",
-              fontSize: h.depth === 1 ? "15px" : "13px",
-              color:
-                activeId === h.id ? "var(--header-hover-color)" : undefined,
-              transition: "color 0.2s ease",
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
             }}
+            className={`${styles.link} ${activeId === null ? styles.active : ""}`}
           >
-            {h.text}
+            Introduction
           </a>
+        </li>
+        {items.map((h) => (
+          <li key={h.id}>
+            <a
+              href={`#${h.id}`}
+              data-id={h.id}
+              onClick={(e) => scrollToSection(e, h.id)}
+              className={`${styles.link} ${h.depth > 1 ? styles.sub : ""} ${activeId === h.id ? styles.active : ""}`}
+              style={{ paddingLeft: `${(h.depth - 1) * 12}px` }}
+            >
+              {h.text}
+            </a>
+          </li>
         ))}
-      </p>
+      </ul>
       <LikeButton postId={postId} />
     </nav>
   );

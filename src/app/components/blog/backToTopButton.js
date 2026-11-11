@@ -29,7 +29,7 @@ export default function BackToTopButton() {
       className={styles.backToTop}
       name="Back to top"
     >
-      <span className={styles.text}>↑ Back to Top</span>
+      ↑ Back to Top
     </button>
   );
 }
