@@ -5,8 +5,8 @@ export default function Contact() {
     <>
       <h2 className={styles.heading}>/ contact</h2>
       <p className={styles.contact}>
-        <a className={styles.email} href="mailto:aayush.sood@icloud.com">
-          aayush.sood@icloud.com
+        <a className={styles.email} href="mailto:aayush.sood@uwaterloo.ca">
+          aayush.sood@uwaterloo.ca
         </a>
       </p>
       <p className={`${styles.mono} ${styles.contactLinks}`}>
