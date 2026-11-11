@@ -79,7 +79,7 @@ export default function Books() {
         </p>
         <div className={styles.grid}>
           {sortedBooks.map((book, index) => (
-            <Book {...book} key={book.title} eager={index < 5} />
+            <Book {...book} key={book.title} position={index} />
           ))}
         </div>
       </div>

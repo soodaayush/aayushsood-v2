@@ -12,7 +12,7 @@ export default function Book({
   height,
   bookLink,
   authorLink,
-  eager,
+  position,
 }) {
   return (
     <div className={styles.book}>
@@ -29,8 +29,12 @@ export default function Book({
             alt={`Cover of ${title}`}
             width={width}
             height={height}
-            sizes="(max-width: 640px) 45vw, 170px"
-            loading={eager ? "eager" : "lazy"}
+            // The cell is about 148px wide on desktop and 161px on a phone
+            sizes="(max-width: 640px) 42vw, 148px"
+            quality={65}
+            // Only the first two covers load straight away (high priority); the others load as you scroll, which keeps the first cover fast
+            loading={position < 2 ? "eager" : "lazy"}
+            fetchPriority={position < 2 ? "high" : "auto"}
           />
         </div>
         <div className={styles.title}>{title}</div>
