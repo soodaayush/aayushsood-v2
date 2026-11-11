@@ -60,3 +60,21 @@
 :global(html.light) .whenLight {
   display: inline;
 }
+
+/* Phones: a little smaller and closer so the name and the links stay on one line */
+@media (max-width: 480px) {
+  .nav {
+    gap: 0 12px;
+    font-size: 13px;
+  }
+
+  .links {
+    gap: 0 14px;
+  }
+
+  .toggle {
+    margin-left: 0;
+    padding-left: 14px;
+    width: calc(15px + 5ch);
+  }
+}
