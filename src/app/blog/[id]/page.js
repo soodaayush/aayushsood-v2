@@ -1,10 +1,12 @@
 import { marked } from "marked";
 import { notFound } from "next/navigation";
 import { getPosts, getPostBySlug } from "../../../../utils/fetchPosts";
+import { getImageSize } from "../../../../utils/imageSize";
+import { formatMonthYear } from "../../../../utils/formatDate";
 
 import BackToTopButton from "@/app/components/blog/backToTopButton";
 import TableOfContents from "@/app/components/blog/TableOfContents";
-import ViewCounter from "@/app/components/blog/viewCounter";
+import PostStats from "@/app/components/blog/postStats";
 
 import styles from "../../styles/blog/blogPost.module.css";
 
@@ -126,7 +128,25 @@ export default async function BlogPostPage({ params }) {
     /<a /g,
     '<a target="_blank" rel="noopener noreferrer" ',
   );
-  htmlContent = htmlContent.replace(/<img /g, '<img decoding="async" ');
+  // Every image gets its real size so the browser reserves the space (no jumping, and the contents
+  // list scrolls to the right place). Only a first image near the top loads straight away, at high
+  // priority; all the others load as you scroll.
+  let imageIndex = 0;
+  htmlContent = htmlContent.replace(
+    /<img ([^>]*?)src="([^"]+)"([^>]*?)>/g,
+    (_, before, src, after, offset) => {
+      const nearTop = imageIndex++ === 0 && offset < 1500;
+      const size = getImageSize(src);
+      const attrs = [
+        'decoding="async"',
+        nearTop ? 'fetchpriority="high"' : 'loading="lazy"',
+        size ? `width="${size.width}" height="${size.height}"` : "",
+      ]
+        .filter(Boolean)
+        .join(" ");
+      return `<img ${attrs} ${before}src="${src}"${after}>`;
+    },
+  );
 
   const articleStructuredData = {
     "@context": "https://schema.org",
@@ -164,31 +184,23 @@ export default async function BlogPostPage({ params }) {
           __html: JSON.stringify(articleStructuredData),
         }}
       />
-      <div className={styles.blogPostContainer}>
-        <div className={`content ${styles.blogPostContentContainer}`}>
-          <div className={styles.details}>
-            <h1 className={`${styles.text} ${styles.title}`}>
-              {post.meta.title}
-            </h1>
-            <p className={styles.text}>{post.meta.date}</p>
-          </div>
-          <div className={styles.blogPostRow}>
-            <div className={styles.blogPostContent}>
-              <div
-                className="blog-content"
-                dangerouslySetInnerHTML={{ __html: htmlContent }}
-              />
-              <BackToTopButton />
-              <ViewCounter postId={post.slug} />
-            </div>
-            {toc.length >= 2 && (
-              <aside className={styles.blogPostToc}>
-                <TableOfContents items={toc} postId={post.slug} />
-              </aside>
-            )}
-          </div>
+      <article className={styles.post}>
+        <h1 className={styles.title}>{post.meta.title}</h1>
+        <p className={styles.date}>{formatMonthYear(post.meta.date)}</p>
+        {toc.length >= 2 && (
+          <aside className={styles.toc}>
+            <TableOfContents items={toc} />
+          </aside>
+        )}
+        <div
+          className={`blog-content ${styles.content}`}
+          dangerouslySetInnerHTML={{ __html: htmlContent }}
+        />
+        <div className={styles.footer}>
+          <BackToTopButton />
+          <PostStats postId={post.slug} />
         </div>
-      </div>
+      </article>
     </>
   );
 }

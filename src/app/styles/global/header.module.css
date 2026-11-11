@@ -1,179 +1,79 @@
-.container {
+.nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px 20px;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  border-bottom: 1px solid var(--header-border);
-  background: var(--header-background);
-  box-shadow: var(--header-box-shadow);
-  backdrop-filter: var(--header-backdrop-filter);
-  -webkit-backdrop-filter: var(--header-backdrop-filter);
-}
-
-.headerContent {
-  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 0 20px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 13.5px;
 }
 
-.name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.pages {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title {
-  margin-right: 20px;
-  transition: 0.15s ease-in-out;
-  color: var(--text-color);
-}
-
-.title:hover {
-  opacity: 0.75;
-}
-
-/* Sized like the h1/h2 they replaced — the header isn't page content, so it shouldn't use headings */
-.brand {
-  display: block;
-  margin: 0.67em 0;
-  font-size: 2em;
-  font-weight: bold;
-}
-
-.navText {
-  display: block;
-  margin: 0.83em 0;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.links {
-  gap: 5px;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.button {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  min-width: 44px;
+.nav a {
   min-height: 44px;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
 }
 
-.headerMenu {
-  padding: 40px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 100vh;
-  z-index: 98;
-  background: var(--mobile-header-background);
+.nav a:hover,
+.toggle:hover {
+  color: var(--accent);
 }
 
-.menuClose {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 20px 0 20px 0;
-}
-
-.menuSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  padding: 20px 0 20px 0;
-  gap: 20px;
-}
-
-.menuButton {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  cursor: pointer;
-}
-
-.pageIcon {
-  height: 40px;
-  width: 40px;
-  color: var(--text-color);
-}
-
-.menuLink {
-  width: 100%;
-  color: var(--text-color);
-}
-
-.menuLinkText {
-  display: block;
-  margin: 0;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.menuButtonReset {
-  padding: 0;
-  border: none;
-  background: none;
-  font: inherit;
-  color: inherit;
-  text-align: inherit;
+.brand {
+  color: var(--ink);
+  font-weight: 500;
 }
 
 .links {
+  display: flex;
+  gap: 0 22px;
+  color: var(--muted);
+}
+
+.current {
+  color: var(--ink);
+}
+
+.toggle {
+  background: transparent;
+  border: 0;
+  border-left: 1px solid var(--line);
+  margin-left: 2px;
+  padding: 0 0 0 20px;
+  min-height: 44px;
+  /* Same width for "light" and "dark" (border + padding + 5 characters), so the bar and the links don't move when it flips */
+  width: calc(21px + 5ch);
+  text-align: left;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+}
+
+.whenLight {
   display: none;
 }
 
-.pages {
+:global(html.light) .whenDark {
   display: none;
 }
 
-@media (min-width: 841px) {
-  .menu {
-    display: none;
+:global(html.light) .whenLight {
+  display: inline;
+}
+
+/* Phones: a little smaller and closer so the name and the links stay on one line */
+@media (max-width: 480px) {
+  .nav {
+    gap: 0 10px;
   }
 
   .links {
-    display: flex;
+    gap: 0 12px;
   }
 
-  .pages {
-    display: flex;
-  }
-}
-
-@media (max-width: 840px) {
-  .menu {
-    display: block;
-  }
-}
-
-@media (max-width: 310px) {
-  .title {
-    font-size: 10px;
+  .toggle {
+    margin-left: 0;
+    padding-left: 12px;
+    width: calc(13px + 5ch);
   }
 }

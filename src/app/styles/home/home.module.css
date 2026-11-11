@@ -1,0 +1,153 @@
+.mono {
+  color: var(--muted);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 13.5px;
+}
+
+.hero {
+  margin-top: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 26px;
+  align-items: center;
+}
+
+.photo {
+  width: 104px;
+  height: auto;
+  aspect-ratio: 462 / 548;
+}
+
+.heroText {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+
+.name {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.tagline {
+  margin: 6px 0 0;
+}
+
+.intro {
+  margin: 28px 0 0;
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.heading {
+  margin: 68px 0 10px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* The title is always on top and its details (tech, dates) always on their own line below, at every width */
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px 0;
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+}
+
+.row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+/* Marks a row that opens another site */
+.out {
+  color: var(--muted);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 13.5px;
+}
+
+a.row:hover .out {
+  color: var(--accent);
+}
+
+a.row:hover {
+  color: var(--accent);
+}
+
+.rowTitle {
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.list dt {
+  margin-top: 14px;
+  color: var(--muted);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 13.5px;
+}
+
+.list dd {
+  margin: 0;
+}
+
+.list a {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--ink) 35%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.list a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.more {
+  margin: 16px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+
+.more a,
+.email {
+  color: var(--accent);
+}
+
+.more a,
+.contactLinks a {
+  /* a taller tap area without moving anything: padding out, negative margin back */
+  padding: 11px 0;
+  margin: -11px 0;
+}
+
+.contact {
+  margin: 0;
+}
+
+.contactLinks {
+  margin: 6px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+
+.contactLinks a {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--ink) 35%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.contactLinks a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}

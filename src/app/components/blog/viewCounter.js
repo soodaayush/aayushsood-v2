@@ -1,12 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import {
-  doc,
-  increment,
-  onSnapshot,
-  runTransaction,
-} from "firebase/firestore";
+import { doc, increment, onSnapshot, runTransaction } from "firebase/firestore";
 import { db } from "../../../../libs/firebaseConfig";
 import { useAnonAuth } from "../../../../hooks/useAnonAuth";
 
@@ -50,17 +45,12 @@ export default function ViewCounter({ postId }) {
   }, [uid, postId]);
 
   const isLoaded = viewCount !== null;
-  const digits = isLoaded ? String(viewCount).padStart(6, "0") : "------";
+  const digits = isLoaded ? String(viewCount) : "-";
 
   return (
-    <div className={styles.container}>
-      <p className={styles.label}># of hits</p>
-      <div className={styles.display}>
-        <span className={styles.ghost} aria-hidden="true">
-          888888
-        </span>
-        <span className={styles.digits}>{digits}</span>
-      </div>
-    </div>
+    <p className={styles.container}>
+      # of hits
+      <span className={styles.digits}>{digits}</span>
+    </p>
   );
 }

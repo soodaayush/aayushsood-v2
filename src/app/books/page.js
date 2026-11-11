@@ -72,16 +72,15 @@ export default function Books() {
           __html: JSON.stringify(itemListStructuredData),
         }}
       />
-      <div className={styles.booksContainer}>
-        <div className={`content ${styles.booksContent}`}>
-          <h1 className={styles.booksTitle}>
-            Collection of books that I&apos;ve read
-          </h1>
-          <div className={styles.booksList}>
-            {sortedBooks.map((book, index) => (
-              <Book {...book} key={index} priority={index < 6} />
-            ))}
-          </div>
+      <div>
+        <h1 className={styles.title}>Books</h1>
+        <p className={styles.count}>
+          {sortedBooks.length} books i&apos;ve read
+        </p>
+        <div className={styles.grid}>
+          {sortedBooks.map((book, index) => (
+            <Book {...book} key={book.title} position={index} />
+          ))}
         </div>
       </div>
     </>

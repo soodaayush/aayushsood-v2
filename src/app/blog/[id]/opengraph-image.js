@@ -21,10 +21,9 @@ export default async function Image({ params }) {
   const post = getPostBySlug(id);
 
   return renderOgImage({
-    breadcrumb: "aayushsood.com / blog",
+    label: "/ blog",
     title: post.meta.title,
-    lines: [{ text: post.meta.description, size: "22px" }],
-    footerLeft: "Aayush Sood",
+    description: post.meta.description,
     footerRight: post.meta.date,
   });
 }

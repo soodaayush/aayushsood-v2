@@ -1,72 +1,36 @@
-"use client";
-
 import Link from "next/link";
 
-import { motion } from "motion/react";
+import { formatMonthYear } from "../../../../utils/formatDate";
 
 import styles from "../../styles/blog/blog.module.css";
 
 export default function BlogList({ posts }) {
   return (
-    <div className={styles.blogContainer}>
-      <div className={`content ${styles.blogContent}`}>
-        <h1 className={styles.blogTitle}>Blog</h1>
-        <div className={styles.blogList}>
-          {posts.map((post, index) => {
-            const tags =
-              post.meta.tags ??
-              (post.meta.keywords ?? [])
-                .filter((k) => k !== "Aayush Sood")
-                .slice(0, 3);
-
-            return (
-              <motion.div
-                key={post.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
-                className={styles.blogPost}
-              >
-                <Link href={`/blog/${post.slug}`}>
-                  <h2 className={`${styles.text} ${styles.title}`}>
-                    {post.meta.title}
-                  </h2>
-                  <div className={styles.meta}>
-                    <span className={`${styles.text} ${styles.date}`}>
-                      {post.meta.date}
-                    </span>
-                    <span className={styles.metaDot}>·</span>
-                    <span className={styles.readingTime}>
-                      {post.readingTime} min read
-                    </span>
-                  </div>
-                  {tags.length > 0 && (
-                    <div className={styles.tags}>
-                      {tags.map((tag) => (
-                        <span key={tag} className={styles.tag}>
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                  <p className={`${styles.text} ${styles.description}`}>
-                    {post.meta.description}
-                  </p>
-                  <div className={styles.readMore}>
-                    Read more
-                    <span className={styles.arrows} aria-hidden="true">
-                      <span>›</span>
-                      <span>›</span>
-                      <span>›</span>
-                      <span>›</span>
-                    </span>
-                  </div>
-                </Link>
-              </motion.div>
-            );
-          })}
-        </div>
+    <div>
+      <h1 className={styles.title}>Blog</h1>
+      <p className={styles.count}>
+        {posts.length} {posts.length === 1 ? "post" : "posts"}
+      </p>
+      <div className={styles.list}>
+        {posts.map((post) => (
+          <Link
+            key={post.slug}
+            className={styles.row}
+            href={`/blog/${post.slug}`}
+          >
+            <span className={styles.date}>
+              {formatMonthYear(post.meta.date)}
+            </span>
+            <span className={styles.chip}>{post.readingTime} min read</span>
+            <span className={styles.text}>
+              <b className={styles.postTitle}>{post.meta.title}</b>
+              <br />
+              <span className={styles.description}>
+                {post.meta.description}
+              </span>
+            </span>
+          </Link>
+        ))}
       </div>
     </div>
   );

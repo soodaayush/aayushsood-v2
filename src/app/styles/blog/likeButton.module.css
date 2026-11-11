@@ -1,22 +1,22 @@
 .container {
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+.pending {
+  visibility: hidden;
 }
 
 .button {
-  border: none;
-  cursor: pointer;
-  position: relative;
   display: inline-flex;
-  align-items: center;
-  font-family: var(--font-wotfard), sans-serif;
-  gap: 0.5rem;
-  margin-right: 10px;
-  transition: opacity 0.15s ease-in-out;
-}
-
-.button:not(.disabled):hover {
-  opacity: 0.75;
+  /* a 44px tap area around the 22px heart without moving anything */
+  padding: 11px;
+  margin: -11px;
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .disabled {
@@ -24,19 +24,21 @@
 }
 
 .likeCount {
-  color: var(--heart-fill-color);
   margin: 0;
+  color: var(--muted);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 13.5px;
 }
 
 .svg {
-  width: 50px;
-  height: 50px;
+  width: 22px;
+  height: 22px;
   overflow: visible;
   transform-origin: center;
 }
 
 .heartPath {
-  stroke: var(--heart-fill-color);
+  stroke: var(--accent);
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -48,17 +50,33 @@
 }
 
 .heartFilled {
-  fill: var(--heart-fill-color);
+  fill: var(--accent);
 }
 
 @keyframes heartPop {
-  0%   { transform: scale(1); }
-  25%  { transform: scale(1.35); }
-  55%  { transform: scale(0.88); }
-  75%  { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.35);
+  }
+  55% {
+    transform: scale(0.88);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .svgAnimated {
   animation: heartPop 0.5s cubic-bezier(0.17, 0.89, 0.32, 1.28) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .svgAnimated {
+    animation: none;
+  }
 }

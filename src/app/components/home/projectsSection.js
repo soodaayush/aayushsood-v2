@@ -1,109 +1,36 @@
-"use client";
+import styles from "../../styles/home/home.module.css";
 
-import { useState, useEffect } from "react";
-import { motion } from "motion/react";
-import Project from "./project";
-import ProjectModal from "./projectModal";
-import styles from "../../styles/home/page.module.css";
-
-export default function Projects({ projects }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [numVisibleProjects, setNumVisibleProjects] = useState(3);
-  const [selectedProject, setSelectedProject] = useState(null);
-
-  useEffect(() => {
-    const updateVisibleProjects = () => {
-      const width = window.innerWidth;
-      if (width <= 760) setNumVisibleProjects(1);
-      else if (width <= 1150) setNumVisibleProjects(2);
-      else setNumVisibleProjects(3);
-    };
-
-    updateVisibleProjects();
-    window.addEventListener("resize", updateVisibleProjects);
-
-    return () => window.removeEventListener("resize", updateVisibleProjects);
-  }, []);
-
-  const nextProject = () => setCurrentIndex((i) => (i + 1) % projects.length);
-  const prevProject = () =>
-    setCurrentIndex((i) => (i === 0 ? projects.length - 1 : i - 1));
-
-  const visibleProjects = [];
-  for (let i = 0; i < numVisibleProjects; i++) {
-    const index = (currentIndex + i) % projects.length;
-    visibleProjects.push({ ...projects[index], index });
-  }
-
+// Rows link to the GitHub repo of the matching entry in projects.json
+export default function Projects({ featured, projects }) {
   return (
     <>
-      <div id="projects" className={styles.projectsContainer}>
-        <div className={`content ${styles.projectContent}`}>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className={styles.sectionHeading}
-          >
-            Projects
-          </motion.h2>
-          <motion.div
-            initial={{ opacity: 0, y: 50, visibility: "hidden" }}
-            whileInView={{ opacity: 1, y: 0, visibility: "visible" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className={styles.projectList}
-          >
-            {visibleProjects.map((project) => (
-              <motion.div
-                key={project.name}
-                className={`${styles.projectCard}`}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.5 }}
-              >
-                <Project
-                  {...project}
-                  onOpen={() => setSelectedProject(project)}
-                />
-              </motion.div>
-            ))}
-          </motion.div>
-          <div className={styles.projectToggles}>
-            <button
-              className={styles.projectToggle}
-              onClick={prevProject}
-              name="Previous project"
+      <h2 className={styles.heading}>/ projects</h2>
+      <div>
+        {featured.map((item) => {
+          const source = projects.find((p) => p.name === item.source);
+          return (
+            <a
+              key={item.name}
+              className={styles.row}
+              href={source?.github}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              ← Prev
-            </button>
-            <div className={styles.dotIndicators}>
-              {projects.map((_, i) => (
-                <button
-                  key={i}
-                  className={`${styles.dot} ${i === currentIndex ? styles.dotActive : ""}`}
-                  onClick={() => setCurrentIndex(i)}
-                  aria-label={`Go to project ${i + 1}`}
-                />
-              ))}
-            </div>
-            <button
-              className={styles.projectToggle}
-              onClick={nextProject}
-              name="Next project"
-            >
-              Next →
-            </button>
-          </div>
-        </div>
+              <span>
+                <span className={styles.rowTitle}>{item.name}</span>
+                {item.subtitle && (
+                  <span className={styles.subtitle}> {item.subtitle}</span>
+                )}
+                <span className={styles.out} aria-hidden="true">
+                  {" "}
+                  ↗
+                </span>
+              </span>
+              <span className={styles.mono}>{item.tech}</span>
+            </a>
+          );
+        })}
       </div>
-
-      <ProjectModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
     </>
   );
 }

@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import LikeButton from "./likeButton";
+import styles from "../../styles/blog/toc.module.css";
 
-export default function TableOfContents({ items, postId }) {
+export default function TableOfContents({ items }) {
+  const [open, setOpen] = useState(false); // closed by default; start with useState(true) to show the list open
   const mounted = useRef(false);
   const [activeId, setActiveId] = useState(null);
 
@@ -67,48 +68,47 @@ export default function TableOfContents({ items, postId }) {
   if (!items?.length) return null;
 
   return (
-    <nav aria-label="Table of contents">
-      <h2>TABLE OF CONTENTS</h2>
-      <p style={{ paddingLeft: 0 }}>
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-          style={{
-            display: "block",
-            padding: "0.25rem 0",
-            textDecoration: "none",
-            fontSize: "15px",
-            color: activeId === null ? "var(--header-hover-color)" : undefined,
-            transition: "color 0.2s ease",
-          }}
-        >
-          Introduction
-        </a>
-        {items.map((h) => (
-          <a
-            key={h.id}
-            href={`#${h.id}`}
-            data-id={h.id}
-            onClick={(e) => scrollToSection(e, h.id)}
-            style={{
-              display: "block",
-              padding: "0.25rem 0",
-              paddingLeft: `${(h.depth - 1) * 12}px`,
-              textDecoration: "none",
-              fontSize: h.depth === 1 ? "15px" : "13px",
-              color:
-                activeId === h.id ? "var(--header-hover-color)" : undefined,
-              transition: "color 0.2s ease",
-            }}
-          >
-            {h.text}
-          </a>
-        ))}
-      </p>
-      <LikeButton postId={postId} />
-    </nav>
+    <div>
+      <button
+        type="button"
+        className={styles.toggle}
+        aria-expanded={open}
+        onClick={() => setOpen(!open)}
+      >
+        TABLE OF CONTENTS
+      </button>
+      <nav
+        aria-label="Table of contents"
+        className={`${styles.nav} ${open ? styles.open : ""}`}
+      >
+        <ul className={styles.list}>
+          <li>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className={`${styles.link} ${activeId === null ? styles.active : ""}`}
+            >
+              Introduction
+            </a>
+          </li>
+          {items.map((h) => (
+            <li key={h.id}>
+              <a
+                href={`#${h.id}`}
+                data-id={h.id}
+                onClick={(e) => scrollToSection(e, h.id)}
+                className={`${styles.link} ${h.depth > 1 ? styles.sub : ""} ${activeId === h.id ? styles.active : ""}`}
+                style={{ paddingLeft: `${(h.depth - 1) * 12}px` }}
+              >
+                {h.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   );
 }

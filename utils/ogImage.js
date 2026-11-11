@@ -5,28 +5,44 @@ import { ImageResponse } from "next/og";
 export const ogSize = { width: 1200, height: 630 };
 export const ogContentType = "image/png";
 
-// OG images are rendered by Satori, which can't read CSS variables — these mirror the dark theme
+// OG images are rendered by Satori, which can't read CSS variables.
+// These mirror the dark theme tokens in globals.css.
 const C = {
-  bg: "#090e1a",
-  blue: "#718de1",
-  white: "#f8fafc",
-  muted: "#8892a4",
-  divider: "#202534",
+  bg: "#0c0c0d",
+  ink: "#ececea",
+  muted: "#9a9a95",
+  line: "#262628",
+  accent: "#ff6a3d",
 };
 
-const fontData = fs.readFileSync(
-  path.join(process.cwd(), "public/assets/fonts/wotfard-regular-webfont.ttf"),
-);
+const readFont = (file) =>
+  fs.readFileSync(path.join(process.cwd(), "public/assets/fonts", file));
 
-export function renderOgImage({
-  breadcrumb,
-  title,
-  titleSize,
-  lines = [],
-  footerLeft,
-  footerRight,
-}) {
-  const resolvedTitleSize = titleSize ?? (title.length > 55 ? "50px" : "62px");
+const fonts = [
+  { name: "DM Sans", data: readFont("dm-sans-400.woff"), weight: 400 },
+  { name: "DM Sans", data: readFont("dm-sans-500.woff"), weight: 500 },
+  { name: "DM Sans", data: readFont("dm-sans-600.woff"), weight: 600 },
+  {
+    name: "JetBrains Mono",
+    data: readFont("jetbrains-mono-400.woff"),
+    weight: 400,
+  },
+  {
+    name: "JetBrains Mono",
+    data: readFont("jetbrains-mono-500.woff"),
+    weight: 500,
+  },
+].map((font) => ({ ...font, style: "normal" }));
+
+function titleSizeFor(title) {
+  if (title.length <= 20) return 92;
+  if (title.length <= 45) return 68;
+  if (title.length <= 65) return 58;
+  return 52;
+}
+
+export function renderOgImage({ label, title, description, footerRight }) {
+  const mono = { fontFamily: "JetBrains Mono", fontSize: 24 };
 
   return new ImageResponse(
     <div
@@ -37,19 +53,19 @@ export function renderOgImage({
         flexDirection: "column",
         backgroundColor: C.bg,
         padding: "64px 80px 56px",
-        fontFamily: "Wotfard",
+        fontFamily: "DM Sans",
       }}
     >
       <div
         style={{
+          ...mono,
           display: "flex",
-          color: C.muted,
-          fontSize: "18px",
-          letterSpacing: "0.06em",
-          marginBottom: "48px",
+          justifyContent: "space-between",
+          flexShrink: 0,
         }}
       >
-        {breadcrumb}
+        <span style={{ color: C.ink, fontWeight: 500 }}>aayush sood</span>
+        {label && <span style={{ color: C.accent }}>{label}</span>}
       </div>
       <div
         style={{
@@ -57,60 +73,51 @@ export function renderOgImage({
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
+          minHeight: 0,
         }}
       >
         <div
           style={{
-            fontSize: resolvedTitleSize,
-            color: C.blue,
-            margin: "0 0 20px 0",
-            lineHeight: 1.2,
+            fontSize: titleSizeFor(title),
+            fontWeight: 600,
+            color: C.ink,
+            letterSpacing: "-0.025em",
+            lineHeight: 1.12,
           }}
         >
           {title}
         </div>
-        {lines.map(({ text, color, size, margin }) => (
+        {description && (
           <div
-            key={text}
             style={{
-              fontSize: size ?? "26px",
-              color: color ?? C.white,
-              lineHeight: 1.5,
-              ...(margin ? { margin } : {}),
+              fontSize: 28,
+              fontWeight: 400,
+              color: C.muted,
+              lineHeight: 1.45,
+              marginTop: 28,
+              maxWidth: 960,
             }}
           >
-            {text}
+            {description}
           </div>
-        ))}
+        )}
       </div>
       <div
         style={{
+          ...mono,
           display: "flex",
-          alignItems: "center",
-          justifyContent: footerRight ? "space-between" : "flex-start",
-          borderTop: `1px solid ${C.divider}`,
-          paddingTop: "24px",
+          justifyContent: "space-between",
+          borderTop: `1px solid ${C.line}`,
+          paddingTop: 24,
+          color: C.muted,
           flexShrink: 0,
         }}
       >
-        <span
-          style={{ color: C.muted, fontSize: footerRight ? "20px" : "18px" }}
-        >
-          {footerLeft}
-        </span>
-        {footerRight && (
-          <span style={{ color: C.muted, fontSize: "18px" }}>
-            {footerRight}
-          </span>
-        )}
+        <span>aayushsood.com</span>
+        {footerRight && <span>{footerRight}</span>}
       </div>
     </div>,
-    {
-      ...ogSize,
-      fonts: [
-        { name: "Wotfard", data: fontData, weight: 400, style: "normal" },
-      ],
-    },
+    { ...ogSize, fonts },
   );
 }
 

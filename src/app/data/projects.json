@@ -1,7 +1,6 @@
 [
   {
     "name": "Market Maker",
-    "image": "/assets/projects/thumbnails/market-maker.webp",
     "description": "A Python simulation exploring how market makers keep markets running by continuously buying and selling assets.",
     "details": "Built to understand how financial markets operate behind the scenes, this project simulates a market maker that provides liquidity by continuously placing buy and sell orders. The simulation models changing asset prices, inventory-based pricing adjustments, and different trader behaviors including random, momentum, and informed strategies. It tracks trading performance through profit and loss metrics and uses Matplotlib to visualize market activity over time.",
     "tags": ["Python", "Matplotlib", "Finance", "Simulation"],
@@ -11,7 +10,6 @@
   },
   {
     "name": "IWKids",
-    "image": "/assets/projects/thumbnails/IWKids.webp",
     "description": "An AI-powered mobile app that enhances the ER experience for kids and families, built for the Youth AI Pitch Competition where our team placed 2nd.",
     "details": "Built for the Atlantic Canada Youth AI Pitch Competition at the AI Healthcare Summit, IWKids aims to reduce anxiety and improve communication for children visiting the IWK Health Centre's emergency room. The app delivers real-time wait time updates via Twilio SMS, an AI-powered chatbot using the OpenAI API to answer common health questions in child-friendly language, and interactive games and activities to keep kids calm during long waits. Our team of four designed, built, and pitched the full prototype in a few weeks, placing 2nd out of 25 competing teams.",
     "tags": ["React Native", "Expo", "Twilio", "OpenAI API"],
@@ -21,7 +19,6 @@
   },
   {
     "name": "BVHS Mobile App",
-    "image": "/assets/projects/thumbnails/bvh-mobile-app.webp",
     "description": "A mobile app I created for my high school for an easier distribution of information. This was created for Harvard University's CS50x.",
     "details": "Created as my final project for Harvard University's CS50x, this mobile app serves Bay View High School students and staff by consolidating key school information into a single accessible interface. Features include class schedules, school announcements, upcoming events, staff directory, and quick links to school resources. Built with React Native and Expo for cross-platform compatibility on both iOS and Android without separate codebases.",
     "tags": ["React Native", "Expo"],
@@ -31,7 +28,6 @@
   },
   {
     "name": "Ben Eater's 8-Bit Project",
-    "image": "/assets/projects/thumbnails/8-bit.webp",
     "description": "A discrete-logic 8-bit breadboard computer built to explore low-level computation, timing, and control signals.",
     "details": "A fully functional 8-bit breadboard computer built from discrete 74-series logic chips, following Ben Eater's in-depth tutorial series. The computer includes a custom ALU capable of addition and subtraction, 16 bytes of RAM, a program counter, an instruction decoder with microcode ROM, and a 7-segment display output. Building it from scratch gave me a ground-up understanding of how CPUs fetch, decode, and execute instructions, from clock signals and bus architecture to memory addressing and control logic.",
     "tags": ["Arduino"],
@@ -41,7 +37,6 @@
   },
   {
     "name": "Ben Eater's 6502 Project",
-    "image": "/assets/projects/thumbnails/6502.webp",
     "description": "A series of hardware projects surrounding the 6502 CPU, inspired by Ben Eater.",
     "details": "A series of hardware projects centered around the MOS 6502 CPU, the processor that powered the Apple II, Commodore 64, and original NES. Projects include building a working 6502-based computer on breadboards, writing 6502 Assembly programs to run on it, and using Arduino and Python for hardware interfacing, memory mapping, and debugging. This hands-on exploration of retro computing deepened my understanding of memory-mapped I/O, interrupt handling, and low-level system design.",
     "tags": ["Arduino", "Python", "Assembly", "C++"],
@@ -51,7 +46,6 @@
   },
   {
     "name": "LeetCode",
-    "image": "/assets/projects/thumbnails/leetcode.webp",
     "description": "A collection of my solved LeetCode problems, written in multiple languages.",
     "details": "A growing repository of solved LeetCode problems spanning Easy, Medium, and Hard difficulties. Solutions are written across JavaScript, Python, and C++ to practice language versatility and compare idiomatic approaches. Maintained as a consistent habit of algorithmic practice and competitive programming preparation.",
     "tags": ["JavaScript", "Python", "C++"],
@@ -62,7 +56,6 @@
   {
     "name": "CoinDeno",
     "website": "https://coindeno.netlify.app/",
-    "image": "/assets/projects/thumbnails/coindeno.webp",
     "description": "A mobile app that allows you to track your favorite cryptocurrencies and build your own portfolio.",
     "details": "A cross-platform mobile app for tracking cryptocurrency portfolios in real time. Users can search for thousands of coins, view live price data and historical market charts, and manage a personalized portfolio with cost-basis tracking. Backed by Firebase for user authentication and data persistence, and built with React Native and Expo for deployment on both iOS and Android. Integrates a third-party crypto market API for real-time data.",
     "tags": ["React Native", "Expo", "Firebase", "JavaScript"],
@@ -73,7 +66,6 @@
   {
     "name": "CoinDeno Web",
     "website": "https://warbaddy.com/",
-    "image": "/assets/projects/thumbnails/coindeno-web.webp",
     "description": "Similar to CoinDeno, this is a web version, which allows you to track your favorite cryptocurrencies and build your own portfolio.",
     "details": "The web counterpart to CoinDeno, delivering the same cryptocurrency tracking and portfolio management experience in a browser. Built with React and Redux for predictable state management across complex data flows, Tailwind CSS for a responsive utility-first design, and Firebase for the backend. Supports real-time price updates, coin search, portfolio tracking with profit/loss calculations, and a fully responsive layout across desktop, tablet, and mobile.",
     "tags": ["React", "Redux", "Firebase", "Tailwind CSS"],
@@ -84,7 +76,6 @@
   {
     "name": "Frontend Mentor Challenges",
     "website": "https://challenges-wb.netlify.app/",
-    "image": "/assets/projects/thumbnails/frontend-mentor-challenges.webp",
     "description": "A collection of my completed Frontend Mentor challenges.",
     "details": "A collection of UI challenges from Frontend Mentor ranging from simple components to full multi-page layouts. Each challenge focuses on pixel-perfect implementation from a provided design spec, responsive design across breakpoints, and clean semantic HTML. Built with HTML, SCSS, and vanilla JavaScript. Completing these challenges sharpened my eye for detail, improved my CSS layout skills, and reinforced best practices for accessible, well-structured markup.",
     "tags": ["HTML", "SCSS", "JavaScript"],

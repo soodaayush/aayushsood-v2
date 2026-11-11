@@ -1,29 +1,17 @@
-"use client";
-
-import { motion } from "motion/react";
-
-import styles from "../../styles/home/page.module.css";
-import TechnicalSkill from "./technicalSkill";
+import styles from "../../styles/home/home.module.css";
 
 export default function TechnicalSkills({ skills }) {
   return (
-    <div className={styles.technicalSkillsContainer}>
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className={styles.sectionHeading}
-      >
-        Technical Skills
-      </motion.h2>
-      <div className="content">
-        <div className={styles.technicalSkillsList}>
-          {skills.map((skill, idx) => (
-            <TechnicalSkill key={idx} {...skill} index={idx} />
-          ))}
-        </div>
-      </div>
-    </div>
+    <>
+      <h2 className={styles.heading}>/ skills</h2>
+      <dl className={styles.list}>
+        {skills.map((group) => (
+          <div key={group.type}>
+            <dt>{group.type.toLowerCase()}</dt>
+            <dd>{group.skills.map((skill) => skill.name).join(", ")}</dd>
+          </div>
+        ))}
+      </dl>
+    </>
   );
 }

@@ -2,28 +2,34 @@ import "./styles/global/globals.css";
 
 import Header from "./components/global/header";
 import Footer from "./components/global/footer";
-import CommandPalette from "./components/global/commandPalette";
-import MotionProvider from "./components/global/motionProvider";
+import CommandPaletteLoader from "./components/global/commandPaletteLoader";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeProvider } from "next-themes";
-import localFont from "next/font/local";
+import { DM_Sans, JetBrains_Mono } from "next/font/google";
 
 import { getPostSummaries } from "../../utils/fetchPosts";
 
-const wotfard = localFont({
-  src: "../../public/assets/fonts/wotfard-regular-webfont.woff2",
-  weight: "400",
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
-  variable: "--font-wotfard",
+  variable: "--font-sans",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: "--font-mono",
 });
 
 export const viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#12192b" },
+    { media: "(prefers-color-scheme: light)", color: "#fbfaf7" },
+    { media: "(prefers-color-scheme: dark)", color: "#0c0c0d" },
   ],
 };
 
@@ -133,7 +139,7 @@ const structuredData = {
   ],
   image: {
     "@type": "ImageObject",
-    url: "https://www.aayushsood.com/assets/welcome/aayush.webp",
+    url: "https://www.aayushsood.com/assets/welcome/headshot.webp",
   },
   jobTitle: "Fullstack Developer",
   worksFor: {
@@ -170,22 +176,30 @@ const structuredData = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={wotfard.variable} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+    >
       <body>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <MotionProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+        >
+          <div className="shell">
             <Header />
             <main>{children}</main>
             <Footer />
-            <CommandPalette posts={getPostSummaries()} />
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify(structuredData),
-              }}
-            />
-            <GoogleAnalytics gaId="G-ZSFY8QD3JM" />
-          </MotionProvider>
+          </div>
+          <CommandPaletteLoader posts={getPostSummaries()} />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(structuredData),
+            }}
+          />
+          <GoogleAnalytics gaId="G-ZSFY8QD3JM" />
         </ThemeProvider>
       </body>
     </html>

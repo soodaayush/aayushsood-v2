@@ -1,0 +1,68 @@
+/* A "table of contents" line under the date that opens the list */
+.toggle {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: none;
+  color: var(--muted);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 13.5px;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+.toggle[aria-expanded="true"] {
+  border-bottom-color: transparent;
+}
+
+.toggle::after {
+  content: "+";
+}
+
+.toggle[aria-expanded="true"]::after {
+  content: "\2212";
+}
+
+.toggle:hover {
+  color: var(--accent);
+}
+
+.nav {
+  display: none;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.open {
+  display: block;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: block;
+  padding: 3px 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.link:hover,
+.active {
+  color: var(--accent);
+}
+
+.sub {
+  font-size: 13.5px;
+}

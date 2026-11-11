@@ -1,108 +1,37 @@
-.blogPostContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.details {
-  text-align: left;
-  width: 100%;
-  margin: 50px 0 50px 0;
-}
-
-.blogPostContentContainer {
-  display: flex;
-  flex-direction: column;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-.blogPostRow {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  width: 100%;
-}
-
-.blogPostContent {
-  flex: 1;
-  min-width: 0;
-}
-
-.text {
-  margin: 0;
+.post {
+  position: relative;
 }
 
 .title {
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.blogPostToc {
-  position: sticky;
-  top: 10rem;
-  flex-shrink: 0;
-  width: 350px;
-  height: fit-content;
-  border-radius: 12px;
-  padding: 1.5rem;
-}
-
-.blogPostToc h2 {
-  font-size: 0.95rem;
+  margin: 56px 0 0;
+  font-size: 36px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
 }
 
-.blogPostToc ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.date {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 13.5px;
 }
 
-.blogPostToc a {
-  display: block;
-  padding: 0.4rem 0.2rem;
-  text-decoration: none;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  transition: all 0.2s;
-  color: var(--toc-text-color);
-  overflow-wrap: break-word;
-  word-break: break-word;
+.toc {
+  margin-top: 32px;
 }
 
-.blogPostToc a:hover {
-  color: var(--toc-text-hover-color);
+.content {
+  margin-top: 40px;
 }
 
-.title {
-  font-size: 50px;
-}
-
-@media (max-width: 760px) {
-  .title {
-    font-size: 36px;
-  }
-}
-
-@media (max-width: 450px) {
-  .title {
-    font-size: 28px;
-  }
-}
-
-@media (min-width: 800px) {
-  .blogPostContentContainer {
-    width: 80%;
-  }
-}
-
-@media (max-width: 1100px) {
-  .blogPostToc {
-    display: none;
-  }
+.footer {
+  margin-top: 56px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px 20px;
 }
