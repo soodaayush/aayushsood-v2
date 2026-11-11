@@ -53,19 +53,11 @@ textarea {
   outline-offset: 3px;
 }
 
-/* Single narrow column. Pages that need more room mark their root with data-width. */
+/* One column width for every page, so the nav and content never move between pages */
 .shell {
   max-width: 700px;
   margin: 0 auto;
   padding: 20px 24px 96px;
-}
-
-.shell:has([data-width="760"]) {
-  max-width: 760px;
-}
-
-.shell:has([data-width="960"]) {
-  max-width: 960px;
 }
 
 a {

@@ -72,7 +72,7 @@ export default function Books() {
           __html: JSON.stringify(itemListStructuredData),
         }}
       />
-      <div data-width="960">
+      <div>
         <h1 className={styles.title}>Books</h1>
         <p className={styles.count}>
           {sortedBooks.length} books i&apos;ve read
