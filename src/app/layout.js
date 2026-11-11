@@ -140,7 +140,7 @@ const structuredData = {
   ],
   image: {
     "@type": "ImageObject",
-    url: "https://www.aayushsood.com/assets/welcome/aayush.webp",
+    url: "https://www.aayushsood.com/assets/welcome/headshot.webp",
   },
   jobTitle: "Fullstack Developer",
   worksFor: {

@@ -2,9 +2,7 @@
   position: fixed;
   inset: 0;
   z-index: 998;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
 }
 
 .palette {
@@ -15,10 +13,10 @@
   margin: 0 auto;
   width: min(640px, calc(100vw - 32px));
   z-index: 999;
-  border-radius: 12px;
-  border: 1px solid var(--header-border);
-  background: var(--palette-background);
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
   overflow: hidden;
 }
 
@@ -27,14 +25,13 @@
   align-items: center;
   gap: 10px;
   padding: 14px 16px;
-  border-bottom: 1px solid var(--header-border);
+  border-bottom: 1px solid var(--line);
 }
 
 .searchIcon {
   flex-shrink: 0;
   font-size: 18px;
-  color: var(--text-color);
-  opacity: 0.5;
+  color: var(--muted);
 }
 
 .input {
@@ -43,32 +40,30 @@
   border: none;
   outline: none;
   font-size: 16px;
-  color: var(--text-color);
-  caret-color: var(--text-color);
+  color: var(--ink);
+  caret-color: var(--accent);
 }
 
 .input::placeholder {
-  color: var(--text-color);
-  opacity: 0.4;
+  color: var(--muted);
 }
 
 .clearButton {
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 4px;
-  color: var(--text-color);
-  opacity: 0.5;
+  min-width: 44px;
+  min-height: 44px;
+  margin: -10px -10px -10px 0;
+  color: var(--muted);
   font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
-  transition: opacity 0.15s;
 }
 
 .clearButton:hover {
-  opacity: 1;
+  color: var(--accent);
 }
 
 .results {
@@ -80,12 +75,11 @@
 .groupLabel {
   margin: 0;
   padding: 6px 16px 4px;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-color);
-  opacity: 0.45;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: lowercase;
+  color: var(--accent);
 }
 
 .result {
@@ -98,19 +92,18 @@
   border: none;
   cursor: pointer;
   text-align: left;
-  transition: background 0.1s;
-  color: var(--text-color);
+  color: var(--ink);
 }
 
 .result:hover,
 .resultSelected {
-  background: var(--header-border);
+  background: color-mix(in srgb, var(--ink) 8%, transparent);
 }
 
 .resultIcon {
   flex-shrink: 0;
   font-size: 16px;
-  opacity: 0.6;
+  color: var(--muted);
 }
 
 .resultText {
@@ -121,7 +114,7 @@
 }
 
 .resultTitle {
-  font-size: 14px;
+  font-size: 14.5px;
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
@@ -129,29 +122,20 @@
 }
 
 .resultSubtitle {
-  font-size: 12px;
-  opacity: 0.55;
+  color: var(--muted);
+  font-size: 13px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.empty {
-  margin: 0;
-  padding: 24px 16px;
-  text-align: center;
-  font-size: 14px;
-  color: var(--text-color);
-  opacity: 0.5;
-}
-
+.empty,
 .hint {
   margin: 0;
   padding: 24px 16px;
   text-align: center;
   font-size: 14px;
-  color: var(--text-color);
-  opacity: 0.5;
+  color: var(--muted);
 }
 
 .footer {
@@ -159,10 +143,10 @@
   align-items: center;
   gap: 16px;
   padding: 10px 16px;
-  border-top: 1px solid var(--header-border);
-  font-size: 11px;
-  color: var(--text-color);
-  opacity: 0.6;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
 }
 
 .kbd {
@@ -170,8 +154,8 @@
   align-items: center;
   justify-content: center;
   padding: 2px 5px;
+  border: 1px solid var(--line);
   border-radius: 4px;
-  border: 1px solid var(--header-border);
   font-size: 11px;
   font-family: inherit;
   margin-right: 3px;

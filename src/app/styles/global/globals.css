@@ -26,10 +26,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   font-size: 16px;
-  /* Legacy aliases, removed once every page uses the tokens above */
-  --font-wotfard: var(--font-sans);
-  --skill-icon-tint: #000;
-  --skill-icon-tint-amount: 0%;
 }
 
 body {
@@ -72,98 +68,6 @@ textarea {
   max-width: 960px;
 }
 
-html.light {
-  --mobile-header-background: #ccd6e0;
-  --header-border: rgba(0, 0, 0, 0.08);
-  --header-background: rgba(229, 235, 242, 0.7);
-  --header-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  --header-backdrop-filter: blur(8px);
-  --text-color: #000;
-  --background-color: #fff;
-  --welcome-background-color: linear-gradient(
-    180deg,
-    #f8fafc,
-    #edf2f7,
-    #e2e8f0,
-    #cbd5e0
-  );
-  --curve-background-color: #ccd6e0;
-  --curve-fill-color: #fff;
-  --header-hover-color: #0f766e;
-  --technical-skills-background-hover-color: #e2e8f0;
-  --skill-icon-tint: #000;
-  --skill-icon-tint-amount: 28%;
-  --project-text-color: #f8fafc;
-  --project-tag-background: #e8c9ea;
-  --creator-underline-color: #0f766e;
-  --blog-post-border: #3e454b;
-  --blog-link-underline-color: #2563eb;
-  --blog-image-border: #e2e8f0;
-  --book-author-color: #758295;
-  --book-overlay-title-color: #f8fafc;
-  --book-overlay-author-color: #8892a4;
-  --book-overlay-background: rgba(9, 14, 26, 0.97);
-  --book-overlay-background-fade: rgba(9, 14, 26, 0.88);
-  --home-link-color: #7b2cbf;
-  --resume-border: #d1d5db;
-  --toc-text-color: #727b9e;
-  --toc-text-hover-color: #262d40;
-  --heart-fill-color: #e9156e;
-  --palette-background: #e5ebf2;
-  --view-counter-bg: #2e3440;
-  --view-counter-label-color: #9aa3b2;
-  --view-counter-display-bg: #1a1e28;
-  --view-counter-ghost-color: rgba(255, 255, 255, 0.07);
-  --view-counter-digit-color: #ffffff;
-  --highlight-background: #fde047;
-}
-
-html.dark {
-  --mobile-header-background: #090e1a;
-  --header-border: #202534;
-  --header-background: rgba(11, 17, 32, 0.5);
-  --header-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  --header-backdrop-filter: blur(5px);
-  --text-color: #f8fafc;
-  --background-color: #090e1a;
-  --welcome-background-color: linear-gradient(
-    180deg,
-    #090f1d,
-    #0a1124,
-    #090e1a,
-    #12192c
-  );
-  --curve-background-color: #12192b;
-  --curve-fill-color: #090e1a;
-  --header-hover-color: #64ffda;
-  --technical-skills-background-hover-color: #e2e8f0;
-  --skill-icon-tint: #fff;
-  --skill-icon-tint-amount: 16%;
-  --project-text-color: #f8fafc;
-  --project-tag-background: #171e29;
-  --creator-underline-color: #0f766e;
-  --blog-post-border: #3e454b;
-  --blog-link-underline-color: #718de1;
-  --blog-image-border: #30353b;
-  --book-author-color: #758295;
-  --book-overlay-title-color: #f8fafc;
-  --book-overlay-author-color: #8892a4;
-  --book-overlay-background: rgba(9, 14, 26, 0.97);
-  --book-overlay-background-fade: rgba(9, 14, 26, 0.88);
-  --home-link-color: #e6b3ff;
-  --resume-border: #202534;
-  --toc-text-color: #959ea5;
-  --toc-text-hover-color: #c3e0e8;
-  --heart-fill-color: #e9156e;
-  --palette-background: #0d1526;
-  --view-counter-bg: #2e3440;
-  --view-counter-label-color: #9aa3b2;
-  --view-counter-display-bg: #1a1e28;
-  --view-counter-ghost-color: rgba(255, 255, 255, 0.07);
-  --view-counter-digit-color: #ffffff;
-  --highlight-background: #fde047;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -172,40 +76,6 @@ a {
 img,
 svg {
   display: block;
-}
-
-.content {
-  width: 100%;
-}
-
-@media (min-width: 1895px) {
-  .content {
-    width: 90%;
-  }
-}
-
-@media (min-width: 2100px) {
-  .content {
-    width: 70%;
-  }
-}
-
-@media (min-width: 2700px) {
-  .content {
-    width: 60%;
-  }
-}
-
-@media (min-width: 3150px) {
-  .content {
-    width: 50%;
-  }
-}
-
-@media (min-width: 3770px) {
-  .content {
-    width: 40%;
-  }
 }
 
 /* Article body (blog posts). Markdown headings render one level down, see blog/[id]/page.js */
