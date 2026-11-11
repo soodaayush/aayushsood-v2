@@ -1,11 +1,11 @@
 import { marked } from "marked";
 import { notFound } from "next/navigation";
 import { getPosts, getPostBySlug } from "../../../../utils/fetchPosts";
+import { getImageSize } from "../../../../utils/imageSize";
 
 import BackToTopButton from "@/app/components/blog/backToTopButton";
 import TableOfContents from "@/app/components/blog/TableOfContents";
-import ViewCounter from "@/app/components/blog/viewCounter";
-import LikeButton from "@/app/components/blog/likeButton";
+import PostStats from "@/app/components/blog/postStats";
 
 import styles from "../../styles/blog/blogPost.module.css";
 
@@ -127,7 +127,25 @@ export default async function BlogPostPage({ params }) {
     /<a /g,
     '<a target="_blank" rel="noopener noreferrer" ',
   );
-  htmlContent = htmlContent.replace(/<img /g, '<img decoding="async" ');
+  // Every image gets its real size so the browser reserves the space (no jumping, and the contents
+  // list scrolls to the right place). Only a first image near the top loads straight away, at high
+  // priority; all the others load as you scroll.
+  let imageIndex = 0;
+  htmlContent = htmlContent.replace(
+    /<img ([^>]*?)src="([^"]+)"([^>]*?)>/g,
+    (_, before, src, after, offset) => {
+      const nearTop = imageIndex++ === 0 && offset < 1500;
+      const size = getImageSize(src);
+      const attrs = [
+        'decoding="async"',
+        nearTop ? 'fetchpriority="high"' : 'loading="lazy"',
+        size ? `width="${size.width}" height="${size.height}"` : "",
+      ]
+        .filter(Boolean)
+        .join(" ");
+      return `<img ${attrs} ${before}src="${src}"${after}>`;
+    },
+  );
 
   const articleStructuredData = {
     "@context": "https://schema.org",
@@ -179,8 +197,7 @@ export default async function BlogPostPage({ params }) {
         />
         <div className={styles.footer}>
           <BackToTopButton />
-          <LikeButton postId={post.slug} />
-          <ViewCounter postId={post.slug} />
+          <PostStats postId={post.slug} />
         </div>
       </article>
     </>
