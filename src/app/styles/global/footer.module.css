@@ -1,29 +1,20 @@
-.footerContainer {
+.footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.footerContent {
-  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  gap: 4px 20px;
+  margin-top: 68px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 13.5px;
 }
 
-.contact {
-  transition: 0.15s ease-in-out;
-  color: var(--text-color);
+.footer p {
+  margin: 0;
 }
 
-.contact:hover {
-  opacity: 0.75;
-}
-
-@media (max-width: 450px) {
-  .footerContent {
-    flex-direction: column;
-    text-align: center;
-  }
+.footer a:hover {
+  color: var(--accent);
 }

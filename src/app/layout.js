@@ -7,23 +7,30 @@ import MotionProvider from "./components/global/motionProvider";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeProvider } from "next-themes";
-import localFont from "next/font/local";
+import { DM_Sans, JetBrains_Mono } from "next/font/google";
 
 import { getPostSummaries } from "../../utils/fetchPosts";
 
-const wotfard = localFont({
-  src: "../../public/assets/fonts/wotfard-regular-webfont.woff2",
-  weight: "400",
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
-  variable: "--font-wotfard",
+  variable: "--font-sans",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: "--font-mono",
 });
 
 export const viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#12192b" },
+    { media: "(prefers-color-scheme: light)", color: "#fbfaf7" },
+    { media: "(prefers-color-scheme: dark)", color: "#0c0c0d" },
   ],
 };
 
@@ -170,13 +177,23 @@ const structuredData = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={wotfard.variable} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+    >
       <body>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+        >
           <MotionProvider>
-            <Header />
-            <main>{children}</main>
-            <Footer />
+            <div className="shell">
+              <Header />
+              <main>{children}</main>
+              <Footer />
+            </div>
             <CommandPalette posts={getPostSummaries()} />
             <script
               type="application/ld+json"
