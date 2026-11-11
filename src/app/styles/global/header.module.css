@@ -41,6 +41,9 @@
   margin-left: 2px;
   padding: 0 0 0 20px;
   min-height: 44px;
+  /* Same width for "light" and "dark" (border + padding + 5 characters), so the bar and the links don't move when it flips */
+  width: calc(21px + 5ch);
+  text-align: left;
   color: var(--muted);
   font: inherit;
   cursor: pointer;
