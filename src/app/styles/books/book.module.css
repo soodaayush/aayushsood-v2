@@ -1,13 +1,17 @@
-.cover {
-  display: block;
+.frame {
+  position: relative;
   width: 100%;
-  height: auto;
   aspect-ratio: 2 / 3;
-  object-fit: cover;
-  object-position: top;
-  border-radius: 3px;
+}
+
+/* Sized inline from the cover's own proportions; covers rest on the bottom edge of the frame */
+.cover {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
   border: 1px solid var(--line);
-  background: color-mix(in srgb, var(--ink) 7%, transparent);
+  border-radius: 3px;
 }
 
 .title {

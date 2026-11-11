@@ -55,7 +55,8 @@ utils/                     # fetchPosts (post loader + validation), formatDate (
 
 - **CSS Modules** for all component styles; CSS custom properties in `globals.css` for theming
 - Theme tokens: `--bg --ink --muted --line --accent` live in `:root` (dark) and are overridden in `html.light {}` in `globals.css`
-- **Design**: plain single column (`.shell`, 700px; a page widens it by putting `data-width="760"` or `"960"` on its root: the blog list and posts use 760 so the nav does not jump between them, books uses 960), mono lowercase section labels (`/ projects`), hairline rows, one accent colour. No cards, shadows, gradients or hover effects on images. Reference: `portfolio-redesign/DESIGN.md` (not committed)
+- **Design**: plain single column (`.shell`, 700px; a page widens it by putting `data-width="760"` or `"960"` on its root: the blog list, posts and books all use 960 so the nav does not jump between them; posts put the contents list in a sticky right column from 900px), mono lowercase section labels (`/ projects`), hairline rows, one accent colour. No cards, shadows, gradients or hover effects on images. Reference: `portfolio-redesign/DESIGN.md` (not committed)
+- **Book covers**: `books.json` stores each cover's real `width`/`height`; `book.js` draws the cover at its own proportions inside a 2:3 frame so nothing is cropped (never force covers to `object-fit: cover`)
 - **Images**: every image is WebP (favicons and the apple-touch-icon stay PNG/ICO because browsers need them; OG images are generated PNGs)
 - **Server Components** for pages/layouts; `"use client"` for anything with state, effects, or event handlers
 - Data lives in `src/app/data/*.json` — edit these to update site content
