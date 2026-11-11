@@ -1,0 +1,25 @@
+[
+  {
+    "name": "IWKids",
+    "subtitle": "Emergency Room Triage App",
+    "tech": "react native, javascript, expo, git, openai api",
+    "source": "IWKids"
+  },
+  {
+    "name": "CoinDeno",
+    "subtitle": "Crypto Tracker",
+    "tech": "react.js, react native, rest, git, firebase, coingecko apis",
+    "source": "CoinDeno"
+  },
+  {
+    "name": "SAP-1",
+    "subtitle": "6502 Microprocessor / 8-bit Project",
+    "tech": "python, assembly",
+    "source": "Ben Eater's 8-Bit Project"
+  },
+  {
+    "name": "Market Maker",
+    "tech": "python",
+    "source": "Market Maker"
+  }
+]

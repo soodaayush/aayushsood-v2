@@ -1,110 +1,32 @@
-"use client";
-
-import { motion } from "motion/react";
-import dynamic from "next/dynamic";
-import { useTheme } from "next-themes";
-
 import Image from "next/image";
-import styles from "../../styles/home/page.module.css";
-import Aayush from "../../../../public/assets/welcome/aayush.webp";
 
-const GREETING = "Hi, I'm Aayush\nAnd I am a fullstack developer!";
-
-// Server-render the first greeting so the hero has its final size before the animation loads (no layout shift)
-const TypeAnimation = dynamic(
-  () => import("react-type-animation").then((m) => m.TypeAnimation),
-  {
-    ssr: false,
-    loading: () => <div className={styles.welcomeText}>{GREETING}</div>,
-  },
-);
+import styles from "../../styles/home/home.module.css";
 
 export default function Welcome() {
-  const { theme } = useTheme();
-
-  const hoverStyles =
-    theme === "dark"
-      ? {
-          boxShadow: "0 0 20px rgba(255, 255, 255, 0.7)",
-        }
-      : {
-          boxShadow: "0 0 20px rgba(113, 141, 225, 0.55)",
-        };
-
   return (
-    <div className={styles.welcomeContainer}>
-      <div className={`content ${styles.welcomeContent}`}>
-        <div>
-          <h1 className={styles.visuallyHidden}>
-            Aayush Sood, Software Engineering student and fullstack developer
-          </h1>
-          <TypeAnimation
-            sequence={[
-              GREETING,
-              2000,
-              "Hi, I'm Aayush\nAnd I am a student!",
-              2000,
-              "Hi, I'm Aayush\nAnd I am a creator!",
-              2000,
-              "Hi, I'm Aayush\nAnd I am a competitive programmer!",
-              2000,
-            ]}
-            preRenderFirstString
-            speed={40}
-            deletionSpeed={35}
-            wrapper="div"
-            className={styles.welcomeText}
-          />
-          <p className={styles.description}>
-            Software Engineering @ University of Waterloo. Based in Nova Scotia,
-            Canada, I&apos;m passionate about <br /> building scalable software,
-            mathematics, geopolitics, and Brazilian Jiu-Jitsu.
+    <>
+      <div className={styles.hero}>
+        <Image
+          className={styles.photo}
+          src="/assets/welcome/headshot.png"
+          alt="Aayush Sood"
+          width={104}
+          height={123}
+          priority
+        />
+        <div className={styles.heroText}>
+          <h1 className={styles.name}>Aayush Sood</h1>
+          <p className={`${styles.mono} ${styles.tagline}`}>
+            software engineering student, full stack developer
           </p>
-          <div className={styles.ctaButtons}>
-            <motion.a
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ type: "spring", stiffness: 450, damping: 20 }}
-              href="#projects"
-              className={`${styles.ctaButton} ${styles.ctaButtonPrimary}`}
-            >
-              View Projects
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ type: "spring", stiffness: 450, damping: 20 }}
-              href="/assets/resume/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${styles.ctaButton} ${styles.ctaButtonSecondary}`}
-            >
-              Resume
-            </motion.a>
-          </div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
-          animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          whileHover={{
-            scale: 1.05,
-            transition: { type: "spring", stiffness: 450, damping: 20 },
-            ...hoverStyles,
-          }}
-          className={styles.profileImageContainer}
-        >
-          <Image
-            className={styles.picture}
-            src={Aayush}
-            height={275}
-            width={233}
-            alt="Aayush"
-            priority
-          />
-        </motion.div>
       </div>
-    </div>
+      <p className={styles.intro}>
+        I&apos;m a Software Engineering student at the University of Waterloo
+        and a full stack developer from Nova Scotia. I build and ship apps, and
+        outside of code I spend my time on math, geopolitics and Brazilian
+        Jiu-Jitsu.
+      </p>
+    </>
   );
 }
