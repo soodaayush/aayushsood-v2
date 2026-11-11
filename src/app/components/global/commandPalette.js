@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, MotionConfig } from "motion/react";
 import { FaBlog, FaHome } from "react-icons/fa";
 import { IoSearch, IoClose } from "react-icons/io5";
 
@@ -83,8 +83,8 @@ function runSearch(searchIndex, query) {
   return searchIndex.filter((item) => item.search.includes(q));
 }
 
-export default function CommandPalette({ posts }) {
-  const [open, setOpen] = useState(false);
+export default function CommandPalette({ posts, startOpen = false }) {
+  const [open, setOpen] = useState(startOpen);
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef(null);
@@ -171,115 +171,119 @@ export default function CommandPalette({ posts }) {
   let fi = 0;
 
   return (
-    <AnimatePresence>
-      {open && (
-        <>
-          <motion.div
-            className={styles.backdrop}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.15 }}
-            onClick={() => setOpen(false)}
-          />
-          <motion.div
-            className={styles.palette}
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.15 }}
-            role="dialog"
-            aria-modal="true"
-            aria-label="Site search"
-          >
-            <div className={styles.inputRow}>
-              <IoSearch className={styles.searchIcon} aria-hidden="true" />
-              <input
-                ref={inputRef}
-                className={styles.input}
-                placeholder="Search pages and posts…"
-                value={query}
-                onChange={(e) => {
-                  setQuery(e.target.value);
-                  setSelectedIndex(0);
-                }}
-                onKeyDown={handleKeyDown}
-                aria-label="Search"
-              />
-              {query && (
-                <button
-                  className={styles.clearButton}
-                  onClick={() => {
-                    setQuery("");
+    <MotionConfig reducedMotion="user">
+      <AnimatePresence>
+        {open && (
+          <>
+            <motion.div
+              className={styles.backdrop}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.15 }}
+              onClick={() => setOpen(false)}
+            />
+            <motion.div
+              className={styles.palette}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.15 }}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Site search"
+            >
+              <div className={styles.inputRow}>
+                <IoSearch className={styles.searchIcon} aria-hidden="true" />
+                <input
+                  ref={inputRef}
+                  className={styles.input}
+                  placeholder="Search pages and posts…"
+                  value={query}
+                  onChange={(e) => {
+                    setQuery(e.target.value);
                     setSelectedIndex(0);
                   }}
-                  aria-label="Clear search"
-                >
-                  <IoClose />
-                </button>
-              )}
-            </div>
-
-            {results.length > 0 && (
-              <div className={styles.results}>
-                {grouped.map(({ type, items }) => (
-                  <div key={type}>
-                    <p className={styles.groupLabel}>{TYPE_LABELS[type]}</p>
-                    {items.map((item) => {
-                      const Icon = TYPE_ICONS[type];
-                      const idx = fi++;
-                      return (
-                        <button
-                          key={`${item.type}-${item.title}`}
-                          className={`${styles.result} ${idx === selectedIndex ? styles.resultSelected : ""}`}
-                          onClick={() => navigate(item)}
-                          onMouseEnter={() => setSelectedIndex(idx)}
-                        >
-                          <Icon
-                            className={styles.resultIcon}
-                            aria-hidden="true"
-                          />
-                          <div className={styles.resultText}>
-                            <span className={styles.resultTitle}>
-                              {item.title}
-                            </span>
-                            <span className={styles.resultSubtitle}>
-                              {item.subtitle}
-                            </span>
-                          </div>
-                        </button>
-                      );
-                    })}
-                  </div>
-                ))}
+                  onKeyDown={handleKeyDown}
+                  aria-label="Search"
+                />
+                {query && (
+                  <button
+                    className={styles.clearButton}
+                    onClick={() => {
+                      setQuery("");
+                      setSelectedIndex(0);
+                    }}
+                    aria-label="Clear search"
+                  >
+                    <IoClose />
+                  </button>
+                )}
               </div>
-            )}
 
-            {query && results.length === 0 && (
-              <p className={styles.empty}>
-                No results for &ldquo;{query}&rdquo;
-              </p>
-            )}
+              {results.length > 0 && (
+                <div className={styles.results}>
+                  {grouped.map(({ type, items }) => (
+                    <div key={type}>
+                      <p className={styles.groupLabel}>{TYPE_LABELS[type]}</p>
+                      {items.map((item) => {
+                        const Icon = TYPE_ICONS[type];
+                        const idx = fi++;
+                        return (
+                          <button
+                            key={`${item.type}-${item.title}`}
+                            className={`${styles.result} ${idx === selectedIndex ? styles.resultSelected : ""}`}
+                            onClick={() => navigate(item)}
+                            onMouseEnter={() => setSelectedIndex(idx)}
+                          >
+                            <Icon
+                              className={styles.resultIcon}
+                              aria-hidden="true"
+                            />
+                            <div className={styles.resultText}>
+                              <span className={styles.resultTitle}>
+                                {item.title}
+                              </span>
+                              <span className={styles.resultSubtitle}>
+                                {item.subtitle}
+                              </span>
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  ))}
+                </div>
+              )}
 
-            {!query && (
-              <p className={styles.hint}>Search across pages and blog posts.</p>
-            )}
+              {query && results.length === 0 && (
+                <p className={styles.empty}>
+                  No results for &ldquo;{query}&rdquo;
+                </p>
+              )}
 
-            <div className={styles.footer}>
-              <span>
-                <kbd className={styles.kbd}>↑</kbd>
-                <kbd className={styles.kbd}>↓</kbd> navigate
-              </span>
-              <span>
-                <kbd className={styles.kbd}>↵</kbd> open
-              </span>
-              <span>
-                <kbd className={styles.kbd}>Esc</kbd> close
-              </span>
-            </div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
+              {!query && (
+                <p className={styles.hint}>
+                  Search across pages and blog posts.
+                </p>
+              )}
+
+              <div className={styles.footer}>
+                <span>
+                  <kbd className={styles.kbd}>↑</kbd>
+                  <kbd className={styles.kbd}>↓</kbd> navigate
+                </span>
+                <span>
+                  <kbd className={styles.kbd}>↵</kbd> open
+                </span>
+                <span>
+                  <kbd className={styles.kbd}>Esc</kbd> close
+                </span>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </MotionConfig>
   );
 }

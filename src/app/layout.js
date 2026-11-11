@@ -2,8 +2,7 @@ import "./styles/global/globals.css";
 
 import Header from "./components/global/header";
 import Footer from "./components/global/footer";
-import CommandPalette from "./components/global/commandPalette";
-import MotionProvider from "./components/global/motionProvider";
+import CommandPaletteLoader from "./components/global/commandPaletteLoader";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeProvider } from "next-themes";
@@ -188,21 +187,19 @@ export default function RootLayout({ children }) {
           defaultTheme="dark"
           enableSystem={false}
         >
-          <MotionProvider>
-            <div className="shell">
-              <Header />
-              <main>{children}</main>
-              <Footer />
-            </div>
-            <CommandPalette posts={getPostSummaries()} />
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify(structuredData),
-              }}
-            />
-            <GoogleAnalytics gaId="G-ZSFY8QD3JM" />
-          </MotionProvider>
+          <div className="shell">
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </div>
+          <CommandPaletteLoader posts={getPostSummaries()} />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(structuredData),
+            }}
+          />
+          <GoogleAnalytics gaId="G-ZSFY8QD3JM" />
         </ThemeProvider>
       </body>
     </html>
