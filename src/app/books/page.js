@@ -74,9 +74,7 @@ export default function Books() {
       />
       <div>
         <h1 className={styles.title}>Books</h1>
-        <p className={styles.count}>
-          {sortedBooks.length} books i&apos;ve read
-        </p>
+        <p className={styles.count}>reading list</p>
         <div className={styles.grid}>
           {sortedBooks.map((book, index) => (
             <Book {...book} key={book.title} position={index} />

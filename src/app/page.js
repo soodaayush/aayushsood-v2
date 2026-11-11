@@ -11,7 +11,6 @@ import projects from "./data/projects.json";
 import roles from "./data/roles.json";
 import technicalSkills from "./data/technicalSkills.json";
 import interests from "./data/interests.json";
-import books from "./data/books.json";
 
 import { getPosts } from "../../utils/fetchPosts";
 
@@ -22,7 +21,7 @@ export default function Home() {
       <Projects featured={featuredProjects} projects={projects} />
       <About roles={roles} />
       <TechnicalSkills skills={technicalSkills} />
-      <Writing posts={getPosts()} bookCount={books.length} />
+      <Writing posts={getPosts()} />
       <Interests interests={interests} />
       <Contact />
     </div>

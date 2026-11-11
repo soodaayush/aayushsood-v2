@@ -4,7 +4,7 @@ import { formatMonthYear } from "../../../../utils/formatDate";
 
 import styles from "../../styles/home/home.module.css";
 
-export default function Writing({ posts, bookCount }) {
+export default function Writing({ posts }) {
   return (
     <>
       <h2 className={styles.heading}>/ writing</h2>
@@ -24,7 +24,7 @@ export default function Writing({ posts, bookCount }) {
       </div>
       <p className={`${styles.mono} ${styles.more}`}>
         <Link href="/blog">all posts →</Link>
-        <Link href="/books">{bookCount} books i&apos;ve read →</Link>
+        <Link href="/books">reading list →</Link>
       </p>
     </>
   );
