@@ -144,16 +144,17 @@ svg {
   line-height: 1.5;
 }
 
-/* Links in an article need a visible underline (--line is too faint against the page) */
+/* Links in an article: accent colour plus a soft accent underline; on hover the text goes back to normal and the underline turns solid */
 .blog-content a {
+  color: var(--accent);
   text-decoration: underline;
-  text-decoration-color: var(--muted);
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
 .blog-content a:hover {
-  color: var(--accent);
+  color: var(--ink);
   text-decoration-color: var(--accent);
 }
 
