@@ -57,7 +57,7 @@ utils/                     # fetchPosts (post loader + validation), formatDate (
 - Theme tokens: `--bg --ink --muted --line --accent` live in `:root` (dark) and are overridden in `html.light {}` in `globals.css`
 - **Design**: plain single column: `.shell` is 700px on every page, so the nav and content edges never move between pages (never give a page its own width). Posts put the contents list at the top, under the date, as a collapsible "table of contents" line (no side column). Mono lowercase section labels (`/ projects`), hairline rows, one accent colour. No cards, shadows, gradients or hover effects on images. Reference: `docs/DESIGN.md`
 - **Book covers**: every cover sits in the same 2:3 frame (`book.module.css`) and is fitted inside it with `object-fit: contain`, so the grid is even and nothing is cropped (never use `object-fit: cover` for covers). `books.json` keeps each cover's real `width`/`height` for next/image
-- **Images**: every image is WebP (favicons and the apple-touch-icon stay PNG/ICO because browsers need them; OG images are generated PNGs)
+- **Images**: every image is WebP (favicons and the apple-touch-icon stay PNG/ICO because browsers need them: an orange DM Sans 600 "a" on #0c0c0d, drawn natively at each size, apple-touch-icon without rounded corners; OG images are generated PNGs)
 - **Server Components** for pages/layouts; `"use client"` for anything with state, effects, or event handlers
 - Data lives in `src/app/data/*.json` — edit these to update site content
 - Blog posts are `.mdx` files in `content/posts/` with YAML frontmatter (`title`, `description`, `date`, `keywords`, `tags`, optional `updated` for `dateModified`). Dates are quoted human-readable strings (e.g. `"March 15, 2025"`) and converted to ISO for metadata
