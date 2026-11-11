@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../../styles/books/book.module.css";
 
 // Every cover sits in the same 2:3 frame and is fitted inside it, so the grid is even and nothing is cropped.
-// The title and cover link to the book, the author to their page. No hover effects.
+// The title and cover link to the book (no hover effect); the author links to their page and turns orange on hover.
 export default function Book({
   title,
   author,

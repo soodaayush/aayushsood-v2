@@ -32,9 +32,16 @@
 }
 
 .author {
-  display: block;
+  /* Only the name is the target, so hovering it is separate from the cover and title link above */
+  display: inline-block;
   margin-top: 3px;
   color: var(--muted);
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 12px;
+}
+
+.author:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
