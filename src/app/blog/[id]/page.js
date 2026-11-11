@@ -2,6 +2,7 @@ import { marked } from "marked";
 import { notFound } from "next/navigation";
 import { getPosts, getPostBySlug } from "../../../../utils/fetchPosts";
 import { getImageSize } from "../../../../utils/imageSize";
+import { formatMonthYear } from "../../../../utils/formatDate";
 
 import BackToTopButton from "@/app/components/blog/backToTopButton";
 import TableOfContents from "@/app/components/blog/TableOfContents";
@@ -185,7 +186,7 @@ export default async function BlogPostPage({ params }) {
       />
       <article className={styles.post}>
         <h1 className={styles.title}>{post.meta.title}</h1>
-        <p className={styles.date}>{post.meta.date}</p>
+        <p className={styles.date}>{formatMonthYear(post.meta.date)}</p>
         {toc.length >= 2 && (
           <aside className={styles.toc}>
             <TableOfContents items={toc} />

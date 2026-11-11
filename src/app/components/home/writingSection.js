@@ -17,7 +17,7 @@ export default function Writing({ posts, bookCount }) {
           >
             <span>{post.meta.title}</span>
             <span className={styles.mono}>
-              {formatMonthYear(post.meta.date).toLowerCase()}
+              {formatMonthYear(post.meta.date)}
             </span>
           </Link>
         ))}
