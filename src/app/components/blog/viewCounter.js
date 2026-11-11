@@ -45,7 +45,7 @@ export default function ViewCounter({ postId }) {
   }, [uid, postId]);
 
   const isLoaded = viewCount !== null;
-  const digits = isLoaded ? String(viewCount).padStart(6, "0") : "------";
+  const digits = isLoaded ? String(viewCount) : "-";
 
   return (
     <p className={styles.container}>
