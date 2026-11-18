@@ -46,7 +46,7 @@ Persist choice in localStorage (try/catch). First visit may follow prefers-color
   geopolitics and Brazilian Jiu-Jitsu."
 - Projects: only four, no descriptions, tech on the right: IWKids, CoinDeno, SAP-1, Market Maker.
   No project images.
-- About: only the four role lines (role, org, dates). No role paragraphs. No high school paragraph.
+- About: only the role lines (role, org, dates), one per organization. No role paragraphs. No high school paragraph.
 - Books page: keep the cover images, plain grid, NO hover effect.
 - Photo: no background color or box around it.
 

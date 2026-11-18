@@ -35,7 +35,7 @@ src/app/
     technicalSkills.json   # Skills by category (Frontend, Backend, Mobile, AI)
     projects.json          # All portfolio projects (only the four in featuredProjects.json are shown on home; rows link to the GitHub repo of the entry named in `source`)
     featuredProjects.json  # The four home rows: name, subtitle, tech list, `source` (name in projects.json)
-    roles.json             # The four "/ about" rows
+    roles.json             # The three "/ about" rows
     interests.json         # Interests with their YouTube channels (home shows name + channel links)
     books.json             # Reading list with ratings
   blog/[id]/page.js        # Blog post page (server component, statically generated)
