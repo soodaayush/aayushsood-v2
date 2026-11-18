@@ -120,10 +120,12 @@ a.row:hover {
 .more a,
 .email {
   color: var(--accent);
+  display: inline-block;
 }
 
 .more a,
-.contactLinks a {
+.contactLinks a,
+.email {
   /* a taller tap area without moving anything: padding out, negative margin back */
   padding: 11px 0;
   margin: -11px 0;
@@ -134,7 +136,8 @@ a.row:hover {
 }
 
 .contactLinks {
-  margin: 6px 0 0;
+  /* 22px so the 44px tap areas of the email above and these links meet without overlapping */
+  margin: 22px 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0 20px;
